@@ -24,11 +24,7 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "extends": "react-app",
-    "eslintIgnore": [
-      "src/**/*.test.ts",
-      "src/**/*.test.tsx"
-    ]
+    "extends": "react-app"
   },
   "browserslist": {
     "production": [

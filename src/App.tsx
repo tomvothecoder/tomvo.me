@@ -1,5 +1,6 @@
-import './App.css';
-import logo from './assets/logo.svg';
+import "App.css";
+import logo from "assets/logo.svg";
+import { BrowserRouter as Router } from "react-router-dom";
 
 function App() {
   return (
@@ -17,6 +18,8 @@ function App() {
         >
           Learn React
         </a>
+        <Router>
+        </Router>
       </header>
     </div>
   );
