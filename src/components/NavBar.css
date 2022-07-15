@@ -1,0 +1,18 @@
+#the-navigation {
+  margin-top: 50px;
+}
+
+.nav-link {
+  color: black;
+}
+
+.nav-link:hover {
+  color: #0077b5;
+}
+.nav-heading {
+  display: block;
+  font-size: 14px;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}

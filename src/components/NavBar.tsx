@@ -4,7 +4,7 @@ import "./NavBar.css";
 function NavBar() {
   return (
     <div id="Navigation">
-      <section className="container" id="nav-bar">
+      <section className="container" id="the-navigation">
         <div className="columns">
           <div className="column is-half is-offset-one-quarter">
             <nav className="level">
