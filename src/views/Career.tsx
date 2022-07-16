@@ -1,6 +1,7 @@
 import About from "components/Career/About";
 import Experience from "components/Career/Experience/Experience";
 import Hero from "components/Career/Hero";
+import Portfolio from "components/Career/Portfolio/Portfolio";
 import "views/Career.css";
 
 function Home() {
@@ -23,12 +24,12 @@ function Home() {
       </div>
     </section> */}
 
-      {/* <section className="section" id="portfolio">
-      <div className="container has-text-centered">
-        <h1 className="section-title">— Some of my work —</h1>
-        <Portfolio/>
-      </div>
-    </section> */}
+      <section className="section" id="portfolio">
+        <div className="container has-text-centered">
+          <h1 className="section-title">— Some of my work —</h1>
+          <Portfolio />
+        </div>
+      </section>
 
       <section className="section" id="about">
         <div className="container">
