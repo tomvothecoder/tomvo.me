@@ -1,9 +1,6 @@
 import ExperienceCard from "components/Career/Experience/ExperienceCard";
 
-// import energeiaLogo from "assets/logos/energeia.svg";
-// import intelLogo from "assets/logos/intel.svg";
-import llnlLogo from "assets/logos/llnl.jpg";
-import uopTower from "assets/logos/uop_tower.jpg";
+import { getImagePath } from "assets/utils";
 import "components/Career/Experience/Experience.css";
 
 type Props = {};
@@ -16,7 +13,7 @@ const Experience: React.FC<Props> = () => {
       length: "2020 - Present",
       location: "Livermore, CA",
       link: "https://llnl.gov/",
-      src: llnlLogo,
+      src: getImagePath("logos", "llnl.jpg"),
       description: `I am a software engineer in the Analytics, Informatics,
           and Management Systems (AIMS) group. I was the leader developer of
           MetaGrid, the next-gen Earth System Grid Federation (ESGF) climate
@@ -28,7 +25,7 @@ const Experience: React.FC<Props> = () => {
       title: "Software Engineer",
       length: "2018 - 2020",
       location: "Davis, CA",
-      src: "placeholder",
+      src: getImagePath("logos", "energeia.png"),
       link: "https://energeia-usa.com/",
       description: `I was the lead software engineer for uSim, Energeia's
             SaaS Python energy simulation platform. I was tasked with refactoring
@@ -43,7 +40,7 @@ const Experience: React.FC<Props> = () => {
       title: "Technical Marketing Engineer Intern",
       length: "2017 - 2018",
       location: "Folsom, CA",
-      src: "placeholder",
+      src: getImagePath("logos", "intel.svg"),
       link: "https://intel.com",
       description: `At Intel, I was able to apply my engineering skills directly in
             the context of marketing and business. I aided internal research on
@@ -58,7 +55,7 @@ const Experience: React.FC<Props> = () => {
       title: "Bachelor of Science, Computer Science",
       length: "2014 - 2018",
       location: "Stockton, CA",
-      src: uopTower,
+      src: getImagePath("logos", "uop_tower.jpg"),
       link: "https://pacific.edu",
       description: `UOP's computer science program built the groundwork
             for me to become a software engineer. The co-op internship curriculum
