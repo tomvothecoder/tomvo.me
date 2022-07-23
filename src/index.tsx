@@ -7,7 +7,6 @@ import reportWebVitals from "./reportWebVitals";
 import "aos/dist/aos.css"; // You can also use <link> for styles
 import "./index.css";
 
-
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
@@ -22,4 +21,4 @@ root.render(
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
 
-AOS.init();
+AOS.init({ once: true });
