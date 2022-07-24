@@ -1,7 +1,15 @@
+import { Link } from "react-scroll";
 import "../../node_modules/bulma/css/bulma.css";
 import "./NavBar.css";
 
 function NavBar() {
+  const scrollConfig = {
+    spy: true,
+    smooth: true,
+    offset: 50,
+    duration: 1200,
+  }
+
   return (
     <div id="Navigation">
       <section className="container" id="the-navigation">
@@ -9,32 +17,24 @@ function NavBar() {
           <div className="column is-half is-offset-one-quarter">
             <nav className="level">
               <div className="level-item has-text-centered">
-                <div>
-                  <a href="#" className="nav-link">
-                    <span className="nav-heading">Experience</span>
-                  </a>
-                </div>
+                <Link to="experience" {...scrollConfig}>
+                  <p className="nav-link nav-heading">Experience</p>
+                </Link>
               </div>
               <div className="level-item has-text-centered">
-                <div>
-                  <a href="#" className="nav-link">
-                    <span className="nav-heading">Skills</span>
-                  </a>
-                </div>
+                <Link to="skills" {...scrollConfig}>
+                  <p className="nav-link nav-heading">Skills</p>
+                </Link>
               </div>
               <div className="level-item has-text-centered">
-                <div>
-                  <a href="#" className="nav-link">
-                    <span className="nav-heading">Portfolio</span>
-                  </a>
-                </div>
+                <Link to="portfolio" {...scrollConfig}>
+                  <p className="nav-link nav-heading">Portfolio</p>
+                </Link>
               </div>
               <div className="level-item has-text-centered">
-                <div>
-                  <a href="#" className="nav-link">
-                    <span className="nav-heading">About</span>
-                  </a>
-                </div>
+                <Link to="about" {...scrollConfig}>
+                  <p className="nav-link nav-heading">About</p>
+                </Link>
               </div>
             </nav>
           </div>

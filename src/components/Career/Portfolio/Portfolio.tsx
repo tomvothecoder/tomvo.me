@@ -30,7 +30,7 @@ const Portfolio: React.FC<Props> = () => {
               key={project.name}
               className="column is-half"
               data-aos="fade-up"
-              data-aos-delay="75"
+              data-aos-delay="100"
             >
               <PortfolioCard
                 name={project.name}

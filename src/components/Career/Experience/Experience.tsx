@@ -75,7 +75,7 @@ const Experience: React.FC<Props> = () => {
           key={item.company}
           className="columns is-centered"
           data-aos="fade-up"
-          data-aos-delay="75"
+          data-aos-delay="100"
         >
           <div className="column is-three-quarters">
             <ExperienceCard
