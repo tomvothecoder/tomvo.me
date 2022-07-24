@@ -1,0 +1,14 @@
+.label {
+  font-weight: bold;
+  padding-top: 0.5rem;
+}
+#Django,
+#Docker-Compose {
+  padding-top: 1rem;
+}
+#Traefik {
+  padding-top: 1.25rem;
+}
+.logo {
+  justify-content: center;
+}
