@@ -1,5 +1,5 @@
 import metagrid from "assets/projects/metagrid.png";
-import myliftingpal from "assets/projects/myliftingpal.png";
+import xcdat from "assets/projects/xcdat.png";
 import PortfolioCard from "components/Career/Portfolio/PortfolioCard";
 import React from "react";
 
@@ -8,16 +8,16 @@ type Props = {};
 const Portfolio: React.FC<Props> = () => {
   const projects = [
     {
+      name: "xCDAT",
+      description: "Xarray Climate Data Analysis Tools",
+      link: "https://github.com/xCDAT/xcdat",
+      imageSrc: xcdat
+    },
+    {
       name: "MetaGrid",
       description: "The next-gen Earth System Grid Federation search portal",
       link: "https://github.com/aims-group/metagrid",
       imageSrc: metagrid,
-    },
-    {
-      name: "MyLiftingPal",
-      description: "A web app designed for fitness enthusiasts",
-      link: "https://github.com/tomvothecoder/myliftingpal",
-      imageSrc: myliftingpal
     },
   ];
 
