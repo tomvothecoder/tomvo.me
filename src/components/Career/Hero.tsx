@@ -7,9 +7,9 @@ function Hero() {
         <div className="hero-body">
           <div className="container has-text-centered">
             <h1 id="hero-welcome">Hi, I'm</h1>
-            <h1 id="hero-title">Tom Vo</h1>
+            <h1 id="hero-title">Tom Vo,</h1>
             <h2 id="hero-description">
-              I'm a Software Engineer in Climate Science.
+              a Software Engineer in Climate Science.
               <span className="blinking-cursor">|</span>
             </h2>
           </div>
