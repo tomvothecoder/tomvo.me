@@ -1,7 +1,15 @@
 import selfPortrait from "assets/me.jpg";
+import { CSSinJS } from "common/types";
 type Props = {};
 
 const About: React.FC<Props> = () => {
+  const styles: CSSinJS = {
+    "letsConnect": {
+      marginTop: "1rem",
+      fontWeight: "600",
+    },
+  };
+
   return (
     <div id="about">
       <div
@@ -35,7 +43,7 @@ const About: React.FC<Props> = () => {
                   </p>
 
                   <div className="container has-text-centered">
-                    <h2 id="lets-connect">
+                    <h2 style={styles.letsConnect}>
                       Let's get in touch. LinkedIn or email works best.
                     </h2>
                     <h1 className="has-text-weight-bold	">
