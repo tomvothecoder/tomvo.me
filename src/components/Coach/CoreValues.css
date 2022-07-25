@@ -1,0 +1,12 @@
+.is-horizontal-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.value-caption {
+  margin-top: 5%;
+}
+
+.value-subcaption {
+  margin-top: 1%;
+}

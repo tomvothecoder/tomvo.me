@@ -1,3 +1,5 @@
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import selfPortrait from "assets/me.jpg";
 import { CSSinJS } from "common/types";
 type Props = {};
@@ -15,7 +17,7 @@ const About: React.FC<Props> = () => {
       <div
         className="columns is-centered"
         data-aos="fade-up"
-        data-aos-delay="100"
+        data-aos-delay="125"
       >
         <div className="column is-three-quarters">
           <div className="card">
@@ -58,7 +60,7 @@ const About: React.FC<Props> = () => {
                             target="_blank"
                             rel="noreferrer"
                           >
-                            <i className="fab fa-linkedin fa-5x"></i>
+                            <FontAwesomeIcon icon={faLinkedin} size="5x"/>
                           </a>
                         </p>
                       </div>
@@ -70,7 +72,7 @@ const About: React.FC<Props> = () => {
                             target="_blank"
                             rel="noreferrer"
                           >
-                            <i className="fab fa-github fa-5x"></i>
+                            <FontAwesomeIcon icon={faGithub} size="5x"/>
                           </a>
                         </p>
                       </div>

@@ -1,11 +1,9 @@
 import metagrid from "assets/projects/metagrid.png";
 import xcdat from "assets/projects/xcdat.png";
 import PortfolioCard from "components/Career/Portfolio/PortfolioCard";
-import React from "react";
 
-type Props = {};
 
-const Portfolio: React.FC<Props> = () => {
+const Portfolio: React.FC= () => {
   const projects = [
     {
       name: "xCDAT",
@@ -30,7 +28,7 @@ const Portfolio: React.FC<Props> = () => {
               key={project.name}
               className="column is-half"
               data-aos="fade-up"
-              data-aos-delay="100"
+              data-aos-delay="125"
             >
               <PortfolioCard
                 name={project.name}
