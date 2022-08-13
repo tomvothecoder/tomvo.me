@@ -5,9 +5,9 @@ import Portfolio from "components/Career/Portfolio/Portfolio";
 import Skills from "components/Career/Skills/Skills";
 import "views/Career.css";
 
-function Home() {
+function Career() {
   return (
-    <div className="home">
+    <div id="career">
       <Hero />
       <section className="section" id="experience">
         <div className="container">
@@ -44,4 +44,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Career;

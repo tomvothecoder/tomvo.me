@@ -17,7 +17,7 @@ const Experience: React.FC<Props> = () => {
       description: `I am a software engineer in the Analytics, Informatics,
           and Management Systems (AIMS) group. I was the leader developer of
           MetaGrid, the next-gen Earth System Grid Federation (ESGF) climate
-          modeling search portal. I am now a major contributor to E3SM (Energy
+          modeling search portal. I am now a major contributor to multiple E3SM (Energy
           Exascale Earth System Model) post-processing and analytics tools.`,
     },
     {
@@ -75,7 +75,7 @@ const Experience: React.FC<Props> = () => {
           key={item.company}
           className="columns is-centered"
           data-aos="fade-up"
-          data-aos-delay="100"
+          data-aos-delay="125"
         >
           <div className="column is-three-quarters">
             <ExperienceCard
