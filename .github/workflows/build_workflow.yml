@@ -15,7 +15,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          persist-credentials: false
           fetch-depth: 0
 
       - name: Use Node.js 16
@@ -43,15 +42,15 @@ jobs:
 
       - name: Copy Build and Commit
         run: |
-          git clone https://github.com/tomvothecoder/tomvo.me.git --branch gh-pages --single-branch gh-pages
+          git clone https://github.com/tomvothecoder/tomvo.me --branch gh-pages --single-branch gh-pages
 
           cd gh-pages
           rm -r *
           echo 'tomvo.me' > CNAME
 
           # Add index.html to point to `master` branch automatically
-          printf '<meta http-equiv="refresh" content="0; url=./dist/index.html" />' >> index.html
-          cp -r ../dist .
+          printf '<meta http-equiv="refresh" content="0; url=./build/index.html" />' >> index.html
+          cp -r ../build .
 
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
