@@ -1,0 +1,67 @@
+name: Build Workflow
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  publish-site:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash -l {0}
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+
+      - name: Use Node.js 16
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - name: Cache node modules
+        uses: actions/cache@v2
+        env:
+          cache-name: cache-node-modules
+        with:
+          path: ~/.cache/yarn
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
+
+      - name: Install Dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Build
+        run: yarn build
+
+      - name: Copy Build and Commit
+        run: |
+          git clone https://github.com/tomvothecoder/tomvo.me.git --branch gh-pages --single-branch gh-pages
+
+          cd gh-pages
+          rm -r *
+          echo 'tomvo.me' > CNAME
+
+          # Add index.html to point to `master` branch automatically
+          printf '<meta http-equiv="refresh" content="0; url=./dist/index.html" />' >> index.html
+          cp -r ../dist .
+
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+
+          # The below command will fail if no changes were present, so we ignore it
+          git add .
+          git commit -m "Deploy build" -a || true
+
+      - name: Push Changes
+        uses: ad-m/github-push-action@master
+        with:
+          branch: gh-pages
+          directory: gh-pages
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          force: true
