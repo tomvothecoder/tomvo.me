@@ -4,6 +4,8 @@ on:
   push:
     branches: [master]
 
+  workflow_dispatch:
+
 jobs:
   publish-site:
     runs-on: ubuntu-latest
