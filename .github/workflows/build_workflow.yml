@@ -3,13 +3,9 @@ name: Build Workflow
 on:
   push:
     branches: [master]
-  pull_request:
-    branches: [master]
-
 
 jobs:
   publish-site:
-    # if: ${{ github.event_name == 'push' }}
     runs-on: ubuntu-latest
     defaults:
       run:
