@@ -54,6 +54,9 @@ jobs:
 
           # Move `/build` content into the root of `gh-pages`.
           mv ../build/* .
+          # Handle client side routing with 404.html redirect.
+          # Source: https://github.com/rafgraph/spa-github-pages
+          cp ../404.html .
 
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
