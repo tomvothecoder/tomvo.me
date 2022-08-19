@@ -1,6 +1,6 @@
 {
+  "name": "tomvo.me",
   "homepage": "https://tomvo.me",
-  "name": "personal-website-react",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
