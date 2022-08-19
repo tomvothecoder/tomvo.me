@@ -20,7 +20,7 @@ const CoreValues: React.FC = () => {
               Client first, period.
             </h2>
             <p className="secondary-font value-subcaption">
-              I truly care about my responsiblities as a CPT, and will never cut
+              I will always uphold my integrity as a CPT, and will never cut
               corners just to make a dime.
             </p>
           </div>
@@ -44,13 +44,13 @@ const CoreValues: React.FC = () => {
             data-aos="zoom-in"
           >
             <figure className="image is-128x128 is-horizontal-center">
-              <img src={barChart} alt="bar-chart"/>
+              <img src={barChart} alt="bar-chart" />
             </figure>
             <h2 className="default-font value-caption">
               Individualized and flexible programming
             </h2>
             <p className="secondary-font value-subcaption">
-              Programs are always tailored to your goals and life circumstances.
+              Programs are tailored to your specific goals and life circumstances.
             </p>
           </div>
         </div>

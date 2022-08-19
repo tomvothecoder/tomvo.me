@@ -5,7 +5,7 @@ import "components/Career/Hero.css";
 function Hero() {
   return (
     <section className="section" id="the-hero">
-      <div className="hero is-large is-center">
+      <div className="hero is-medium is-center">
         <div className="hero-body">
           <div className="container has-text-centered">
             <h1 id="hero-welcome">Hi, I'm</h1>

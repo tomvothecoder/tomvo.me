@@ -17,7 +17,7 @@ const About: React.FC = () => {
           <div className="card">
             <div className="card-content">
               <p>
-                <b>Exercise has been an integral part of my life,</b> starting
+                <b>Exercise has been an integral part of my life</b> starting
                 from the age of 14 when my brother introduced me to bodyweight
                 resistance training at home.
                 <br />
@@ -27,23 +27,23 @@ const About: React.FC = () => {
                   cultivated a strong passion for exercise science, kinesiology,
                   and nutrition.
                 </b>{" "}
-                I have dedicated hundreds of hours researching ways to improve
-                my training while centered on specific goals, such as improving
-                my total in powerlifting or to simply gain more muscle.
+                I invested hundreds of hours researching ways to improve my
+                training, whether to increase my powerlifting total or to simply
+                gain more muscle.
                 <br />
                 <br /> As I my knowledge in this field evolved, friends and
-                family members took notice and reached out for guidance in their
-                own exercise journies. I became{" "}
+                family members reached out for support in their own exercise
+                journies. I became{" "}
                 <b>
                   driven to help others identify and develop sustainable goals
                 </b>{" "}
                 with a process that is both enjoyable and rewarding.
                 <br />
                 <br />
-                Thank you for taking to time to get to know a little about me.{" "}
+                Thank you for your time, I truly appreciate it.{" "}
                 <b>
-                  Keep on scrolling to find out about my core values and the
-                  services I offer as a NASM CPT!
+                  Now keep on scrolling to find out about my values and services
+                  as a NASM CPT!
                 </b>
               </p>
             </div>
