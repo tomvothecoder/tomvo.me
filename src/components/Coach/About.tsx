@@ -38,8 +38,7 @@ const About: React.FC = () => {
                   driven to help others identify and develop sustainable goals
                 </b>{" "}
                 with a process that is both enjoyable and rewarding.
-                <br /> I love seeing others make progress and the look on their
-                face when they see tangible results.
+                <br />
                 <br />
                 Thank you for your time, I truly appreciate it.{" "}
                 <b>
