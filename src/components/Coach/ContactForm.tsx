@@ -11,7 +11,7 @@ const ContactForm: React.FC = () => {
         <div
           className="column is-4 has-text-left"
           data-aos="fade-in"
-          data-aos-delay="125"
+          data-aos-delay="100"
         >
           <h1 className="title is-1">Let's Connect</h1>
           <p className="is-size-4 ">
@@ -34,7 +34,7 @@ const ContactForm: React.FC = () => {
         <div
           className="column is-6 has-text-left"
           data-aos="fade-in"
-          data-aos-delay="125"
+          data-aos-delay="100"
         >
           <div className="field">
             <label className="label">Name</label>

@@ -8,12 +8,12 @@ const About: React.FC = () => {
   return (
     <section id="cpt">
       <div className="columns is-10 is-centered">
-        <div className="column is-3" data-aos="fade-up" data-aos-delay="125">
+        <div className="column is-3" data-aos="fade-up" data-aos-delay="100">
           <figure style={styles["selfie"]} className="image">
             <img src={selfPortrait} alt="me" />
           </figure>
         </div>
-        <div className="column is-6" data-aos="fade-up" data-aos-delay="125">
+        <div className="column is-6" data-aos="fade-up" data-aos-delay="100">
           <div className="card">
             <div className="card-content">
               <p>
