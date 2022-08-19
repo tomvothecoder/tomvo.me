@@ -19,7 +19,7 @@ const PortfolioCard: React.FC<Props> = ({
     <a href={link} target="_blank" id="portfolio-card" rel="noreferrer">
       <figure
         data-aos="fade"
-        data-aos-delay="125"
+        data-aos-delay="100"
         className="image project-img"
       >
         <img src={imageSrc} alt={name} />

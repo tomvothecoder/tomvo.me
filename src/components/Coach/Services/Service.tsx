@@ -6,7 +6,7 @@ const Service = ({ iconSrc, name, bullets }: Props) => {
       <div
         className="columns is-centered is-8"
         data-aos="zoom-in"
-        data-aos-delay="125"
+        data-aos-delay="100"
       >
         <div className="column is-1">
           <figure className="image is-64x64 is-horizontal-center">

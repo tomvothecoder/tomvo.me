@@ -17,7 +17,7 @@ const About: React.FC<Props> = () => {
       <div
         className="columns is-centered"
         data-aos="fade-up"
-        data-aos-delay="125"
+        data-aos-delay="100"
       >
         <div className="column is-three-quarters">
           <div className="card">

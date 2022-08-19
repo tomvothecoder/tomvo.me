@@ -4,7 +4,7 @@ import React from "react";
 type Props = { name: string; source: string };
 
 const Skill: React.FC<Props> = ({ name, source }) => (
-  <div id="skill" data-aos="zoom-in" data-aos-delay="125">
+  <div id="skill" data-aos="zoom-in" data-aos-delay="100">
     <div className="is-flex logo">
       <div className="logo">
         <figure className="image is-64x64">
