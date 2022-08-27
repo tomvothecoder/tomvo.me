@@ -22,16 +22,16 @@ const About: React.FC = () => {
                 resistance training at home.
                 <br />
                 <br />
-                Over the years I{" "}
+                Over the years, I{" "}
                 <b>
-                  cultivated a strong passion for exercise science, kinesiology,
-                  and nutrition.
+                  cultivated a strong passion for the fields of exercise
+                  science, kinesiology, and nutrition.
                 </b>{" "}
                 I invested hundreds of hours researching ways to optimize my
-                training to achieve goals such as increasing powerlifting total
-                or simply gaining more muscle.
+                training to achieve goals such as increasing my powerlifting
+                total or simply gaining more muscle.
                 <br />
-                <br /> As I my knowledge in this field evolved, friends and
+                <br /> As I my knowledge in these fields evolved, my friends and
                 family members reached out for support in their own exercise
                 journies. I became{" "}
                 <b>
