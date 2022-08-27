@@ -20,7 +20,7 @@ const CoreValues: React.FC = () => {
               Client first, period.
             </h2>
             <p className="secondary-font value-subcaption">
-              I will always uphold my integrity as a CPT, and will never cut
+              I will always uphold my integrity as a CPT and will never cut
               corners just to make a dime.
             </p>
           </div>
