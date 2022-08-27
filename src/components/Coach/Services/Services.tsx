@@ -19,7 +19,7 @@ const Services: React.FC = () => {
       bullets: [
         "Includes assessment, goal identification, program development, and post-program retrospective",
         "Progression schemes with recovery management to make effective gains and avoid burn-out",
-        "A flexible and adaptable system to dynamic goals and life circumstances",
+        "A flexible and adaptable to dynamic goals and life circumstances",
       ],
     },
     {
@@ -27,7 +27,7 @@ const Services: React.FC = () => {
       iconSrc: webcam,
       name: "Active check-ins",
       bullets: [
-        "Assess how you are doing and make program micro/macro adjustments as needed",
+        "Assess how you are doing and make program micro/macro adjustments if needed",
         "Make sure you’re having fun!",
         "Perform form-checks to ensure safe and optimal technique with efficient movement patterns",
       ],
