@@ -22,8 +22,8 @@ const ContactForm: React.FC = () => {
         >
           <h1 className="title is-1">Let's Connect</h1>
           <p className="is-size-4 ">
-            I'm excited to learn more about your aspirations and how I can help
-            you reach them. Shoot me a message and I'll get back to you soon!
+            I would love to learn about your fitness aspirations. Shoot me a
+            message and I'll get back to you soon!
           </p>
           <div style={styles["socialMedia"]}>
             <p className="bd-notification is-primary">
