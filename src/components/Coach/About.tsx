@@ -22,28 +22,28 @@ const About: React.FC = () => {
                 resistance training at home.
                 <br />
                 <br />
-                Over the years, I{" "}
+                Over the years I{" "}
                 <b>
                   cultivated a strong passion for exercise science, kinesiology,
                   and nutrition.
                 </b>{" "}
-                I invested hundreds of hours researching ways to improve my
-                training, whether to increase my powerlifting total or to simply
-                gain more muscle.
+                I invested hundreds of hours researching ways to optimize my
+                training to achieve goals such as increasing powerlifting total
+                or simply gaining more muscle.
                 <br />
                 <br /> As I my knowledge in this field evolved, friends and
                 family members reached out for support in their own exercise
                 journies. I became{" "}
                 <b>
                   driven to help others identify and develop sustainable goals
-                </b>{" "}
-                with a process that is both enjoyable and rewarding.
+                  through a process that is both enjoyable and rewarding.
+                </b>
                 <br />
                 <br />
-                Thank you for your time, I truly appreciate it.{" "}
+                Thank you for your time so far.{" "}
                 <b>
-                  Now keep on scrolling to find out about my values and services
-                  as a NASM CPT!
+                  Now keep on scrolling to learn about my values and services as
+                  a NASM CPT!
                 </b>
               </p>
             </div>
