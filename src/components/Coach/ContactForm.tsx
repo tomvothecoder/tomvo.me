@@ -10,7 +10,7 @@ const ContactForm: React.FC = () => {
 
   useEffect(() => {
     kwesforms.init();
-  });
+  }, []);
 
   return (
     <div className="has-text-centered">
@@ -43,32 +43,66 @@ const ContactForm: React.FC = () => {
           data-aos="fade-in"
           data-aos-delay="100"
         >
-          <div className="field">
-            <label className="label">Name</label>
-            <div className="control">
-              <input className="input is-medium" type="text" />
+          <form
+            className="kwes-form"
+            action="https://kwesforms.com/api/foreign/forms/aSVFVwmIio7ugCj6l1gO"
+          >
+            <div className="field">
+              <label className="label" htmlFor="name">
+                Name
+              </label>
+              <div className="control">
+                <input
+                  className="input is-medium"
+                  type="text"
+                  name="name"
+                  data-kw-rules="required|min:2|max:255"
+                />
+              </div>
             </div>
-          </div>
-          <div className="field">
-            <label className="label">Email</label>
-            <div className="control">
-              <input className="input is-medium" type="text" />
+            <div className="field">
+              <label className="label" htmlFor="email">
+                Email
+              </label>
+              <div className="control">
+                <input
+                  className="input is-medium"
+                  type="text"
+                  name="email"
+                  data-kw-rules="required|email"
+                />
+              </div>
+              <div className="field">
+                <label className="label" htmlFor="phone">
+                  Phone Number (optional)
+                </label>
+                <div className="control">
+                  <input className="input is-medium" type="text" name="phone" />
+                </div>
+              </div>
+              <div className="field">
+                <label className="label" htmlFor="message">
+                  Message
+                </label>
+                <div className="control">
+                  <textarea
+                    className="textarea is-medium"
+                    name="message"
+                    data-kw-rules="required|max:1000"
+                  ></textarea>
+                </div>
+              </div>
+              <div className="control">
+                <button
+                  type="submit"
+                  className="button is-link is-fullwidth has-text-weight-medium is-medium"
+                  data-kw-rules="required|email"
+                >
+                  Send Message
+                </button>
+              </div>
             </div>
-          </div>
-          <div className="field">
-            <label className="label">Message</label>
-            <div className="control">
-              <textarea className="textarea is-medium"></textarea>
-            </div>
-          </div>
-          <div className="control">
-            <button
-              type="submit"
-              className="button is-link is-fullwidth has-text-weight-medium is-medium"
-            >
-              Send Message
-            </button>
-          </div>
+          </form>
         </div>
       </div>
     </div>
