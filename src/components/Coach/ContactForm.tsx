@@ -2,8 +2,15 @@ import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { CSSinJS } from "common/types";
 
+import kwesforms from "kwesforms";
+import { useEffect } from "react";
+
 const ContactForm: React.FC = () => {
   const styles: CSSinJS = { socialMedia: { marginTop: "10px" } };
+
+  useEffect(() => {
+    kwesforms.init();
+  });
 
   return (
     <div className="has-text-centered">
