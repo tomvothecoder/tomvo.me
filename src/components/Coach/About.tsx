@@ -17,33 +17,35 @@ const About: React.FC = () => {
           <div className="card">
             <div className="card-content">
               <p>
-                <b>Exercise has been an integral part of my life</b> starting
-                from the age of 14 when my brother introduced me to bodyweight
-                resistance training at home.
-                <br />
-                <br />
-                Over the years, I{" "}
+                When I was fourteen years old, my brother introduced me to
+                resistance training as a summertime hobby. I was initially
+                "resistant" to the idea of getting off the computer and moving,
+                but I finally came around to lifting. I am glad I hopped off the
+                chair because{" "}
                 <b>
-                  cultivated a strong passion for the fields of exercise
-                  science, kinesiology, and nutrition.
-                </b>{" "}
-                I invested hundreds of hours researching ways to optimize my
-                training to achieve goals such as increasing my powerlifting
-                total or simply gaining more muscle.
-                <br />
-                <br /> As I my knowledge in these fields evolved, my friends and
-                family members reached out for support in their own exercise
-                journies. I became{" "}
-                <b>
-                  driven to help others identify and develop sustainable goals
-                  through a process that is both enjoyable and rewarding.
+                  {" "}
+                  training has grown to become an integral part of my life.
                 </b>
                 <br />
                 <br />
-                Thank you for your time so far.{" "}
+                My natural tendency to learn the how things work lead me to
+                invest{" "}
                 <b>
-                  Now keep on scrolling to learn about my values and services as
-                  a NASM CPT!
+                  hundreds of hours researching exercise science, kinesiology,
+                  and nutrition.{" "}
+                </b>{" "}
+                <br />
+                <br />
+                Over the years, I have supported my friends and family in their
+                own exercise journeys. I am{" "}
+                <b>driven to help others develop realistic goals</b> and{" "}
+                <b>achieving them with a sustainable and enjoyable process.</b>{" "}
+                <br />
+                <br />
+                Thank you for your time so far!{" "}
+                <b>
+                  I would love to hear about your own exercise aspirations, so
+                  let's connect!
                 </b>
               </p>
             </div>
