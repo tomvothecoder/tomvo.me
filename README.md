@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# tomvo.me
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Tom Vo's personal website, created with React and TypeScript.
 
 ## Available Scripts
 
