@@ -1,10 +1,10 @@
 const Facts: React.FC = () => {
   const facts = [
     "NASM Certified Personal Trainer since October 2021",
-    "Climate Science Software Engineer at Lawrence Livermore National Lab",
+    "Climate Research Software Engineer at Lawrence Livermore National Lab",
     "Enjoys cooking, food photography, hiking, watching MMA, and PC gaming",
-    "Competed in two USPA powerlifting meets and won 1st and 2nd place in the 165lbs division",
-    "Coached multiple powerlifting athletes who placed top-3 in their divisions",
+    "Won 1st and 2nd place in the 165lbs division of two USPA meets",
+    "Coached multiple powerlifting athletes who placed top-3 in their USPA divisions",
     "All-time gym PRs are a 375 lb Squat, 230 lb bench, and 470 lb deadlift",
   ];
 
