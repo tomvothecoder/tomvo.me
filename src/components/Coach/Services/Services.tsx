@@ -15,7 +15,7 @@ const Services: React.FC = () => {
     {
       // <a href="https://www.flaticon.com/free-icons/end-to-end" title="end to end icons">End to end icons created by Muhammad_Usman - Flaticon</a>
       iconSrc: route,
-      name: "End-to-end coaching system",
+      name: "End-to-end online coaching system",
       bullets: [
         "Includes assessment, goal identification, program development, and post-program retrospective",
         "Progression schemes with recovery management to make effective gains and avoid burn-out",

@@ -19,34 +19,32 @@ const About: React.FC = () => {
               <p>
                 When I was fourteen years old, my brother introduced me to
                 resistance training as a summertime hobby. I was initially
-                "resistant" to the idea of getting off the computer and moving,
-                but I finally came around to lifting. I am glad I hopped off the
-                chair because{" "}
-                <b>
-                  {" "}
-                  training has grown to become an integral part of my life.
-                </b>
+                "resistant" to the idea of getting off the computer and lifting,
+                but I finally came around. I am glad I made that decision
+                because now <b> training is an integral part of my life.</b>
                 <br />
                 <br />
-                My natural tendency to learn the how things work lead me to
-                invest{" "}
+                My natural tendency to have a deeper understanding of how things
+                work lead me to invest{" "}
                 <b>
                   hundreds of hours researching exercise science, kinesiology,
                   and nutrition.{" "}
                 </b>{" "}
-                <br />
-                <br />
-                Over the years, I have supported my friends and family in their
-                own exercise journeys. I am{" "}
-                <b>driven to help others develop realistic goals</b> and{" "}
-                <b>achieving them with a sustainable and enjoyable process.</b>{" "}
-                <br />
-                <br />
-                Thank you for your time so far!{" "}
+                Over the years, I supported many of my friends and family
+                members in their own exercise journeys. I am{" "}
+                <b>driven to help others develop realistic sustainable goals</b>{" "}
+                while{" "}
                 <b>
-                  I would love to hear about your own exercise aspirations, so
-                  let's connect!
-                </b>
+                  achieving them through an effective and enjoyable process.
+                </b>{" "}
+                <br />
+                <br />
+                <b>
+                  Continue scrolling to learn about my values and the services I
+                  offer as a CPT!
+                </b>{" "}
+                Whether you're new to exercise or have prior experience, I would
+                love to meet you and learn about your exercise aspirations.{" "}
               </p>
             </div>
           </div>
