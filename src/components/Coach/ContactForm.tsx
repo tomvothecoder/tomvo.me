@@ -22,7 +22,7 @@ const ContactForm: React.FC = () => {
         >
           <h1 className="title is-1">Let's Connect</h1>
           <p className="is-size-4 ">
-            I would love to learn about your fitness aspirations. Shoot me a
+            I would love to learn about your exercise aspirations. Shoot me a
             message and I'll get back to you soon!
           </p>
           <div style={styles["socialMedia"]}>
