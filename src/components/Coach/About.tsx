@@ -24,8 +24,8 @@ const About: React.FC = () => {
                 because now <b> training is an integral part of my life.</b>
                 <br />
                 <br />
-                My natural tendency to learn the how things work lead me to
-                invest{" "}
+                My natural tendency to have a deeper understanding of how things
+                work lead me to invest{" "}
                 <b>
                   hundreds of hours researching exercise science, kinesiology,
                   and nutrition.{" "}

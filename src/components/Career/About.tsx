@@ -32,8 +32,8 @@ const About: React.FC<Props> = () => {
                   <p className="job-desc">
                     As a software engineer, I enjoy the thought process involved
                     in the entire lifecycle of ideas. From prototyping to the
-                    implementation phase, I strive to follow a pragamatic
-                    approach and use effective metholodogies to build robust
+                    implementation phase, I strive to follow a pragmatic
+                    approach and use effective methodologies to build robust
                     tools. A wise programmer once said, "don't forget to test
                     your code!"
                   </p>
