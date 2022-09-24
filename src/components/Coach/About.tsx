@@ -34,12 +34,17 @@ const About: React.FC = () => {
                 members in their own exercise journeys. I am{" "}
                 <b>driven to help others develop realistic sustainable goals</b>{" "}
                 while{" "}
-                <b>achieving them with an effective and enjoyable process.</b>{" "}
+                <b>
+                  achieving them through an effective and enjoyable process.
+                </b>{" "}
                 <br />
                 <br />
+                <b>
+                  Continue scrolling to learn about my values and the services I
+                  offer as a CPT!
+                </b>{" "}
                 Whether you're new to exercise or have prior experience, I would
                 love to meet you and learn about your exercise aspirations.{" "}
-                <b>Let's connect!</b>
               </p>
             </div>
           </div>
