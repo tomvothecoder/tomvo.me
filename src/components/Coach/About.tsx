@@ -19,32 +19,35 @@ const About: React.FC = () => {
               <p>
                 When I was fourteen years old, my brother introduced me to
                 resistance training as a summertime hobby. I was initially
-                "resistant" to the idea of getting off the computer and lifting,
-                but I finally came around. I am glad I made that decision
-                because now <b> training is an integral part of my life.</b>
+                "resistant" to the idea of getting off Maplestory to lift, but I
+                finally came around. From grinding to level 70 to grinding in
+                the gym, <b> training became an integral part of my life.</b>
                 <br />
-                <br />
-                My natural tendency to have a deeper understanding of how things
-                work lead me to invest{" "}
+                <br />{" "}
                 <b>
-                  hundreds of hours researching exercise science, kinesiology,
-                  and nutrition.{" "}
+                  I am driven to ask questions, learn, and share my knowledge
+                  with others.{" "}
                 </b>{" "}
-                Over the years, I supported many of my friends and family
-                members in their own exercise journeys. I am{" "}
-                <b>driven to help others develop realistic sustainable goals</b>{" "}
-                while{" "}
+                Over the years, I invested hundreds of hours researching
+                exercise science and kinesiology. I coached friends and family
+                members in their own exercise journeys, refining my knowledge in
+                the process.{" "}
                 <b>
-                  achieving them through an effective and enjoyable process.
-                </b>{" "}
+                  {" "}
+                  It is an absolute joy helping people develop sustainable goals
+                  while witnessing them progressively achieve breakthrough
+                  milestones.{" "}
+                </b>
                 <br />
                 <br />
                 <b>
-                  Continue scrolling to learn about my values and the services I
-                  offer as a CPT!
+                  As a NASM Certified Personal Trainer, I focus on an
+                  empathetic, evidence-based approach to help you in your
+                  pursuit of self-development.
                 </b>{" "}
                 Whether you're new to exercise or have prior experience, I would
-                love to meet you and learn about your exercise aspirations.{" "}
+                love to meet you and learn about your aspirations. Enough said,
+                let's make some gains together! 💪🙌
               </p>
             </div>
           </div>
