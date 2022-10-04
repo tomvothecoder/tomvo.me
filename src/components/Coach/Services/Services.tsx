@@ -37,9 +37,8 @@ const Services: React.FC = () => {
       iconSrc: apple,
       name: "General health guidance",
       bullets: [
-        "Focus on long-term sustainable habits to achieve goals",
-        "Emphasis on natural ways to reach goals, such as optimizing sleep and managing stress",
-        "Flexible and balanced nutrition",
+        "Focus on sustainable and healthy practices to effectively achieve goals",
+        "Emphasis on balanced and flexible nutrition",
       ],
     },
   ];
