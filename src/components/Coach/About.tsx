@@ -20,8 +20,8 @@ const About: React.FC = () => {
                 When I was fourteen years old, my brother introduced me to
                 resistance training as a summertime hobby. I was initially
                 "resistant" to the idea of getting off Maplestory to lift, but I
-                finally came around. From grinding to level 70 to grinding in
-                the gym, <b> training became an integral part of my life.</b>
+                finally came around. From slaying bosses to slaying weights,
+                <b> training became an integral part of my life.</b>
                 <br />
                 <br />{" "}
                 <b>
@@ -34,9 +34,8 @@ const About: React.FC = () => {
                 the process.{" "}
                 <b>
                   {" "}
-                  It is an absolute joy helping people develop sustainable goals
-                  while witnessing them progressively achieve breakthrough
-                  milestones.{" "}
+                  It is an absolute joy helping folks develop sustainable goals
+                  and witnessing them progressively achieve their milestones.{" "}
                 </b>
                 <br />
                 <br />

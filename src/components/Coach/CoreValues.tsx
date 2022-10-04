@@ -20,7 +20,7 @@ const CoreValues: React.FC = () => {
               Client first, period.
             </h2>
             <p className="secondary-font value-subcaption">
-              I will always uphold my integrity as a CPT and will never cut
+              I will always demonstrate my integrity as a CPT and never cut
               corners just to make a dime.
             </p>
           </div>
@@ -33,7 +33,7 @@ const CoreValues: React.FC = () => {
             </figure>
             {/* Source: <a href="https://www.flaticon.com/free-icons/computer" title="computer icons">Computer icons created by vectorsmarket15 - Flaticon</a> */}
             <h2 className="default-font value-caption">
-              A simple, science-based approach
+              A simple, science-based approach.
             </h2>
             <p className="secondary-font value-subcaption">
               Bro-science is a thing of the past!
@@ -47,10 +47,10 @@ const CoreValues: React.FC = () => {
               <img src={barChart} alt="bar-chart" />
             </figure>
             <h2 className="default-font value-caption">
-              Individualized and flexible programming
+              Individualized and flexible programming.
             </h2>
             <p className="secondary-font value-subcaption">
-              Programs are tailored to your specific goals and life circumstances.
+            Programs are tailored to your specific goals, experience level, and life circumstances.
             </p>
           </div>
         </div>
