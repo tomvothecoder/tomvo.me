@@ -17,35 +17,33 @@ const About: React.FC = () => {
           <div className="card">
             <div className="card-content">
               <p>
-                When I was fourteen years old, my brother introduced me to
-                resistance training as a summertime hobby. I was initially
-                "resistant" to the idea of getting off Maplestory to lift, but I
-                finally came around. From slaying bosses to slaying weights,
-                <b> training became an integral part of my life.</b>
+                When I was fourteen years old, my brother introduced me to home
+                workouts as a summertime hobby. I admit, logging off of
+                Maplestory to lift took some convincing. From slaying bosses to
+                slaying weights,
+                <b> physical training became an integral part of my life.</b>
                 <br />
-                <br />{" "}
+                <br />
                 <b>
-                  I am driven to ask questions, learn, and share my knowledge
-                  with others.{" "}
-                </b>{" "}
-                Over the years, I invested hundreds of hours researching
-                exercise science and kinesiology. I coached friends and family
-                members in their own exercise journeys, refining my knowledge in
-                the process.{" "}
+                  Over the years, I invested hundreds of hours researching
+                  exercise science, kinesiology, and program development.{" "}
+                </b>
+                I coached friends and family members in their own exercise
+                journeys, refining my skills in the process. I am driven to
+                learn, ask questions, and share my knowledge with others.{" "}
                 <b>
-                  {" "}
                   It is an absolute joy helping folks develop sustainable goals
-                  and witnessing them progressively achieve their milestones.{" "}
+                  and witnessing them progressively achieve milestones.{" "}
                 </b>
                 <br />
                 <br />
                 <b>
-                  As a NASM Certified Personal Trainer, I focus on an
-                  empathetic, evidence-based approach to help you in your
-                  pursuit of self-development.
+                  As a NASM Certified Personal Trainer, I practice an
+                  empathetic, science-based approach to guide my clients in
+                  their pursuit of self-development.
                 </b>{" "}
                 Whether you're new to exercise or have prior experience, I would
-                love to meet you and learn about your aspirations. Enough said,
+                love to learn about your aspirations in exercise. Enough said,
                 let's make some gains together! 💪🙌
               </p>
             </div>
