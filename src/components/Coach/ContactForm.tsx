@@ -28,7 +28,7 @@ const ContactForm: React.FC = () => {
           <div style={styles["socialMedia"]}>
             <p className="bd-notification is-primary">
               <a
-                href="https://www.instagram.com/tomvodelaghetto/"
+                href="https://www.instagram.com/coachtomvo/"
                 id="linkedin-icon"
                 target="_blank"
                 rel="noreferrer"
