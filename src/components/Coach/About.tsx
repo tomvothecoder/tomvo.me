@@ -32,8 +32,8 @@ const About: React.FC = () => {
                 journeys, refining my skills in the process. I am driven to
                 learn, ask questions, and share my knowledge with others.{" "}
                 <b>
-                  It is an absolute joy helping folks develop sustainable goals
-                  and witnessing them progressively achieve milestones.{" "}
+                  It is an absolute joy helping people develop tangible goals
+                  and witnessing them incrementally achieve their milestones.{" "}
                 </b>
                 <br />
                 <br />
