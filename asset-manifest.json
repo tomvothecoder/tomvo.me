@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.ed54e299.css",
-    "main.js": "/static/js/main.d7c0d348.js",
+    "main.js": "/static/js/main.cea2041e.js",
     "static/js/787.28b53aeb.chunk.js": "/static/js/787.28b53aeb.chunk.js",
     "static/media/me.jpg": "/static/media/me.15a54287890dc85adf88.jpg",
     "static/media/uop_tower.jpg": "/static/media/uop_tower.58b7efef5682754ae7ef.jpg",
@@ -49,11 +49,11 @@
     "static/media/css3.svg": "/static/media/css3.c1a6e31908696206d909.svg",
     "static/media/html5.svg": "/static/media/html5.d4e1a1683a94672b7695.svg",
     "main.ed54e299.css.map": "/static/css/main.ed54e299.css.map",
-    "main.d7c0d348.js.map": "/static/js/main.d7c0d348.js.map",
+    "main.cea2041e.js.map": "/static/js/main.cea2041e.js.map",
     "787.28b53aeb.chunk.js.map": "/static/js/787.28b53aeb.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ed54e299.css",
-    "static/js/main.d7c0d348.js"
+    "static/js/main.cea2041e.js"
   ]
 }
