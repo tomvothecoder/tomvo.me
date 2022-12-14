@@ -5,28 +5,26 @@ const Tiers: React.FC = () => {
   const tiers = [
     {
       tier: 1,
-      price: 99,
       targetClient:
         "For those who want help with goal setting and programming.",
       services: [
-        "Custom and comprehensive workout plans",
-        "Weekly progress review (email/message)",
+        "Custom workout plans",
+        "Weekly progress review",
         "Monthly video check-in",
-        "24-hour access for questions, form checks, etc.",
+        "24-hr access for questions",
       ],
-      nonServices: ["Nutrition and supplementation guidance"],
+      nonServices: ["Nutrition and supplementation"],
     },
     {
       tier: 2,
-      price: 149,
       targetClient:
         "Tier 1 with dedicated nutrition and supplementation guidance.",
       services: [
-        "Custom and comprehensive workout plans",
-        "Weekly progress review (email/message)",
+        "Custom workout plans",
+        "Weekly progress review",
         "Monthly video check-in",
-        "24-hour access for questions, form check, etc.",
-        "Nutrition and supplementation guidance",
+        "24-hr access for questions",
+        "Nutrition and supplementation",
       ],
       nonServices: [],
     },
@@ -40,7 +38,6 @@ const Tiers: React.FC = () => {
               <Tier
                 key={tier.tier}
                 tier={tier.tier}
-                price={tier.price}
                 targetClient={tier.targetClient}
                 services={tier.services}
                 nonServices={tier.nonServices}
