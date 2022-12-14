@@ -34,7 +34,7 @@ const Tier: React.FC<Props> = ({
             {services.map((service: string) => (
               <li key={service} className="mb-3 is-flex is-align-items-center">
                 <svg
-                  className="h-6 w-6 mr-2 is-size-7"
+                  className="h-6 w-6 mr-2"
                   xmlns="http://www.w3.org/2000/svg"
                   width="24px"
                   height="24px"
