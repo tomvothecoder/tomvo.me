@@ -1,11 +1,14 @@
 const Facts: React.FC = () => {
   const facts = [
     "NASM Certified Personal Trainer since October 2021",
-    "Coached multiple powerlifting athletes who placed top-3 in their USPA divisions",
+    "Coached powerlifting athletes who placed top-3 at multiple meets",
+    "Specialization in strength training and cardiovascular training",
+    "Emphasis on prehabilitation and rehabilitation (corrective exercises and mobility) ",
     "Won 1st and 2nd place in the 165lbs division of two USPA meets",
-    "All-time gym PRs are a 375 lb Squat, 230 lb bench, and 470 lb deadlift",
-    "Enjoys cooking, food photography, hiking, MMA, and PC gaming",
-  ];
+    "All-time gym PRs: 375 lb Squat, 230 lb bench, and 470 lb deadlift",
+    "I enjoy cooking, food photography, hiking, martial arts, and PC gaming",
+    ];
+
 
   return (
     <section id="cpt" className="container">

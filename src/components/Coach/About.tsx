@@ -17,34 +17,35 @@ const About: React.FC = () => {
           <div className="card">
             <div className="card-content">
               <p>
-                When I was fourteen years old, my brother introduced me to home
-                workouts as a summertime hobby. I admit, logging off of
-                Maplestory to lift took some convincing. From slaying bosses to
-                slaying weights,
-                <b> physical training became an integral part of my life.</b>
+                When I was fourteen my brother introduced me to exercise as
+                summertime hobby. I admit, logging off of Maplestory took some
+                convincing. I went from slaying monsters to slaying weights.
+                <b>
+                  {" "}
+                  Physical training has been an integral part of my life for
+                  over a decade.
+                </b>
                 <br />
                 <br />
                 <b>
-                  Over the years, I invested hundreds of hours researching
-                  exercise science, kinesiology, and program development.{" "}
+                  Throughtout the years I dedicated hundreds of hours researching exercise
+                  science, kinesiology, and program development.{" "}
                 </b>
                 I coached friends and family members in their own exercise
-                journeys, refining my skills in the process. I am driven to
-                learn, ask questions, and share my knowledge with others.{" "}
-                <b>
-                  It is an absolute joy helping people develop tangible goals
-                  and witnessing them incrementally achieve their milestones.{" "}
-                </b>
+                journeys, which ranged from general health and fitness to
+                powerlifting. I find immense joy helping people develop tangible
+                goals and seeing them achieve milestones one step at a time.{" "}
                 <br />
                 <br />
                 <b>
                   As a NASM Certified Personal Trainer, I practice an
                   empathetic, science-based approach to guide my clients in
-                  their pursuit of self-development.
-                </b>{" "}
-                Whether you're new to exercise or have prior experience, I would
-                love to learn about your aspirations in exercise. Enough said,
-                let's make some gains together! 💪🙌
+                  their pursuit of self-development.{" "}
+                </b>
+                I am driven to learn, ask questions, and share my knowledge with
+                others. Whether you're new to exercise or have prior experience,
+                I would love to learn about your aspirations in exercise. Enough
+                said, let's make some gains together! 💪🙌
               </p>
             </div>
           </div>
