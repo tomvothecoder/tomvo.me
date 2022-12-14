@@ -33,8 +33,8 @@ const About: React.FC = () => {
                 </b>
                 I coached friends and family members in their own exercise
                 journeys, which ranged from general health and fitness to
-                powerlifting. I find immense joy helping people develop tangible
-                goals and seeing them achieve milestones one step at a time.{" "}
+                powerlifting. I find immense joy in helping people develop tangible
+                goals and achieving them one step at a time.{" "}
                 <br />
                 <br />
                 <b>
