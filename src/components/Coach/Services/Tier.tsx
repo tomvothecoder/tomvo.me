@@ -22,7 +22,7 @@ const Tier: React.FC<Props> = ({
   nonServices,
 }: Props) => {
   return (
-    <div className="column is-one-half" data-aos="zoom-in">
+    <div className="column is-one-third" data-aos="zoom-in">
       <div>
         <div className="box has-background-white has-text-centered" style={styles["card"]}>
           <p className="has-text-grey-dark is-size-4 font-medium mb-2">

@@ -13,7 +13,7 @@ const Tiers: React.FC = () => {
         "Monthly video check-in",
         "24-hr access for questions",
       ],
-      nonServices: ["Nutrition and supplementation guidance"],
+      nonServices: ["Nutrition and supplementation"],
     },
     {
       tier: 2,
@@ -33,7 +33,7 @@ const Tiers: React.FC = () => {
   return (
     <section>
       <div className="container">
-        <div className="columns">
+        <div className="columns is-centered">
           {tiers.map((tier) => (
               <Tier
                 key={tier.tier}
