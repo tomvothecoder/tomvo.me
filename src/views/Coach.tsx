@@ -4,6 +4,7 @@ import CoreValues from "components/Coach/CoreValues";
 import Facts from "components/Coach/Facts";
 import Hero from "components/Coach/Hero";
 import Services from "components/Coach/Services/Services";
+import Tiers from "components/Coach/Services/Tiers";
 
 const Coach: React.FC = () => {
   return (
@@ -20,7 +21,7 @@ const Coach: React.FC = () => {
 
       <section className="section" id="values">
         <div className="container has-text-centered">
-          <h1 className="section-title">— Quick Facts About Me —</h1>
+          <h1 className="section-title">— My Credentials and Quick Facts—</h1>
           <Facts />
         </div>
       </section>
@@ -35,6 +36,7 @@ const Coach: React.FC = () => {
       <section className="section" id="services">
         <div className="container has-text-centered">
           <h1 className="section-title">— Services I Offer —</h1>
+          <Tiers />
           <Services />
         </div>
       </section>

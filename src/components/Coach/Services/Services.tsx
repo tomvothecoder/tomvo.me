@@ -39,6 +39,7 @@ const Services: React.FC = () => {
       bullets: [
         "Focus on sustainable and healthy practices to effectively achieve goals",
         "Emphasis on balanced and flexible nutrition",
+        "Caloric tracking with macronutrients and micronutrients",
       ],
     },
   ];
