@@ -17,7 +17,7 @@ const Services: React.FC = () => {
       iconSrc: route,
       name: "End-to-End Programming System",
       bullets: [
-        "Includes an goal identification, initial assessment, program development, and post-program reflection",
+        "Includes goal identification, initial assessment, program development, and post-program reflection",
         "Progressive overload with recovery management to make effective gains and avoid burn out",
         "Feedback driven and flexible to dynamic goals or life circumstances",
       ],
