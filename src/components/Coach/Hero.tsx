@@ -1,4 +1,4 @@
-import { faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "components/Career/Hero.css";
 
@@ -25,7 +25,7 @@ function Hero() {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <FontAwesomeIcon icon={faInstagram} size="3x"/>
+                    <FontAwesomeIcon icon={faInstagram} size="3x" />
                   </a>
                 </p>
               </div>
