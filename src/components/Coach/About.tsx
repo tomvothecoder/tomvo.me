@@ -22,24 +22,24 @@ const About: React.FC = () => {
                 convincing. I went from slaying monsters to slaying weights.
                 <b>
                   {" "}
-                  Physical training has been an integral part of my life for
-                  over a decade.
+                  For over a decade, physical training has been an integral part
+                  of my life.
                 </b>
                 <br />
                 <br />
                 <b>
-                  Throughtout the years I dedicated hundreds of hours researching exercise
-                  science, kinesiology, and program development.{" "}
+                  Throughtout the years I dedicated hundreds of hours
+                  researching exercise science, kinesiology, and program
+                  development.{" "}
                 </b>
                 I coached friends and family members in their own exercise
                 journeys, which ranged from general health and fitness to
-                powerlifting. I find immense joy in helping people develop tangible
-                goals and achieving them one step at a time.{" "}
-                <br />
+                powerlifting. I find immense joy in helping people develop
+                tangible goals and achieving them one step at a time. <br />
                 <br />
                 <b>
-                  As a NASM Certified Personal Trainer, I practice an
-                  empathetic, science-based approach to guide my clients in
+                  As a NASM Certified Personal Trainer, I practice a
+                  compassionate, science-based approach to guide my clients in
                   their pursuit of self-development.{" "}
                 </b>
                 I am driven to learn, ask questions, and share my knowledge with

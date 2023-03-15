@@ -15,31 +15,32 @@ const Services: React.FC = () => {
     {
       // <a href="https://www.flaticon.com/free-icons/end-to-end" title="end to end icons">End to end icons created by Muhammad_Usman - Flaticon</a>
       iconSrc: route,
-      name: "End-to-end online coaching system",
+      name: "End-to-End Programming System",
       bullets: [
-        "Includes assessment, goal identification, program development, and post-program retrospective",
-        "Progression schemes with recovery management to make effective gains and avoid burn-out",
-        "A flexible and adaptable to dynamic goals and life circumstances",
-      ],
-    },
-    {
-      // <a href="https://www.flaticon.com/free-icons/cam" title="cam icons">Cam icons created by Vectors Market - Flaticon</a>
-      iconSrc: webcam,
-      name: "Active check-ins",
-      bullets: [
-        "Assess how you are doing and make program micro/macro adjustments if needed",
-        "Make sure you’re having fun!",
-        "Perform form-checks to ensure safe and optimal technique with efficient movement patterns",
+        "Includes an goal identification, initial assessment, program development, and post-program reflection",
+        "Progressive overload with recovery management to make effective gains and avoid burn out",
+        "Feedback driven and flexible to dynamic goals or life circumstances",
       ],
     },
     {
       // <a href="https://www.flaticon.com/free-icons/fruit" title="fruit icons">Fruit icons created by Freepik - Flaticon</a>
       iconSrc: apple,
-      name: "General health guidance",
+      name: "Habit-Based Nutritional Coaching",
       bullets: [
-        "Focus on sustainable and healthy practices to effectively achieve goals",
-        "Emphasis on balanced and flexible nutrition",
-        "Caloric tracking with macronutrients and micronutrients",
+        "Focus on strategies to improve nutrition through education, accountability, and behavior changes",
+        "Develop habits and behaviors for long-term benefits to your health and wellbeing",
+        "Incorporate consistent meal timing and well-balanced diets (no strict meal planning!)"
+
+      ],
+    },
+    {
+      // <a href="https://www.flaticon.com/free-icons/cam" title="cam icons">Cam icons created by Vectors Market - Flaticon</a>
+      iconSrc: webcam,
+      name: "Active Check-Ins",
+      bullets: [
+        "Gather feedback to make micro/macro adjustments to your program if needed",
+        "Assess how you are doing, answer your questions, and make sure you're having fun!",
+        "Perform form-checks to ensure safe and optimal technique",
       ],
     },
   ];
