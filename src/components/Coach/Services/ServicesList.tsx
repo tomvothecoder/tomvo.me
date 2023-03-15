@@ -28,7 +28,7 @@ const ServicesList: React.FC = () => {
                 style={styles["card"]}
               >
                 <p className="has-text-grey-dark is-size-5 mt-2">
-                  My services are centered around <b>building a unique coaching experience
+                  My services are centered around <b>building a unique online coaching experience
                   based on your goals and experience level</b>. I offer{" "}
                   <b>month-to-month</b> and <b>fixed-length rates</b> (<em>for example, a 6
                   week for powerlifting competition prep</em>). Whatever you need, I gotchu
