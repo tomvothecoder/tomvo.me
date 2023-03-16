@@ -29,7 +29,7 @@ const Services: React.FC = () => {
       bullets: [
         "Focus on strategies to improve nutrition through education, accountability, and behavior changes",
         "Develop habits and behaviors for long-term benefits to your health and wellbeing",
-        "Incorporate consistent meal timing and well-balanced diets (no strict meal planning!)"
+        "Integrate sustainable meal timing practices and well-balanced diets (no strict meal planning!)"
 
       ],
     },

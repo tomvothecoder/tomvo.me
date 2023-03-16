@@ -21,7 +21,7 @@ const Coach: React.FC = () => {
 
       <section className="section" id="values">
         <div className="container has-text-centered">
-          <h1 className="section-title">— My Credentials and Quick Facts—</h1>
+          <h1 className="section-title">— My Credentials and Facts—</h1>
           <Facts />
         </div>
       </section>
