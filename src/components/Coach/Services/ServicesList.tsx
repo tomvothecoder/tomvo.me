@@ -12,8 +12,8 @@ const ServicesList: React.FC = () => {
   const services = [
     "Custom-tailored training programs",
     "Habit-based nutritonal coaching",
-    "Progress review over email/text (weekly or bi-weekly)",
-    "Video check-in (as needed)",
+    "Progress review over email/text",
+    "Virtual check-in",
     "24-hr access for questions, form-checks, etc.",
   ];
 

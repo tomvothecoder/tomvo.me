@@ -11,7 +11,7 @@ function Hero() {
             <h1 id="hero-welcome">Hi, I'm</h1>
             <h1 id="hero-title">Tom Vo,</h1>
             <h2 id="hero-description">
-              a NASM Certified Personal Trainer.
+              a NASM Certified Personal Trainer and Powerlifting Coach.
               <span className="blinking-cursor">|</span>
             </h2>
           </div>

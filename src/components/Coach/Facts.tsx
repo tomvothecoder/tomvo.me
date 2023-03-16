@@ -1,6 +1,7 @@
 const Facts: React.FC = () => {
   const credentials = [
-    "NASM Certified Personal Trainer since October 2021",
+    "NASM Certified Personal Trainer since September 2021",
+    "Powerlifting coach since 2017",
     "Coached powerlifting athletes who placed top-3 in USPA meets",
     "Specialization in strength, hypertrophy, and powerlifting meet preparation",
     "An advocate for prehabilitation, rehabilitation, and recovery work",
