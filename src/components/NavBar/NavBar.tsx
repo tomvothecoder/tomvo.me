@@ -56,22 +56,33 @@ function NavBar() {
 
   return (
     <section id="nav-bar">
-      <div className="container">
-        <div className="columns is-6">
-          <div className="column is-half is-offset-one-quarter">
-            <div className="level">
-              {curNavBarItems !== null &&
-                navBarItems[location.pathname as string].map((item) => (
+      <nav className="navbar">
+        <div className="navbar-brand">
+          <a className="navbar-item" href="https://bulma.io">
+            <img
+              src="https://bulma.io/images/bulma-logo.png"
+              alt="Tom Vo"
+              width="112"
+              height="28"
+            ></img>
+          </a>
+        </div>
+
+        <div id="navbarExampleTransparentExample" className="navbar-menu">
+          <div className="navbar-end">
+            {curNavBarItems !== null &&
+              navBarItems[location.pathname as string].map((item) => (
+                <a className="navbar-item">
                   <NavBarItem
                     key={item.title}
                     title={item.title}
                     scrollTo={item.scrollTo}
                   />
-                ))}
-            </div>
+                </a>
+              ))}
           </div>
         </div>
-      </div>
+      </nav>
     </section>
   );
 }

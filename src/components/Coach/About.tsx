@@ -28,7 +28,7 @@ const About: React.FC = () => {
                 <br />
                 <br />
                 <b>
-                  Throughtout the years I dedicated hundreds of hours
+                  Throughout the years I dedicated hundreds of hours
                   researching exercise science, kinesiology, and program
                   development.{" "}
                 </b>

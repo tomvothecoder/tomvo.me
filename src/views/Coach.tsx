@@ -10,21 +10,6 @@ const Coach: React.FC = () => {
   return (
     <div id="coach">
       <Hero />
-      <section className="section" id="about">
-        <div className="container">
-          <h1 className="section-title has-text-centered">
-            — Why Did I Become CPT? —
-          </h1>
-          <About />
-        </div>
-      </section>
-
-      <section className="section" id="values">
-        <div className="container has-text-centered">
-          <h1 className="section-title">— My Credentials and Facts—</h1>
-          <Facts />
-        </div>
-      </section>
 
       <section className="section" id="values">
         <div className="container has-text-centered">
@@ -44,6 +29,23 @@ const Coach: React.FC = () => {
         <div className="container has-text-centered">
           <h1 className="section-title">— A Deep Dive Into My Services —</h1>
           <Services />
+        </div>
+      </section>
+
+      <section className="section" id="about">
+        <div className="container">
+          <h1 className="section-title has-text-centered">
+            — A Little About Me —
+          </h1>
+          <About />
+        </div>
+      </section>
+
+      <section className="section" id="values">
+        <div className="container has-text-centered">
+          <h1 className="section-title">— My Quick Facts —</h1>
+          <h1 className="section-title">— My Quick Facts —</h1>
+          <Facts />
         </div>
       </section>
 

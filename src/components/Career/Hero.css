@@ -1,3 +1,6 @@
+#the-hero{
+  color:grey;
+}
 #hero-welcome {
   color: #363636;
   font-size: 24px;
@@ -7,9 +10,18 @@
 #hero-title {
   color: #363636;
   font-size: 48px;
+  font-weight: 400;
+  line-height: 1.125;
+}
+
+#hero-name {
+  color: #C9C0A5;
+  font-size: 48px;
+  font-style: bold;
   font-weight: 500;
   line-height: 1.125;
 }
+
 
 #hero-description {
   color: #4a4a4a;

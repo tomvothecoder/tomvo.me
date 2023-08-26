@@ -21,18 +21,21 @@ const ServicesList: React.FC = () => {
     <section>
       <div className="container">
         <div className="columns is-centered">
-          <div className="column is-6" data-aos="zoom-in">
+          <div className="column is-8" data-aos="zoom-in">
             <div>
               <div
                 className="box has-background-white has-text-left"
                 style={styles["card"]}
               >
                 <p className="has-text-grey-dark is-size-5 mt-2">
-                  My services are centered around <b>building a unique online coaching experience
-                  based on your goals and experience level</b>. I offer{" "}
-                  <b>month-to-month</b> and <b>fixed-length rates</b> (<em>for example, a 6
-                  week for powerlifting competition prep</em>). Whatever you need, I gotchu
-                  fam!
+                  <b>
+                    My coaching philosophy revolves around client-centered
+                    approach with a scientific and feedback-driven system.{" "}
+                  </b>
+                  I offer services that are unique to each of my clients' goals,
+                  aspirations, and experience level. Whether you want to train
+                  for a sport, fitness, or general health, I am driven to help
+                  you in the process!
                 </p>
               </div>
               <div

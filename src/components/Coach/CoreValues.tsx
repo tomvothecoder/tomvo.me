@@ -7,7 +7,7 @@ const CoreValues: React.FC = () => {
   return (
     <section id="core-values">
       <div className="container">
-        <div className="columns is-centered">
+        <div className="columns is-6 is-centered">
           <div
             className="column is-one-third has-text-centered"
             data-aos="zoom-in"
