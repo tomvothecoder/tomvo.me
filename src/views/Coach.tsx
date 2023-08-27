@@ -59,7 +59,10 @@ const Coach: React.FC = () => {
         </div>
       </section>
 
-      <section className="section" id="contact">
+      <section
+        className="section"
+        id="contact"
+      >
         <div className="container">
           <ContactForm />
         </div>

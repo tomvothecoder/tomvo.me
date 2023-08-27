@@ -14,9 +14,9 @@ const ContactForm: React.FC = () => {
 
   return (
     <div className="has-text-centered">
-      <div className="columns is-8 is-centered ">
+      <div className="columns is-8 is-centered">
         <div
-          className="column is-4 has-text-left"
+          className="column is-4 has-text-centered is-vcentered"
           data-aos="fade-in"
           data-aos-delay="100"
         >
@@ -39,7 +39,7 @@ const ContactForm: React.FC = () => {
           </div>
         </div>
         <div
-          className="column is-4 has-text-left"
+          className="column card is-4 has-text-left"
           data-aos="fade-in"
           data-aos-delay="100"
         >

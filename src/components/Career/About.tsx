@@ -6,7 +6,7 @@ type Props = {};
 
 const About: React.FC<Props> = () => {
   const styles: CSSinJS = {
-    "letsConnect": {
+    letsConnect: {
       marginTop: "1rem",
       fontWeight: "600",
     },
@@ -29,14 +29,7 @@ const About: React.FC<Props> = () => {
                   </figure>
                 </div>
                 <div className="column is-three-quarters">
-                  <p className="job-desc">
-                    As a software engineer, I enjoy the thought process involved
-                    in the entire lifecycle of ideas. From prototyping to the
-                    implementation phase, I strive to follow a pragmatic
-                    approach and use effective methodologies to build robust
-                    tools. A wise programmer once said, "don't forget to test
-                    your code!"
-                  </p>
+                  <p className="job-desc"></p>
                   <p className="job-desc">
                     Aside from programming, my passions include powerlifting,
                     running, hiking, watching MMA, and eating the best burrito
@@ -60,7 +53,7 @@ const About: React.FC<Props> = () => {
                             target="_blank"
                             rel="noreferrer"
                           >
-                            <FontAwesomeIcon icon={faLinkedin} size="5x"/>
+                            <FontAwesomeIcon icon={faLinkedin} size="5x" />
                           </a>
                         </p>
                       </div>
@@ -72,7 +65,7 @@ const About: React.FC<Props> = () => {
                             target="_blank"
                             rel="noreferrer"
                           >
-                            <FontAwesomeIcon icon={faGithub} size="5x"/>
+                            <FontAwesomeIcon icon={faGithub} size="5x" />
                           </a>
                         </p>
                       </div>

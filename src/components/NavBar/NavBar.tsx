@@ -27,47 +27,18 @@ function NavBar() {
         scrollTo: "about",
       },
     ],
-    "/coach": [
-      {
-        title: "About",
-        scrollTo: "about",
-      },
-      {
-        title: "Values",
-        scrollTo: "values",
-      },
-      {
-        title: "Services",
-        scrollTo: "services",
-      },
-      {
-        title: "Contact",
-        scrollTo: "contact",
-      },
-    ],
   };
 
   // The default route "/" redirects to another route, so avoid rendering
   // nav bar items on the default route (which breaks).
   let curNavBarItems = null;
-  if (location.pathname !== "/") {
+  if (location.pathname == "/career") {
     curNavBarItems = navBarItems[location.pathname as string];
   }
 
   return (
     <section id="nav-bar">
       <nav className="navbar">
-        <div className="navbar-brand">
-          <a className="navbar-item" href="https://bulma.io">
-            <img
-              src="https://bulma.io/images/bulma-logo.png"
-              alt="Tom Vo"
-              width="112"
-              height="28"
-            ></img>
-          </a>
-        </div>
-
         <div id="navbarExampleTransparentExample" className="navbar-menu">
           <div className="navbar-end">
             {curNavBarItems !== null &&
