@@ -40,15 +40,16 @@ function Hero() {
                 exercise with my clients. Enough said, let's link up and make
                 some gains together! 💪🙌
               </p>
-
-              <a
-                href="https://www.instagram.com/coachtomvo/"
-                id="instagram-icon"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <FontAwesomeIcon icon={faInstagram} size="3x" />
-              </a>
+              <div className="hero-icon">
+                <a
+                  href="https://www.instagram.com/coachtomvo/"
+                  id="instagram-icon"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <FontAwesomeIcon icon={faInstagram} size="3x" />
+                </a>
+              </div>
             </div>
           </div>
         </div>

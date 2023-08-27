@@ -1,4 +1,4 @@
-#hero-welcome{
+#hero-welcome {
   color: #a44a3f;
   font-size: 24px;
   margin-bottom: 0;
@@ -25,8 +25,12 @@
   margin: 25px;
 }
 
-#instagram-icon {
-  margin: 25px;
+.hero-icon {
+  margin: 20px;
+}
+
+#linkedin-icon {
+  margin: 10px;
 }
 
 .blinking-cursor {
