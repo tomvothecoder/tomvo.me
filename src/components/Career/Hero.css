@@ -1,11 +1,9 @@
-#the-hero {
-  color: grey;
-}
-#hero-welcome {
-  color: #A44A3F;
+#hero-welcome{
+  color: #a44a3f;
   font-size: 24px;
   margin-bottom: 0;
-  line-height:100px;
+  line-height: 100px;
+  font-weight: 600;
 }
 
 #hero-title {
@@ -29,7 +27,6 @@
 
 #instagram-icon {
   margin: 25px;
-
 }
 
 .blinking-cursor {

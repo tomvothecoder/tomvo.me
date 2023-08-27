@@ -7,18 +7,17 @@ const styles: CSSinJS = {
     alignItems: "stretch",
   },
   service: {
-    fontSize: "16px",
-    fontWeight: 400,
-  }
+    fontSize: "18px",
+    fontWeight: 600,
+  },
 };
 
 const ServicesList: React.FC = () => {
   const services = [
-    "Powerlifting meet prep and off-season training",
-    "Custom-tailored training programs",
+    "Powerlifting meet prep",
+    "Individualized training programs",
     "Habit-based nutritional coaching",
-    "Progress review over email/text",
-    "Phone and video check-in",
+    "Active check-ins and video calls",
     "24-hr access for questions, form-checks, etc.",
   ];
 

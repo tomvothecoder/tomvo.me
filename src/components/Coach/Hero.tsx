@@ -11,7 +11,7 @@ function Hero() {
     <section className="section container" id="the-hero">
       <div className="hero is-small">
         <div className="hero-body">
-          <div className="columns is-8 is-centered is-vcentered">
+          <div className="columns is-9 is-centered is-vcentered">
             <div
               className="column is-4"
               data-aos="fade-in"
@@ -23,23 +23,22 @@ function Hero() {
             </div>
 
             <div
-              className="column is-4 has-text-left"
+              className="column is-5 has-text-left"
               data-aos="fade-in"
               data-aos-delay="100"
             >
               <h3 id="hero-welcome">Hey There!</h3>
               <h1 id="hero-title">I'm Tom Vo,</h1>
               <p id="hero-description">
-                a NASM Certified Personal Trainer and Powerlifting Coach. My
-                core philosophy is to focus on the individual needs of each of
-                my client because we are all different. Over the years I
-                developed science-based and feedback-driven system
+                a NASM Certified Personal Trainer and Powerlifting Coach. I
+                pride myself on deeply understanding each of my clients' goals
+                and aspirations. I provide truly individualized services using a
+                feedback-driven training and nutritional coaching system.
               </p>
               <p id="hero-description">
-                My services are custom tailored to my clients' goals,
-                aspirations, and experience level. I am driven to help everybody
-                and anybody, whether you're training for a sport or general
-                health and wellbeing!
+                I am driven to grow my knowledge and share my passion in
+                exercise with my clients. Enough said, let's link up and make
+                some gains together! 💪🙌
               </p>
 
               <a
