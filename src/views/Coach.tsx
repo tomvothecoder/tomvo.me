@@ -1,4 +1,3 @@
-import About from "components/Coach/About";
 import ContactForm from "components/Coach/ContactForm";
 import CoreValues from "components/Coach/CoreValues";
 import Facts from "components/Coach/Facts";
@@ -20,7 +19,7 @@ const Coach: React.FC = () => {
 
       <section className="section" id="services-list">
         <div className="container has-text-centered">
-          <h1 className="section-title">— Build Your Coaching Experience —</h1>
+          <h1 className="section-title">— Services at a Glance —</h1>
           <ServicesList />
         </div>
       </section>
@@ -32,18 +31,17 @@ const Coach: React.FC = () => {
         </div>
       </section>
 
-      <section className="section" id="about">
+      {/* <section className="section" id="about">
         <div className="container">
           <h1 className="section-title has-text-centered">
             — A Little About Me —
           </h1>
           <About />
         </div>
-      </section>
+      </section> */}
 
       <section className="section" id="values">
         <div className="container has-text-centered">
-          <h1 className="section-title">— My Quick Facts —</h1>
           <h1 className="section-title">— My Quick Facts —</h1>
           <Facts />
         </div>

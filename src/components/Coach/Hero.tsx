@@ -21,26 +21,34 @@ function Hero() {
                 <img src={selfPortrait} alt="me" />
               </figure>
             </div>
+
             <div
               className="column is-4 has-text-left"
               data-aos="fade-in"
               data-aos-delay="100"
             >
-              <h1 id="hero-welcome">Hey There!</h1>
-              <h1 id="hero-title">
-                I'm <span className="hero-name">Tom Vo.</span>
-              </h1>
+              <h3 id="hero-welcome">Hey There!</h3>
+              <h1 id="hero-title">I'm Tom Vo,</h1>
               <p id="hero-description">
-                NASM CPT and Powerlifting Coach.
-                <span className="blinking-cursor">|</span>
+                a NASM Certified Personal Trainer and Powerlifting Coach. My
+                core philosophy is to focus on the individual needs of each of
+                my client because we are all different. Over the years I
+                developed science-based and feedback-driven system
               </p>
+              <p id="hero-description">
+                My services are custom tailored to my clients' goals,
+                aspirations, and experience level. I am driven to help everybody
+                and anybody, whether you're training for a sport or general
+                health and wellbeing!
+              </p>
+
               <a
                 href="https://www.instagram.com/coachtomvo/"
-                id="linkedin-icon"
+                id="instagram-icon"
                 target="_blank"
                 rel="noreferrer"
               >
-                <FontAwesomeIcon icon={faInstagram} size="2x" />
+                <FontAwesomeIcon icon={faInstagram} size="3x" />
               </a>
             </div>
           </div>
