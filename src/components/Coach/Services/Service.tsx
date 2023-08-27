@@ -1,6 +1,12 @@
+import { CSSinJS } from "common/types";
+
 type Props = { iconSrc: string; name: string; bullets: Array<string> };
 
 const Service = ({ iconSrc, name, bullets }: Props) => {
+  const styles: CSSinJS = {
+    title: { fontSize: "18px", fontWeight: 600 },
+    bullet: { fontSize: "16px" },
+  };
   return (
     <section>
       <div
@@ -14,8 +20,10 @@ const Service = ({ iconSrc, name, bullets }: Props) => {
           </figure>
         </div>
         <div className="column is-7">
-          <h2 className="default-font has-text-left">{name}</h2>
-          <ul className="has-text-left">
+          <h2 className="default-font has-text-left" style={styles["title"]}>
+            {name}
+          </h2>
+          <ul className="has-text-left" style={styles["bullet"]}>
             {bullets.map((bullet) => (
               <li key={bullet}>&bull; {bullet}</li>
             ))}

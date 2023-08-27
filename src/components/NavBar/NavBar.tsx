@@ -27,51 +27,33 @@ function NavBar() {
         scrollTo: "about",
       },
     ],
-    "/coach": [
-      {
-        title: "About",
-        scrollTo: "about",
-      },
-      {
-        title: "Values",
-        scrollTo: "values",
-      },
-      {
-        title: "Services",
-        scrollTo: "services",
-      },
-      {
-        title: "Contact",
-        scrollTo: "contact",
-      },
-    ],
   };
 
   // The default route "/" redirects to another route, so avoid rendering
   // nav bar items on the default route (which breaks).
   let curNavBarItems = null;
-  if (location.pathname !== "/") {
+  if (location.pathname == "/career") {
     curNavBarItems = navBarItems[location.pathname as string];
   }
 
   return (
     <section id="nav-bar">
-      <div className="container">
-        <div className="columns is-6">
-          <div className="column is-half is-offset-one-quarter">
-            <div className="level">
-              {curNavBarItems !== null &&
-                navBarItems[location.pathname as string].map((item) => (
+      <nav className="navbar">
+        <div id="navbarExampleTransparentExample" className="navbar-menu">
+          <div className="navbar-end">
+            {curNavBarItems !== null &&
+              navBarItems[location.pathname as string].map((item) => (
+                <a className="navbar-item">
                   <NavBarItem
                     key={item.title}
                     title={item.title}
                     scrollTo={item.scrollTo}
                   />
-                ))}
-            </div>
+                </a>
+              ))}
           </div>
         </div>
-      </div>
+      </nav>
     </section>
   );
 }

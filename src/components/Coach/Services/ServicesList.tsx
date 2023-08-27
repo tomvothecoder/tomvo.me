@@ -6,14 +6,18 @@ const styles: CSSinJS = {
     flexWrap: "wrap",
     alignItems: "stretch",
   },
+  service: {
+    fontSize: "18px",
+    fontWeight: 600,
+  },
 };
 
 const ServicesList: React.FC = () => {
   const services = [
-    "Custom-tailored training programs",
-    "Habit-based nutritonal coaching",
-    "Progress review over email/text",
-    "Virtual check-in",
+    "Powerlifting meet prep",
+    "Individualized training programs",
+    "Habit-based nutritional coaching",
+    "Active check-ins and video calls",
     "24-hr access for questions, form-checks, etc.",
   ];
 
@@ -24,24 +28,9 @@ const ServicesList: React.FC = () => {
           <div className="column is-6" data-aos="zoom-in">
             <div>
               <div
-                className="box has-background-white has-text-left"
-                style={styles["card"]}
-              >
-                <p className="has-text-grey-dark is-size-5 mt-2">
-                  My services are centered around <b>building a unique online coaching experience
-                  based on your goals and experience level</b>. I offer{" "}
-                  <b>month-to-month</b> and <b>fixed-length rates</b> (<em>for example, a 6
-                  week for powerlifting competition prep</em>). Whatever you need, I gotchu
-                  fam!
-                </p>
-              </div>
-              <div
                 className="box has-background-white has-text-centered"
                 style={styles["card"]}
               >
-                <p className="has-text-grey-dark is-size-6 mt-2 is-italic">
-                  Choose your services below. Mix and match to your desire.
-                </p>
                 <ul className="has-text-grey-dark is-size-6 mt-3 mb-5">
                   {services.map((service: string) => (
                     <li
@@ -59,7 +48,7 @@ const ServicesList: React.FC = () => {
                       >
                         <path d="M1412 734q0-28-18-46l-91-90q-19-19-45-19t-45 19l-408 407-226-226q-19-19-45-19t-45 19l-91 90q-18 18-18 46 0 27 18 45l362 362q19 19 45 19 27 0 46-19l543-543q18-18 18-45zm252 162q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z"></path>
                       </svg>
-                      <p className="is-size-6">{service}</p>
+                      <p style={styles["service"]}>{service}</p>
                     </li>
                   ))}
                 </ul>

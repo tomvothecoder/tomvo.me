@@ -1,25 +1,41 @@
 #hero-welcome {
-  color: #363636;
+  color: #a44a3f;
   font-size: 24px;
-  line-height: 1.125;
+  margin-bottom: 0;
+  line-height: 100px;
+  font-weight: 600;
 }
 
 #hero-title {
-  color: #363636;
-  font-size: 48px;
-  font-weight: 500;
-  line-height: 1.125;
+  margin-left: -10%;
+  font-size: 36px;
+  color: #fff;
+  background-color: #24232c !important;
+  box-shadow: -10px -12px 0px #24232c, 10px -12px 0px #24232c,
+    -10px 0px 0px #24232c, 10px 0px 0px #24232c;
+  font-weight: normal;
+  display: inline;
+  line-height: 0;
 }
 
 #hero-description {
-  color: #4a4a4a;
-  font-size: 24px;
+  color: #24232c;
+  font-size: 16px;
+  font-weight: 400;
   margin: 25px;
+}
+
+.hero-icon {
+  margin: 20px;
+}
+
+#linkedin-icon {
+  margin: 10px;
 }
 
 .blinking-cursor {
   font-weight: 100;
-  font-size: 24px;
+  font-size: 16px;
   color: #2e3d48;
   -webkit-animation: 1s blink step-end infinite;
   -moz-animation: 1s blink step-end infinite;

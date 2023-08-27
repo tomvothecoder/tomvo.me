@@ -17,9 +17,9 @@ const Services: React.FC = () => {
       iconSrc: route,
       name: "End-to-End Programming System",
       bullets: [
-        "Includes goal identification, initial assessment, program development, and post-program reflection",
-        "Progressive overload with recovery management to make effective gains and avoid burn out",
-        "Feedback driven and flexible to dynamic goals or life circumstances",
+        "Goal identification, initial assessment, program development, and week-to-week adjustments",
+        "Progressive overload and recovery management for effective gains",
+        "Feedback-driven with flexibility to accomodate changing goals or life circumstances",
       ],
     },
     {
@@ -29,8 +29,7 @@ const Services: React.FC = () => {
       bullets: [
         "Focus on strategies to improve nutrition through education, accountability, and behavior changes",
         "Develop habits and behaviors for long-term benefits to your health and wellbeing",
-        "Integrate sustainable meal timing practices and well-balanced diets (no strict meal planning!)"
-
+        "Integrate sustainable meal timing practices and well-balanced diets (no strict meal planning!)",
       ],
     },
     {
@@ -46,7 +45,7 @@ const Services: React.FC = () => {
   ];
 
   return (
-    <section>
+    <section >
       {services.map((service) => (
         <div key={service.name} style={styles["service"]}>
           <Service
