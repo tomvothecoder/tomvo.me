@@ -2,8 +2,9 @@ import { CSSinJS } from "common/types";
 
 type Props = { iconSrc: string; name: string; bullets: Array<string> };
 
-const Service = ({ iconSrc, name, bullets }: Props) => {
+const SystemComponent = ({ iconSrc, name, bullets }: Props) => {
   const styles: CSSinJS = {
+    icon: { marginLeft: "auto", marginRight: "auto" },
     title: { fontSize: "18px", fontWeight: 600 },
     bullet: { fontSize: "16px" },
   };
@@ -15,7 +16,7 @@ const Service = ({ iconSrc, name, bullets }: Props) => {
         data-aos-delay="100"
       >
         <div className="column is-1">
-          <figure className="image is-64x64 is-horizontal-center">
+          <figure className="image is-64x64" style={styles["icon"]}>
             <img src={iconSrc} alt={name}></img>
           </figure>
         </div>
@@ -34,4 +35,4 @@ const Service = ({ iconSrc, name, bullets }: Props) => {
   );
 };
 
-export default Service;
+export default SystemComponent;
