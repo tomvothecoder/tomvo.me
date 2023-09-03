@@ -2,16 +2,16 @@ import apple from "assets/services/apple.png";
 import route from "assets/services/route.png";
 import webcam from "assets/services/webcam.png";
 import { CSSinJS } from "common/types";
-import Service from "components/Coach/Services/Service";
+import SystemComponent from "components/Coach/Services/SystemComponent";
 
-const Services: React.FC = () => {
+const System: React.FC = () => {
   const styles: CSSinJS = {
     service: {
       marginTop: "15px",
     },
   };
 
-  const services = [
+  const systemComponents = [
     {
       // <a href="https://www.flaticon.com/free-icons/end-to-end" title="end to end icons">End to end icons created by Muhammad_Usman - Flaticon</a>
       iconSrc: route,
@@ -45,10 +45,10 @@ const Services: React.FC = () => {
   ];
 
   return (
-    <section >
-      {services.map((service) => (
+    <section>
+      {systemComponents.map((service) => (
         <div key={service.name} style={styles["service"]}>
-          <Service
+          <SystemComponent
             key={service.name}
             iconSrc={service.iconSrc}
             name={service.name}
@@ -60,4 +60,4 @@ const Services: React.FC = () => {
   );
 };
 
-export default Services;
+export default System;

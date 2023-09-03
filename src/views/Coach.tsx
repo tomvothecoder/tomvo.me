@@ -3,20 +3,20 @@ import ContactForm from "components/Coach/ContactForm";
 import CoreValues from "components/Coach/CoreValues";
 import Facts from "components/Coach/Facts";
 import Hero from "components/Coach/Hero";
-import Services from "components/Coach/Services/Services";
 import ServicesList from "components/Coach/Services/ServicesList";
+import System from "components/Coach/Services/System";
 
 const Coach: React.FC = () => {
   const styles: CSSinJS = {
     coachingSystem: { backgroundColor: "#253D5B", color: "#fff" },
     sectionTitle: {
-      fontSize: "18px",
+      fontSize: "24px",
       fontWeight: 600,
       color: "black",
       marginBottom: "2%",
     },
     whiteSectionTitle: {
-      fontSize: "18px",
+      fontSize: "24px",
       fontWeight: 600,
       color: "white",
       marginBottom: "2%",
@@ -48,7 +48,7 @@ const Coach: React.FC = () => {
       <section className="section" id="coaching-system">
         <div className="container has-text-centered">
           <h1 style={styles["sectionTitle"]}>— My Coaching System —</h1>
-          <Services />
+          <System />
         </div>
       </section>
 
