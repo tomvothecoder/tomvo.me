@@ -1,19 +1,20 @@
 {
   "files": {
     "main.css": "/static/css/main.577bd995.css",
-    "main.js": "/static/js/main.c461342f.js",
+    "main.js": "/static/js/main.f462393d.js",
     "static/js/787.28b53aeb.chunk.js": "/static/js/787.28b53aeb.chunk.js",
     "static/media/me.jpg": "/static/media/me.15a54287890dc85adf88.jpg",
     "static/media/uop_tower.jpg": "/static/media/uop_tower.58b7efef5682754ae7ef.jpg",
     "static/media/metagrid.png": "/static/media/metagrid.72aa57972ed6cf0e95ea.png",
     "static/media/xcdat.png": "/static/media/xcdat.11879331442063ef94d8.png",
     "static/media/data-science.png": "/static/media/data-science.4343ab2a901b51933dfd.png",
-    "static/media/teamwork.png": "/static/media/teamwork.b1cbd71805e81017f3a1.png",
-    "static/media/webcam.png": "/static/media/webcam.a30e2384e8318930df0a.png",
+    "static/media/handshake.png": "/static/media/handshake.3c7da30d0edcd79de461.png",
     "static/media/traefik.svg": "/static/media/traefik.6b87d3e677a69ee6d6f3.svg",
     "static/media/route.png": "/static/media/route.c290539ec4a9e466e207.png",
     "static/media/docker-compose.svg": "/static/media/docker-compose.16be60f64b5cfcecf920.svg",
+    "static/media/webcam.png": "/static/media/webcam.30b3666aca3cd0c41458.png",
     "static/media/apple.png": "/static/media/apple.9b6e6b0ad5311be7c362.png",
+    "static/media/gold-medal.png": "/static/media/gold-medal.76b5e912909749f19043.png",
     "static/media/nodejs.svg": "/static/media/nodejs.5a3a9ca294db05398848.svg",
     "static/media/energeia.png": "/static/media/energeia.192f3ea5fcf35039b1f1.png",
     "static/media/postgresql.svg": "/static/media/postgresql.7c0ecebe3a8282bd680c.svg",
@@ -49,11 +50,11 @@
     "static/media/css3.svg": "/static/media/css3.c1a6e31908696206d909.svg",
     "static/media/html5.svg": "/static/media/html5.d4e1a1683a94672b7695.svg",
     "main.577bd995.css.map": "/static/css/main.577bd995.css.map",
-    "main.c461342f.js.map": "/static/js/main.c461342f.js.map",
+    "main.f462393d.js.map": "/static/js/main.f462393d.js.map",
     "787.28b53aeb.chunk.js.map": "/static/js/787.28b53aeb.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.577bd995.css",
-    "static/js/main.c461342f.js"
+    "static/js/main.f462393d.js"
   ]
 }
