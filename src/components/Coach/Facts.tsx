@@ -18,12 +18,13 @@ const Facts: React.FC = () => {
           <div className="card">
             <div className="card-content has-text-left" style={styles["text"]}>
               <p>
-                I'm a climate research software engineer by day. I enjoy
-                cooking, food photography, hiking, martial arts, and PC gaming!
-                I have coached numerous USPA and USAPL athletes who placed
-                top-3, with some winning best overall male lifter. I also
-                competed in a few meets and will be making a return to the
-                platform soon. My all-time gym PRs are 375/230/470.
+                I'm a Climate Research Software Engineer at a national
+                laboratory on the weekdays (check out my{" "}
+                <a href="https://tomvo.me/career"> career website</a>). I enjoy
+                powerlifting, cooking, food photography, hiking, martial arts,
+                reading, and PC gaming! I have competed in a few powerlifting
+                meets and my all-time gym PRs are 375 squat, 230 bench, and 470
+                deadlift.
               </p>
             </div>
           </div>

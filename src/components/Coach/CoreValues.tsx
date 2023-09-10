@@ -1,6 +1,6 @@
 import barChart from "assets/values/bar-chart.png";
 import science from "assets/values/data-science.png";
-import teamWork from "assets/values/teamwork.png";
+import client from "assets/values/handshake.png";
 import { CSSinJS } from "common/types";
 
 const CoreValues: React.FC = () => {
@@ -16,13 +16,13 @@ const CoreValues: React.FC = () => {
           <div className="card" data-aos="zoom-in">
             <div className="card-content">
               <figure className="image is-96x96" style={styles["figure"]}>
-                <img src={teamWork} alt="database" />
+                <img src={client} alt="client" />
               </figure>
-              {/* Source: <a href="https://www.flaticon.com/free-icons/person" title="person icons">Person icons created by Freepik - Flaticon</a> */}
+              {/* <a href="https://www.flaticon.com/free-icons/client" title="client icons">Client icons created by Freepik - Flaticon</a> */}
               <h2 style={styles["valueCaption"]}>Client first, period.</h2>
               <p style={styles["valueSubCaption"]}>
-                I will always uphold my integrity as a coach and never cut corners
-                just to make a dime.
+                I will always uphold my integrity as a coach and never cut
+                corners just to make a dime.
               </p>
             </div>
           </div>
@@ -31,12 +31,10 @@ const CoreValues: React.FC = () => {
           <div className="card" data-aos="zoom-in">
             <div className="card-content">
               <figure className="image is-96x96" style={styles["figure"]}>
-                <img src={science} alt="yoga" />
+                <img src={science} alt="science" />
               </figure>
               {/* Source: <a href="https://www.flaticon.com/free-icons/computer" title="computer icons">Computer icons created by vectorsmarket15 - Flaticon</a> */}
-              <h2 style={styles["valueCaption"]}>
-                Simple and science-based
-              </h2>
+              <h2 style={styles["valueCaption"]}>Simple and science-based</h2>
               <p style={styles["valueSubCaption"]}>
                 Bro-science is a thing of the past! Let's talk about that real
                 juicy science instead.
