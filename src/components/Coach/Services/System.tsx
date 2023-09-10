@@ -35,7 +35,7 @@ const System: React.FC = () => {
     {
       // <a href="https://www.flaticon.com/free-icons/fruit" title="fruit icons">Fruit icons created by Freepik - Flaticon</a>
       iconSrc: apple,
-      name: "Habit-Based Nutritional Coaching",
+      name: "Habit-Based Nutrition Coaching",
       bullets: [
         "Focus on strategies to improve nutrition through education, accountability, and behavior changes",
         "Develop habits and behaviors for long-term benefits to your health and wellbeing",
