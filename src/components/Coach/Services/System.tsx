@@ -1,4 +1,5 @@
 import apple from "assets/services/apple.png";
+import barbell from "assets/services/gold-medal.png";
 import route from "assets/services/route.png";
 import webcam from "assets/services/webcam.png";
 import { CSSinJS } from "common/types";
@@ -13,6 +14,15 @@ const System: React.FC = () => {
 
   const systemComponents = [
     {
+      // <a href="https://www.flaticon.com/free-icons/medal" title="medal icons">Medal icons created by Pixel Buddha - Flaticon</a>
+      iconSrc: barbell,
+      name: "Powerlifting Training and Meet Prep",
+      bullets: [
+        "Off-season programming based on ideal volume, frequency, and periodization scheme for each athlete",
+        "Meet prep includes a 4-6 week peaking program, weekly calls, and attempt strategizing",
+      ],
+    },
+    {
       // <a href="https://www.flaticon.com/free-icons/end-to-end" title="end to end icons">End to end icons created by Muhammad_Usman - Flaticon</a>
       iconSrc: route,
       name: "End-to-End Programming System",
@@ -25,7 +35,7 @@ const System: React.FC = () => {
     {
       // <a href="https://www.flaticon.com/free-icons/fruit" title="fruit icons">Fruit icons created by Freepik - Flaticon</a>
       iconSrc: apple,
-      name: "Habit-Based Nutritional Coaching",
+      name: "Habit-Based Nutrition Coaching",
       bullets: [
         "Focus on strategies to improve nutrition through education, accountability, and behavior changes",
         "Develop habits and behaviors for long-term benefits to your health and wellbeing",
@@ -33,7 +43,7 @@ const System: React.FC = () => {
       ],
     },
     {
-      // <a href="https://www.flaticon.com/free-icons/cam" title="cam icons">Cam icons created by Vectors Market - Flaticon</a>
+      // <a href="https://www.flaticon.com/free-icons/webcam" title="webcam icons">Webcam icons created by Vectors Market - Flaticon</a>
       iconSrc: webcam,
       name: "Active Check-Ins",
       bullets: [

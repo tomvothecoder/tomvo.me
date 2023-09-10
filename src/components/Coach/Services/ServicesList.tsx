@@ -10,7 +10,7 @@ const styles: CSSinJS = {
 
 const ServicesList: React.FC = () => {
   const services = [
-    "Powerlifting meet prep",
+    "Powerlifting training and meet prep",
     "Individualized training programs",
     "Habit-based nutrition coaching",
     "Active check-ins and calls",

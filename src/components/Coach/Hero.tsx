@@ -30,16 +30,21 @@ function Hero() {
               <h3 id="hero-welcome">Hey There!</h3>
               <h1 id="hero-title">I'm Tom Vo,</h1>
               <p id="hero-description">
-                a NASM Certified Personal Trainer and Powerlifting Coach. I
-                pride myself on deeply understanding each of my client's goals
-                and aspirations. I provide a truly individualized coaching
-                experience using a feedback-driven training and nutritional
-                system.
+                <strong>
+                  a NASM Certified Personal Trainer and Powerlifting Coach with
+                  over a decade of lifting experience.
+                </strong>{" "}
+                I have coached numerous powerlifting athletes who placed in the
+                top 3 of their division, with some winning best overall lifter.
+                I have also helped clients reached their weight-loss goals
+                through habit-based nutrition and exercise programs.
               </p>
               <p id="hero-description">
-                As a continuous learner, I love to share my passion and
-                knowledge in exercise with everyone! Enough said, let's link up
-                and make some gains together! 💪🙌
+                My coaching philosophy focuses on deeply understanding each of
+                my client's goals and life circumstances to provide
+                individualized services. As a continuous learner, I love to
+                share my passion in exercise with everyone. Enough said, let's
+                link up and make some gains together! 💪🙌
               </p>
               <div className="hero-icon">
                 <a
