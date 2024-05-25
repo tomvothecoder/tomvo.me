@@ -1,0 +1,16 @@
+{
+    "folders": [
+        {
+            "path": ".."
+        }
+    ],
+    // ===========================
+    // VS Code Workspace Settings
+    // ===========================
+    "settings": {
+        // ===================
+        // Editor settings
+        // ===================
+        "editor.formatOnSave": true,
+    }
+}
