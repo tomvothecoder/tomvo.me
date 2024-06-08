@@ -1,8 +1,8 @@
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import selfPortrait from "assets/me.jpg";
 import { CSSinJS } from "common/types";
 import "components/Career/Hero.css";
+import ReactPlayer from "react-player";
 
 function Hero() {
   const styles: CSSinJS = { selfie: { justifyContent: "center" } };
@@ -18,7 +18,17 @@ function Hero() {
               data-aos-delay="100"
             >
               <figure style={styles["selfie"]} className="image">
-                <img src={selfPortrait} alt="me" />
+                <div className="player-wrapper">
+                  <ReactPlayer
+                    className="react-player fixed-bottom"
+                    url="videos/IMG_3290.mp4"
+                    width="100%"
+                    height="100%"
+                    playing={true}
+                    loop={true}
+                    muted={true}
+                  />
+                </div>
               </figure>
             </div>
 
@@ -34,17 +44,21 @@ function Hero() {
                   a NASM Certified Personal Trainer and Powerlifting Coach with
                   over a decade of lifting experience.
                 </strong>{" "}
-                I have coached numerous powerlifting athletes who placed in the
-                top 3 of their division, with some winning best overall lifter.
-                I have also helped clients reached their weight-loss goals
-                through habit-based nutrition and exercise programs.
+                I've coached numerous powerlifting athletes over the years,
+                including those who placed top three in their division, with
+                some winning best overall lifter. I've also helped clients
+                reached their weight-loss goals through habit-based nutrition
+                and exercise programs.
               </p>
               <p id="hero-description">
-                My coaching philosophy focuses on deeply understanding each of
-                my client's goals and life circumstances to provide
-                individualized services. As a continuous learner, I love to
-                share my passion in exercise with everyone. Enough said, let's
-                link up and make some gains together! 💪🙌
+                <strong>
+                  My coaching philosophy focuses on deeply understanding
+                  each of my client's goals and life circumstances to provide
+                  individualized services.
+                </strong>{" "}
+                I'm a life-long continuous learner who loves to share my passion
+                in health and fitness with everyone. Enough said, let's link up
+                and make some gains together! 💪🙌
               </p>
               <div className="hero-icon">
                 <a

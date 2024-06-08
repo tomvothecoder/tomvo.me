@@ -7,7 +7,7 @@ const CoreValues: React.FC = () => {
   const styles: CSSinJS = {
     figure: { marginLeft: "auto", marginRight: "auto" },
     valueCaption: { fontSize: "18px", fontWeight: 600, marginTop: "5%" },
-    valueSubCaption: { fontSize: "16px", marginTop: "1%", fontStyle: "italic" },
+    valueSubCaption: { fontSize: "16px", marginTop: "1%" },
   };
   return (
     <section id="core-values">

@@ -18,7 +18,7 @@ const System: React.FC = () => {
       iconSrc: barbell,
       name: "Powerlifting Training and Meet Prep",
       bullets: [
-        "Off-season programming based on ideal volume, frequency, and periodization scheme for each athlete",
+        "Off-season programming based on athlete-specific volume, frequency, and periodization scheme",
         "Meet prep includes a 4-6 week peaking program, weekly calls, and attempt strategizing",
       ],
     },
