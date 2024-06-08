@@ -52,9 +52,9 @@ function Hero() {
               </p>
               <p id="hero-description">
                 <strong>
-                  My coaching philosophy focuses on the deeper understanding of
-                  every individual's goals and life circumstances to provide
-                  uniquely tailored services.
+                  My coaching philosophy focuses on deeply understanding
+                  each of my client's goals and life circumstances to provide
+                  individualized services.
                 </strong>{" "}
                 I'm a life-long continuous learner who loves to share my passion
                 in health and fitness with everyone. Enough said, let's link up
