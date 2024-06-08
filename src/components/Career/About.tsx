@@ -29,12 +29,11 @@ const About: React.FC<Props> = () => {
                   </figure>
                 </div>
                 <div className="column is-three-quarters">
-                  <p className="job-desc"></p>
                   <p className="job-desc">
                     Aside from programming, my passions include powerlifting,
-                    running, hiking, watching MMA, and eating the best burrito
-                    that a town has to offer. Catch me around the California bay
-                    area!
+                    cooking, hiking, martial arts, and eating the best burrito
+                    that a town has to offer. Catch me around the California Bay
+                    Area!
                   </p>
 
                   <div className="container has-text-centered">

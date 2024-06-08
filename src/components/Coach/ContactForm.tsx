@@ -1,12 +1,16 @@
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import selfPortrait from "assets/me.jpg";
 import { CSSinJS } from "common/types";
 
 import kwesforms from "kwesforms";
 import { useEffect } from "react";
 
 const ContactForm: React.FC = () => {
-  const styles: CSSinJS = { socialMedia: { marginTop: "10px" } };
+  const styles: CSSinJS = {
+    socialMedia: { marginTop: "10px" },
+    selfie: { justifyContent: "center", width: "55%" },
+  };
 
   useEffect(() => {
     kwesforms.init();
@@ -16,14 +20,19 @@ const ContactForm: React.FC = () => {
     <div className="has-text-centered">
       <div className="columns is-8 is-centered">
         <div
-          className="column is-4 has-text-centered is-vcentered"
+          className="column is-4 is-vcentered"
           data-aos="fade-in"
           data-aos-delay="100"
         >
+          <figure style={styles["selfie"]} className="image is-inline-block">
+            <img src={selfPortrait} alt="me" />
+          </figure>
           <h1 className="title is-1">Let's Connect</h1>
+
           <p className="is-size-5 ">
-            I would love to learn about your exercise aspirations. Shoot me a
-            message and I'll get back to you soon!
+            I would love to learn about your exercise aspirations. Message me on
+            Instagram or fill out the message form here and I'll get back to you
+            soon!
           </p>
           <div style={styles["socialMedia"]}>
             <p className="bd-notification is-primary">
