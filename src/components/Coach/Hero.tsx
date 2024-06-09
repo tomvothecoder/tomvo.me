@@ -27,7 +27,8 @@ function Hero() {
                     playing={true}
                     loop={true}
                     muted={true}
-                    playsinline
+                    playsinline={true}
+                    webkit-playsinline={true}
                   />
                 </div>
               </figure>
