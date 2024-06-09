@@ -29,7 +29,7 @@ const ContactForm: React.FC = () => {
           </figure>
           <h1 className="title is-1">Let's Connect</h1>
 
-          <p className="is-size-5 ">
+          <p className="is-size-5 has-text-dark-grey">
             I would love to learn about your exercise aspirations. Message me on
             Instagram or fill out the message form here and I'll get back to you
             soon!
@@ -38,7 +38,7 @@ const ContactForm: React.FC = () => {
             <p className="bd-notification is-primary">
               <a
                 href="https://www.instagram.com/coachtomvo/"
-                id="linkedin-icon"
+                id="instagram-icon"
                 target="_blank"
                 rel="noreferrer"
               >

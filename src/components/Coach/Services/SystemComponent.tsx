@@ -20,7 +20,7 @@ const SystemComponent = ({ iconSrc, name, bullets }: Props) => {
             <img src={iconSrc} alt={name}></img>
           </figure>
         </div>
-        <div className="column is-7">
+        <div className="column is-7 has-text-grey-dark">
           <h2 className="default-font has-text-left" style={styles["title"]}>
             {name}
           </h2>
