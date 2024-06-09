@@ -21,7 +21,7 @@ function Hero() {
                 <div className="player-wrapper">
                   <ReactPlayer
                     className="react-player fixed-bottom"
-                    url="videos/IMG_3290.mp4"
+                    url="https://github.com/tomvothecoder/tomvo.me/raw/main/public/videos/IMG_3290.mp4"
                     width="100%"
                     height="100%"
                     playing={true}
@@ -40,10 +40,10 @@ function Hero() {
               <h3 id="hero-welcome">Hey There!</h3>
               <h1 id="hero-title">I'm Tom Vo,</h1>
               <p id="hero-description">
-                <strong>
+                <span className="has-text-weight-bold">
                   a NASM Certified Personal Trainer and Powerlifting Coach with
                   over a decade of lifting experience.
-                </strong>{" "}
+                </span>{" "}
                 I've coached numerous powerlifting athletes over the years,
                 including those who placed top three in their division, with
                 some winning best overall lifter. I've also helped clients
@@ -51,11 +51,11 @@ function Hero() {
                 and exercise programs.
               </p>
               <p id="hero-description">
-                <strong>
+                <span className="has-text-weight-bold">
                   My coaching philosophy focuses on deeply understanding
                   each of my client's goals and life circumstances to provide
                   individualized services.
-                </strong>{" "}
+                </span>{" "}
                 I'm a life-long continuous learner who loves to share my passion
                 in health and fitness with everyone. Enough said, let's link up
                 and make some gains together! 💪🙌

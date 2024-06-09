@@ -9,7 +9,7 @@ import Coach from "views/Coach";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App theme-light">
       <BrowserRouter>
         <NavBar />
         <Routes>
