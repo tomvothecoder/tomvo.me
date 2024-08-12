@@ -30,9 +30,8 @@ const ContactForm: React.FC = () => {
           <h1 className="title is-1">Let's Connect</h1>
 
           <p className="is-size-5 has-text-dark-grey">
-            I would love to learn about your exercise aspirations. Message me on
-            Instagram or fill out the message form here and I'll get back to you
-            soon!
+            I want to learn about your exercise aspirations. Message me here or
+            on Instagram and I'll get back to you soon.
           </p>
           <div style={styles["socialMedia"]}>
             <p className="bd-notification is-primary">

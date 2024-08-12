@@ -5,7 +5,7 @@ type Props = { iconSrc: string; name: string; bullets: Array<string> };
 const SystemComponent = ({ iconSrc, name, bullets }: Props) => {
   const styles: CSSinJS = {
     icon: { marginLeft: "auto", marginRight: "auto" },
-    title: { fontSize: "18px", fontWeight: 600 },
+    title: { fontSize: "18px", fontWeight: 500 },
     bullet: { fontSize: "16px" },
   };
   return (

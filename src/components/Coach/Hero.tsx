@@ -54,8 +54,8 @@ function Hero() {
               </p>
               <p id="hero-description">
                 <span className="has-text-weight-bold">
-                  My coaching philosophy focuses on deeply understanding
-                  each of my client's goals and life circumstances to provide
+                  My coaching philosophy focuses on deeply understanding each of
+                  my client's goals and life circumstances to provide
                   individualized services.
                 </span>{" "}
                 I'm a life-long continuous learner who loves to share my passion

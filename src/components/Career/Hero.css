@@ -1,3 +1,17 @@
+#hero-quote {
+  font-size: 36px;
+  color: #fff;
+  background-color: #24232c !important;
+  box-shadow:
+    -10px -12px 0px #24232c,
+    10px -12px 0px #24232c,
+    -10px 0px 0px #24232c,
+    10px 0px 0px #24232c;
+  font-weight: normal;
+  display: inline;
+  line-height: 0;
+}
+
 #hero-welcome {
   color: #a44a3f;
   font-size: 24px;
@@ -11,8 +25,11 @@
   font-size: 36px;
   color: #fff;
   background-color: #24232c !important;
-  box-shadow: -10px -12px 0px #24232c, 10px -12px 0px #24232c,
-    -10px 0px 0px #24232c, 10px 0px 0px #24232c;
+  box-shadow:
+    -10px -12px 0px #24232c,
+    10px -12px 0px #24232c,
+    -10px 0px 0px #24232c,
+    10px 0px 0px #24232c;
   font-weight: normal;
   display: inline;
   line-height: 0;
