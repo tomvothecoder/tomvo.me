@@ -1,6 +1,7 @@
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import selfPortrait from "assets/me.jpg";
+import ReactPlayer from "react-player";
+
 import { CSSinJS } from "common/types";
 
 import kwesforms from "kwesforms";
@@ -8,8 +9,10 @@ import { useEffect } from "react";
 
 const ContactForm: React.FC = () => {
   const styles: CSSinJS = {
+    caption: { marginBottom: "10px" },
     socialMedia: { marginTop: "10px" },
-    selfie: { justifyContent: "center", width: "55%" },
+    selfie: { justifyContent: "center" },
+    igHandle: { fontSize: "24px", marginLeft: "5px" },
   };
 
   useEffect(() => {
@@ -17,34 +20,37 @@ const ContactForm: React.FC = () => {
   }, []);
 
   return (
-    <div className="has-text-centered">
+    <div className="has-text-center">
       <div className="columns is-8 is-centered">
         <div
           className="column is-4 is-vcentered"
           data-aos="fade-in"
           data-aos-delay="100"
         >
-          <figure style={styles["selfie"]} className="image is-inline-block">
-            <img src={selfPortrait} alt="me" />
-          </figure>
-          <h1 className="title is-1">Let's Connect</h1>
-
-          <p className="is-size-5 has-text-dark-grey">
+          <h1 className="title is-1 is-underlined">Let's Connect</h1>
+          <p className="is-size-5 has-text-dark-grey" style={styles["caption"]}>
             I want to learn about your exercise aspirations. Message me here or
             on Instagram and I'll get back to you soon.
           </p>
-          <div style={styles["socialMedia"]}>
-            <p className="bd-notification is-primary">
-              <a
-                href="https://www.instagram.com/coachtomvo/"
-                id="instagram-icon"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <FontAwesomeIcon icon={faInstagram} size="3x" />
-              </a>
-            </p>
-          </div>
+
+          <figure
+            style={styles["selfie"]}
+            className="image is-inline-block is-hidden-mobile"
+          >
+            <div className="player-wrapper">
+              <ReactPlayer
+                className="react-player fixed-bottom"
+                url="https://github.com/tomvothecoder/tomvo.me/raw/main/public/videos/IMG_3290.mp4"
+                width="60%"
+                height="60%"
+                playing={true}
+                loop={true}
+                muted={true}
+                playsinline={true}
+                webkit-playsinline={true}
+              />
+            </div>
+          </figure>
         </div>
         <div
           className="column card is-4 has-text-left"
@@ -55,6 +61,19 @@ const ContactForm: React.FC = () => {
             className="kwes-form"
             action="https://kwesforms.com/api/foreign/forms/aSVFVwmIio7ugCj6l1gO"
           >
+            <div style={styles["socialMedia"]}>
+              <p className="bd-notification is-primary">
+                <a
+                  href="https://www.instagram.com/coachtomvo/"
+                  id="instagram-icon"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <FontAwesomeIcon icon={faInstagram} size="3x" />
+                  <span style={styles["igHandle"]}>@coachtomvo</span>
+                </a>
+              </p>
+            </div>
             <div className="field">
               <label className="label" htmlFor="name">
                 Name

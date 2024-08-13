@@ -14,7 +14,7 @@ const Facts: React.FC = () => {
   return (
     <section id="cpt" className="container">
       <div className="columns is-centered">
-        <div className="column is-6" data-aos="fade-up" data-aos-delay="100">
+        <div className="column is-7" data-aos="fade-up" data-aos-delay="100">
           <div className="card">
             <div className="card-content has-text-left" style={styles["text"]}>
               <p>

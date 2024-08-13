@@ -19,7 +19,7 @@ const CoreValues: React.FC = () => {
                 <img src={client} alt="client" />
               </figure>
               {/* <a href="https://www.flaticon.com/free-icons/client" title="client icons">Client icons created by Freepik - Flaticon</a> */}
-              <h2 style={styles["valueCaption"]}>Client first, period.</h2>
+              <h2 style={styles["valueCaption"]}>Client first</h2>
               <p style={styles["valueSubCaption"]}>
                 I will always uphold my integrity as a coach and never cut
                 corners.
@@ -36,7 +36,8 @@ const CoreValues: React.FC = () => {
               {/* Source: <a href="https://www.flaticon.com/free-icons/computer" title="computer icons">Computer icons created by vectorsmarket15 - Flaticon</a> */}
               <h2 style={styles["valueCaption"]}>Science-based</h2>
               <p style={styles["valueSubCaption"]}>
-                I truly value exercise science as the foundation of my work.
+                I geek out on exercise science, which is the foundation of my
+                coaching system.
               </p>
             </div>
           </div>
@@ -49,7 +50,7 @@ const CoreValues: React.FC = () => {
               </figure>
               <h2 style={styles["valueCaption"]}>Individualized</h2>
               <p style={styles["valueSubCaption"]}>
-                Services tailored to your goals, experience, and life
+                Services are tailored to your goals, experience, and life
                 circumstances.
               </p>
             </div>
