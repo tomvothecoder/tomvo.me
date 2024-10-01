@@ -1,5 +1,5 @@
 import apple from "assets/services/apple.png";
-import barbell from "assets/services/gold-medal.png";
+import barbell from "assets/services/barbell.svg";
 import route from "assets/services/route.png";
 import webcam from "assets/services/webcam.png";
 import { CSSinJS } from "common/types";
@@ -18,8 +18,9 @@ const System: React.FC = () => {
       iconSrc: barbell,
       name: "Powerlifting Training and Meet Prep",
       bullets: [
-        "Off-season programming based on athlete-specific volume, frequency, and periodization scheme",
-        "Meet prep includes a 4-6 week peaking program, weekly calls, and attempt strategizing",
+        "Meet prep includes peaking program, weekly calls, and attempt strategizing",
+        "Off-season programs with athlete-specific volume, frequency, and periodization",
+        "RPE and percentage-based approach",
       ],
     },
     {
@@ -28,7 +29,7 @@ const System: React.FC = () => {
       name: "End-to-End Programming System",
       bullets: [
         "Goal identification, initial assessment, program development, and week-to-week adjustments",
-        "Progressive overload and recovery management for effective gains",
+        "Progressive overload and recovery management for optimal gains",
         "Feedback-driven with flexibility to accomodate changing goals or life circumstances",
       ],
     },
@@ -49,7 +50,7 @@ const System: React.FC = () => {
       bullets: [
         "Gather feedback to make micro/macro adjustments to your program if needed",
         "Assess how you are doing, answer your questions, and make sure you're having fun!",
-        "Perform form-checks to ensure safe and optimal technique",
+        "Form-checks to ensure safe and optimal technique",
       ],
     },
   ];

@@ -6,7 +6,7 @@ import { CSSinJS } from "common/types";
 const CoreValues: React.FC = () => {
   const styles: CSSinJS = {
     figure: { marginLeft: "auto", marginRight: "auto" },
-    valueCaption: { fontSize: "18px", fontWeight: 600, marginTop: "5%" },
+    valueCaption: { fontSize: "18px", fontWeight: 500, marginTop: "5%" },
     valueSubCaption: { fontSize: "16px", marginTop: "1%" },
   };
   return (
@@ -19,10 +19,10 @@ const CoreValues: React.FC = () => {
                 <img src={client} alt="client" />
               </figure>
               {/* <a href="https://www.flaticon.com/free-icons/client" title="client icons">Client icons created by Freepik - Flaticon</a> */}
-              <h2 style={styles["valueCaption"]}>Client first, period.</h2>
+              <h2 style={styles["valueCaption"]}>Client first</h2>
               <p style={styles["valueSubCaption"]}>
                 I will always uphold my integrity as a coach and never cut
-                corners just to make a dime.
+                corners.
               </p>
             </div>
           </div>
@@ -34,10 +34,10 @@ const CoreValues: React.FC = () => {
                 <img src={science} alt="science" />
               </figure>
               {/* Source: <a href="https://www.flaticon.com/free-icons/computer" title="computer icons">Computer icons created by vectorsmarket15 - Flaticon</a> */}
-              <h2 style={styles["valueCaption"]}>Simple and science-based</h2>
+              <h2 style={styles["valueCaption"]}>Science-based</h2>
               <p style={styles["valueSubCaption"]}>
-                Bro-science is a thing of the past! Let's talk about that real
-                juicy science instead.
+                I geek out on exercise science, which is the foundation of my
+                coaching system.
               </p>
             </div>
           </div>
@@ -48,10 +48,10 @@ const CoreValues: React.FC = () => {
               <figure className="image is-96x96" style={styles["figure"]}>
                 <img src={barChart} alt="bar-chart" />
               </figure>
-              <h2 style={styles["valueCaption"]}>Individualized services</h2>
+              <h2 style={styles["valueCaption"]}>Individualized</h2>
               <p style={styles["valueSubCaption"]}>
-                Everything is tailored to your specific goals, experience level,
-                and life circumstances.
+                Services are tailored to your goals, experience, and life
+                circumstances.
               </p>
             </div>
           </div>

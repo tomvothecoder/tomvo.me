@@ -1,23 +1,25 @@
 import { CSSinJS } from "common/types";
+import Banner from "components/Coach/Banner";
 import ContactForm from "components/Coach/ContactForm";
 import CoreValues from "components/Coach/CoreValues";
 import Facts from "components/Coach/Facts";
 import Hero from "components/Coach/Hero";
 import ServicesList from "components/Coach/Services/ServicesList";
 import System from "components/Coach/Services/System";
+import "views/Coach.css";
 
 const Coach: React.FC = () => {
   const styles: CSSinJS = {
     coachingSystem: { backgroundColor: "#253D5B", color: "#fff" },
     sectionTitle: {
       fontSize: "24px",
-      fontWeight: 600,
+      fontWeight: 500,
       color: "black",
       marginBottom: "2%",
     },
     whiteSectionTitle: {
       fontSize: "24px",
-      fontWeight: 600,
+      fontWeight: 500,
       color: "white",
       marginBottom: "2%",
     },
@@ -26,6 +28,7 @@ const Coach: React.FC = () => {
   return (
     <div id="coach">
       <Hero />
+      <Banner />
 
       <section className="section" id="values">
         <div className="container has-text-centered">
@@ -59,10 +62,7 @@ const Coach: React.FC = () => {
         </div>
       </section>
 
-      <section
-        className="section"
-        id="contact"
-      >
+      <section className="section" id="contact">
         <div className="container">
           <ContactForm />
         </div>

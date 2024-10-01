@@ -1,11 +1,16 @@
+import selfPortrait from "assets/me.jpg";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import { CSSinJS } from "common/types";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import "components/Career/Hero.css";
-import ReactPlayer from "react-player";
 
 function Hero() {
-  const styles: CSSinJS = { selfie: { justifyContent: "center" } };
+  const styles: CSSinJS = {
+    selfie: { justifyContent: "center" },
+    igHandle: { fontSize: "24px", marginLeft: "5px" },
+  };
 
   return (
     <section className="section container" id="the-hero">
@@ -17,20 +22,11 @@ function Hero() {
               data-aos="fade-in"
               data-aos-delay="100"
             >
-              <figure style={styles["selfie"]} className="image">
-                <div className="player-wrapper">
-                  <ReactPlayer
-                    className="react-player fixed-bottom"
-                    url="https://github.com/tomvothecoder/tomvo.me/raw/main/public/videos/IMG_3290.mp4"
-                    width="100%"
-                    height="100%"
-                    playing={true}
-                    loop={true}
-                    muted={true}
-                    playsinline={true}
-                    webkit-playsinline={true}
-                  />
-                </div>
+              <figure
+                style={styles["selfie"]}
+                className="image is-inline-block"
+              >
+                <img src={selfPortrait} alt="me" />
               </figure>
             </div>
 
@@ -46,31 +42,37 @@ function Hero() {
                   a NASM Certified Personal Trainer and Powerlifting Coach with
                   over a decade of lifting experience.
                 </span>{" "}
-                I've coached numerous powerlifting athletes over the years,
-                including those who placed top three in their division, with
-                some winning best overall lifter. I've also helped clients
-                reached their weight-loss goals through habit-based nutrition
-                and exercise programs.
+                I specialize in powerlifting, strength and conditioning,
+                hypertrophy, and weight-loss. I have coached numerous
+                powerlifting athletes, including those who placed top three in
+                their division and others winning best overall lifter. I've also
+                helped clients reached their weight-loss goals through
+                habit-based nutrition and exercise programs.
               </p>
               <p id="hero-description">
                 <span className="has-text-weight-bold">
-                  My coaching philosophy focuses on deeply understanding
-                  each of my client's goals and life circumstances to provide
-                  individualized services.
+                  My coaching philosophy focuses on applying science-based
+                  practices with a deep understanding of each client's unique
+                  goals and life circumstances.
                 </span>{" "}
-                I'm a life-long continuous learner who loves to share my passion
-                in health and fitness with everyone. Enough said, let's link up
-                and make some gains together! 💪🙌
+                I'm a continuous learner and I love sharing my passion in health
+                and fitness with everyone. Enough about me, let's link up and
+                train together! 💪🙌
               </p>
               <div className="hero-icon">
-                <a
-                  href="https://www.instagram.com/coachtomvo/"
-                  id="instagram-icon"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <FontAwesomeIcon icon={faInstagram} size="3x" />
-                </a>
+                <div style={styles["socialMedia"]}>
+                  <p className="bd-notification is-primary">
+                    <a
+                      href="https://www.instagram.com/coachtomvo/"
+                      id="instagram-icon"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <FontAwesomeIcon icon={faInstagram} size="3x" />
+                      <span style={styles["igHandle"]}>@coachtomvo</span>
+                    </a>
+                  </p>
+                </div>
               </div>
             </div>
           </div>

@@ -14,17 +14,16 @@ const Facts: React.FC = () => {
   return (
     <section id="cpt" className="container">
       <div className="columns is-centered">
-        <div className="column is-6" data-aos="fade-up" data-aos-delay="100">
+        <div className="column is-7" data-aos="fade-up" data-aos-delay="100">
           <div className="card">
             <div className="card-content has-text-left" style={styles["text"]}>
               <p>
                 I'm a Climate Research Software Engineer at a national
                 laboratory on the weekdays (check out my{" "}
-                <a href="https://tomvo.me/career"> career website</a>). I enjoy
-                powerlifting, cooking, food photography, hiking, martial arts,
-                reading, and PC gaming! I have competed in a few powerlifting
-                meets and my all-time gym PRs are 375 squat, 230 bench, and 470
-                deadlift.
+                <a href="https://tomvo.me/career"> career website</a>). Besides
+                coaching and powerlifting, I enjoy cooking, reading, and nature!
+                I've competed in a few powerlifting meets. My all-time gym PRs
+                are 375 lb squat, 230 lb bench, and 500 lb deadlift.
               </p>
             </div>
           </div>
