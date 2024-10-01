@@ -1,4 +1,5 @@
 import { CSSinJS } from "common/types";
+import Banner from "components/Coach/Banner";
 import ContactForm from "components/Coach/ContactForm";
 import CoreValues from "components/Coach/CoreValues";
 import Facts from "components/Coach/Facts";
@@ -27,6 +28,7 @@ const Coach: React.FC = () => {
   return (
     <div id="coach">
       <Hero />
+      <Banner />
 
       <section className="section" id="values">
         <div className="container has-text-centered">

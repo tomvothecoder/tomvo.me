@@ -2,7 +2,6 @@ import selfPortrait from "assets/me.jpg";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 
 import { CSSinJS } from "common/types";
-import Banner from "components/Coach/Banner";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import "components/Career/Hero.css";
@@ -15,8 +14,6 @@ function Hero() {
 
   return (
     <section className="section container" id="the-hero">
-      <Banner />
-
       <div className="hero is-small">
         <div className="hero-body">
           <div className="columns is-9 is-centered is-vcentered">
