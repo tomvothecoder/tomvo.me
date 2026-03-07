@@ -47,7 +47,6 @@ const ContactForm: React.FC = () => {
                 loop={true}
                 muted={true}
                 playsinline={true}
-                webkit-playsinline={true}
               />
             </div>
           </figure>
