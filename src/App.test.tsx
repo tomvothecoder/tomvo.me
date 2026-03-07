@@ -1,6 +1,11 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { render } from '@testing-library/react';
+import { vi } from 'vitest';
 import App from './App';
+
+vi.mock('react-player', () => ({
+  default: () => <div data-testid="react-player" />,
+}));
 
 test('renders app', () => {
   render(<App />);
