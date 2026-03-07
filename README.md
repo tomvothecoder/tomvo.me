@@ -20,7 +20,11 @@ Serves the production build locally so you can test it before deploying.
 
 ### `pnpm test`
 
-Runs the test suite with Vitest in watch mode.
+Runs the test suite once (CI-friendly).
+
+### `pnpm test:watch`
+
+Runs the test suite in watch mode during local development.
 
 ## Learn More
 
