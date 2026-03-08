@@ -1,27 +1,40 @@
-# IMPLEMENTATION.md
+# IMPLEMENTATION
 
-## Task Summary
-Reviewed the branch changes and prepared pull-request-ready documentation for opening a PR.
+## Assessment (previous vs current redesign)
+- Improved: section order and messaging are more conversion-focused than the previous version.
+- Regression fixed: secondary hero CTA (`View Services`) looked disabled due to low-contrast outlined styling.
+- Regression fixed: iconography was inconsistent (mixed raster styles/sizes), which lowered perceived visual quality.
 
-## Approved Plan
-1. Inspect branch commits and changed files.
-2. Document review and implementation summary.
-3. Commit documentation updates.
-4. Open PR with summary and validation.
+## What changed in this follow-up
+- Added a scoped hero secondary CTA class and explicit contrast/hover states to make `View Services` clearly interactive.
+- Replaced coach audience card icons with consistent Font Awesome vector icons.
+- Replaced coaching system icons with Font Awesome vectors and added reusable icon badge styles.
+- Updated `SystemComponent` to render typed icon props instead of image paths.
+- Documented benchmark references and findings for coaching-website comparison.
 
-## Files Modified
+## Files modified
+- `src/components/Coach/Hero.tsx`
+- `src/views/Coach.css`
+- `src/components/Coach/CoreValues.tsx`
+- `src/components/Coach/Services/System.tsx`
+- `src/components/Coach/Services/SystemComponent.tsx`
 - `PLANNING.md`
-- `IMPLEMENTATION.md`
 
-## Description of Changes
-1. Replaced `PLANNING.md` template content with a task-specific plan for reviewing branch changes and preparing a PR.
-2. Replaced `IMPLEMENTATION.md` template content with an execution summary and concrete validation record.
+## Benchmark references reviewed
+- `https://www.nerdfitness.com/coaching-overview-page/`
+- `https://future.co/pro`
+- `https://www.startingstrengthgyms.com/online-coaching.html`
+- `https://caliberstrong.com/`
+- `https://www.barbellmedicine.com/coaching/`
 
-## Validation Steps
-1. Ran `git status --short` to check working tree state before and after edits.
-2. Ran `git log --oneline -5` to identify recent branch commits.
-3. Ran `git show --name-only --stat 5c88fca` to review files included in the branch's latest commit.
+## Comparison findings applied
+- Top-of-page CTA clarity is critical: strong primary action plus clearly visible secondary path.
+- "How coaching works" should stay short, ordered, and scannable.
+- Social proof and results should be visible before the final contact form.
+- Offer positioning benefits from clear audience-fit language and explicit deliverables.
 
-## Notes / Assumptions
-- Reviewer assignment is not supported by the available `make_pr` tool interface (title/body only).
-- Change review is based on local git history present in this environment.
+## Validation
+- `npx prettier --write "src/components/Coach/Hero.tsx" "src/components/Coach/CoreValues.tsx" "src/components/Coach/Services/System.tsx" "src/components/Coach/Services/SystemComponent.tsx" "src/views/Coach.css" "PLANNING.md"`
+- `npx tsc --noEmit` passed.
+- `npm run build` passed.
+- `./node_modules/.bin/eslint "src/**/*.{ts,tsx}"` failed: no ESLint config detected in this environment.

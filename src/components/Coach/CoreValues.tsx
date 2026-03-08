@@ -1,61 +1,61 @@
-import barChart from "assets/values/bar-chart.png";
-import science from "assets/values/data-science.png";
-import client from "assets/values/handshake.png";
-import { CSSinJS } from "common/types";
+import {
+  faChartLine,
+  faDumbbell,
+  faUserGroup,
+} from "@fortawesome/free-solid-svg-icons";
+import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+type Audience = {
+  icon: IconDefinition;
+  iconClassName: string;
+  title: string;
+  description: string;
+};
 
 const CoreValues: React.FC = () => {
-  const styles: CSSinJS = {
-    figure: { marginLeft: "auto", marginRight: "auto" },
-    valueCaption: { fontSize: "18px", fontWeight: 500, marginTop: "5%" },
-    valueSubCaption: { fontSize: "16px", marginTop: "1%" },
-  };
+  const audiences: Audience[] = [
+    {
+      icon: faUserGroup,
+      iconClassName: "coach-icon-badge coach-icon-badge--a",
+      title: "Beginner to Intermediate Lifters",
+      description:
+        "You want a clear plan, reliable form feedback, and confidence in the gym.",
+    },
+    {
+      icon: faChartLine,
+      iconClassName: "coach-icon-badge coach-icon-badge--b",
+      title: "Powerlifters Chasing PRs",
+      description:
+        "You need structured off-season programming and meet prep with smart attempt strategy.",
+    },
+    {
+      icon: faDumbbell,
+      iconClassName: "coach-icon-badge coach-icon-badge--c",
+      title: "Busy Adults & Athletes",
+      description:
+        "You want efficient training and sustainable nutrition habits that fit real life.",
+    },
+  ];
+
   return (
     <section id="core-values">
       <div className="columns is-9 is-centered">
-        <div className="column is-3 has-text-centered">
-          <div className="card" data-aos="zoom-in">
-            <div className="card-content">
-              <figure className="image is-96x96" style={styles["figure"]}>
-                <img src={client} alt="client" />
-              </figure>
-              {/* <a href="https://www.flaticon.com/free-icons/client" title="client icons">Client icons created by Freepik - Flaticon</a> */}
-              <h2 style={styles["valueCaption"]}>Client first</h2>
-              <p style={styles["valueSubCaption"]}>
-                I will always uphold my integrity as a coach and never cut
-                corners.
-              </p>
+        {audiences.map((audience) => (
+          <div key={audience.title} className="column is-3 has-text-centered">
+            <div className="card coach-surface-card" data-aos="zoom-in">
+              <div className="card-content">
+                <figure className="coach-icon-figure image is-96x96">
+                  <div className={audience.iconClassName} aria-hidden="true">
+                    <FontAwesomeIcon icon={audience.icon} size="2x" />
+                  </div>
+                </figure>
+                <h2 className="coach-card-title">{audience.title}</h2>
+                <p className="coach-card-description">{audience.description}</p>
+              </div>
             </div>
           </div>
-        </div>
-        <div className="column is-3 has-text-centered">
-          <div className="card" data-aos="zoom-in">
-            <div className="card-content">
-              <figure className="image is-96x96" style={styles["figure"]}>
-                <img src={science} alt="science" />
-              </figure>
-              {/* Source: <a href="https://www.flaticon.com/free-icons/computer" title="computer icons">Computer icons created by vectorsmarket15 - Flaticon</a> */}
-              <h2 style={styles["valueCaption"]}>Science-based</h2>
-              <p style={styles["valueSubCaption"]}>
-                I geek out on exercise science, which is the foundation of my
-                coaching system.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div className="column is-3 has-text-centered">
-          <div className="card" data-aos="zoom-in">
-            <div className="card-content">
-              <figure className="image is-96x96" style={styles["figure"]}>
-                <img src={barChart} alt="bar-chart" />
-              </figure>
-              <h2 style={styles["valueCaption"]}>Individualized</h2>
-              <p style={styles["valueSubCaption"]}>
-                Services are tailored to your goals, experience, and life
-                circumstances.
-              </p>
-            </div>
-          </div>
-        </div>
+        ))}
       </div>
     </section>
   );

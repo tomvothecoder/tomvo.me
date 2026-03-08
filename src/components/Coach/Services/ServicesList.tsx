@@ -1,53 +1,79 @@
-import { CSSinJS } from "common/types";
 import React from "react";
-
-const styles: CSSinJS = {
-  service: {
-    fontSize: "18px",
-    fontWeight: 600,
-  },
-};
 
 const ServicesList: React.FC = () => {
   const services = [
-    "Powerlifting training and meet prep",
-    "Individualized training programs",
-    "Habit-based nutrition coaching",
-    "Active check-ins and calls",
-    "24-hour access for questions",
+    {
+      title: "1:1 Personal Training",
+      description:
+        "In-person coaching focused on strength, movement quality, and accountability.",
+      forWho:
+        "Best for: Lifters who want hands-on instruction and live form coaching.",
+      includes: [
+        "Technique coaching",
+        "Progressive training blocks",
+        "Session-by-session feedback",
+      ],
+    },
+    {
+      title: "Online Strength Coaching",
+      description:
+        "Custom programming with weekly guidance and adjustments based on your performance.",
+      forWho:
+        "Best for: Busy lifters who train independently but want expert oversight.",
+      includes: [
+        "Individualized plan",
+        "Weekly check-ins",
+        "Video form review",
+      ],
+    },
+    {
+      title: "Powerlifting Meet Prep",
+      description:
+        "Peaking cycles and attempt selection strategy to help you perform on meet day.",
+      forWho:
+        "Best for: Powerlifters preparing for their first meet or next PR total.",
+      includes: [
+        "Peaking structure",
+        "Attempt strategy",
+        "Competition readiness",
+      ],
+    },
+    {
+      title: "Nutrition & Accountability",
+      description:
+        "Habit-based nutrition coaching built for consistency, recovery, and body composition goals.",
+      forWho:
+        "Best for: Clients wanting sustainable nutrition without rigid meal plans.",
+      includes: [
+        "Habit coaching",
+        "Simple nutrition targets",
+        "Ongoing accountability",
+      ],
+    },
   ];
 
   return (
     <section>
       <div className="container">
-        <div className="columns is-centered">
-          <div className="column is-5" data-aos="zoom-in">
-            <div>
-              <div className="box has-background-white">
-                <ul className="has-text-left has-text-grey-dark">
-                  {services.map((service: string) => (
-                    <li
-                      key={service}
-                      className="mb-3 is-flex is-align-items-center"
-                    >
-                      <svg
-                        className="mr-2"
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24px"
-                        height="24px"
-                        stroke="currentColor"
-                        fill="#10b981"
-                        viewBox="0 0 1792 1792"
-                      >
-                        <path d="M1412 734q0-28-18-46l-91-90q-19-19-45-19t-45 19l-408 407-226-226q-19-19-45-19t-45 19l-91 90q-18 18-18 46 0 27 18 45l362 362q19 19 45 19 27 0 46-19l543-543q18-18 18-45zm252 162q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z"></path>
-                      </svg>
-                      <p style={styles["service"]}>{service}</p>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+        <div className="columns is-multiline is-centered">
+          {services.map((service) => (
+            <div key={service.title} className="column is-5" data-aos="zoom-in">
+              <article className="card coach-surface-card coach-service-card">
+                <div className="card-content has-text-left">
+                  <h2 className="coach-card-title">{service.title}</h2>
+                  <p className="coach-card-description">
+                    {service.description}
+                  </p>
+                  <p className="coach-service-fit">{service.forWho}</p>
+                  <ul className="coach-service-list">
+                    {service.includes.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                </div>
+              </article>
             </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>

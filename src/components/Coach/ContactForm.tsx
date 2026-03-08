@@ -12,7 +12,7 @@ const ContactForm: React.FC = () => {
     caption: { marginBottom: "10px" },
     socialMedia: { marginTop: "10px" },
     selfie: { justifyContent: "center" },
-    igHandle: { fontSize: "24px", marginLeft: "5px" },
+    igHandle: { fontSize: "20px", marginLeft: "6px" },
   };
 
   useEffect(() => {
@@ -27,10 +27,10 @@ const ContactForm: React.FC = () => {
           data-aos="fade-in"
           data-aos-delay="100"
         >
-          <h1 className="title is-1 is-underlined">Let's Connect</h1>
+          <h1 className="title is-2">Ready to get started?</h1>
           <p className="is-size-5 has-text-dark-grey" style={styles["caption"]}>
-            I want to learn about your exercise aspirations. Message me here or
-            on Instagram and I'll get back to you soon.
+            Tell me your goals, current training setup, and what support you are
+            looking for. I will follow up with next steps and coaching options.
           </p>
 
           <figure
@@ -52,7 +52,7 @@ const ContactForm: React.FC = () => {
           </figure>
         </div>
         <div
-          className="column card is-4 has-text-left"
+          className="column card is-4 has-text-left coach-surface-card"
           data-aos="fade-in"
           data-aos-delay="100"
         >
@@ -68,7 +68,7 @@ const ContactForm: React.FC = () => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <FontAwesomeIcon icon={faInstagram} size="3x" />
+                  <FontAwesomeIcon icon={faInstagram} size="2x" />
                   <span style={styles["igHandle"]}>@coachtomvo</span>
                 </a>
               </p>
