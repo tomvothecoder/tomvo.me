@@ -1,10 +1,16 @@
+import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { CSSinJS } from "common/types";
 
-type Props = { iconSrc: string; name: string; bullets: Array<string> };
+type Props = {
+  icon: IconDefinition;
+  iconClassName: string;
+  name: string;
+  bullets: Array<string>;
+};
 
-const SystemComponent = ({ iconSrc, name, bullets }: Props) => {
+const SystemComponent = ({ icon, iconClassName, name, bullets }: Props) => {
   const styles: CSSinJS = {
-    icon: { marginLeft: "auto", marginRight: "auto" },
     title: { fontSize: "18px", fontWeight: 500 },
     bullet: { fontSize: "16px" },
   };
@@ -16,8 +22,10 @@ const SystemComponent = ({ iconSrc, name, bullets }: Props) => {
         data-aos-delay="100"
       >
         <div className="column is-1">
-          <figure className="image is-64x64" style={styles["icon"]}>
-            <img src={iconSrc} alt={name}></img>
+          <figure className="coach-system-icon coach-icon-figure">
+            <div className={iconClassName} aria-hidden="true">
+              <FontAwesomeIcon icon={icon} />
+            </div>
           </figure>
         </div>
         <div className="column is-7 has-text-grey-dark">

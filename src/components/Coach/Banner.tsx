@@ -1,17 +1,27 @@
-import "components/Career/Hero.css";
 import React from "react";
 
 const Banner: React.FC = () => {
-  1;
+  const trustPoints = [
+    "NASM Certified",
+    "Powerlifting Coaching",
+    "Science-Based Programming",
+    "Individualized Plans",
+    "Meet Prep Experience",
+  ];
+
   return (
-    <section className="container">
-      <div className="columns is-9 is-centered is-vcentered">
+    <section className="section pt-2" id="trust-signals">
+      <div className="container">
         <div
-          className="columns has-text-centered"
+          className="coach-trust-bar"
           data-aos="fade-in"
           data-aos-delay="100"
         >
-          <h1 id="banner">"Science-based, performance driven training"</h1>
+          {trustPoints.map((point) => (
+            <span key={point} className="coach-trust-chip">
+              {point}
+            </span>
+          ))}
         </div>
       </div>
     </section>

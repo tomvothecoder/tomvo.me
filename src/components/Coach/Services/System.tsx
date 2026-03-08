@@ -1,56 +1,47 @@
-import apple from "assets/services/apple.png";
-import barbell from "assets/services/barbell.svg";
-import route from "assets/services/route.png";
-import webcam from "assets/services/webcam.png";
-import { CSSinJS } from "common/types";
+import {
+  faAppleWhole,
+  faArrowsRotate,
+  faClipboardList,
+  faDumbbell,
+} from "@fortawesome/free-solid-svg-icons";
 import SystemComponent from "components/Coach/Services/SystemComponent";
 
 const System: React.FC = () => {
-  const styles: CSSinJS = {
-    service: {
-      marginTop: "15px",
-    },
-  };
-
   const systemComponents = [
     {
-      // <a href="https://www.flaticon.com/free-icons/medal" title="medal icons">Medal icons created by Pixel Buddha - Flaticon</a>
-      iconSrc: barbell,
-      name: "Powerlifting Training and Meet Prep",
+      icon: faClipboardList,
+      iconClassName: "coach-icon-badge coach-icon-badge--a",
+      name: "1) Assess and Plan",
       bullets: [
-        "Meet prep includes peaking program, weekly calls, and attempt strategizing",
-        "Off-season programs with athlete-specific volume, frequency, and periodization",
-        "RPE and percentage-based approach",
+        "Define your goal, training history, and constraints.",
+        "Build a personalized plan for strength, physique, or performance.",
       ],
     },
     {
-      // <a href="https://www.flaticon.com/free-icons/end-to-end" title="end to end icons">End to end icons created by Muhammad_Usman - Flaticon</a>
-      iconSrc: route,
-      name: "End-to-End Programming System",
+      icon: faDumbbell,
+      iconClassName: "coach-icon-badge coach-icon-badge--b",
+      name: "2) Execute and Progress",
       bullets: [
-        "Goal identification, initial assessment, program development, and week-to-week adjustments",
-        "Progressive overload and recovery management for optimal gains",
-        "Feedback-driven with flexibility to accomodate changing goals or life circumstances",
+        "Train with clear volume, intensity, and progression targets.",
+        "Use RPE and performance data to keep progress measurable.",
       ],
     },
     {
-      // <a href="https://www.flaticon.com/free-icons/fruit" title="fruit icons">Fruit icons created by Freepik - Flaticon</a>
-      iconSrc: apple,
-      name: "Habit-Based Nutrition Coaching",
+      icon: faArrowsRotate,
+      iconClassName: "coach-icon-badge coach-icon-badge--d",
+      name: "3) Review and Adjust",
       bullets: [
-        "Focus on strategies to improve nutrition through education, accountability, and behavior changes",
-        "Develop habits and behaviors for long-term benefits to your health and wellbeing",
-        "Integrate sustainable meal timing practices and well-balanced diets (no strict meal planning!)",
+        "Weekly check-ins and form reviews to remove bottlenecks.",
+        "Adjust training quickly around recovery, schedule, or goal changes.",
       ],
     },
     {
-      // <a href="https://www.flaticon.com/free-icons/webcam" title="webcam icons">Webcam icons created by Vectors Market - Flaticon</a>
-      iconSrc: webcam,
-      name: "Active Check-Ins",
+      icon: faAppleWhole,
+      iconClassName: "coach-icon-badge coach-icon-badge--c",
+      name: "4) Support with Nutrition Habits",
       bullets: [
-        "Gather feedback to make micro/macro adjustments to your program if needed",
-        "Assess how you are doing, answer your questions, and make sure you're having fun!",
-        "Form-checks to ensure safe and optimal technique",
+        "Use practical nutrition habits to improve recovery and consistency.",
+        "Focus on sustainable behavior change, not rigid meal rules.",
       ],
     },
   ];
@@ -58,10 +49,10 @@ const System: React.FC = () => {
   return (
     <section>
       {systemComponents.map((service) => (
-        <div key={service.name} style={styles["service"]}>
+        <div key={service.name} className="coach-system-item">
           <SystemComponent
-            key={service.name}
-            iconSrc={service.iconSrc}
+            icon={service.icon}
+            iconClassName={service.iconClassName}
             name={service.name}
             bullets={service.bullets}
           />

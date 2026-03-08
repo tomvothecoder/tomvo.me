@@ -1,33 +1,221 @@
-@import url("https://fonts.googleapis.com/css?family=Fugaz+One&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Slabo&display=swap");
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Fugaz One", sans-serif;
+#coach h1,
+#coach h2,
+#coach h3,
+#coach h4,
+#coach h5,
+#coach h6 {
+  font-family: "Montserrat", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-p {
+#coach p,
+#coach li,
+#coach a,
+#coach button,
+#coach label,
+#coach input,
+#coach textarea {
   font-family: "Slabo", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-li {
-  font-family: "Slabo", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.default-font {
-  font-size: 18px;
-}
-
-.secondary-font {
+#coach .coach-kicker {
+  color: #a44a3f;
   font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+#coach .coach-hero-title {
+  font-size: 34px;
+  line-height: 1.25;
+  margin-bottom: 16px;
+}
+
+#coach .coach-hero-subtitle {
+  color: #253d5b;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+#coach .coach-hero-image {
+  border-radius: 12px;
+}
+
+#coach .coach-hero-cta {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+#coach .coach-cta-secondary {
+  color: #253d5b;
+  border-color: #253d5b;
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+#coach .coach-cta-secondary:hover,
+#coach .coach-cta-secondary:focus-visible {
+  color: #fff;
+  border-color: #253d5b;
+  background-color: #253d5b;
+}
+
+#coach .coach-hero-social {
+  font-weight: 600;
+}
+
+#coach .coach-trust-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+#coach .coach-trust-chip {
+  border: 1px solid #d5dae3;
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #253d5b;
+  background-color: #fff;
+}
+
+#coach .coach-section-title {
+  font-size: 28px;
+  font-weight: 500;
+  color: #111827;
+  margin-bottom: 20px;
+}
+
+#coach .coach-section-title--light {
+  color: #fff;
+}
+
+#coach .coach-surface-card {
+  border: 1px solid #e5e7eb;
+  box-shadow: none;
+  border-radius: 10px;
+}
+
+#coach .coach-card-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 10px;
+  margin-bottom: 8px;
+  color: #111827;
+}
+
+#coach .coach-card-description {
+  font-size: 16px;
+  color: #374151;
+}
+
+#coach .coach-icon-figure {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#coach .coach-icon-badge {
+  align-items: center;
+  border-radius: 999px;
+  display: inline-flex;
+  height: 72px;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 72px;
+}
+
+#coach .coach-icon-badge--a {
+  background-color: #e6f0ff;
+  color: #1d4ed8;
+}
+
+#coach .coach-icon-badge--b {
+  background-color: #e6faf0;
+  color: #047857;
+}
+
+#coach .coach-icon-badge--c {
+  background-color: #fff4e6;
+  color: #b45309;
+}
+
+#coach .coach-icon-badge--d {
+  background-color: #f5f3ff;
+  color: #6d28d9;
+}
+
+#coach .coach-service-card {
+  min-height: 100%;
+}
+
+#coach .coach-system-item {
+  margin-top: 20px;
+}
+
+#coach .coach-system-icon {
+  height: 64px;
+  width: 64px;
+}
+
+#coach .coach-system-item .coach-icon-badge {
+  font-size: 20px;
+  height: 64px;
+  width: 64px;
+}
+
+#coach .coach-service-fit {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+#coach .coach-service-list {
+  margin-left: 18px;
+}
+
+#coach .coach-service-list li {
+  list-style: disc;
+  margin-bottom: 6px;
+}
+
+#coach .coach-testimonial-card {
+  min-height: 100%;
+}
+
+#coach .coach-testimonial-quote {
+  font-size: 17px;
+  font-style: italic;
+  color: #111827;
+}
+
+#coach .coach-testimonial-byline {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #4b5563;
+}
+
+@media screen and (max-width: 768px) {
+  #coach .coach-hero-title {
+    font-size: 28px;
+  }
+
+  #coach .coach-hero-subtitle {
+    font-size: 16px;
+  }
+
+  #coach .coach-section-title {
+    font-size: 24px;
+  }
 }
