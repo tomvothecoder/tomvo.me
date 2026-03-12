@@ -1,29 +1,34 @@
 # PLANNING
 
 ## Task understanding
-Investigate why `tomvo.me` renders as a blank/black page in production, apply a minimal fix, validate locally, and prepare the fix branch for push.
+Fix a Safari refresh issue where sections using AOS stay hidden (appearing as content disappearing under headers), then deliver the fix on a new branch with a pushed PR.
 
 ## Findings so far
-- Console error points to a runtime crash in bundled `kwesforms` code:
-  - `Uncaught TypeError: can't access property "webpackChunkkwesforms", this is undefined`
-- `src/components/Coach/ContactForm.tsx` imports `kwesforms` and calls `kwesforms.init()` on mount.
-- The installed `kwesforms` package bundle references top-level `this.webpackChunkkwesforms`, which fails under Vite's strict ESM execution context.
+- `src/main.tsx` initialized AOS at module scope (`AOS.init({ once: true })`).
+- AOS hides `[data-aos]` elements until animation classes are applied.
+- On Safari refresh/page lifecycle, initializing AOS outside React mount can miss mounted routed content, leaving animated sections hidden.
 
 ## Files reviewed
-- `.github/workflows/build_workflow.yml`
-- `src/components/Coach/ContactForm.tsx`
-- `src/views/Coach.tsx`
-- `src/views/Coach.css`
-- `package.json`
-- `node_modules/kwesforms/index.js`
+- `src/main.tsx`
+- `src/App.tsx`
+- `src/App.css`
+- `src/components/NavBar/NavBar.css`
 
 ## Exact files planned for modification
-1. `src/components/Coach/ContactForm.tsx`
-   - Replace npm runtime import/init with browser script loading and safe `window.kwesforms.init()` call.
-2. `IMPLEMENTATION.md`
-   - Document root cause, fix, and validation commands/results.
+1. `src/main.tsx`
+   - Remove module-scope AOS initialization.
+2. `src/App.tsx`
+   - Add React lifecycle-based AOS initialization and refresh behavior.
+   - Refresh on route changes and on `load`/`pageshow` to cover Safari page lifecycle.
+3. `IMPLEMENTATION.md`
+   - Record root cause, patch, and validation outputs.
 
 ## Validation plan
-- Run `pnpm test`.
+- Run `pnpm test -- --watch=false`.
 - Run `pnpm build`.
-- Confirm built JS no longer includes the npm `webpackChunkkwesforms` runtime payload.
+
+## Delivery plan
+- Create branch `codex/fix-aos-refresh-hidden-content`.
+- Commit minimal diff.
+- Push branch.
+- Open PR against `main`.

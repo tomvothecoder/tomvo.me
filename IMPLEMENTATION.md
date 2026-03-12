@@ -1,24 +1,23 @@
 # IMPLEMENTATION
 
 ## Root cause
-- Production startup crashed from `kwesforms` npm bundle execution.
-- `src/components/Coach/ContactForm.tsx` imported `kwesforms` and called `kwesforms.init()` in `useEffect`.
-- The package bundle references `this.webpackChunkkwesforms` at runtime, which is `undefined` under Vite's module execution context, causing the crash seen in production.
+- AOS was initialized in `src/main.tsx` at module scope.
+- In Safari refresh/page lifecycle paths, AOS could initialize before routed `data-aos` nodes were fully in place.
+- Since AOS CSS keeps `data-aos` nodes hidden until animation classes are applied, those sections remained invisible.
 
 ## Fix applied
-- Kept KwesForms usage for form handling.
-- Replaced npm runtime import/init with browser script loading in `ContactForm`:
-  - Load `https://kwesforms.com/v2/kwes-script.js` once via a guarded `<script>` injection.
-  - Call `window.kwesforms?.init()` after script load (or immediately if already present).
-  - Keep form markup (`className="kwes-form"`, Kwes action URL, `data-kw-rules`) unchanged.
+- Removed module-scope `AOS.init` from `src/main.tsx`.
+- Added `AOSLifecycle` in `src/App.tsx` to manage AOS inside React lifecycle:
+  - Initialize AOS once in `useEffect` after app mount.
+  - Call `AOS.refreshHard()` on `window` `load` and `pageshow` events (Safari lifecycle-safe).
+  - Call `AOS.refreshHard()` after route path changes via `useLocation`, deferred with `requestAnimationFrame`.
 
 ## Files modified
-- `src/components/Coach/ContactForm.tsx`
+- `src/main.tsx`
+- `src/App.tsx`
 - `PLANNING.md`
+- `IMPLEMENTATION.md`
 
 ## Validation
-- `pnpm test` passed (1 test).
+- `pnpm test -- --watch=false` passed (1 test).
 - `pnpm build` passed.
-- Verified built app JS no longer contains:
-  - `webpackChunkkwesforms`
-  - `requireKwesforms`
