@@ -1,11 +1,9 @@
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import ReactPlayer from "react-player";
+import { useEffect } from "react";
 
 import { CSSinJS } from "common/types";
-
-import kwesforms from "kwesforms";
-import { useEffect } from "react";
 
 const ContactForm: React.FC = () => {
   const styles: CSSinJS = {
@@ -16,7 +14,35 @@ const ContactForm: React.FC = () => {
   };
 
   useEffect(() => {
-    kwesforms.init();
+    const scriptId = "kwesforms-script";
+    const kwesWindow = window as typeof window & {
+      kwesforms?: { init: () => void };
+    };
+    const initKwesForms = () => kwesWindow.kwesforms?.init();
+
+    if (kwesWindow.kwesforms?.init) {
+      initKwesForms();
+      return undefined;
+    }
+
+    const existingScript = document.getElementById(
+      scriptId,
+    ) as HTMLScriptElement | null;
+
+    if (existingScript) {
+      existingScript.addEventListener("load", initKwesForms);
+      return () => existingScript.removeEventListener("load", initKwesForms);
+    }
+
+    const script = document.createElement("script");
+    script.id = scriptId;
+    script.src = "https://kwesforms.com/v2/kwes-script.js";
+    script.async = true;
+    script.defer = true;
+    script.addEventListener("load", initKwesForms);
+    document.body.appendChild(script);
+
+    return () => script.removeEventListener("load", initKwesForms);
   }, []);
 
   return (

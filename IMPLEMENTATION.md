@@ -1,40 +1,24 @@
 # IMPLEMENTATION
 
-## Assessment (previous vs current redesign)
-- Improved: section order and messaging are more conversion-focused than the previous version.
-- Regression fixed: secondary hero CTA (`View Services`) looked disabled due to low-contrast outlined styling.
-- Regression fixed: iconography was inconsistent (mixed raster styles/sizes), which lowered perceived visual quality.
+## Root cause
+- Production startup crashed from `kwesforms` npm bundle execution.
+- `src/components/Coach/ContactForm.tsx` imported `kwesforms` and called `kwesforms.init()` in `useEffect`.
+- The package bundle references `this.webpackChunkkwesforms` at runtime, which is `undefined` under Vite's module execution context, causing the crash seen in production.
 
-## What changed in this follow-up
-- Added a scoped hero secondary CTA class and explicit contrast/hover states to make `View Services` clearly interactive.
-- Replaced coach audience card icons with consistent Font Awesome vector icons.
-- Replaced coaching system icons with Font Awesome vectors and added reusable icon badge styles.
-- Updated `SystemComponent` to render typed icon props instead of image paths.
-- Documented benchmark references and findings for coaching-website comparison.
+## Fix applied
+- Kept KwesForms usage for form handling.
+- Replaced npm runtime import/init with browser script loading in `ContactForm`:
+  - Load `https://kwesforms.com/v2/kwes-script.js` once via a guarded `<script>` injection.
+  - Call `window.kwesforms?.init()` after script load (or immediately if already present).
+  - Keep form markup (`className="kwes-form"`, Kwes action URL, `data-kw-rules`) unchanged.
 
 ## Files modified
-- `src/components/Coach/Hero.tsx`
-- `src/views/Coach.css`
-- `src/components/Coach/CoreValues.tsx`
-- `src/components/Coach/Services/System.tsx`
-- `src/components/Coach/Services/SystemComponent.tsx`
+- `src/components/Coach/ContactForm.tsx`
 - `PLANNING.md`
 
-## Benchmark references reviewed
-- `https://www.nerdfitness.com/coaching-overview-page/`
-- `https://future.co/pro`
-- `https://www.startingstrengthgyms.com/online-coaching.html`
-- `https://caliberstrong.com/`
-- `https://www.barbellmedicine.com/coaching/`
-
-## Comparison findings applied
-- Top-of-page CTA clarity is critical: strong primary action plus clearly visible secondary path.
-- "How coaching works" should stay short, ordered, and scannable.
-- Social proof and results should be visible before the final contact form.
-- Offer positioning benefits from clear audience-fit language and explicit deliverables.
-
 ## Validation
-- `npx prettier --write "src/components/Coach/Hero.tsx" "src/components/Coach/CoreValues.tsx" "src/components/Coach/Services/System.tsx" "src/components/Coach/Services/SystemComponent.tsx" "src/views/Coach.css" "PLANNING.md"`
-- `npx tsc --noEmit` passed.
-- `npm run build` passed.
-- `./node_modules/.bin/eslint "src/**/*.{ts,tsx}"` failed: no ESLint config detected in this environment.
+- `pnpm test` passed (1 test).
+- `pnpm build` passed.
+- Verified built app JS no longer contains:
+  - `webpackChunkkwesforms`
+  - `requireKwesforms`
