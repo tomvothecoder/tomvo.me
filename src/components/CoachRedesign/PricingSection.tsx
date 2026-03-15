@@ -64,16 +64,16 @@ function PricingSection() {
 
           return (
             <motion.div key={plan.name} variants={fadeInUp} className="h-full">
-              <Card
-                className={cn(
-                  "h-full",
-                  plan.highlighted
+                <Card
+                  className={cn(
+                    "h-full",
+                    plan.highlighted
                     ? "border-accent/40 ring-1 ring-accent/30"
                     : undefined,
                 )}
-              >
+                >
                 <CardContent className="flex h-full flex-col p-6">
-                  <div className="flex items-start justify-between gap-3">
+                  <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
                     <div className="flex min-w-0 items-center gap-3">
                       <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-accent/10 text-accent">
                         <Icon className="h-4 w-4" />
@@ -81,12 +81,12 @@ function PricingSection() {
                       <CardTitle>{plan.name}</CardTitle>
                     </div>
                     {plan.highlighted ? (
-                      <Badge variant="accent" className="shrink-0 whitespace-nowrap">
+                      <Badge variant="accent" className="w-fit shrink-0 whitespace-nowrap self-start">
                         Most popular
                       </Badge>
                     ) : null}
                   </div>
-                  <p className="mt-1 text-sm font-medium text-foreground whitespace-nowrap">
+                  <p className="mt-1 text-sm font-medium text-foreground">
                     {plan.cadence}
                   </p>
                   <p className="mt-3 text-[15px] leading-7 text-foreground/75">

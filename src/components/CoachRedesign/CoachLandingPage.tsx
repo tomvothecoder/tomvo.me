@@ -30,7 +30,7 @@ function CoachLandingPage() {
 
   return (
     <div className="relative bg-background pb-20 text-foreground md:pb-0">
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-[420px] bg-gradient-to-b from-accent/10 via-transparent to-transparent" />
+      <div className="pointer-events-none absolute inset-x-0 top-10 h-[420px] bg-gradient-to-b from-accent/10 via-transparent to-transparent md:top-12" />
       <div className="relative">
         <CoachSubNav />
         <HeroSection />

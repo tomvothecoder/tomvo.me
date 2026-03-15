@@ -136,36 +136,41 @@ function CoachSubNav() {
   };
 
   return (
-    <div className="sticky top-16 z-30 border-b border-border/80 bg-background/92 backdrop-blur supports-[backdrop-filter]:bg-background/88">
-      <nav aria-label="Coach section navigation" className="mx-auto w-full max-w-6xl px-6 py-2 md:px-10">
-        <div className="flex min-h-10 snap-x snap-mandatory items-center gap-1.5 overflow-x-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden md:justify-center">
-          {sections.map((section) => {
-            const isActive = activeSectionId === section.id;
+    <div className="sticky top-16 z-30 border-b border-border/80 bg-background/95 backdrop-blur">
+      <nav
+        aria-label="Coach section navigation"
+        className="mx-auto w-full max-w-6xl px-4 py-1.5 sm:px-6 md:px-10"
+      >
+        <div className="-mx-1 overflow-x-auto overscroll-x-contain [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
+          <div className="flex min-h-10 min-w-max snap-x snap-mandatory items-center gap-1.5 px-1 md:w-full md:min-w-0 md:justify-center">
+            {sections.map((section) => {
+              const isActive = activeSectionId === section.id;
 
-            return (
-              <a
-                key={section.id}
-                href={`#${section.id}`}
-                aria-current={isActive ? "true" : undefined}
-                onClick={(event) => handleSectionClick(event, section.id)}
-                className={cn(
-                  "relative snap-start shrink-0 rounded-full border px-3.5 py-1.5 text-sm font-medium leading-5 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/50",
-                  isActive
-                    ? "border-accent/30 bg-accent/5 text-accent"
-                    : "border-transparent bg-transparent text-foreground/70 hover:border-border/70 hover:bg-surface hover:text-foreground",
-                )}
-              >
-                {isActive ? (
-                  <motion.span
-                    layoutId="coach-subnav-active-chip"
-                    transition={prefersReducedMotion ? { duration: 0 } : activeChipTransition}
-                    className="absolute inset-0 rounded-full bg-accent/10"
-                  />
-                ) : null}
-                <span className="relative z-[1]">{section.label}</span>
-              </a>
-            );
-          })}
+              return (
+                <a
+                  key={section.id}
+                  href={`#${section.id}`}
+                  aria-current={isActive ? "true" : undefined}
+                  onClick={(event) => handleSectionClick(event, section.id)}
+                  className={cn(
+                    "relative snap-start shrink-0 rounded-full border px-3 py-1.5 text-xs font-medium leading-5 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/50 sm:px-3.5 sm:text-sm",
+                    isActive
+                      ? "border-accent/30 bg-accent/5 text-accent"
+                      : "border-transparent bg-transparent text-foreground/70 hover:border-border/70 hover:bg-surface hover:text-foreground",
+                  )}
+                >
+                  {isActive ? (
+                    <motion.span
+                      layoutId="coach-subnav-active-chip"
+                      transition={prefersReducedMotion ? { duration: 0 } : activeChipTransition}
+                      className="absolute inset-0 rounded-full bg-accent/10"
+                    />
+                  ) : null}
+                  <span className="relative z-[1]">{section.label}</span>
+                </a>
+              );
+            })}
+          </div>
         </div>
       </nav>
     </div>
