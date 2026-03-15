@@ -54,6 +54,7 @@ function ServicesSection() {
       eyebrow="Services"
       title="Coaching options built around your goals and training context"
       description="Choose the support level that matches your current training phase and schedule."
+      descriptionClassName="text-foreground/70"
     >
       <motion.div
         variants={staggerContainer}
@@ -70,10 +71,10 @@ function ServicesSection() {
                     <Icon className="h-5 w-5" />
                   </span>
                   <CardTitle className="mt-3">{service.title}</CardTitle>
-                  <CardDescription className="m-0 mt-2 text-sm leading-relaxed">
+                  <CardDescription className="m-0 mt-2 text-sm leading-relaxed text-foreground/70">
                     {service.description}
                   </CardDescription>
-                  <ul className="m-0 mt-4 space-y-2 text-sm text-muted">
+                  <ul className="m-0 mt-4 space-y-2 text-sm leading-relaxed text-foreground/70">
                     {service.points.map((point) => (
                       <li key={point} className="flex items-start gap-2">
                         <span className="mt-2 h-1.5 w-1.5 rounded-full bg-accent" />

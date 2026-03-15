@@ -9,6 +9,7 @@ interface SectionWrapperProps {
   eyebrow?: string;
   title: string;
   description?: string;
+  descriptionClassName?: string;
   children: ReactNode;
   className?: string;
   contentClassName?: string;
@@ -19,6 +20,7 @@ function SectionWrapper({
   eyebrow,
   title,
   description,
+  descriptionClassName,
   children,
   className,
   contentClassName,
@@ -42,7 +44,14 @@ function SectionWrapper({
             {title}
           </h2>
           {description ? (
-            <p className="mt-4 text-lg leading-relaxed text-muted">{description}</p>
+            <p
+              className={cn(
+                "mt-4 text-lg leading-relaxed text-muted",
+                descriptionClassName,
+              )}
+            >
+              {description}
+            </p>
           ) : null}
         </motion.div>
 

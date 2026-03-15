@@ -11,9 +11,9 @@ import {
 
 const faqs = [
   {
-    question: "Do you train clients in Fremont, Newark, Milpitas, and Santa Clara?",
+    question: "Do you offer in-person, online, or both?",
     answer:
-      "Yes. Coaching is available for clients in Fremont, Newark, Milpitas, and Santa Clara, with options for in-person and online support depending on your schedule.",
+      "I coach both in-person and online. In-person coaching is available in Fremont, Newark, Milpitas, and Santa Clara, and online support is available for clients who prefer remote coaching.",
   },
   {
     question: "Do I need lifting experience before starting?",
@@ -46,13 +46,16 @@ function FAQSection() {
       eyebrow="FAQ"
       title="Questions clients ask before starting"
       description="Everything you need to evaluate fit, format, and next steps."
+      descriptionClassName="text-foreground/70"
     >
       <motion.div variants={fadeInUp} {...(prefersReducedMotion ? {} : revealInView)}>
         <Accordion type="single" collapsible className="rounded-xl border border-border bg-surface px-5 shadow-soft">
           {faqs.map((faq, index) => (
             <AccordionItem value={`item-${index + 1}`} key={faq.question}>
               <AccordionTrigger>{faq.question}</AccordionTrigger>
-              <AccordionContent>{faq.answer}</AccordionContent>
+              <AccordionContent className="leading-relaxed text-foreground/70">
+                {faq.answer}
+              </AccordionContent>
             </AccordionItem>
           ))}
         </Accordion>
