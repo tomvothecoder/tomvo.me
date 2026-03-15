@@ -14,8 +14,8 @@ const Banner: React.FC = () => {
       <div className="container">
         <div
           className="coach-trust-bar"
-          data-aos="fade-in"
-          data-aos-delay="100"
+         
+         
         >
           {trustPoints.map((point) => (
             <span key={point} className="coach-trust-chip">

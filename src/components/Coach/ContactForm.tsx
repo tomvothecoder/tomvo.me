@@ -50,8 +50,8 @@ const ContactForm: React.FC = () => {
       <div className="columns is-8 is-centered">
         <div
           className="column is-4 is-vcentered"
-          data-aos="fade-in"
-          data-aos-delay="100"
+         
+         
         >
           <h1 className="title is-2">Ready to get started?</h1>
           <p className="is-size-5 has-text-dark-grey" style={styles["caption"]}>
@@ -79,8 +79,8 @@ const ContactForm: React.FC = () => {
         </div>
         <div
           className="column card is-4 has-text-left coach-surface-card"
-          data-aos="fade-in"
-          data-aos-delay="100"
+         
+         
         >
           <form
             className="kwes-form"

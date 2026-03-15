@@ -43,7 +43,7 @@ const CoreValues: React.FC = () => {
       <div className="columns is-9 is-centered">
         {audiences.map((audience) => (
           <div key={audience.title} className="column is-3 has-text-centered">
-            <div className="card coach-surface-card" data-aos="zoom-in">
+            <div className="card coach-surface-card">
               <div className="card-content">
                 <figure className="coach-icon-figure image is-96x96">
                   <div className={audience.iconClassName} aria-hidden="true">

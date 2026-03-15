@@ -18,8 +18,8 @@ const SystemComponent = ({ icon, iconClassName, name, bullets }: Props) => {
     <section>
       <div
         className="columns is-centered is-8"
-        data-aos="zoom-in"
-        data-aos-delay="100"
+       
+       
       >
         <div className="column is-1">
           <figure className="coach-system-icon coach-icon-figure">

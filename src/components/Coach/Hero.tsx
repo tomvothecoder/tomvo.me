@@ -17,8 +17,8 @@ function Hero() {
           <div className="columns is-9 is-centered is-vcentered">
             <div
               className="column is-4"
-              data-aos="fade-in"
-              data-aos-delay="100"
+             
+             
             >
               <figure
                 style={styles["selfie"]}
@@ -34,8 +34,8 @@ function Hero() {
 
             <div
               className="column is-5 has-text-left"
-              data-aos="fade-in"
-              data-aos-delay="100"
+             
+             
             >
               <p className="coach-kicker">NASM-Certified Personal Trainer</p>
               <h1 className="coach-hero-title">

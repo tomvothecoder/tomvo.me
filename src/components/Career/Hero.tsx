@@ -15,8 +15,8 @@ function Hero() {
           <div className="columns is-9 is-centered is-vcentered">
             <div
               className="column is-4"
-              data-aos="fade-in"
-              data-aos-delay="100"
+             
+             
             >
               <figure style={styles["selfie"]} className="image">
                 <img src={selfPortrait} alt="me" />
@@ -25,8 +25,8 @@ function Hero() {
 
             <div
               className="column is-5 has-text-left"
-              data-aos="fade-in"
-              data-aos-delay="100"
+             
+             
             >
               <h3 id="hero-welcome">Hey There!</h3>
               <h1 id="hero-title">I'm Tom Vo,</h1>
