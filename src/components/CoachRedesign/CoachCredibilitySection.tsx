@@ -8,6 +8,11 @@ import { Card, CardContent } from "components/ui/card";
 
 const credibilityPoints = [
   {
+    icon: ClipboardCheck,
+    title: "5 years of professional coaching experience",
+    text: "Experience across private coaching, meet prep, and sustainable habit-building for adult clients.",
+  },
+  {
     icon: ShieldCheck,
     title: "NASM-certified coaching foundation",
     text: "Programming decisions are built on safe progressions and repeatable training principles.",
@@ -32,7 +37,7 @@ function CoachCredibilitySection() {
       id="credibility"
       eyebrow="Coach credibility"
       title="Why clients trust this coaching system"
-      description="You get a clear training process, transparent communication, and coaching decisions grounded in data."
+      description="You get a clear training process, transparent communication, and coaching decisions grounded in data and 5 years of professional coaching experience."
     >
       <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
         <motion.div variants={fadeInUp} {...(prefersReducedMotion ? {} : revealInView)}>
@@ -48,7 +53,7 @@ function CoachCredibilitySection() {
         <motion.div
           variants={staggerContainer}
           {...(prefersReducedMotion ? {} : revealInView)}
-          className="grid gap-4"
+          className="flex flex-col gap-4"
         >
           {credibilityPoints.map((point) => {
             const Icon = point.icon;

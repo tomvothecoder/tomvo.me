@@ -8,7 +8,7 @@ import { motion, useReducedMotion } from "framer-motion";
 
 import { fadeInUp, revealInView, staggerContainer } from "components/CoachRedesign/animations";
 import SectionWrapper from "components/CoachRedesign/SectionWrapper";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "components/ui/card";
+import { Card, CardContent, CardDescription, CardTitle } from "components/ui/card";
 
 const services = [
   {
@@ -65,17 +65,15 @@ function ServicesSection() {
           return (
             <motion.div key={service.title} variants={fadeInUp}>
               <Card className="h-full">
-                <CardHeader>
+                <CardContent className="px-6 pb-6 pt-6">
                   <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-accent/10 text-accent">
                     <Icon className="h-5 w-5" />
                   </span>
-                  <CardTitle>{service.title}</CardTitle>
-                  <CardDescription className="text-sm leading-relaxed">
+                  <CardTitle className="mt-3">{service.title}</CardTitle>
+                  <CardDescription className="m-0 mt-2 text-sm leading-relaxed">
                     {service.description}
                   </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-2 text-sm text-muted">
+                  <ul className="m-0 mt-4 space-y-2 text-sm text-muted">
                     {service.points.map((point) => (
                       <li key={point} className="flex items-start gap-2">
                         <span className="mt-2 h-1.5 w-1.5 rounded-full bg-accent" />

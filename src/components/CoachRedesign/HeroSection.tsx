@@ -13,11 +13,11 @@ const trustSignals = [
   },
   {
     icon: MapPin,
-    label: "Serving Fremont, Newark, and Santa Clara",
+    label: "Serving Fremont, Newark, Santa Clara, and Milpitas",
   },
   {
     icon: BarChart3,
-    label: "Progress-first programming and accountability",
+    label: "5 years of professional coaching experience",
   },
 ];
 
@@ -25,7 +25,7 @@ function HeroSection() {
   const prefersReducedMotion = useReducedMotion();
 
   return (
-    <section id="hero" className="px-6 pb-14 pt-20 md:px-10 md:pb-20 md:pt-28">
+    <section id="hero" className="px-6 pb-8 pt-20 md:px-10 md:pb-12 md:pt-28">
       <div className="mx-auto grid w-full max-w-6xl gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
         <motion.div
           variants={heroStagger}

@@ -11,9 +11,9 @@ import {
 
 const faqs = [
   {
-    question: "Do you train clients in Fremont, Newark, and Santa Clara?",
+    question: "Do you train clients in Fremont, Newark, Santa Clara, and Milpitas?",
     answer:
-      "Yes. Coaching is available for clients in Fremont, Newark, and Santa Clara, with options for in-person and online support depending on your schedule.",
+      "Yes. Coaching is available for clients in Fremont, Newark, Santa Clara, and Milpitas, with options for in-person and online support depending on your schedule.",
   },
   {
     question: "Do I need lifting experience before starting?",
