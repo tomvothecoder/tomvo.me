@@ -8,7 +8,7 @@ const stats = [
     label: "Private coaching experience",
   },
   {
-    value: "Hybrid",
+    value: "In-person + Online",
     label: "In-person + online coaching",
   },
   {
