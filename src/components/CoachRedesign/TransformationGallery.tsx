@@ -46,19 +46,19 @@ function TransformationGallery() {
       >
         {transformations.map((item, index) => (
           <motion.div key={item.title} variants={fadeInUp}>
-            <Card className="h-full overflow-hidden">
+            <Card className="flex h-full flex-col overflow-hidden">
               <div className="h-32 border-b border-border bg-gradient-to-br from-accent/20 via-accent/5 to-transparent p-6">
                 <p className="text-xs font-semibold uppercase tracking-[0.15em] text-muted">
                   Case {index + 1}
                 </p>
               </div>
-              <CardContent className="pt-6">
+              <CardContent className="flex flex-1 flex-col pt-6">
                 <Badge className="mb-4" variant="accent">
                   {item.label}
                 </Badge>
                 <h3 className="text-xl font-semibold text-foreground">{item.title}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-muted">{item.summary}</p>
-                <p className="mt-5 text-sm font-medium text-foreground">{item.metric}</p>
+                <p className="mt-auto pt-5 text-sm font-medium text-foreground">{item.metric}</p>
               </CardContent>
             </Card>
           </motion.div>

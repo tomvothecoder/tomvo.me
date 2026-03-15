@@ -13,7 +13,7 @@ const stats = [
   },
   {
     value: "4 Cities",
-    label: "Fremont, Newark, Santa Clara, Milpitas",
+    label: "Fremont, Newark, Milpitas, and Santa Clara",
   },
   {
     value: "Weekly",

@@ -13,7 +13,7 @@ const trustSignals = [
   },
   {
     icon: MapPin,
-    label: "Serving Fremont, Newark, Santa Clara, and Milpitas",
+    label: "Serving Fremont, Newark, Milpitas, and Santa Clara",
   },
   {
     icon: BarChart3,

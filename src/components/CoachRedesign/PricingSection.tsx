@@ -1,16 +1,18 @@
-import { Check } from "lucide-react";
+import { BarChart3, Check, Dumbbell, Trophy } from "lucide-react";
 import { motion, useReducedMotion } from "framer-motion";
 
 import { fadeInUp, revealInView, staggerContainer } from "components/CoachRedesign/animations";
 import SectionWrapper from "components/CoachRedesign/SectionWrapper";
 import { Badge } from "components/ui/badge";
 import { Button } from "components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "components/ui/card";
+import { Card, CardContent, CardTitle } from "components/ui/card";
+import { cn } from "lib/utils";
 
 const plans = [
   {
+    icon: Dumbbell,
     name: "Starter",
-    cadence: "4 sessions / month",
+    cadence: "4 sessions",
     focus: "Form, foundations, and consistency",
     features: [
       "Monthly programming",
@@ -20,8 +22,9 @@ const plans = [
     highlighted: false,
   },
   {
+    icon: BarChart3,
     name: "Performance",
-    cadence: "8 sessions / month",
+    cadence: "8 sessions",
     focus: "Progressive overload and weekly oversight",
     features: [
       "Priority check-ins",
@@ -31,6 +34,7 @@ const plans = [
     highlighted: true,
   },
   {
+    icon: Trophy,
     name: "Meet Prep",
     cadence: "12-week prep cycle",
     focus: "Competition peaking and attempt execution",
@@ -54,21 +58,36 @@ function PricingSection() {
         {...(prefersReducedMotion ? {} : revealInView)}
         className="grid gap-5 lg:grid-cols-3"
       >
-        {plans.map((plan) => (
-          <motion.div key={plan.name} variants={fadeInUp}>
+        {plans.map((plan) => {
+          const Icon = plan.icon;
+
+          return (
+            <motion.div key={plan.name} variants={fadeInUp} className="h-full">
             <Card
-              className={plan.highlighted ? "border-accent/40 ring-1 ring-accent/30" : undefined}
+              className={cn(
+                "h-full",
+                plan.highlighted ? "border-accent/40 ring-1 ring-accent/30" : undefined,
+              )}
             >
-              <CardHeader>
+              <CardContent className="flex h-full flex-col p-6">
                 <div className="flex items-start justify-between gap-3">
-                  <CardTitle>{plan.name}</CardTitle>
-                  {plan.highlighted ? <Badge variant="accent">Most popular</Badge> : null}
+                  <div className="flex min-w-0 items-start gap-3">
+                    <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-accent/10 text-accent">
+                      <Icon className="h-4 w-4" />
+                    </span>
+                    <div className="min-w-0">
+                      <CardTitle>{plan.name}</CardTitle>
+                      <p className="mt-1 text-sm font-medium text-foreground">{plan.cadence}</p>
+                    </div>
+                  </div>
+                  {plan.highlighted ? (
+                    <Badge variant="accent" className="shrink-0 whitespace-nowrap">
+                      Most popular
+                    </Badge>
+                  ) : null}
                 </div>
-                <p className="text-sm font-medium text-foreground">{plan.cadence}</p>
-                <p className="text-sm text-muted">{plan.focus}</p>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-3">
+                <p className="mt-3 text-sm text-muted">{plan.focus}</p>
+                <ul className="mt-4 space-y-2.5">
                   {plan.features.map((feature) => (
                     <li key={feature} className="flex items-center gap-2 text-sm text-muted">
                       <Check className="h-4 w-4 text-accent" />
@@ -76,13 +95,26 @@ function PricingSection() {
                     </li>
                   ))}
                 </ul>
-                <Button asChild className="mt-6 w-full" variant={plan.highlighted ? "default" : "outline"}>
-                  <a href="#consultation">Book Free Consultation</a>
-                </Button>
+                <div className="mt-auto pt-5">
+                  <Button
+                    asChild
+                    size="lg"
+                    className={cn(
+                      "w-full",
+                      !plan.highlighted
+                        ? "border-accent/30 bg-accent/5 text-accent hover:border-accent/40 hover:bg-accent/10"
+                        : "",
+                    )}
+                    variant={plan.highlighted ? "default" : "outline"}
+                  >
+                    <a href="#consultation">Book Free Consultation</a>
+                  </Button>
+                </div>
               </CardContent>
             </Card>
-          </motion.div>
-        ))}
+            </motion.div>
+          );
+        })}
       </motion.div>
     </SectionWrapper>
   );

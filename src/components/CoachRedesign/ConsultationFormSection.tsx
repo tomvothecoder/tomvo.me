@@ -68,7 +68,7 @@ function ConsultationFormSection() {
             </li>
             <li className="flex items-center gap-3">
               <MapPin className="h-4 w-4 text-accent" />
-              <span>Service area: Fremont, Newark, Santa Clara, Milpitas</span>
+              <span>Service area: Fremont, Newark, Milpitas, and Santa Clara</span>
             </li>
             <li className="flex items-center gap-3">
               <Phone className="h-4 w-4 text-accent" />
