@@ -1,11 +1,13 @@
 # IMPLEMENTATION
 
 ## Summary
+
 Implemented the approved `/coach` redesign using Tailwind CSS + shadcn-style UI primitives + Framer Motion, preserved client-side KwesForms submission, and removed AOS from the codebase.
 
 ## What changed
 
 ### 1) Stack migration groundwork
+
 - Added dependencies for redesign stack:
   - `framer-motion`, `lucide-react`
   - shadcn-style utility deps: `@radix-ui/react-accordion`, `@radix-ui/react-slot`, `class-variance-authority`, `clsx`, `tailwind-merge`
@@ -17,6 +19,7 @@ Implemented the approved `/coach` redesign using Tailwind CSS + shadcn-style UI 
   - `src/lib/utils.ts` (`cn` helper)
 
 ### 2) New `/coach` architecture (section-based)
+
 - Replaced old `Coach` page composition with a new landing page implementation:
   - `src/components/CoachRedesign/CoachLandingPage.tsx`
 - Added new sections:
@@ -37,7 +40,9 @@ Implemented the approved `/coach` redesign using Tailwind CSS + shadcn-style UI 
   - `src/views/Coach.tsx` now renders `CoachLandingPage`
 
 ### 3) shadcn-style component primitives
+
 Added reusable UI building blocks under `src/components/ui/`:
+
 - `button.tsx`
 - `card.tsx`
 - `input.tsx`
@@ -46,12 +51,14 @@ Added reusable UI building blocks under `src/components/ui/`:
 - `accordion.tsx`
 
 ### 4) AOS removal and Framer Motion adoption
+
 - Removed AOS runtime/init from `src/main.tsx`.
 - Removed all `data-aos` attributes from `src` components.
 - Removed `aos` and `@types/aos` from dependencies.
 - Framer Motion now powers hero entry, section reveals, and staggered cards.
 
 ### 5) Form integration (KwesForms retained)
+
 - Implemented redesigned consultation form in:
   - `src/components/CoachRedesign/ConsultationFormSection.tsx`
 - Kept KwesForms model:
@@ -64,6 +71,7 @@ Added reusable UI building blocks under `src/components/ui/`:
 - Primary CTA text: `Book Free Consultation`
 
 ### 6) Shared shell and metadata refresh
+
 - Updated app shell styles:
   - `src/components/NavBar/NavBar.tsx`
   - `src/components/Footer.tsx`
@@ -74,23 +82,28 @@ Added reusable UI building blocks under `src/components/ui/`:
   - `public/manifest.json`
 
 ### 7) Test stability updates
+
 - Added `IntersectionObserver` test mock in `src/setupTests.ts` to support Framer Motion viewport features in jsdom.
 
 ## Validation
+
 - `rg -n "aos|data-aos|AOS.init" src package.json` -> no matches
 - `pnpm test` -> pass (1 test)
 - `pnpm build` -> pass
 
 ## Notes
+
 - `/career` route remains intact and routable.
 - Redesigned surfaces are implemented with Tailwind + shadcn-style primitives and Framer Motion.
 
 ## Incremental polish (2026-03-14)
 
 ### Summary
+
 Applied focused `/coach` conversion polish for readability and messaging clarity without changing page architecture.
 
 ### What changed
+
 - Updated micro-proof stats in `src/components/CoachRedesign/StatsSection.tsx`:
   - `5 Years` -> `Private coaching experience`
   - `Hybrid` -> `In-person + online coaching`
@@ -106,15 +119,18 @@ Applied focused `/coach` conversion polish for readability and messaging clarity
   - Kept exactly 3 bullets with clearer format/location/coaching-mode language
 
 ### Validation
+
 - `pnpm test` -> pass
 - `pnpm build` -> pass
 
 ## Incremental results refresh (2026-03-14)
 
 ### Summary
+
 Updated the `/coach` transformation section with concrete case studies and added an additional-results highlight while keeping the existing 3-card layout and interaction style.
 
 ### What changed
+
 - Updated case-study cards in `src/components/CoachRedesign/TransformationGallery.tsx`:
   - Advanced remote powerlifting meet-prep result (+55.1 lb total, first-place finish)
   - Remote body-composition result (~210 lb to 190 lb)
@@ -125,5 +141,35 @@ Updated the `/coach` transformation section with concrete case studies and added
   - Includes in-person novice meet-prep outcome (~898 total, 8/9 attempts).
 
 ### Validation
+
 - `pnpm test` -> pass
 - `pnpm build` -> pass
+
+## Incremental security remediation (2026-03-15)
+
+### Summary
+
+Resolved all four active Dependabot alerts tied to `pnpm-lock.yaml` by upgrading direct dependencies and pinning one transitive package to a patched version.
+
+### What changed
+
+- Updated `react-router-dom` from `^6.23.1` to `^6.30.2` (resolved to `6.30.3`), which pulls patched:
+  - `react-router@6.30.3`
+  - `@remix-run/router@1.23.2`
+- Updated `vitest` from `^2.1.0` to `^4.1.0`, removing the vulnerable transitive `vite@5`/`esbuild@0.21.x` path and resolving to:
+  - `vite@6.4.1`
+  - `esbuild@0.25.12`
+- Added a `pnpm` override in `package.json` to force patched `flatted`:
+  - `"pnpm": { "overrides": { "flatted": "^3.4.1" } }`
+- Regenerated `pnpm-lock.yaml` with `pnpm install`.
+
+### Validation
+
+- `pnpm why flatted esbuild react-router @remix-run/router`:
+  - `flatted@3.4.1`
+  - `esbuild@0.25.12`
+  - `react-router@6.30.3`
+  - `@remix-run/router@1.23.2`
+- `pnpm audit --json` -> zero vulnerabilities (`high: 0`, `moderate: 0`).
+- `pnpm test` -> pass (1/1).
+- `pnpm build` -> pass.
