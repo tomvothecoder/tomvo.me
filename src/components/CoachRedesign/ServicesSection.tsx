@@ -59,6 +59,7 @@ function ServicesSection() {
       title="Coaching options built around your goals and training context"
       description="Choose the support level that matches your current training phase and schedule across strength training, powerlifting, and mobility-focused coaching."
       descriptionClassName="text-foreground/75"
+      className="py-14 md:py-20"
     >
       <motion.div
         variants={staggerContainer}

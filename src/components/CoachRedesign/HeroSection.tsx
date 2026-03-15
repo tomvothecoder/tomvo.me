@@ -1,4 +1,4 @@
-import { ArrowRight, BarChart3, CheckCircle2, Dumbbell, MapPin } from "lucide-react";
+import { ArrowRight, BarChart3, CheckCircle2, Clock3, Dumbbell, MapPin } from "lucide-react";
 import { motion, useReducedMotion } from "framer-motion";
 
 import selfPortrait from "assets/me.jpg";
@@ -67,6 +67,14 @@ function HeroSection() {
             <Button asChild variant="outline" size="lg">
               <a href="#packages">View Packages</a>
             </Button>
+          </motion.div>
+
+          <motion.div
+            variants={fadeInUp}
+            className="mt-4 inline-flex items-center gap-2 rounded-full border border-border bg-surface px-3 py-1.5 text-[13px] font-medium text-foreground/80"
+          >
+            <Clock3 className="h-3.5 w-3.5 text-accent" />
+            <span>Typical consultation response within 24 hours</span>
           </motion.div>
 
           <motion.ul variants={fadeInUp} className="mt-8 space-y-3">

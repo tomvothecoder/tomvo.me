@@ -53,6 +53,7 @@ function PricingSection() {
       title="Simple coaching packages with clear progression"
       description="Choose the format that best fits your training frequency and performance goals. All packages support in-person or online coaching with flexibility based on individual cases."
       descriptionClassName="text-foreground/75"
+      className="py-14 md:py-20"
     >
       <motion.div
         variants={staggerContainer}
@@ -86,17 +87,17 @@ function PricingSection() {
                       </Badge>
                     ) : null}
                   </div>
-                  <p className="mt-1 text-sm font-medium text-foreground">
+                  <p className="mt-1 text-[15px] font-medium leading-6 text-foreground">
                     {plan.cadence}
                   </p>
-                  <p className="mt-3 text-[15px] leading-7 text-foreground/75">
+                  <p className="mt-3 text-base leading-7 text-foreground/75">
                     {plan.focus}
                   </p>
                   <ul className="mt-4 space-y-2.5">
                     {plan.features.map((feature) => (
                       <li
                         key={feature}
-                        className="flex items-center gap-2 text-[15px] leading-7 text-foreground/75"
+                        className="flex items-center gap-2 text-base leading-7 text-foreground/75"
                       >
                         <Check className="h-4 w-4 text-accent" />
                         <span>{feature}</span>
@@ -124,7 +125,7 @@ function PricingSection() {
           );
         })}
       </motion.div>
-      <p className="mt-4 text-[15px] leading-7 text-foreground/75">
+      <p className="mt-4 text-base leading-7 text-foreground/75">
         Plans are adapted to your goals, schedule, and preferred coaching format.
       </p>
     </SectionWrapper>

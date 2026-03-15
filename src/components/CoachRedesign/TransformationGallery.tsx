@@ -109,6 +109,7 @@ function TransformationGallery() {
       eyebrow="Results"
       title="Transformation stories built on structure, not shortcuts"
       description="The process emphasizes clear milestones, measurable outcomes, and consistent execution."
+      className="py-14 md:py-20"
     >
       <p className="text-xs font-semibold uppercase tracking-[0.15em] text-foreground/60">
         General outcomes
@@ -134,10 +135,10 @@ function TransformationGallery() {
                 <h3 className="text-xl font-semibold text-foreground">
                   {item.title}
                 </h3>
-                <p className="mt-3 text-[15px] leading-7 text-foreground/75">
+                <p className="mt-3 text-base leading-7 text-foreground/75">
                   {item.summary}
                 </p>
-                <p className="mt-auto pt-5 text-sm font-medium text-foreground">
+                <p className="mt-auto pt-5 text-[15px] font-medium leading-6 text-foreground">
                   {item.metric}
                 </p>
               </CardContent>
@@ -168,14 +169,14 @@ function TransformationGallery() {
                 <h3 className="text-xl font-semibold leading-tight text-foreground lg:min-h-[4rem]">
                   {item.title}
                 </h3>
-                <p className="mt-3 text-[15px] leading-7 text-foreground/75 lg:min-h-[7rem]">
+                <p className="mt-3 text-base leading-7 text-foreground/75 lg:min-h-[7rem]">
                   {item.summary}
                 </p>
-                <p className="mt-4 text-sm font-medium leading-6 text-foreground lg:min-h-[3rem]">
+                <p className="mt-4 text-[15px] font-medium leading-6 text-foreground lg:min-h-[3rem]">
                   {item.metric}
                 </p>
                 {item.detail ? (
-                  <p className="mt-2 text-sm leading-6 text-foreground/75 lg:min-h-[3rem]">
+                  <p className="mt-2 text-[15px] leading-6 text-foreground/75 lg:min-h-[3rem]">
                     {item.detail}
                   </p>
                 ) : null}

@@ -6,15 +6,16 @@ import { cn } from "lib/utils";
 interface CoachSection {
   id: string;
   label: string;
+  mobileLabel?: string;
 }
 
 const sections: CoachSection[] = [
   { id: "services", label: "Services" },
   { id: "transformations", label: "Results" },
-  { id: "packages", label: "Packages" },
-  { id: "credibility", label: "Credibility" },
+  { id: "packages", label: "Packages", mobileLabel: "Plans" },
+  { id: "credibility", label: "Credibility", mobileLabel: "Coach" },
   { id: "faq", label: "FAQ" },
-  { id: "consultation", label: "Consultation" },
+  { id: "consultation", label: "Consultation", mobileLabel: "Consult" },
 ];
 
 const activeChipTransition = {
@@ -153,7 +154,7 @@ function CoachSubNav() {
                   aria-current={isActive ? "true" : undefined}
                   onClick={(event) => handleSectionClick(event, section.id)}
                   className={cn(
-                    "relative snap-start shrink-0 rounded-full border px-3 py-1.5 text-xs font-medium leading-5 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/50 sm:px-3.5 sm:text-sm",
+                    "relative snap-start shrink-0 rounded-full border px-2.5 py-1.5 text-xs font-medium leading-5 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/50 sm:px-3.5 sm:text-sm",
                     isActive
                       ? "border-accent/30 bg-accent/5 text-accent"
                       : "border-transparent bg-transparent text-foreground/70 hover:border-border/70 hover:bg-surface hover:text-foreground",
@@ -166,7 +167,12 @@ function CoachSubNav() {
                       className="absolute inset-0 rounded-full bg-accent/10"
                     />
                   ) : null}
-                  <span className="relative z-[1]">{section.label}</span>
+                  <span className="relative z-[1] sm:hidden">
+                    {section.mobileLabel ?? section.label}
+                  </span>
+                  <span className="relative z-[1] hidden sm:inline">
+                    {section.label}
+                  </span>
                 </a>
               );
             })}

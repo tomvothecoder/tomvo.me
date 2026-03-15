@@ -52,13 +52,16 @@ function FAQSection() {
       title="Questions clients ask before starting"
       description="Everything you need to evaluate fit, format, and next steps."
       descriptionClassName="text-foreground/75"
+      className="py-14 md:py-20"
     >
       <motion.div variants={fadeInUp} {...(prefersReducedMotion ? {} : revealInView)}>
-        <Accordion type="single" collapsible className="rounded-xl border border-border bg-surface px-5 shadow-soft">
+        <Accordion type="single" collapsible className="rounded-xl border border-border bg-surface px-4 shadow-soft sm:px-5">
           {faqs.map((faq, index) => (
             <AccordionItem value={`item-${index + 1}`} key={faq.question}>
-              <AccordionTrigger>{faq.question}</AccordionTrigger>
-              <AccordionContent className="text-[15px] leading-7 text-foreground/75">
+              <AccordionTrigger className="text-[15px] leading-6 sm:text-base">
+                {faq.question}
+              </AccordionTrigger>
+              <AccordionContent className="text-base leading-7 text-foreground/75">
                 {faq.answer}
               </AccordionContent>
             </AccordionItem>
