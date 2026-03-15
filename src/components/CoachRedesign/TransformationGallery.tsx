@@ -7,25 +7,31 @@ import { Card, CardContent } from "components/ui/card";
 
 const transformations = [
   {
-    label: "Strength progression",
-    title: "Higher confidence under the bar",
+    label: "Advanced meet prep (Remote)",
+    title: "First-place finish with total progression",
     summary:
-      "Clients follow repeatable progression systems for squat, bench, and deadlift improvements.",
-    metric: "Structured block progression",
+      "Remote meet-prep increased total from 1361.3 to 1416.4 from June 3 to July 22, 2023, with attempt strategy and competition-week execution.",
+    metric: "+55.1 lb total and 1st place at USAPL Barbell Brigade Open (Jul 22, 2023)",
+    profileUrl: "https://www.openpowerlifting.org/u/jordanang",
+    meetUrl: "https://www.openpowerlifting.org/m/usapl/CA-2023-19#jordanang",
   },
   {
-    label: "Body composition",
-    title: "Sustainable fat-loss habits",
+    label: "Body composition (Remote)",
+    title: "Sustainable weight-loss with structure",
     summary:
-      "Nutrition accountability and training consistency are paired to support long-term changes.",
-    metric: "Habit-focused nutrition coaching",
+      "From Jan 2023 to Mar 2023, remote coaching paired resistance training, cardio, intermittent fasting, and calorie management for consistent adherence.",
+    metric: "~210 lb to 190 lb in ~3 months",
+    profileUrl: null,
+    meetUrl: null,
   },
   {
-    label: "Competition readiness",
-    title: "Meet prep with clear execution",
+    label: "Beginner strength development",
+    title: "First-time lifter built lean mass and confidence",
     summary:
-      "Peaking and attempt planning reduce uncertainty and improve meet-day decision quality.",
-    metric: "Attempt strategy + taper planning",
+      "From Dec 2024 to Jun 2025, a rec-league basketball athlete with no gym experience improved movement quality, trained pain-free, and built foundational strength.",
+    metric: "107 lb to 115 lb bodyweight and 115 lb squat",
+    profileUrl: null,
+    meetUrl: null,
   },
 ];
 
@@ -57,12 +63,119 @@ function TransformationGallery() {
                   {item.label}
                 </Badge>
                 <h3 className="text-xl font-semibold text-foreground">{item.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-muted">{item.summary}</p>
+                <p className="mt-3 text-[15px] leading-7 text-foreground/75">{item.summary}</p>
                 <p className="mt-auto pt-5 text-sm font-medium text-foreground">{item.metric}</p>
+                <div className="mt-2 min-h-10">
+                  {item.profileUrl && item.meetUrl ? (
+                    <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm">
+                      <span className="text-foreground/70">Verified on OpenPowerlifting</span>
+                      <a
+                        href={item.profileUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="font-medium text-accent hover:underline"
+                      >
+                        Profile
+                      </a>
+                      <span className="text-foreground/60">•</span>
+                      <a
+                        href={item.meetUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="font-medium text-accent hover:underline"
+                      >
+                        Meet
+                      </a>
+                    </div>
+                  ) : null}
+                </div>
               </CardContent>
             </Card>
           </motion.div>
         ))}
+      </motion.div>
+
+      <motion.div
+        variants={staggerContainer}
+        {...(prefersReducedMotion ? {} : revealInView)}
+        className="mt-6 grid gap-5 md:grid-cols-2"
+      >
+        <motion.div variants={fadeInUp}>
+          <Card className="h-full border-accent/30 bg-accent/5">
+            <CardContent className="pt-6">
+              <h3 className="text-lg font-semibold text-foreground">
+                Additional result: novice to meet-ready
+              </h3>
+              <p className="mt-3 text-[15px] leading-7 text-foreground/75">
+                In-person meet prep from May 2025 to Nov 2025 for a first-time powerlifting athlete with minimal gym experience; reached ~898 total and hit 8/9 attempts.
+              </p>
+              <p className="mt-4 text-sm font-medium text-foreground">~898 lb total, 8/9 attempts</p>
+              <p className="mt-2 text-sm text-foreground/75">
+                Top meet lifts: Squat 286.6 lb, Bench 198.4 lb, Deadlift 402.3 lb
+              </p>
+              <div className="mt-3 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm">
+                <span className="text-foreground/70">Verified on OpenPowerlifting</span>
+                <a
+                  href="https://www.openpowerlifting.org/u/christophercruz2"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="font-medium text-accent hover:underline"
+                >
+                  Profile
+                </a>
+                <span className="text-foreground/60">•</span>
+                <a
+                  href="https://www.openpowerlifting.org/m/usapl/CA-2024-39#christophercruz2"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="font-medium text-accent hover:underline"
+                >
+                  Meet
+                </a>
+              </div>
+            </CardContent>
+          </Card>
+        </motion.div>
+
+        <motion.div variants={fadeInUp}>
+          <Card className="h-full border-accent/30 bg-accent/5">
+            <CardContent className="pt-6">
+              <h3 className="text-lg font-semibold text-foreground">
+                Additional result: first place in weight class
+              </h3>
+              <p className="mt-3 text-[15px] leading-7 text-foreground/75">
+                Competitive powerlifting client secured first place in his weight class with
+                structured prep and meet-day execution.
+              </p>
+              <p className="mt-4 text-sm font-medium text-foreground">
+                90 kg (198.4 lb) class winner
+              </p>
+              <p className="mt-2 text-sm text-foreground/75">
+                Top meet lifts: Squat 529.1 lb, Bench 303.1 lb, Deadlift 628.3 lb, Total 1460.6 lb
+              </p>
+              <div className="mt-3 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm">
+                <span className="text-foreground/70">Verified on OpenPowerlifting</span>
+                <a
+                  href="https://www.openpowerlifting.org/u/alvinpov"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="font-medium text-accent hover:underline"
+                >
+                  Profile
+                </a>
+                <span className="text-foreground/60">•</span>
+                <a
+                  href="https://www.openpowerlifting.org/m/uspa/2957#alvinpov"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="font-medium text-accent hover:underline"
+                >
+                  Meet
+                </a>
+              </div>
+            </CardContent>
+          </Card>
+        </motion.div>
       </motion.div>
     </SectionWrapper>
   );

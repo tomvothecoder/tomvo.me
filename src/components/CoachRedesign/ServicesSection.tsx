@@ -26,7 +26,7 @@ const services = [
     icon: CalendarClock,
     title: "Online Strength Coaching",
     description:
-      "Structured programming with weekly adjustments based on your training data and schedule.",
+      "Structured programming with weekly adjustments based on your data and schedule.",
     points: ["Custom training plan", "Weekly check-ins", "Video review support"],
   },
   {

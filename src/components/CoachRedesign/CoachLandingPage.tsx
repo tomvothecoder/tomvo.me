@@ -6,7 +6,7 @@ import HeroSection from "components/CoachRedesign/HeroSection";
 import PricingSection from "components/CoachRedesign/PricingSection";
 import ServicesSection from "components/CoachRedesign/ServicesSection";
 import StatsSection from "components/CoachRedesign/StatsSection";
-import TestimonialsSection from "components/CoachRedesign/TestimonialsSection";
+// import TestimonialsSection from "components/CoachRedesign/TestimonialsSection";
 import TransformationGallery from "components/CoachRedesign/TransformationGallery";
 
 function CoachLandingPage() {
@@ -18,7 +18,8 @@ function CoachLandingPage() {
         <StatsSection />
         <ServicesSection />
         <TransformationGallery />
-        <TestimonialsSection />
+        {/* Intentionally hidden until approved client quotes are collected. */}
+        {/* <TestimonialsSection /> */}
         <PricingSection />
         <CoachCredibilitySection />
         <FAQSection />

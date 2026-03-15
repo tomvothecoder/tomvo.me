@@ -45,3 +45,16 @@ Apply three focused `/coach` refinements: improve long-card readability in conve
 2. Apply moderate text readability improvements (contrast/size/line-height) only in the specified conversion-critical sections.
 3. Replace consultation left-column paragraph and bullets with shorter, clearer copy while preserving section structure.
 4. Validate with `pnpm test` and `pnpm build`.
+
+## Incremental task (2026-03-14, coach results refresh)
+### Task understanding
+Refresh the `/coach` results section with concrete case studies (advanced remote meet prep, remote weight loss, beginner female strength development) and add a secondary highlight for the novice meet-prep case.
+
+### Files reviewed
+- `src/components/CoachRedesign/TransformationGallery.tsx`
+
+### Implementation plan
+1. Replace placeholder transformation case content with approved case-study copy.
+2. Preserve 3-card layout and bottom-aligned metric line behavior.
+3. Add a compact additional-result panel under the grid for the novice meet-prep case.
+4. Validate with `pnpm test` and `pnpm build`.

@@ -108,3 +108,22 @@ Applied focused `/coach` conversion polish for readability and messaging clarity
 ### Validation
 - `pnpm test` -> pass
 - `pnpm build` -> pass
+
+## Incremental results refresh (2026-03-14)
+
+### Summary
+Updated the `/coach` transformation section with concrete case studies and added an additional-results highlight while keeping the existing 3-card layout and interaction style.
+
+### What changed
+- Updated case-study cards in `src/components/CoachRedesign/TransformationGallery.tsx`:
+  - Advanced remote powerlifting meet-prep result (+55.1 lb total, first-place finish)
+  - Remote body-composition result (~210 lb to 190 lb)
+  - Beginner female strength/muscle-gain result (107 lb to 115 lb, 115 lb squat)
+- Preserved equal-height card structure with bottom-aligned metric lines.
+- Added a compact panel below the 3-card grid:
+  - `Additional result: novice to meet-ready`
+  - Includes in-person novice meet-prep outcome (~898 total, 8/9 attempts).
+
+### Validation
+- `pnpm test` -> pass
+- `pnpm build` -> pass
