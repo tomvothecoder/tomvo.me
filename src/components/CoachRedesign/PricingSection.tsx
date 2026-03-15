@@ -58,7 +58,7 @@ function PricingSection() {
       <motion.div
         variants={staggerContainer}
         {...(prefersReducedMotion ? {} : revealInView)}
-        className="grid gap-5 lg:grid-cols-3"
+        className="grid gap-5 md:grid-cols-2 xl:grid-cols-3"
       >
         {plans.map((plan) => {
           const Icon = plan.icon;
@@ -90,14 +90,14 @@ function PricingSection() {
                   <p className="mt-1 text-[15px] font-medium leading-6 text-foreground">
                     {plan.cadence}
                   </p>
-                  <p className="mt-3 text-base leading-7 text-foreground/75">
+                  <p className="mt-3 text-base leading-7 text-foreground/80">
                     {plan.focus}
                   </p>
                   <ul className="mt-4 space-y-2.5">
                     {plan.features.map((feature) => (
                       <li
                         key={feature}
-                        className="flex items-center gap-2 text-base leading-7 text-foreground/75"
+                        className="flex items-center gap-2 text-base leading-7 text-foreground/80"
                       >
                         <Check className="h-4 w-4 text-accent" />
                         <span>{feature}</span>
@@ -125,7 +125,7 @@ function PricingSection() {
           );
         })}
       </motion.div>
-      <p className="mt-4 text-base leading-7 text-foreground/75">
+      <p className="mt-4 text-base leading-7 text-foreground/80">
         Plans are adapted to your goals, schedule, and preferred coaching format.
       </p>
     </SectionWrapper>

@@ -39,7 +39,7 @@ function CoachCredibilitySection() {
       title="Why clients trust this coaching system"
       description="You get a clear training process, transparent communication, and coaching decisions grounded in data and 5 years of professional coaching experience."
     >
-      <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+      <div className="grid gap-8 xl:grid-cols-[0.9fr_1.1fr] xl:items-start">
         <motion.div variants={fadeInUp} {...(prefersReducedMotion ? {} : revealInView)}>
           <div className="overflow-hidden rounded-2xl border border-border bg-surface shadow-soft">
             <img

@@ -51,7 +51,7 @@ function FAQSection() {
       eyebrow="FAQ"
       title="Questions clients ask before starting"
       description="Everything you need to evaluate fit, format, and next steps."
-      descriptionClassName="text-foreground/75"
+      descriptionClassName="text-foreground/80"
       className="py-14 md:py-20"
     >
       <motion.div variants={fadeInUp} {...(prefersReducedMotion ? {} : revealInView)}>
@@ -61,7 +61,7 @@ function FAQSection() {
               <AccordionTrigger className="text-[15px] leading-6 sm:text-base">
                 {faq.question}
               </AccordionTrigger>
-              <AccordionContent className="text-base leading-7 text-foreground/75">
+              <AccordionContent className="text-base leading-7 text-foreground/80">
                 {faq.answer}
               </AccordionContent>
             </AccordionItem>

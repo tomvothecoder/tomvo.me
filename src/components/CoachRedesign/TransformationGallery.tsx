@@ -21,15 +21,15 @@ const generalOutcomes = [
     label: "Body composition (Remote)",
     title: "Sustainable weight-loss with structure",
     summary:
-      "From Jan to Mar 2023, remote coaching combined resistance training, cardio, and calorie targets for consistent adherence.",
-    metric: "~210 lb to 190 lb in ~3 months",
+      "Remote coaching from Jan to Mar 2023 combined resistance training, cardio, and calorie targets for consistent adherence.",
+    metric: "Result: ~210 lb to 190 lb in ~3 months",
   },
   {
     label: "Beginner strength development",
     title: "First-time lifter built lean mass and confidence",
     summary:
-      "From Dec 2024 to Jun 2025, a rec-league basketball athlete with no gym experience improved movement quality and built strength pain-free.",
-    metric: "107 lb to 115 lb bodyweight and 115 lb squat",
+      "From Dec 2024 to Jun 2025, a rec-league athlete with no gym background improved movement quality and built strength pain-free.",
+    metric: "Result: 107 lb to 115 lb bodyweight, 115 lb squat",
   },
 ];
 
@@ -38,35 +38,32 @@ const powerliftingOutcomes = [
     label: "Advanced meet prep (Remote)",
     title: "1st place in 181 lb class",
     summary:
-      "Remote meet prep from Jun to Jul 2023 focused on structured attempt selection and competition-week execution.",
-    metric: "Outcome: +55.1 lb total, 8/9 attempts",
-    detail:
-      "Top lifts: Squat 512.5 lb, Bench 330.7 lb, Deadlift 573.2 lb, Total 1416.4 lb",
+      "Remote meet prep from Jun to Jul 2023 with structured attempt selection and competition-week execution.",
+    metric: "Outcome: 1416.4 lb total, 8/9 attempts",
+    detail: "Lifts: 512.5 / 330.7 / 573.2 lb",
     profileUrl: "https://www.openpowerlifting.org/u/jordanang",
     meetUrl: "https://www.openpowerlifting.org/m/usapl/CA-2023-19#jordanang",
+  },
+  {
+    label: "Competitive meet prep (Remote)",
+    title: "1st place in 198 lb class",
+    summary:
+      "Remote coaching for an Aug 2023 meet supported first place in his class with structured prep.",
+    metric: "Outcome: 1460.6 lb total, 9/9 attempts",
+    detail: "Lifts: 529.1 / 303.1 / 628.3 lb",
+    profileUrl: "https://www.openpowerlifting.org/u/alvinpov",
+    meetUrl: "https://www.openpowerlifting.org/m/uspa/2957#alvinpov",
   },
   {
     label: "Novice meet prep (In-person)",
     title: "First-time lifter became meet-ready",
     summary:
       "In-person meet prep from May to Nov 2024 for a first-time powerlifting athlete with minimal gym experience.",
-    metric: "Outcome: ~898 lb total, 8/9 attempts",
-    detail:
-      "Top lifts: Squat 297.6 lb, Bench 198.4 lb, Deadlift 402.3 lb, Total 898.3 lb",
+    metric: "Outcome: 898.3 lb total, 8/9 attempts",
+    detail: "Lifts: 297.6 / 198.4 / 402.3 lb",
     profileUrl: "https://www.openpowerlifting.org/u/christophercruz2",
     meetUrl:
       "https://www.openpowerlifting.org/m/usapl/CA-2024-39#christophercruz2",
-  },
-  {
-    label: "Competitive meet prep (Remote)",
-    title: "1st place in 198 lb class",
-    summary:
-      "Remote powerlifting coaching for an Aug 2023 meet supported first place in his weight class with structured prep.",
-    metric: "Outcome: 1st place in 198 lb class, 9/9 attempts",
-    detail:
-      "Top lifts: Squat 529.1 lb, Bench 303.1 lb, Deadlift 628.3 lb, Total 1460.6 lb",
-    profileUrl: "https://www.openpowerlifting.org/u/alvinpov",
-    meetUrl: "https://www.openpowerlifting.org/m/uspa/2957#alvinpov",
   },
 ];
 
@@ -74,11 +71,11 @@ function ProofLinks({ profileUrl, meetUrl, className }: ProofLinksProps) {
   return (
     <div
       className={cn(
-        "flex items-center gap-1.5 whitespace-nowrap text-xs leading-5 text-foreground/70",
+        "flex items-center gap-1.5 whitespace-nowrap text-xs leading-5 text-foreground/80",
         className,
       )}
     >
-      <span>Verified on OpenPowerlifting</span>
+      <span>Verified via OpenPowerlifting</span>
       <a
         href={profileUrl}
         target="_blank"
@@ -135,7 +132,7 @@ function TransformationGallery() {
                 <h3 className="text-xl font-semibold text-foreground">
                   {item.title}
                 </h3>
-                <p className="mt-3 text-base leading-7 text-foreground/75">
+                <p className="mt-3 text-base leading-7 text-foreground/80">
                   {item.summary}
                 </p>
                 <p className="mt-auto pt-5 text-[15px] font-medium leading-6 text-foreground">
@@ -154,7 +151,7 @@ function TransformationGallery() {
       <motion.div
         variants={staggerContainer}
         {...(prefersReducedMotion ? {} : revealInView)}
-        className="mt-4 grid gap-5 lg:grid-cols-3"
+        className="mt-4 grid gap-5 md:grid-cols-2 xl:grid-cols-3"
       >
         {powerliftingOutcomes.map((item, index) => (
           <motion.div key={item.title} variants={fadeInUp}>
@@ -166,17 +163,17 @@ function TransformationGallery() {
                 <Badge className="mb-4 mt-3" variant="accent">
                   {item.label}
                 </Badge>
-                <h3 className="text-xl font-semibold leading-tight text-foreground lg:min-h-[4rem]">
+                <h3 className="text-xl font-semibold leading-tight text-foreground xl:min-h-[4rem]">
                   {item.title}
                 </h3>
-                <p className="mt-3 text-base leading-7 text-foreground/75 lg:min-h-[7rem]">
+                <p className="mt-3 text-base leading-7 text-foreground/80 xl:min-h-[7rem]">
                   {item.summary}
                 </p>
-                <p className="mt-4 text-[15px] font-medium leading-6 text-foreground lg:min-h-[3rem]">
+                <p className="mt-4 text-[15px] font-medium leading-6 text-foreground xl:min-h-[3rem]">
                   {item.metric}
                 </p>
                 {item.detail ? (
-                  <p className="mt-2 text-[15px] leading-6 text-foreground/75 lg:min-h-[3rem]">
+                  <p className="mt-2 text-[15px] leading-6 text-foreground/80 xl:min-h-[3rem]">
                     {item.detail}
                   </p>
                 ) : null}

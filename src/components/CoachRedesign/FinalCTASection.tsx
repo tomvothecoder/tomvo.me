@@ -20,9 +20,8 @@ function FinalCTASection() {
         <h2 className="mx-auto mt-3 max-w-3xl text-3xl font-semibold leading-tight text-foreground md:text-4xl">
           Ready to train with a structured plan and measurable progress?
         </h2>
-        <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-muted">
-          Book a free consultation to review your goals and choose the right
-          coaching package for your next phase.
+        <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-muted">
+          Book a free consultation to map your goals and next training phase.
         </p>
 
         <div className="mt-8">

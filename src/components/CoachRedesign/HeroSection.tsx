@@ -30,7 +30,7 @@ function HeroSection() {
 
   return (
     <section id="hero" className="px-6 pb-8 pt-10 md:px-10 md:pb-12 md:pt-14">
-      <div className="mx-auto grid w-full max-w-6xl gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
+      <div className="mx-auto grid w-full max-w-6xl gap-12 xl:grid-cols-[1.05fr_0.95fr] xl:items-center">
         <motion.div
           variants={heroStagger}
           {...(prefersReducedMotion ? {} : heroReveal)}
