@@ -56,23 +56,23 @@ function ConsultationFormSection() {
           {...(prefersReducedMotion ? {} : revealInView)}
           className="space-y-4"
         >
-          <motion.p variants={fadeInUp} className="text-base leading-relaxed text-muted">
-            This call helps identify your current bottlenecks, timeline, and the
-            right coaching package for your goals.
+          <motion.p variants={fadeInUp} className="text-[15px] leading-7 text-foreground/75">
+            Share your training context and goals, and you will get a clear recommendation on
+            package fit and next steps.
           </motion.p>
 
-          <motion.ul variants={fadeInUp} className="space-y-3 text-sm text-muted">
+          <motion.ul variants={fadeInUp} className="space-y-3 text-[15px] leading-7 text-foreground/75">
             <li className="flex items-center gap-3">
               <Clock3 className="h-4 w-4 text-accent" />
               <span>Typical response time: within 24 hours</span>
             </li>
             <li className="flex items-center gap-3">
               <MapPin className="h-4 w-4 text-accent" />
-              <span>Service area: Fremont, Newark, Milpitas, and Santa Clara</span>
+              <span>In-person: Fremont, Newark, Milpitas, and Santa Clara</span>
             </li>
             <li className="flex items-center gap-3">
               <Phone className="h-4 w-4 text-accent" />
-              <span>Private coaching and structured online support</span>
+              <span>Online coaching available with weekly plan adjustments</span>
             </li>
           </motion.ul>
         </motion.div>

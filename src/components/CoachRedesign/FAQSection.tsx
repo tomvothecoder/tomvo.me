@@ -46,14 +46,14 @@ function FAQSection() {
       eyebrow="FAQ"
       title="Questions clients ask before starting"
       description="Everything you need to evaluate fit, format, and next steps."
-      descriptionClassName="text-foreground/70"
+      descriptionClassName="text-foreground/75"
     >
       <motion.div variants={fadeInUp} {...(prefersReducedMotion ? {} : revealInView)}>
         <Accordion type="single" collapsible className="rounded-xl border border-border bg-surface px-5 shadow-soft">
           {faqs.map((faq, index) => (
             <AccordionItem value={`item-${index + 1}`} key={faq.question}>
               <AccordionTrigger>{faq.question}</AccordionTrigger>
-              <AccordionContent className="leading-relaxed text-foreground/70">
+              <AccordionContent className="text-[15px] leading-7 text-foreground/75">
                 {faq.answer}
               </AccordionContent>
             </AccordionItem>

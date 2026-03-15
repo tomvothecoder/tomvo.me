@@ -5,11 +5,11 @@ import { fadeInUp, staggerContainer } from "components/CoachRedesign/animations"
 const stats = [
   {
     value: "5 Years",
-    label: "Professional coaching experience",
+    label: "Private coaching experience",
   },
   {
-    value: "NASM",
-    label: "Certified training standard",
+    value: "Hybrid",
+    label: "In-person + online coaching",
   },
   {
     value: "4 Cities",
@@ -17,7 +17,7 @@ const stats = [
   },
   {
     value: "Weekly",
-    label: "Program adjustments and check-ins",
+    label: "Plan adjustments and check-ins",
   },
 ];
 

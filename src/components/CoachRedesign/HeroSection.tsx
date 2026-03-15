@@ -47,7 +47,7 @@ function HeroSection() {
 
           <motion.p
             variants={fadeInUp}
-            className="mt-6 max-w-xl text-lg leading-relaxed text-foreground/70"
+            className="mt-6 max-w-xl text-lg leading-8 text-foreground/75"
           >
             Structured 1:1 training and clear progression for adults who want
             stronger lifts, better movement quality, and sustainable habits.
@@ -67,7 +67,7 @@ function HeroSection() {
 
           <motion.ul variants={fadeInUp} className="mt-8 space-y-3">
             {trustSignals.map(({ icon: Icon, label }) => (
-              <li key={label} className="flex items-center gap-3 text-sm leading-relaxed text-foreground/70">
+              <li key={label} className="flex items-center gap-3 text-[15px] leading-7 text-foreground/75">
                 <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-accent/10 text-accent">
                   <Icon className="h-4 w-4" />
                 </span>

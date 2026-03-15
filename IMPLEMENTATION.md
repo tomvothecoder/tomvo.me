@@ -84,3 +84,27 @@ Added reusable UI building blocks under `src/components/ui/`:
 ## Notes
 - `/career` route remains intact and routable.
 - Redesigned surfaces are implemented with Tailwind + shadcn-style primitives and Framer Motion.
+
+## Incremental polish (2026-03-14)
+
+### Summary
+Applied focused `/coach` conversion polish for readability and messaging clarity without changing page architecture.
+
+### What changed
+- Updated micro-proof stats in `src/components/CoachRedesign/StatsSection.tsx`:
+  - `5 Years` -> `Private coaching experience`
+  - `Hybrid` -> `In-person + online coaching`
+  - `4 Cities` copy retained with Fremont/Newark/Milpitas/Santa Clara
+  - `Weekly` -> `Plan adjustments and check-ins`
+- Increased readability in conversion-critical text blocks:
+  - `src/components/CoachRedesign/HeroSection.tsx` (supporting paragraph + trust bullets)
+  - `src/components/CoachRedesign/ServicesSection.tsx` (section description, card descriptions, bullets)
+  - `src/components/CoachRedesign/PricingSection.tsx` (section description, plan focus, feature lines, footer note)
+  - `src/components/CoachRedesign/FAQSection.tsx` (section description + accordion answers)
+- Tightened consultation left-column content in `src/components/CoachRedesign/ConsultationFormSection.tsx`:
+  - Replaced paragraph with a shorter single-paragraph value statement
+  - Kept exactly 3 bullets with clearer format/location/coaching-mode language
+
+### Validation
+- `pnpm test` -> pass
+- `pnpm build` -> pass

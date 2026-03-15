@@ -27,3 +27,21 @@ Implement the approved 2025/2026 premium redesign for `/coach` using Tailwind CS
 - `rg -n "aos|data-aos|AOS.init" src package.json`
 - `pnpm test`
 - `pnpm build`
+
+## Incremental task (2026-03-14)
+### Task understanding
+Apply three focused `/coach` refinements: improve long-card readability in conversion-critical sections, make stats labels more conversion-oriented, and tighten consultation left-column copy.
+
+### Files reviewed
+- `src/components/CoachRedesign/HeroSection.tsx`
+- `src/components/CoachRedesign/StatsSection.tsx`
+- `src/components/CoachRedesign/ServicesSection.tsx`
+- `src/components/CoachRedesign/PricingSection.tsx`
+- `src/components/CoachRedesign/FAQSection.tsx`
+- `src/components/CoachRedesign/ConsultationFormSection.tsx`
+
+### Implementation plan
+1. Update stats micro-proof labels/values to prioritize conversion language over credentials shorthand.
+2. Apply moderate text readability improvements (contrast/size/line-height) only in the specified conversion-critical sections.
+3. Replace consultation left-column paragraph and bullets with shorter, clearer copy while preserving section structure.
+4. Validate with `pnpm test` and `pnpm build`.
