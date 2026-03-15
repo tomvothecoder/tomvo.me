@@ -1,6 +1,10 @@
 import { motion, useReducedMotion } from "framer-motion";
 
-import { fadeInUp, revealInView, staggerContainer } from "components/CoachRedesign/animations";
+import {
+  fadeInUp,
+  revealInView,
+  staggerContainer,
+} from "components/CoachRedesign/animations";
 import SectionWrapper from "components/CoachRedesign/SectionWrapper";
 import { Badge } from "components/ui/badge";
 import { Card, CardContent } from "components/ui/card";
@@ -36,7 +40,8 @@ const powerliftingOutcomes = [
     summary:
       "Remote meet prep from Jun to Jul 2023 focused on structured attempt selection and competition-week execution.",
     metric: "Outcome: +55.1 lb total, 8/9 attempts",
-    detail: "Top lifts: Squat 512.5 lb, Bench 330.7 lb, Deadlift 573.2 lb, Total 1416.4 lb",
+    detail:
+      "Top lifts: Squat 512.5 lb, Bench 330.7 lb, Deadlift 573.2 lb, Total 1416.4 lb",
     profileUrl: "https://www.openpowerlifting.org/u/jordanang",
     meetUrl: "https://www.openpowerlifting.org/m/usapl/CA-2023-19#jordanang",
   },
@@ -44,19 +49,22 @@ const powerliftingOutcomes = [
     label: "Novice meet prep (In-person)",
     title: "First-time lifter became meet-ready",
     summary:
-      "In-person meet prep from May to Nov 2025 for a first-time powerlifting athlete with minimal gym experience.",
+      "In-person meet prep from May to Nov 2024 for a first-time powerlifting athlete with minimal gym experience.",
     metric: "Outcome: ~898 lb total, 8/9 attempts",
-    detail: "Top lifts: Squat 297.6 lb, Bench 198.4 lb, Deadlift 402.3 lb, Total 898.3 lb",
+    detail:
+      "Top lifts: Squat 297.6 lb, Bench 198.4 lb, Deadlift 402.3 lb, Total 898.3 lb",
     profileUrl: "https://www.openpowerlifting.org/u/christophercruz2",
-    meetUrl: "https://www.openpowerlifting.org/m/usapl/CA-2024-39#christophercruz2",
+    meetUrl:
+      "https://www.openpowerlifting.org/m/usapl/CA-2024-39#christophercruz2",
   },
   {
     label: "Competitive meet prep (Remote)",
-    title: "1st place in 90 kg class",
+    title: "1st place in 198 lb class",
     summary:
       "Remote powerlifting coaching for an Aug 2023 meet supported first place in his weight class with structured prep.",
-    metric: "Outcome: 1st place in 90 kg (198.4 lb) class, 9/9 attempts",
-    detail: "Top lifts: Squat 529.1 lb, Bench 303.1 lb, Deadlift 628.3 lb, Total 1460.6 lb",
+    metric: "Outcome: 1st place in 198 lb class, 9/9 attempts",
+    detail:
+      "Top lifts: Squat 529.1 lb, Bench 303.1 lb, Deadlift 628.3 lb, Total 1460.6 lb",
     profileUrl: "https://www.openpowerlifting.org/u/alvinpov",
     meetUrl: "https://www.openpowerlifting.org/m/uspa/2957#alvinpov",
   },
@@ -123,9 +131,15 @@ function TransformationGallery() {
                 <Badge className="mb-4" variant="accent">
                   {item.label}
                 </Badge>
-                <h3 className="text-xl font-semibold text-foreground">{item.title}</h3>
-                <p className="mt-3 text-[15px] leading-7 text-foreground/75">{item.summary}</p>
-                <p className="mt-auto pt-5 text-sm font-medium text-foreground">{item.metric}</p>
+                <h3 className="text-xl font-semibold text-foreground">
+                  {item.title}
+                </h3>
+                <p className="mt-3 text-[15px] leading-7 text-foreground/75">
+                  {item.summary}
+                </p>
+                <p className="mt-auto pt-5 text-sm font-medium text-foreground">
+                  {item.metric}
+                </p>
               </CardContent>
             </Card>
           </motion.div>

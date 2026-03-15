@@ -6,6 +6,7 @@ import FAQSection from "components/CoachRedesign/FAQSection";
 import FinalCTASection from "components/CoachRedesign/FinalCTASection";
 import HeroSection from "components/CoachRedesign/HeroSection";
 import PricingSection from "components/CoachRedesign/PricingSection";
+import CoachSubNav from "components/CoachRedesign/CoachSubNav";
 import ServicesSection from "components/CoachRedesign/ServicesSection";
 import StatsSection from "components/CoachRedesign/StatsSection";
 // import TestimonialsSection from "components/CoachRedesign/TestimonialsSection";
@@ -28,9 +29,10 @@ function CoachLandingPage() {
   }, []);
 
   return (
-    <div className="relative overflow-hidden bg-background pb-20 text-foreground md:pb-0">
+    <div className="relative bg-background pb-20 text-foreground md:pb-0">
       <div className="pointer-events-none absolute inset-x-0 top-0 h-[420px] bg-gradient-to-b from-accent/10 via-transparent to-transparent" />
       <div className="relative">
+        <CoachSubNav />
         <HeroSection />
         <StatsSection />
         <ServicesSection />

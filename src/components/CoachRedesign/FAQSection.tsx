@@ -13,7 +13,7 @@ const faqs = [
   {
     question: "Do you offer in-person, online, or both?",
     answer:
-      "I coach both in-person and online. In-person coaching is available in Fremont, Newark, Milpitas, and Santa Clara, and online support is available for clients who prefer remote coaching.",
+      "I coach both in-person and online. In-person coaching is available in Fremont and Newark, and online support is available for clients who prefer remote coaching.",
   },
   {
     question: "Do I need lifting experience before starting?",
@@ -29,6 +29,11 @@ const faqs = [
     question: "Can you coach for a powerlifting meet?",
     answer:
       "Yes. Meet prep includes peaking strategy, attempt selection, and taper planning so you can execute confidently on competition day.",
+  },
+  {
+    question: "Do you coach mobility or pain-aware training modifications?",
+    answer:
+      "Yes. Coaching includes mobility-focused work and pain-aware exercise modifications to improve movement quality while keeping strength progress on track.",
   },
   {
     question: "What happens after I submit a consultation request?",

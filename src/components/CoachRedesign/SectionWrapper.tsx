@@ -28,7 +28,7 @@ function SectionWrapper({
   const prefersReducedMotion = useReducedMotion();
 
   return (
-    <section id={id} className={cn("px-6 py-16 md:px-10 md:py-20", className)}>
+    <section id={id} className={cn("scroll-mt-32 px-6 py-16 md:scroll-mt-36 md:px-10 md:py-20", className)}>
       <div className="mx-auto w-full max-w-6xl">
         <motion.div
           variants={fadeInUp}

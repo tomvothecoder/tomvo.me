@@ -7,7 +7,7 @@ function NavBar() {
   const location = useLocation();
 
   return (
-    <header className="sticky top-0 z-30 border-b border-border/80 bg-background/95 backdrop-blur">
+    <header className="sticky top-0 z-40 border-b border-border/80 bg-background/95 backdrop-blur">
       <nav className="mx-auto flex h-16 w-full max-w-6xl items-center justify-between px-6 md:px-10">
         <Link to="/coach" className="inline-flex items-center gap-2 text-sm font-semibold tracking-tight text-foreground">
           <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-accent/10 text-accent">

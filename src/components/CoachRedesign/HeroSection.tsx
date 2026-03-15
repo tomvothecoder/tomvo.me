@@ -1,4 +1,4 @@
-import { ArrowRight, BarChart3, CheckCircle2, MapPin } from "lucide-react";
+import { ArrowRight, BarChart3, CheckCircle2, Dumbbell, MapPin } from "lucide-react";
 import { motion, useReducedMotion } from "framer-motion";
 
 import selfPortrait from "assets/me.jpg";
@@ -13,11 +13,15 @@ const trustSignals = [
   },
   {
     icon: MapPin,
-    label: "Serving Fremont, Newark, Milpitas, and Santa Clara",
+    label: "Serving Fremont and Newark",
   },
   {
     icon: BarChart3,
     label: "5 years of professional coaching experience",
+  },
+  {
+    icon: Dumbbell,
+    label: "Specialties: strength training, powerlifting, and mobility-focused coaching",
   },
 ];
 
@@ -25,7 +29,7 @@ function HeroSection() {
   const prefersReducedMotion = useReducedMotion();
 
   return (
-    <section id="hero" className="px-6 pb-8 pt-20 md:px-10 md:pb-12 md:pt-28">
+    <section id="hero" className="px-6 pb-8 pt-10 md:px-10 md:pb-12 md:pt-14">
       <div className="mx-auto grid w-full max-w-6xl gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
         <motion.div
           variants={heroStagger}

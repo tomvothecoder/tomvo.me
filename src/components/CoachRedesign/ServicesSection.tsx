@@ -13,7 +13,7 @@ import { Card, CardContent, CardDescription, CardTitle } from "components/ui/car
 const services = [
   {
     icon: Dumbbell,
-    title: "1:1 Personal Training",
+    title: "1:1 Strength Training",
     description:
       "In-person sessions for technique refinement, strength progression, and accountability.",
     points: [
@@ -38,10 +38,14 @@ const services = [
   },
   {
     icon: ShieldCheck,
-    title: "Nutrition Accountability",
+    title: "Mobility & Recovery Coaching",
     description:
-      "Habit-based guidance to support recovery, body composition, and consistent training energy.",
-    points: ["Simple nutrition targets", "Behavior coaching", "Ongoing accountability"],
+      "Mobility-focused guidance to improve movement quality, support recovery, and keep training sustainable.",
+    points: [
+      "Mobility and movement prep",
+      "Pain-aware training modifications",
+      "Recovery and nutrition habits",
+    ],
   },
 ];
 
@@ -53,7 +57,7 @@ function ServicesSection() {
       id="services"
       eyebrow="Services"
       title="Coaching options built around your goals and training context"
-      description="Choose the support level that matches your current training phase and schedule."
+      description="Choose the support level that matches your current training phase and schedule across strength training, powerlifting, and mobility-focused coaching."
       descriptionClassName="text-foreground/75"
     >
       <motion.div
@@ -67,11 +71,13 @@ function ServicesSection() {
             <motion.div key={service.title} variants={fadeInUp}>
               <Card className="h-full">
                 <CardContent className="px-6 pb-6 pt-6">
-                  <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-accent/10 text-accent">
-                    <Icon className="h-5 w-5" />
-                  </span>
-                  <CardTitle className="mt-3">{service.title}</CardTitle>
-                  <CardDescription className="m-0 mt-2 text-[15px] leading-7 text-foreground/75">
+                  <div className="flex items-center gap-3">
+                    <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-accent/10 text-accent">
+                      <Icon className="h-4 w-4" />
+                    </span>
+                    <CardTitle>{service.title}</CardTitle>
+                  </div>
+                  <CardDescription className="m-0 mt-3 text-[15px] leading-7 text-foreground/75">
                     {service.description}
                   </CardDescription>
                   <ul className="m-0 mt-4 space-y-2 text-[15px] leading-7 text-foreground/75">

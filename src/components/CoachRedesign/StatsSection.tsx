@@ -12,8 +12,8 @@ const stats = [
     label: "In-person + online coaching",
   },
   {
-    value: "4 Cities",
-    label: "Fremont, Newark, Milpitas, and Santa Clara",
+    value: "2 Cities",
+    label: "Fremont and Newark",
   },
   {
     value: "Weekly",
