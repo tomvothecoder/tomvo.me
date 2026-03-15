@@ -1,10 +1,12 @@
-import { Dumbbell } from "lucide-react";
+import { Code2, Dumbbell } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 
 import { cn } from "lib/utils";
 
 function NavBar() {
   const location = useLocation();
+  const brandLabel = location.pathname === "/career" ? "Tom Vo" : "Coach Tom";
+  const BrandIcon = location.pathname === "/career" ? Code2 : Dumbbell;
 
   return (
     <header className="sticky top-0 z-40 border-b border-border/80 bg-background/95 backdrop-blur">
@@ -14,9 +16,9 @@ function NavBar() {
           className="inline-flex items-center gap-2 text-sm font-semibold tracking-tight text-foreground"
         >
           <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-accent/10 text-accent">
-            <Dumbbell className="h-4 w-4" />
+            <BrandIcon className="h-4 w-4" />
           </span>
-          <span>Coach Tom Vo</span>
+          <span>{brandLabel}</span>
         </Link>
 
         <div className="flex items-center gap-2 sm:gap-3">

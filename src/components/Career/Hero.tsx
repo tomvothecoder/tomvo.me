@@ -13,21 +13,13 @@ function Hero() {
       <div className="hero is-small">
         <div className="hero-body">
           <div className="columns is-9 is-centered is-vcentered">
-            <div
-              className="column is-4"
-             
-             
-            >
+            <div className="column is-4 career-hero-media">
               <figure style={styles["selfie"]} className="image">
                 <img src={selfPortrait} alt="me" />
               </figure>
             </div>
 
-            <div
-              className="column is-5 has-text-left"
-             
-             
-            >
+            <div className="column is-5 has-text-left career-hero-copy">
               <h3 id="hero-welcome">Hey There!</h3>
               <h1 id="hero-title">I'm Tom Vo,</h1>
               <p id="hero-description">

@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import About from "components/Career/About";
 import Experience from "components/Career/Experience/Experience";
 import Hero from "components/Career/Hero";
@@ -6,6 +7,10 @@ import Skills from "components/Career/Skills/Skills";
 import "views/Career.css";
 
 function Career() {
+  useEffect(() => {
+    document.title = "Tom Vo | Research Software Engineer";
+  }, []);
+
   return (
     <div id="career">
       <Hero />
