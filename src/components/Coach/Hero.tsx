@@ -15,28 +15,20 @@ function Hero() {
       <div className="hero is-small">
         <div className="hero-body">
           <div className="columns is-9 is-centered is-vcentered">
-            <div
-              className="column is-4"
-             
-             
-            >
+            <div className="column is-4">
               <figure
                 style={styles["selfie"]}
                 className="image is-inline-block"
               >
                 <img
                   src={selfPortrait}
-                  alt="Coach Tom Vo"
+                  alt="Coach Tom Vo Vo"
                   className="coach-hero-image"
                 />
               </figure>
             </div>
 
-            <div
-              className="column is-5 has-text-left"
-             
-             
-            >
+            <div className="column is-5 has-text-left">
               <p className="coach-kicker">NASM-Certified Personal Trainer</p>
               <h1 className="coach-hero-title">
                 Strength coaching for lifters and athletes who want structured,

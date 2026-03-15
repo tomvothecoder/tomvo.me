@@ -17,11 +17,11 @@ function FinalCTASection() {
         <p className="text-xs font-semibold uppercase tracking-[0.16em] text-accent">
           Start now
         </p>
-        <h2 className="mx-auto mt-3 max-w-3xl text-3xl font-semibold leading-tight text-foreground md:text-4xl">
+        <h2 className="mx-auto mt-3 max-w-3xl text-3xl font-bold leading-tight tracking-tight text-foreground md:text-4xl">
           Ready to train with a structured plan and measurable progress?
         </h2>
-        <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-muted">
-          Book a free consultation to map your goals and next training phase.
+        <p className="mx-auto mt-4 max-w-lg text-[15px] leading-relaxed text-foreground/75 sm:text-base">
+          Book a free consultation and leave with a clear next-step training plan.
         </p>
 
         <div className="mt-8">

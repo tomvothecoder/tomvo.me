@@ -1,8 +1,19 @@
-import { ArrowRight, BarChart3, CheckCircle2, Clock3, Dumbbell, MapPin } from "lucide-react";
+import {
+  ArrowRight,
+  BarChart3,
+  CheckCircle2,
+  Clock3,
+  Dumbbell,
+  MapPin,
+} from "lucide-react";
 import { motion, useReducedMotion } from "framer-motion";
 
 import selfPortrait from "assets/me.jpg";
-import { heroReveal, heroStagger, fadeInUp } from "components/CoachRedesign/animations";
+import {
+  heroReveal,
+  heroStagger,
+  fadeInUp,
+} from "components/CoachRedesign/animations";
 import { Badge } from "components/ui/badge";
 import { Button } from "components/ui/button";
 
@@ -21,7 +32,8 @@ const trustSignals = [
   },
   {
     icon: Dumbbell,
-    label: "Specialties: strength training, powerlifting, and mobility-focused coaching",
+    label:
+      "Specialties: strength training, powerlifting, and mobility-focused coaching",
   },
 ];
 
@@ -79,7 +91,10 @@ function HeroSection() {
 
           <motion.ul variants={fadeInUp} className="mt-8 space-y-3">
             {trustSignals.map(({ icon: Icon, label }) => (
-              <li key={label} className="flex items-center gap-3 text-[15px] leading-7 text-foreground/75">
+              <li
+                key={label}
+                className="flex items-center gap-3 text-[15px] leading-7 text-foreground/75"
+              >
                 <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-accent/10 text-accent">
                   <Icon className="h-4 w-4" />
                 </span>
@@ -98,7 +113,7 @@ function HeroSection() {
           <div className="relative overflow-hidden rounded-2xl border border-border bg-surface p-4 shadow-soft">
             <img
               src={selfPortrait}
-              alt="Coach Tom Vo"
+              alt="Coach Tom Vo Vo"
               className="h-[420px] w-full rounded-xl object-cover object-center"
             />
             <div className="mt-4 rounded-xl border border-border bg-background p-4">
