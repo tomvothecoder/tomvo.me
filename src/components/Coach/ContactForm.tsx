@@ -48,11 +48,7 @@ const ContactForm: React.FC = () => {
   return (
     <div className="has-text-center">
       <div className="columns is-8 is-centered">
-        <div
-          className="column is-4 is-vcentered"
-          data-aos="fade-in"
-          data-aos-delay="100"
-        >
+        <div className="column is-4 is-vcentered">
           <h1 className="title is-2">Ready to get started?</h1>
           <p className="is-size-5 has-text-dark-grey" style={styles["caption"]}>
             Tell me your goals, current training setup, and what support you are
@@ -77,11 +73,7 @@ const ContactForm: React.FC = () => {
             </div>
           </figure>
         </div>
-        <div
-          className="column card is-4 has-text-left coach-surface-card"
-          data-aos="fade-in"
-          data-aos-delay="100"
-        >
+        <div className="column card is-4 has-text-left coach-surface-card">
           <form
             className="kwes-form"
             action="https://kwesforms.com/api/foreign/forms/aSVFVwmIio7ugCj6l1gO"

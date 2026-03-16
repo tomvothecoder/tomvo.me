@@ -2,14 +2,13 @@ import metagrid from "assets/projects/metagrid.png";
 import xcdat from "assets/projects/xcdat.png";
 import PortfolioCard from "components/Career/Portfolio/PortfolioCard";
 
-
-const Portfolio: React.FC= () => {
+const Portfolio: React.FC = () => {
   const projects = [
     {
       name: "xCDAT",
       description: "Xarray Climate Data Analysis Tools",
       link: "https://github.com/xCDAT/xcdat",
-      imageSrc: xcdat
+      imageSrc: xcdat,
     },
     {
       name: "MetaGrid",
@@ -24,12 +23,7 @@ const Portfolio: React.FC= () => {
       <div className="portfolio">
         <div className="columns">
           {projects.map((project) => (
-            <div
-              key={project.name}
-              className="column is-half"
-              data-aos="fade-up"
-              data-aos-delay="100"
-            >
+            <div key={project.name} className="column is-half">
               <PortfolioCard
                 name={project.name}
                 description={project.description}

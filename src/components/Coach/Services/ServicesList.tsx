@@ -57,7 +57,7 @@ const ServicesList: React.FC = () => {
       <div className="container">
         <div className="columns is-multiline is-centered">
           {services.map((service) => (
-            <div key={service.title} className="column is-5" data-aos="zoom-in">
+            <div key={service.title} className="column is-5">
               <article className="card coach-surface-card coach-service-card">
                 <div className="card-content has-text-left">
                   <h2 className="coach-card-title">{service.title}</h2>

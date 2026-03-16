@@ -14,11 +14,7 @@ const About: React.FC<Props> = () => {
 
   return (
     <div id="about">
-      <div
-        className="columns is-centered"
-        data-aos="fade-up"
-        data-aos-delay="100"
-      >
+      <div className="columns is-centered">
         <div className="column is-three-quarters">
           <div className="card">
             <div className="card-content">

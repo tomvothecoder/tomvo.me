@@ -1,0 +1,135 @@
+import { BarChart3, Check, Dumbbell, Trophy } from "lucide-react";
+import { motion, useReducedMotion } from "framer-motion";
+
+import { fadeInUp, revealInView, staggerContainer } from "components/CoachRedesign/animations";
+import SectionWrapper from "components/CoachRedesign/SectionWrapper";
+import { Badge } from "components/ui/badge";
+import { Button } from "components/ui/button";
+import { Card, CardContent, CardTitle } from "components/ui/card";
+import { cn } from "lib/utils";
+
+const plans = [
+  {
+    icon: Dumbbell,
+    name: "Starter",
+    cadence: "4 sessions monthly",
+    focus: "Form, foundations, and consistency",
+    features: [
+      "Monthly programming",
+      "Technique coaching",
+      "Progress tracking",
+    ],
+    highlighted: false,
+  },
+  {
+    icon: BarChart3,
+    name: "Performance",
+    cadence: "8 sessions monthly",
+    focus: "Progressive overload and weekly oversight",
+    features: [
+      "Priority check-ins",
+      "Program adjustments",
+      "Nutrition accountability",
+    ],
+    highlighted: true,
+  },
+  {
+    icon: Trophy,
+    name: "Meet Prep",
+    cadence: "12-week package",
+    focus: "Competition peaking and attempt execution",
+    features: ["Peaking structure", "Attempt strategy", "Meet-day planning"],
+    highlighted: false,
+  },
+];
+
+function PricingSection() {
+  const prefersReducedMotion = useReducedMotion();
+
+  return (
+    <SectionWrapper
+      id="packages"
+      eyebrow="Packages"
+      title="Simple coaching packages with clear progression"
+      description="Choose the format that best fits your training frequency and performance goals. All packages support in-person or online coaching with flexibility based on individual cases."
+      descriptionClassName="text-foreground/75"
+      className="py-14 md:py-20"
+    >
+      <motion.div
+        variants={staggerContainer}
+        {...(prefersReducedMotion ? {} : revealInView)}
+        className="grid gap-5 md:grid-cols-2 xl:grid-cols-3"
+      >
+        {plans.map((plan) => {
+          const Icon = plan.icon;
+
+          return (
+            <motion.div key={plan.name} variants={fadeInUp} className="h-full">
+                <Card
+                  className={cn(
+                    "h-full",
+                    plan.highlighted
+                    ? "border-accent/40 ring-1 ring-accent/30"
+                    : undefined,
+                )}
+                >
+                <CardContent className="flex h-full flex-col p-6">
+                  <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+                    <div className="flex min-w-0 items-center gap-3">
+                      <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-accent/10 text-accent">
+                        <Icon className="h-4 w-4" />
+                      </span>
+                      <CardTitle>{plan.name}</CardTitle>
+                    </div>
+                    {plan.highlighted ? (
+                      <Badge variant="accent" className="w-fit shrink-0 whitespace-nowrap self-start">
+                        Most popular
+                      </Badge>
+                    ) : null}
+                  </div>
+                  <p className="mt-1 text-[15px] font-medium leading-6 text-foreground">
+                    {plan.cadence}
+                  </p>
+                  <p className="mt-3 text-[15px] leading-7 text-foreground/85 sm:text-base">
+                    {plan.focus}
+                  </p>
+                  <ul className="mt-4 space-y-2.5">
+                    {plan.features.map((feature) => (
+                      <li
+                        key={feature}
+                        className="flex items-center gap-2 text-[15px] leading-7 text-foreground/85 sm:text-base"
+                      >
+                        <Check className="h-4 w-4 text-accent" />
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="mt-auto pt-5">
+                    <Button
+                      asChild
+                      size="lg"
+                      className={cn(
+                        "w-full",
+                        !plan.highlighted
+                          ? "border-accent/30 bg-accent/5 text-accent hover:border-accent/40 hover:bg-accent/10"
+                          : "",
+                      )}
+                      variant={plan.highlighted ? "default" : "outline"}
+                    >
+                      <a href="#consultation">Book Free Consultation</a>
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
+          );
+        })}
+      </motion.div>
+      <p className="mt-4 text-[15px] leading-7 text-foreground/85 sm:text-base">
+        Plans are adapted to your goals, schedule, and preferred coaching format.
+      </p>
+    </SectionWrapper>
+  );
+}
+
+export default PricingSection;

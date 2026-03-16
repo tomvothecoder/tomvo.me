@@ -12,11 +12,7 @@ const Banner: React.FC = () => {
   return (
     <section className="section pt-2" id="trust-signals">
       <div className="container">
-        <div
-          className="coach-trust-bar"
-          data-aos="fade-in"
-          data-aos-delay="100"
-        >
+        <div className="coach-trust-bar">
           {trustPoints.map((point) => (
             <span key={point} className="coach-trust-chip">
               {point}

@@ -23,7 +23,7 @@ const Testimonials: React.FC = () => {
     <section>
       <div className="columns is-centered is-multiline">
         {testimonials.map((item) => (
-          <div key={item.quote} className="column is-4" data-aos="fade-up">
+          <div key={item.quote} className="column is-4">
             <article className="card coach-surface-card coach-testimonial-card">
               <div className="card-content has-text-left">
                 <p className="coach-testimonial-quote">“{item.quote}”</p>

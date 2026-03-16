@@ -1,3 +1,17 @@
+#the-hero .columns {
+  overflow: visible;
+}
+
+.career-hero-media {
+  position: relative;
+  z-index: 1;
+}
+
+.career-hero-copy {
+  position: relative;
+  z-index: 2;
+}
+
 #hero-welcome {
   color: #a44a3f;
   font-size: 24px;
@@ -7,7 +21,7 @@
 }
 
 #hero-title {
-  margin-left: -10%;
+  margin-left: -8%;
   font-size: 36px;
   color: #fff;
   background-color: #24232c !important;
@@ -17,8 +31,10 @@
     -10px 0px 0px #24232c,
     10px 0px 0px #24232c;
   font-weight: normal;
-  display: inline;
-  line-height: 0;
+  display: inline-block;
+  line-height: 1.05;
+  position: relative;
+  z-index: 3;
 }
 
 #banner {
@@ -106,5 +122,11 @@
   }
   50% {
     color: black;
+  }
+}
+
+@media (max-width: 1023px) {
+  #hero-title {
+    margin-left: 0;
   }
 }

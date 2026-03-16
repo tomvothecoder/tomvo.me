@@ -1,60 +1,60 @@
-import "components/NavBar/NavBar.css";
+import { Code2, Dumbbell } from "lucide-react";
+import { Link, useLocation } from "react-router-dom";
 
-import { useLocation } from "react-router-dom";
-import NavBarItem from "./NavBarItem";
+import { cn } from "lib/utils";
 
 function NavBar() {
   const location = useLocation();
-
-  const navBarItems: {
-    [key: string]: Array<{ title: string; scrollTo: string }>;
-  } = {
-    "/career": [
-      {
-        title: "Experience",
-        scrollTo: "experience",
-      },
-      {
-        title: "Skills",
-        scrollTo: "skills",
-      },
-      {
-        title: "Portfolio",
-        scrollTo: "portfolio",
-      },
-      {
-        title: "About",
-        scrollTo: "about",
-      },
-    ],
-  };
-
-  // The default route "/" redirects to another route, so avoid rendering
-  // nav bar items on the default route (which breaks).
-  let curNavBarItems = null;
-  if (location.pathname == "/career") {
-    curNavBarItems = navBarItems[location.pathname as string];
-  }
+  const brandLabel = location.pathname === "/career" ? "Tom Vo" : "Coach Tom";
+  const BrandIcon = location.pathname === "/career" ? Code2 : Dumbbell;
 
   return (
-    <section id="nav-bar">
-      <nav className="navbar">
-        <div id="navbarExampleTransparentExample" className="navbar-menu">
-          <div className="navbar-end">
-            {curNavBarItems !== null &&
-              navBarItems[location.pathname as string].map((item) => (
-                <a className="navbar-item">
-                  <NavBarItem
-                    key={item.title}
-                    title={item.title}
-                    scrollTo={item.scrollTo}
-                  />
-                </a>
-              ))}
-          </div>
+    <header className="sticky top-0 z-40 border-b border-border/80 bg-background/95 backdrop-blur">
+      <nav className="mx-auto flex h-16 w-full max-w-6xl items-center justify-between px-6 md:px-10">
+        <Link
+          to="/coach"
+          className="inline-flex items-center gap-2 text-sm font-semibold tracking-tight text-foreground"
+        >
+          <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-accent/10 text-accent">
+            <BrandIcon className="h-4 w-4" />
+          </span>
+          <span>{brandLabel}</span>
+        </Link>
+
+        <div className="flex items-center gap-2 sm:gap-3">
+          <Link
+            to="/coach"
+            className={cn(
+              "rounded-lg px-3 py-2 text-sm font-medium transition-colors",
+              location.pathname === "/coach"
+                ? "bg-accent/10 text-accent"
+                : "text-muted hover:text-foreground",
+            )}
+          >
+            Coaching
+          </Link>
+          <Link
+            to="/career"
+            className={cn(
+              "rounded-lg px-3 py-2 text-sm font-medium transition-colors",
+              location.pathname === "/career"
+                ? "bg-accent/10 text-accent"
+                : "text-muted hover:text-foreground",
+            )}
+          >
+            Career
+          </Link>
+          {location.pathname === "/coach" ? (
+            <a
+              href="#consultation"
+              className="rounded-lg bg-accent px-3 py-2 text-sm font-semibold text-accent-foreground transition-colors hover:bg-accent/90"
+            >
+              Book
+            </a>
+          ) : null}
         </div>
       </nav>
-    </section>
+    </header>
   );
 }
 
