@@ -113,7 +113,7 @@ function HeroSection() {
           <div className="relative overflow-hidden rounded-2xl border border-border bg-surface p-4 shadow-soft">
             <img
               src={selfPortrait}
-              alt="Coach Tom Vo Vo"
+              alt="Coach Tom Vo"
               className="h-[420px] w-full rounded-xl object-cover object-center"
             />
             <div className="mt-4 rounded-xl border border-border bg-background p-4">

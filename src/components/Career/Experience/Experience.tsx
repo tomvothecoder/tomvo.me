@@ -71,12 +71,7 @@ const Experience: React.FC<Props> = () => {
   return (
     <div id="experience">
       {jobs.map((item) => (
-        <div
-          key={item.company}
-          className="columns is-centered"
-         
-         
-        >
+        <div key={item.company} className="columns is-centered">
           <div className="column is-three-quarters">
             <ExperienceCard
               company={item.company}

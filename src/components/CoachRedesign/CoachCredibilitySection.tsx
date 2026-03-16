@@ -51,7 +51,7 @@ function CoachCredibilitySection() {
           <div className="overflow-hidden rounded-2xl border border-border bg-surface shadow-soft">
             <img
               src={selfPortrait}
-              alt="Coach Tom Vo Vo coaching profile"
+              alt="Coach Tom Vo coaching profile"
               className="h-full min-h-[380px] w-full object-cover"
             />
           </div>

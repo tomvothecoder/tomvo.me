@@ -14,14 +14,18 @@ import TransformationGallery from "components/CoachRedesign/TransformationGaller
 import { Button } from "components/ui/button";
 import { cn } from "lib/utils";
 
+// Scroll distance at which the mobile sticky CTA should become visible.
+const MOBILE_STICKY_CTA_SCROLL_THRESHOLD_PX = 520;
+
 function CoachLandingPage() {
   const [showMobileStickyCta, setShowMobileStickyCta] = useState(false);
 
   useEffect(() => {
     const toggleStickyCta = () => {
-      setShowMobileStickyCta(window.scrollY > 520);
+      setShowMobileStickyCta(
+        window.scrollY > MOBILE_STICKY_CTA_SCROLL_THRESHOLD_PX,
+      );
     };
-
     toggleStickyCta();
     window.addEventListener("scroll", toggleStickyCta, { passive: true });
 

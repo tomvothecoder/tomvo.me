@@ -16,11 +16,7 @@ const SystemComponent = ({ icon, iconClassName, name, bullets }: Props) => {
   };
   return (
     <section>
-      <div
-        className="columns is-centered is-8"
-       
-       
-      >
+      <div className="columns is-centered is-8">
         <div className="column is-1">
           <figure className="coach-system-icon coach-icon-figure">
             <div className={iconClassName} aria-hidden="true">

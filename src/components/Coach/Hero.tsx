@@ -22,7 +22,7 @@ function Hero() {
               >
                 <img
                   src={selfPortrait}
-                  alt="Coach Tom Vo Vo"
+                  alt="Coach Tom Vo"
                   className="coach-hero-image"
                 />
               </figure>
