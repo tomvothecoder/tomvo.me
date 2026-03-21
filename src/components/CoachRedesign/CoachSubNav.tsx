@@ -1,5 +1,5 @@
 import { type MouseEvent, useEffect, useMemo, useState } from "react";
-import { motion, useReducedMotion } from "framer-motion";
+import { useReducedMotion } from "framer-motion";
 
 import { cn } from "lib/utils";
 
@@ -18,19 +18,15 @@ const sections: CoachSection[] = [
   { id: "consultation", label: "Consultation", mobileLabel: "Consult" },
 ];
 
-const activeChipTransition = {
-  type: "spring",
-  stiffness: 420,
-  damping: 36,
-  mass: 0.3,
-};
-
 const ACTIVE_SECTION_TARGET_OFFSET_PX = 120;
 
 function CoachSubNav() {
   const prefersReducedMotion = useReducedMotion();
   const [activeSectionId, setActiveSectionId] = useState(sections[0].id);
-  const sectionIds = useMemo(() => new Set(sections.map((section) => section.id)), []);
+  const sectionIds = useMemo(
+    () => new Set(sections.map((section) => section.id)),
+    [],
+  );
 
   useEffect(() => {
     const sectionElements = sections
@@ -60,8 +56,12 @@ function CoachSubNav() {
       }
 
       visibleSections.sort((a, b) => {
-        const distanceFromTargetA = Math.abs(a[1].top - ACTIVE_SECTION_TARGET_OFFSET_PX);
-        const distanceFromTargetB = Math.abs(b[1].top - ACTIVE_SECTION_TARGET_OFFSET_PX);
+        const distanceFromTargetA = Math.abs(
+          a[1].top - ACTIVE_SECTION_TARGET_OFFSET_PX,
+        );
+        const distanceFromTargetB = Math.abs(
+          b[1].top - ACTIVE_SECTION_TARGET_OFFSET_PX,
+        );
 
         if (distanceFromTargetA !== distanceFromTargetB) {
           return distanceFromTargetA - distanceFromTargetB;
@@ -117,7 +117,10 @@ function CoachSubNav() {
     return () => window.removeEventListener("hashchange", syncFromHash);
   }, [sectionIds]);
 
-  const handleSectionClick = (event: MouseEvent<HTMLAnchorElement>, sectionId: string) => {
+  const handleSectionClick = (
+    event: MouseEvent<HTMLAnchorElement>,
+    sectionId: string,
+  ) => {
     event.preventDefault();
 
     const sectionElement = document.getElementById(sectionId);
@@ -137,13 +140,13 @@ function CoachSubNav() {
   };
 
   return (
-    <div className="sticky top-16 z-30 border-b border-border/80 bg-background/95 backdrop-blur">
+    <div className="sticky top-16 z-30 border-b border-border bg-background">
       <nav
         aria-label="Coach section navigation"
-        className="mx-auto w-full max-w-6xl px-4 py-1.5 sm:px-6 md:px-10"
+        className="mx-auto w-full max-w-6xl px-4 sm:px-6 md:px-10"
       >
-        <div className="-mx-1 overflow-x-auto overscroll-x-contain [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
-          <div className="flex min-h-10 min-w-max snap-x snap-mandatory items-center gap-1.5 px-1 md:w-full md:min-w-0 md:justify-center">
+        <div className="overflow-x-auto overscroll-x-contain [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
+          <div className="flex min-h-12 min-w-max items-center gap-5 md:w-full md:min-w-0">
             {sections.map((section) => {
               const isActive = activeSectionId === section.id;
 
@@ -154,25 +157,16 @@ function CoachSubNav() {
                   aria-current={isActive ? "true" : undefined}
                   onClick={(event) => handleSectionClick(event, section.id)}
                   className={cn(
-                    "relative snap-start shrink-0 rounded-full border px-2.5 py-1.5 text-xs font-medium leading-5 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/50 sm:px-3.5 sm:text-sm",
+                    "shrink-0 border-b-2 py-3 text-xs font-medium leading-5 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/50 sm:text-sm",
                     isActive
-                      ? "border-accent/30 bg-accent/5 text-accent"
-                      : "border-transparent bg-transparent text-foreground/70 hover:border-border/70 hover:bg-surface hover:text-foreground",
+                      ? "border-foreground text-foreground"
+                      : "border-transparent text-foreground/70 hover:text-foreground",
                   )}
                 >
-                  {isActive ? (
-                    <motion.span
-                      layoutId="coach-subnav-active-chip"
-                      transition={prefersReducedMotion ? { duration: 0 } : activeChipTransition}
-                      className="absolute inset-0 rounded-full bg-accent/10"
-                    />
-                  ) : null}
-                  <span className="relative z-[1] sm:hidden">
+                  <span className="sm:hidden">
                     {section.mobileLabel ?? section.label}
                   </span>
-                  <span className="relative z-[1] hidden sm:inline">
-                    {section.label}
-                  </span>
+                  <span className="hidden sm:inline">{section.label}</span>
                 </a>
               );
             })}

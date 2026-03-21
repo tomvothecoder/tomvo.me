@@ -104,3 +104,54 @@ Address all current Dependabot alerts reported from `pnpm-lock.yaml` by updating
 - `pnpm audit --json`
 - `pnpm test`
 - `pnpm build`
+
+## Incremental task (2026-03-20, coach uncodixfy refinement)
+
+### Task understanding
+
+Refine the existing `/coach` page to remove generic AI landing-page patterns while preserving the current route, content model, and KwesForms integration.
+
+### Files reviewed
+
+- `.agents/uncodixfy/SKILL.md`
+- `src/views/Coach.tsx`
+- `src/components/CoachRedesign/*`
+- `src/components/NavBar/NavBar.tsx`
+- `src/components/ui/button.tsx`
+- `src/components/ui/input.tsx`
+- `src/components/ui/textarea.tsx`
+- `src/App.test.tsx`
+
+### Implementation plan
+
+1. Simplify the live coach page shell by removing the top gradient, final CTA section, and mobile sticky booking bar.
+2. Remove eyebrow labels, badge-heavy framing, hover-lift effects, and decorative reveal wrappers from the active coach sections while keeping the existing section order.
+3. Restyle the hero, subnav, stats, services, results, pricing, credibility, FAQ, and consultation sections as flatter bordered layouts with simpler hierarchy.
+4. Preserve all existing anchor targets, CTA destinations, and the KwesForms action URL, field names, and validation rules.
+5. Add coach-page assertions to the test suite and validate with `pnpm test` and `pnpm build`.
+
+## Incremental task (2026-03-20, coach hierarchy second pass)
+
+### Task understanding
+
+Strengthen the refined `/coach` page without reverting to the older decorative treatment. The goal is better hierarchy, section rhythm, and conversion emphasis while keeping the cleaner uncodixfy direction.
+
+### Files reviewed
+
+- `src/components/CoachRedesign/HeroSection.tsx`
+- `src/components/CoachRedesign/StatsSection.tsx`
+- `src/components/CoachRedesign/ServicesSection.tsx`
+- `src/components/CoachRedesign/TransformationGallery.tsx`
+- `src/components/CoachRedesign/PricingSection.tsx`
+- `src/components/CoachRedesign/CoachCredibilitySection.tsx`
+- `src/components/CoachRedesign/FAQSection.tsx`
+- `src/components/CoachRedesign/ConsultationFormSection.tsx`
+- `src/components/NavBar/NavBar.tsx`
+
+### Implementation plan
+
+1. Strengthen the hero with a more deliberate image column, tighter supporting proof, and clearer CTA support copy.
+2. Convert the stats area into a stronger proof strip and improve service/result card rhythm with clearer internal hierarchy.
+3. Give pricing and consultation stronger focal weight using spacing, borders, and restrained contrast rather than badges or decorative effects.
+4. Tighten credibility, FAQ, and navbar hierarchy so the full page feels more intentional.
+5. Validate with `pnpm test` and `pnpm build`.

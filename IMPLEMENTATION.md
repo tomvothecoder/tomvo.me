@@ -173,3 +173,81 @@ Resolved all four active Dependabot alerts tied to `pnpm-lock.yaml` by upgrading
 - `pnpm audit --json` -> zero vulnerabilities (`high: 0`, `moderate: 0`).
 - `pnpm test` -> pass (1/1).
 - `pnpm build` -> pass.
+
+## Incremental uncodixfy refinement (2026-03-20)
+
+### Summary
+
+Applied a focused `/coach` cleanup pass to remove decorative AI-style landing-page patterns while preserving the existing route, content, CTAs, and consultation form contract.
+
+### What changed
+
+- Simplified the live coach-page shell in `src/components/CoachRedesign/CoachLandingPage.tsx`:
+  - removed the decorative top gradient
+  - removed the mobile sticky booking CTA
+  - removed the trailing `FinalCTASection` from the rendered page
+- Simplified shared coach section framing in `src/components/CoachRedesign/SectionWrapper.tsx`:
+  - removed the `eyebrow` API and uppercase mini-heading pattern
+  - removed section-heading Framer Motion wrappers
+- Refined active coach sections to use flatter bordered layouts and simpler hierarchy:
+  - `HeroSection.tsx`
+  - `CoachSubNav.tsx`
+  - `StatsSection.tsx`
+  - `ServicesSection.tsx`
+  - `TransformationGallery.tsx`
+  - `PricingSection.tsx`
+  - `CoachCredibilitySection.tsx`
+  - `FAQSection.tsx`
+  - `ConsultationFormSection.tsx`
+- Simplified `/coach` navbar styling in `src/components/NavBar/NavBar.tsx`:
+  - removed the icon bubble, backdrop blur, and chip-style active links
+  - kept the same links and booking action
+- Tightened shared form/button radii used by the coach page:
+  - `src/components/ui/button.tsx`
+  - `src/components/ui/input.tsx`
+  - `src/components/ui/textarea.tsx`
+- Expanded `src/App.test.tsx` to verify:
+  - the coach hero, packages, FAQ, and consultation sections render
+  - consultation CTAs still target `#consultation`
+  - the consultation form fields still render
+  - OpenPowerlifting proof links are present
+  - the removed final CTA copy is no longer rendered
+
+### Validation
+
+- `pnpm test` -> pass (1/1)
+- `pnpm build` -> pass
+
+## Incremental coach hierarchy second pass (2026-03-20)
+
+### Summary
+
+Applied a second refinement pass to the cleaner `/coach` version to recover hierarchy, section rhythm, and focal emphasis without reintroducing the older decorative landing-page treatment.
+
+### What changed
+
+- Strengthened the hero in `src/components/CoachRedesign/HeroSection.tsx`:
+  - reduced the trust list to the highest-value proof points
+  - added clearer supporting CTA copy
+  - made the image column more deliberate with simple supporting quick facts
+- Rebuilt `src/components/CoachRedesign/StatsSection.tsx` as a stronger proof strip instead of a weak text list.
+- Tightened structure in `src/components/CoachRedesign/ServicesSection.tsx`:
+  - stronger row padding
+  - clearer separation between service summary and bullet column
+- Improved hierarchy in `src/components/CoachRedesign/TransformationGallery.tsx`:
+  - stronger card titles and result blocks
+  - clearer metadata hierarchy
+  - more deliberate spacing between content, outcomes, and verification links
+- Increased focal weight in `src/components/CoachRedesign/PricingSection.tsx`:
+  - stronger highlighted plan treatment without restoring badges
+  - clearer internal separation between cadence, focus, features, and CTA
+- Tightened the credibility and FAQ sections:
+  - `src/components/CoachRedesign/CoachCredibilitySection.tsx`
+  - `src/components/CoachRedesign/FAQSection.tsx`
+- Made the consultation section feel more action-oriented in `src/components/CoachRedesign/ConsultationFormSection.tsx` by increasing the form panel emphasis and clarifying the info column.
+- Strengthened the active state and brand presence in `src/components/NavBar/NavBar.tsx` while keeping the simpler navigation treatment.
+
+### Validation
+
+- `pnpm test` -> pass (1/1)
+- `pnpm build` -> pass

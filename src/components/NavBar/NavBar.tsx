@@ -5,29 +5,28 @@ import { cn } from "lib/utils";
 
 function NavBar() {
   const location = useLocation();
-  const brandLabel = location.pathname === "/career" ? "Tom Vo" : "Coach Tom";
+  const brandLabel =
+    location.pathname === "/career" ? "Tom Vo" : "Coach Tom Vo";
   const BrandIcon = location.pathname === "/career" ? Code2 : Dumbbell;
 
   return (
-    <header className="sticky top-0 z-40 border-b border-border/80 bg-background/95 backdrop-blur">
+    <header className="sticky top-0 z-40 border-b border-border bg-background">
       <nav className="mx-auto flex h-16 w-full max-w-6xl items-center justify-between px-6 md:px-10">
         <Link
           to="/coach"
-          className="inline-flex items-center gap-2 text-sm font-semibold tracking-tight text-foreground"
+          className="inline-flex items-center gap-2.5 text-[15px] font-semibold tracking-tight text-foreground"
         >
-          <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-accent/10 text-accent">
-            <BrandIcon className="h-4 w-4" />
-          </span>
+          <BrandIcon className="h-4 w-4 text-accent" />
           <span>{brandLabel}</span>
         </Link>
 
-        <div className="flex items-center gap-2 sm:gap-3">
+        <div className="flex items-center gap-3 sm:gap-4">
           <Link
             to="/coach"
             className={cn(
-              "rounded-lg px-3 py-2 text-sm font-medium transition-colors",
+              "border-b-2 border-transparent px-1 py-2 text-sm font-medium transition-colors",
               location.pathname === "/coach"
-                ? "bg-accent/10 text-accent"
+                ? "border-accent text-foreground"
                 : "text-muted hover:text-foreground",
             )}
           >
@@ -36,9 +35,9 @@ function NavBar() {
           <Link
             to="/career"
             className={cn(
-              "rounded-lg px-3 py-2 text-sm font-medium transition-colors",
+              "border-b-2 border-transparent px-1 py-2 text-sm font-medium transition-colors",
               location.pathname === "/career"
-                ? "bg-accent/10 text-accent"
+                ? "border-accent text-foreground"
                 : "text-muted hover:text-foreground",
             )}
           >

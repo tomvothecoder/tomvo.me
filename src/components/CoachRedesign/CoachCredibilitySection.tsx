@@ -1,14 +1,7 @@
 import { ClipboardCheck, FlaskConical, ShieldCheck } from "lucide-react";
-import { motion, useReducedMotion } from "framer-motion";
 
 import selfPortrait from "assets/me.jpg";
-import {
-  fadeInUp,
-  revealInView,
-  staggerContainer,
-} from "components/CoachRedesign/animations";
 import SectionWrapper from "components/CoachRedesign/SectionWrapper";
-import { Card, CardContent } from "components/ui/card";
 
 const credibilityPoints = [
   {
@@ -34,57 +27,41 @@ const credibilityPoints = [
 ];
 
 function CoachCredibilitySection() {
-  const prefersReducedMotion = useReducedMotion();
-
   return (
     <SectionWrapper
       id="credibility"
-      eyebrow="Coach credibility"
       title="Why clients trust this coaching system"
       description="You get a clear training process, transparent communication, and coaching decisions grounded in data and 5 years of professional coaching experience."
     >
-      <div className="grid gap-8 xl:grid-cols-[0.9fr_1.1fr] xl:items-start">
-        <motion.div
-          variants={fadeInUp}
-          {...(prefersReducedMotion ? {} : revealInView)}
-        >
-          <div className="overflow-hidden rounded-2xl border border-border bg-surface shadow-soft">
-            <img
-              src={selfPortrait}
-              alt="Coach Tom Vo coaching profile"
-              className="h-full min-h-[380px] w-full object-cover"
-            />
-          </div>
-        </motion.div>
+      <div className="grid gap-8 xl:grid-cols-[0.88fr_1.12fr] xl:items-start">
+        <div className="overflow-hidden border border-border bg-surface p-3">
+          <img
+            src={selfPortrait}
+            alt="Coach Tom Vo coaching profile"
+            className="h-full min-h-[420px] w-full object-cover"
+          />
+        </div>
 
-        <motion.div
-          variants={staggerContainer}
-          {...(prefersReducedMotion ? {} : revealInView)}
-          className="flex flex-col gap-4"
-        >
+        <div className="divide-y divide-border border border-border bg-surface">
           {credibilityPoints.map((point) => {
             const Icon = point.icon;
             return (
-              <motion.div key={point.title} variants={fadeInUp}>
-                <Card>
-                  <CardContent className="flex gap-4 pt-6">
-                    <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-accent/10 text-accent">
-                      <Icon className="h-5 w-5" />
-                    </span>
-                    <div>
-                      <h3 className="text-lg font-semibold text-foreground">
-                        {point.title}
-                      </h3>
-                      <p className="mt-2 text-sm leading-relaxed text-muted">
-                        {point.text}
-                      </p>
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
+              <article key={point.title} className="flex gap-4 px-6 py-6 md:px-7">
+                <span className="mt-1 shrink-0 text-accent">
+                  <Icon className="h-5 w-5" />
+                </span>
+                <div>
+                  <h3 className="text-[1.05rem] font-semibold leading-6 text-foreground">
+                    {point.title}
+                  </h3>
+                  <p className="mt-2 text-sm leading-7 text-muted">
+                    {point.text}
+                  </p>
+                </div>
+              </article>
             );
           })}
-        </motion.div>
+        </div>
       </div>
     </SectionWrapper>
   );

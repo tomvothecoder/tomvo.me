@@ -1,13 +1,4 @@
-import { motion, useReducedMotion } from "framer-motion";
-
-import {
-  fadeInUp,
-  revealInView,
-  staggerContainer,
-} from "components/CoachRedesign/animations";
 import SectionWrapper from "components/CoachRedesign/SectionWrapper";
-import { Badge } from "components/ui/badge";
-import { Card, CardContent } from "components/ui/card";
 import { cn } from "lib/utils";
 
 interface ProofLinksProps {
@@ -38,10 +29,13 @@ const powerliftingOutcomes = [
     label: "Advanced meet prep (Remote)",
     title: "1st place in 181 lb class",
     summary:
-      "Remote meet prep from Jun to Jul 2023 with structured attempt selection and competition-week execution.",
+      "Remote meet prep from Jun to Jul 2023 with structured attempt selection, competition-week execution, and a +55.1 lb total increase from June to July.",
     metric: "1416.4 lb total, 8/9 attempts",
-    support: "+55.1 lb increase from June to July",
-    lifts: ["Sq 512.5 lb", "Bn 330.7 lb", "Dl 573.2 lb"],
+    lifts: [
+      { label: "Squat", value: "512.5 lb" },
+      { label: "Bench", value: "330.7 lb" },
+      { label: "Deadlift", value: "573.2 lb" },
+    ],
     profileUrl: "https://www.openpowerlifting.org/u/jordanang",
     meetUrl: "https://www.openpowerlifting.org/m/usapl/CA-2023-19#jordanang",
   },
@@ -51,7 +45,11 @@ const powerliftingOutcomes = [
     summary:
       "Remote coaching for an Aug 2023 meet supported first place in his class with structured prep.",
     metric: "1460.6 lb total, 9/9 attempts",
-    lifts: ["Sq 529.1 lb", "Bn 303.1 lb", "Dl 628.3 lb"],
+    lifts: [
+      { label: "Squat", value: "529.1 lb" },
+      { label: "Bench", value: "303.1 lb" },
+      { label: "Deadlift", value: "628.3 lb" },
+    ],
     profileUrl: "https://www.openpowerlifting.org/u/alvinpov",
     meetUrl: "https://www.openpowerlifting.org/m/uspa/2957#alvinpov",
   },
@@ -61,7 +59,11 @@ const powerliftingOutcomes = [
     summary:
       "In-person meet prep from May to Nov 2024 for a first-time powerlifting athlete with minimal gym experience.",
     metric: "898.3 lb total, 8/9 attempts",
-    lifts: ["Sq 297.6 lb", "Bn 198.4 lb", "Dl 402.3 lb"],
+    lifts: [
+      { label: "Squat", value: "297.6 lb" },
+      { label: "Bench", value: "198.4 lb" },
+      { label: "Deadlift", value: "402.3 lb" },
+    ],
     profileUrl: "https://www.openpowerlifting.org/u/christophercruz2",
     meetUrl:
       "https://www.openpowerlifting.org/m/usapl/CA-2024-39#christophercruz2",
@@ -72,11 +74,11 @@ function ProofLinks({ profileUrl, meetUrl, className }: ProofLinksProps) {
   return (
     <div
       className={cn(
-        "flex flex-wrap items-center gap-x-1.5 gap-y-1 text-xs leading-5 text-foreground/75",
+        "flex flex-wrap items-center gap-x-2 gap-y-1 text-xs leading-5 text-foreground/70",
         className,
       )}
     >
-      <span>Verified via OpenPowerlifting</span>
+      <span>OpenPowerlifting:</span>
       <a
         href={profileUrl}
         target="_blank"
@@ -85,7 +87,7 @@ function ProofLinks({ profileUrl, meetUrl, className }: ProofLinksProps) {
       >
         Profile
       </a>
-      <span>•</span>
+      <span>|</span>
       <a
         href={meetUrl}
         target="_blank"
@@ -99,117 +101,88 @@ function ProofLinks({ profileUrl, meetUrl, className }: ProofLinksProps) {
 }
 
 function TransformationGallery() {
-  const prefersReducedMotion = useReducedMotion();
-
   return (
     <SectionWrapper
       id="transformations"
-      eyebrow="Results"
       title="Transformation stories built on structure, not shortcuts"
       description="The process emphasizes clear milestones, measurable outcomes, and consistent execution."
       className="py-14 md:py-20"
     >
-      <p className="text-xs font-semibold uppercase tracking-[0.15em] text-foreground/60">
-        General outcomes
-      </p>
+      <div className="flex items-end justify-between gap-4">
+        <h3 className="text-lg font-semibold text-foreground">General outcomes</h3>
+      </div>
 
-      <motion.div
-        variants={staggerContainer}
-        {...(prefersReducedMotion ? {} : revealInView)}
-        className="mt-4 grid gap-5 md:grid-cols-2"
-      >
-        {generalOutcomes.map((item, index) => (
-          <motion.div key={item.title} variants={fadeInUp}>
-            <Card className="h-full border-border/90 bg-surface shadow-soft transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md">
-              <CardContent className="flex h-full flex-col pt-6">
-                <div className="flex items-center justify-between gap-3">
-                  <p className="text-xs font-semibold uppercase tracking-[0.15em] text-foreground/65">
-                    General case {index + 1}
-                  </p>
-                </div>
-                <Badge className="mb-4 mt-3 w-fit" variant="accent">
-                  {item.label}
-                </Badge>
-                <h3 className="text-xl font-semibold text-foreground">
-                  {item.title}
-                </h3>
-                <p className="mt-3 text-[15px] leading-7 text-foreground/85 sm:text-base">
-                  {item.summary}
-                </p>
-                <div className="mt-auto pt-5">
-                  <p className="text-xs font-semibold uppercase tracking-[0.14em] text-foreground/55">
-                    Result
-                  </p>
-                  <p className="mt-1 text-lg font-semibold leading-7 text-foreground">
-                    {item.metric}
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
-          </motion.div>
+      <div className="mt-4 grid gap-5 md:grid-cols-2">
+        {generalOutcomes.map((item) => (
+          <article
+            key={item.title}
+            className="flex h-full flex-col border border-border bg-surface p-6 md:p-7"
+          >
+            <p className="text-sm leading-6 text-foreground/68">{item.label}</p>
+            <h4 className="mt-3 text-[1.35rem] font-semibold leading-tight text-foreground">
+              {item.title}
+            </h4>
+            <p className="mt-3 text-[15px] leading-7 text-foreground/82">
+              {item.summary}
+            </p>
+            <p className="mt-auto border-t border-border pt-4 text-sm leading-6 text-foreground/72">
+              <span className="font-semibold text-foreground">Result:</span>{" "}
+              {item.metric}
+            </p>
+          </article>
         ))}
-      </motion.div>
+      </div>
 
-      <p className="mt-8 text-xs font-semibold uppercase tracking-[0.15em] text-foreground/60">
-        Powerlifting outcomes
-      </p>
+      <div className="mt-10 flex items-end justify-between gap-4">
+        <h3 className="text-lg font-semibold text-foreground">
+          Powerlifting outcomes
+        </h3>
+      </div>
 
-      <motion.div
-        variants={staggerContainer}
-        {...(prefersReducedMotion ? {} : revealInView)}
-        className="mt-4 grid gap-5 md:grid-cols-2 xl:grid-cols-3"
-      >
-        {powerliftingOutcomes.map((item, index) => (
-          <motion.div key={item.title} variants={fadeInUp}>
-            <Card className="group h-full border-accent/25 bg-gradient-to-b from-accent/5 to-surface shadow-soft transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md">
-              <CardContent className="flex h-full flex-col pt-6">
-                <div className="flex items-start justify-between gap-3">
-                  <p className="text-xs font-semibold uppercase tracking-[0.15em] text-foreground/65">
-                    Powerlifting case {index + 1}
-                  </p>
-                </div>
-                <Badge className="mb-4 mt-3 w-fit" variant="accent">
-                  {item.label}
-                </Badge>
-                <h3 className="text-xl font-semibold leading-tight text-foreground xl:min-h-[4rem]">
-                  {item.title}
-                </h3>
-                <p className="mt-3 text-[15px] leading-7 text-foreground/85 sm:text-base xl:min-h-[6.5rem]">
-                  {item.summary}
-                </p>
-                <div className="mt-4 rounded-lg border border-accent/20 bg-accent/10 px-3 py-2.5 transition-colors duration-300 group-hover:border-accent/35">
-                  <p className="text-xs font-semibold uppercase tracking-[0.14em] text-foreground/60">
-                    Outcome
-                  </p>
-                  <p className="mt-1 text-[15px] font-semibold leading-6 text-foreground">
-                    {item.metric}
-                  </p>
-                  {item.support ? (
-                    <p className="mt-1 text-xs font-medium leading-5 text-foreground/80">
-                      {item.support}
+      <div className="mt-4 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+        {powerliftingOutcomes.map((item) => (
+          <article
+            key={item.title}
+            className="flex h-full flex-col border border-border bg-surface p-6 md:p-7"
+          >
+            <p className="text-sm leading-6 text-foreground/68">
+              {item.label}
+            </p>
+            <h4 className="mt-3 text-[1.35rem] font-semibold leading-tight text-foreground xl:min-h-[4.5rem]">
+              {item.title}
+            </h4>
+            <p className="mt-3 text-[15px] leading-7 text-foreground/82 xl:min-h-[8rem]">
+              {item.summary}
+            </p>
+            <div className="mt-auto border-t border-border pt-4 text-sm leading-6 text-foreground/72">
+              <p className="font-semibold text-foreground">Outcome</p>
+              <p className="mt-1">{item.metric}</p>
+            </div>
+            <div className="mt-4 border-t border-border pt-4">
+              <p className="text-sm font-semibold leading-6 text-foreground">
+                Best lifts
+              </p>
+              <div className="mt-2 grid grid-cols-3 divide-x divide-border border border-border bg-background">
+                {item.lifts.map((lift) => (
+                  <div key={lift.label} className="px-2.5 py-2.5">
+                    <p className="text-[11px] font-medium uppercase tracking-wide text-foreground/55">
+                      {lift.label}
                     </p>
-                  ) : null}
-                </div>
-                <div className="mt-3 flex flex-wrap gap-1.5">
-                  {item.lifts.map((lift) => (
-                    <span
-                      key={lift}
-                      className="rounded-full border border-border bg-background px-2.5 py-0.5 text-[11px] font-medium leading-4 text-foreground/85"
-                    >
-                      {lift}
-                    </span>
-                  ))}
-                </div>
-                <ProofLinks
-                  profileUrl={item.profileUrl}
-                  meetUrl={item.meetUrl}
-                  className="mt-auto pt-3"
-                />
-              </CardContent>
-            </Card>
-          </motion.div>
+                    <p className="mt-1 text-sm font-medium leading-5 text-foreground">
+                      {lift.value}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <ProofLinks
+              profileUrl={item.profileUrl}
+              meetUrl={item.meetUrl}
+              className="mt-4 border-t border-border pt-4"
+            />
+          </article>
         ))}
-      </motion.div>
+      </div>
     </SectionWrapper>
   );
 }

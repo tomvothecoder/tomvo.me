@@ -1,7 +1,3 @@
-import { motion, useReducedMotion } from "framer-motion";
-
-import { fadeInUp, staggerContainer } from "components/CoachRedesign/animations";
-
 const stats = [
   {
     value: "5 Years",
@@ -9,11 +5,11 @@ const stats = [
   },
   {
     value: "In-person + Online",
-    label: "In-person + online coaching",
+    label: "Coaching formats available",
   },
   {
     value: "2 Cities",
-    label: "Fremont and Newark",
+    label: "Fremont and Newark coverage",
   },
   {
     value: "Weekly",
@@ -22,31 +18,27 @@ const stats = [
 ];
 
 function StatsSection() {
-  const prefersReducedMotion = useReducedMotion();
-
   return (
     <section id="proof" className="px-6 py-4 md:px-10 md:py-8">
-      <motion.div
-        variants={staggerContainer}
-        {...(prefersReducedMotion
-          ? {}
-          : {
-              initial: "hidden",
-              animate: "visible",
-            })}
-        className="mx-auto grid w-full max-w-6xl gap-4 sm:grid-cols-2 xl:grid-cols-4"
-      >
-        {stats.map((item) => (
-          <motion.article
+      <div className="mx-auto grid w-full max-w-6xl border border-border bg-surface sm:grid-cols-2 xl:grid-cols-4">
+        {stats.map((item, index) => (
+          <article
             key={item.label}
-            variants={fadeInUp}
-            className="rounded-xl border border-border bg-surface p-5 shadow-soft"
+            className={[
+              "p-5 md:p-6",
+              index < stats.length - 1 ? "border-b border-border xl:border-b-0" : "",
+              index % 2 === 0 ? "xl:border-r xl:border-border" : "",
+              index === 1 ? "sm:border-l sm:border-border xl:border-l-0" : "",
+              index === 3 ? "sm:border-l sm:border-border xl:border-l-0" : "",
+            ].join(" ")}
           >
-            <p className="text-2xl font-semibold text-foreground">{item.value}</p>
-            <p className="mt-2 text-sm text-muted">{item.label}</p>
-          </motion.article>
+            <p className="text-2xl font-semibold tracking-tight text-foreground">
+              {item.value}
+            </p>
+            <p className="mt-2 text-sm leading-6 text-muted">{item.label}</p>
+          </article>
         ))}
-      </motion.div>
+      </div>
     </section>
   );
 }
