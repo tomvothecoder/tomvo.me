@@ -10,23 +10,25 @@ function NavBar() {
   const BrandIcon = location.pathname === "/career" ? Code2 : Dumbbell;
 
   return (
-    <header className="sticky top-0 z-40 border-b border-border bg-background">
+    <header className="sticky top-0 z-40 bg-background shadow-[0_10px_24px_-24px_rgba(17,17,17,0.5)]">
       <nav className="mx-auto flex h-16 w-full max-w-6xl items-center justify-between px-6 md:px-10">
         <Link
           to="/coach"
-          className="inline-flex items-center gap-2.5 text-[15px] font-semibold tracking-tight text-foreground"
+          className="inline-flex items-center gap-2 text-sm font-semibold tracking-tight text-foreground"
         >
-          <BrandIcon className="h-4 w-4 text-accent" />
+          <span className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-border bg-surface text-accent">
+            <BrandIcon className="h-4 w-4" />
+          </span>
           <span>{brandLabel}</span>
         </Link>
 
-        <div className="flex items-center gap-3 sm:gap-4">
+        <div className="flex items-center gap-2 sm:gap-3">
           <Link
             to="/coach"
             className={cn(
-              "border-b-2 border-transparent px-1 py-2 text-sm font-medium transition-colors",
+              "rounded-lg px-3 py-2 text-sm font-medium transition-colors",
               location.pathname === "/coach"
-                ? "border-accent text-foreground"
+                ? "bg-foreground/[0.05] text-foreground"
                 : "text-muted hover:text-foreground",
             )}
           >
@@ -35,9 +37,9 @@ function NavBar() {
           <Link
             to="/career"
             className={cn(
-              "border-b-2 border-transparent px-1 py-2 text-sm font-medium transition-colors",
+              "rounded-lg px-3 py-2 text-sm font-medium transition-colors",
               location.pathname === "/career"
-                ? "border-accent text-foreground"
+                ? "bg-foreground/[0.05] text-foreground"
                 : "text-muted hover:text-foreground",
             )}
           >

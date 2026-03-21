@@ -38,12 +38,12 @@ function HeroSection() {
             Build measurable strength with coaching that fits real life.
           </h1>
 
-          <p className="mt-5 max-w-xl text-lg leading-8 text-foreground/75">
+          <p className="mt-5 max-w-xl text-lg leading-8 text-foreground/78">
             Structured 1:1 training and clear progression for adults who want
             stronger lifts, better movement quality, and sustainable habits.
           </p>
 
-          <div className="mt-8 flex flex-wrap gap-3">
+          <div className="mt-7 flex flex-wrap gap-3">
             <Button asChild size="lg">
               <a href="#consultation">
                 Book Free Consultation
@@ -55,19 +55,19 @@ function HeroSection() {
             </Button>
           </div>
 
-          <p className="mt-3 text-sm leading-6 text-muted">
+          <p className="mt-3 text-sm leading-6 text-foreground/70">
             Start with a free consultation to review goals, schedule, and the
             coaching format that fits best.
           </p>
 
-          <div className="mt-8 grid gap-3 border-t border-border pt-5 sm:grid-cols-2">
+          <div className="mt-7 grid gap-3 border border-border bg-surface p-4 sm:grid-cols-2">
             {trustSignals.map(({ icon: Icon, label }) => (
-              <div key={label} className="flex items-start gap-3 text-[15px] leading-6 text-foreground/78">
+              <div key={label} className="flex items-start gap-3 text-[15px] leading-6 text-foreground/82">
                 <Icon className="mt-1 h-4 w-4 shrink-0 text-accent" />
                 <span>{label}</span>
               </div>
             ))}
-            <div className="flex items-start gap-3 text-[15px] leading-6 text-foreground/78">
+            <div className="flex items-start gap-3 text-[15px] leading-6 text-foreground/82">
               <Clock3 className="mt-1 h-4 w-4 shrink-0 text-accent" />
               <span>Typical consultation response within 24 hours.</span>
             </div>

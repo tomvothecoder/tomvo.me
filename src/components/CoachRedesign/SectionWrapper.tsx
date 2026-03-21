@@ -25,19 +25,19 @@ function SectionWrapper({
     <section
       id={id}
       className={cn(
-        "scroll-mt-32 px-6 py-16 md:scroll-mt-36 md:px-10 md:py-20",
+        "scroll-mt-40 px-6 py-16 md:scroll-mt-44 md:px-10 md:py-20",
         className,
       )}
     >
       <div className="mx-auto w-full max-w-6xl">
-        <div className="mb-10 max-w-3xl">
+        <div className="mb-8 max-w-3xl">
           <h2 className="text-3xl font-semibold leading-tight text-foreground md:text-4xl">
             {title}
           </h2>
           {description ? (
             <p
               className={cn(
-                "mt-4 text-lg leading-relaxed text-muted",
+                "mt-3 text-[17px] leading-7 text-muted",
                 descriptionClassName,
               )}
             >

@@ -116,16 +116,18 @@ function TransformationGallery() {
         {generalOutcomes.map((item) => (
           <article
             key={item.title}
-            className="flex h-full flex-col border border-border bg-surface p-6 md:p-7"
+            className="flex h-full flex-col border border-border bg-surface p-5 md:p-6"
           >
-            <p className="text-sm leading-6 text-foreground/68">{item.label}</p>
-            <h4 className="mt-3 text-[1.35rem] font-semibold leading-tight text-foreground">
+            <p className="text-[12px] font-medium tracking-wide text-foreground/55">
+              {item.label}
+            </p>
+            <h4 className="mt-2.5 text-[1.16rem] font-semibold leading-tight text-foreground">
               {item.title}
             </h4>
-            <p className="mt-3 text-[15px] leading-7 text-foreground/82">
+            <p className="mt-2.5 max-w-[34ch] text-[15px] leading-6 text-foreground/78">
               {item.summary}
             </p>
-            <p className="mt-auto border-t border-border pt-4 text-sm leading-6 text-foreground/72">
+            <p className="mt-auto border-t border-border pt-3 text-sm leading-6 text-foreground/72">
               <span className="font-semibold text-foreground">Result:</span>{" "}
               {item.metric}
             </p>
@@ -143,28 +145,32 @@ function TransformationGallery() {
         {powerliftingOutcomes.map((item) => (
           <article
             key={item.title}
-            className="flex h-full flex-col border border-border bg-surface p-6 md:p-7"
+            className="flex h-full flex-col border border-border bg-surface p-5 md:p-6"
           >
-            <p className="text-sm leading-6 text-foreground/68">
+            <p className="text-[12px] font-medium tracking-wide text-foreground/55">
               {item.label}
             </p>
-            <h4 className="mt-3 text-[1.35rem] font-semibold leading-tight text-foreground xl:min-h-[4.5rem]">
+            <h4 className="mt-2.5 max-w-[16ch] text-[1.16rem] font-semibold leading-tight text-foreground xl:min-h-[4rem]">
               {item.title}
             </h4>
-            <p className="mt-3 text-[15px] leading-7 text-foreground/82 xl:min-h-[8rem]">
+            <p className="mt-2.5 max-w-[33ch] text-[15px] leading-6 text-foreground/78 xl:min-h-[7rem]">
               {item.summary}
             </p>
-            <div className="mt-auto border-t border-border pt-4 text-sm leading-6 text-foreground/72">
-              <p className="font-semibold text-foreground">Outcome</p>
-              <p className="mt-1">{item.metric}</p>
+            <div className="mt-auto border-t border-border pt-3 text-sm leading-6 text-foreground/72">
+              <p className="text-[11px] font-medium uppercase tracking-[0.14em] text-foreground/55">
+                Outcome
+              </p>
+              <p className="mt-1 text-sm leading-6 text-foreground/76">
+                {item.metric}
+              </p>
             </div>
-            <div className="mt-4 border-t border-border pt-4">
-              <p className="text-sm font-semibold leading-6 text-foreground">
+            <div className="mt-3 border-t border-border pt-3">
+              <p className="text-[11px] font-medium uppercase tracking-[0.14em] text-foreground/55">
                 Best lifts
               </p>
               <div className="mt-2 grid grid-cols-3 divide-x divide-border border border-border bg-background">
                 {item.lifts.map((lift) => (
-                  <div key={lift.label} className="px-2.5 py-2.5">
+                  <div key={lift.label} className="px-2.5 py-2">
                     <p className="text-[11px] font-medium uppercase tracking-wide text-foreground/55">
                       {lift.label}
                     </p>
@@ -178,7 +184,7 @@ function TransformationGallery() {
             <ProofLinks
               profileUrl={item.profileUrl}
               meetUrl={item.meetUrl}
-              className="mt-4 border-t border-border pt-4"
+              className="mt-3 border-t border-border pt-3"
             />
           </article>
         ))}

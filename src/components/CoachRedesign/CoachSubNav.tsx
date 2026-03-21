@@ -140,7 +140,7 @@ function CoachSubNav() {
   };
 
   return (
-    <div className="sticky top-16 z-30 border-b border-border bg-background">
+    <div className="sticky top-16 z-30 border-b border-border bg-surface shadow-[0_10px_24px_-24px_rgba(17,17,17,0.5)]">
       <nav
         aria-label="Coach section navigation"
         className="mx-auto w-full max-w-6xl px-4 sm:px-6 md:px-10"
@@ -159,7 +159,7 @@ function CoachSubNav() {
                   className={cn(
                     "shrink-0 border-b-2 py-3 text-xs font-medium leading-5 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/50 sm:text-sm",
                     isActive
-                      ? "border-foreground text-foreground"
+                      ? "border-accent text-foreground"
                       : "border-transparent text-foreground/70 hover:text-foreground",
                   )}
                 >

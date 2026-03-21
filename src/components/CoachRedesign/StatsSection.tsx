@@ -20,7 +20,7 @@ const stats = [
 function StatsSection() {
   return (
     <section id="proof" className="px-6 py-4 md:px-10 md:py-8">
-      <div className="mx-auto grid w-full max-w-6xl border border-border bg-surface sm:grid-cols-2 xl:grid-cols-4">
+      <div className="mx-auto grid w-full max-w-6xl border border-border bg-foreground/[0.02] sm:grid-cols-2 xl:grid-cols-4">
         {stats.map((item, index) => (
           <article
             key={item.label}
@@ -32,10 +32,10 @@ function StatsSection() {
               index === 3 ? "sm:border-l sm:border-border xl:border-l-0" : "",
             ].join(" ")}
           >
-            <p className="text-2xl font-semibold tracking-tight text-foreground">
+            <p className="text-xl font-semibold tracking-tight text-foreground md:text-2xl">
               {item.value}
             </p>
-            <p className="mt-2 text-sm leading-6 text-muted">{item.label}</p>
+            <p className="mt-1.5 text-sm leading-6 text-foreground/68">{item.label}</p>
           </article>
         ))}
       </div>

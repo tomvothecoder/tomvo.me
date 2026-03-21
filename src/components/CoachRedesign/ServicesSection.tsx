@@ -51,27 +51,32 @@ function ServicesSection() {
       className="py-14 md:py-20"
     >
       <div className="divide-y divide-border border border-border bg-surface">
-        {services.map((service) => {
+        {services.map((service, index) => {
           const Icon = service.icon;
           return (
             <article
               key={service.title}
-              className="grid gap-5 px-6 py-6 md:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] md:gap-8 md:px-7"
+              className={`grid gap-6 px-6 py-6 md:grid-cols-[minmax(0,1fr)_minmax(0,0.92fr)] md:gap-10 md:px-7 md:py-7 ${
+                index % 2 === 1 ? "bg-foreground/[0.015]" : ""
+              }`}
             >
-              <div>
+              <div className="md:border-r md:border-border md:pr-10">
                 <div className="flex items-center gap-3">
                   <Icon className="h-4 w-4 text-accent" />
                   <h3 className="text-xl font-semibold text-foreground">
                     {service.title}
                   </h3>
                 </div>
-                <p className="mt-3 max-w-xl text-[15px] leading-7 text-foreground/75">
+                <p className="mt-3 max-w-[34rem] text-[15px] leading-7 text-foreground/80">
                   {service.description}
                 </p>
               </div>
-              <ul className="space-y-2 border-border text-[15px] leading-7 text-foreground/75 md:border-l md:pl-8">
+              <ul className="text-[15px] leading-7 text-foreground/80 md:pl-1">
                 {service.points.map((point) => (
-                  <li key={point} className="flex items-start gap-3">
+                  <li
+                    key={point}
+                    className="flex items-start gap-3 border-b border-border/80 py-2.5 last:border-b-0 last:pb-0 first:pt-0"
+                  >
                     <span className="mt-3 h-1.5 w-1.5 shrink-0 rounded-full bg-foreground/70" />
                     <span>{point}</span>
                   </li>
