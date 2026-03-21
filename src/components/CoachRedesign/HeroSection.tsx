@@ -1,4 +1,5 @@
 import { ArrowRight, CheckCircle2, Clock3, Dumbbell, MapPin } from "lucide-react";
+import { motion, useReducedMotion } from "framer-motion";
 
 import selfPortrait from "assets/me.jpg";
 import { Button } from "components/ui/button";
@@ -30,10 +31,22 @@ const quickFacts = [
 ];
 
 function HeroSection() {
+  const prefersReducedMotion = useReducedMotion();
+  const heroMotionProps = prefersReducedMotion
+    ? {}
+    : {
+        initial: { opacity: 0, y: 12 },
+        animate: { opacity: 1, y: 0 },
+        transition: {
+          duration: 0.4,
+          ease: [0.22, 1, 0.36, 1] as [number, number, number, number],
+        },
+      };
+
   return (
     <section id="hero" className="px-6 pb-10 pt-10 md:px-10 md:pb-14 md:pt-14">
       <div className="mx-auto grid w-full max-w-6xl gap-10 xl:grid-cols-[1.08fr_0.92fr] xl:items-center">
-        <div className="max-w-2xl">
+        <motion.div className="max-w-2xl" {...heroMotionProps}>
           <h1 className="text-4xl font-semibold leading-[1.02] tracking-tight text-foreground sm:text-5xl md:text-6xl">
             Build measurable strength with coaching that fits real life.
           </h1>
@@ -72,9 +85,27 @@ function HeroSection() {
               <span>Typical consultation response within 24 hours.</span>
             </div>
           </div>
-        </div>
+        </motion.div>
 
-        <aside className="border border-border bg-surface p-4 md:p-5">
+        <motion.aside
+          className="border border-border bg-surface p-4 md:p-5"
+          {...(prefersReducedMotion
+            ? {}
+            : {
+                initial: { opacity: 0, y: 12 },
+                animate: { opacity: 1, y: 0 },
+                transition: {
+                  duration: 0.4,
+                  delay: 0.08,
+                  ease: [0.22, 1, 0.36, 1] as [
+                    number,
+                    number,
+                    number,
+                    number,
+                  ],
+                },
+              })}
+        >
           <img
             src={selfPortrait}
             alt="Coach Tom Vo"
@@ -92,7 +123,7 @@ function HeroSection() {
               </div>
             ))}
           </div>
-        </aside>
+        </motion.aside>
       </div>
     </section>
   );

@@ -251,3 +251,24 @@ Applied a second refinement pass to the cleaner `/coach` version to recover hier
 
 - `pnpm test` -> pass (1/1)
 - `pnpm build` -> pass
+
+## Incremental coach motion restraint pass (2026-03-20)
+
+### Summary
+
+Added only the motion that improves the `/coach` experience: a subtle, reduced-motion-aware hero entrance and intentional FAQ accordion open/close transitions. Decorative section reveals and card motion remain disabled.
+
+### What changed
+
+- Updated `src/components/CoachRedesign/HeroSection.tsx`:
+  - added a small first-render fade/y entrance on the hero copy and image columns
+  - respected `prefers-reduced-motion` by disabling those motion props when requested
+- Updated `src/components/ui/accordion.tsx`:
+  - added open/close transitions for accordion content using state-driven grid-row/opacity transitions
+  - kept the existing chevron rotation and content model intact
+
+### Validation
+
+- `pnpm test` -> pass (1/1)
+- `pnpm build` -> pass
+- `pnpm build` still emits the existing chunk-size warning for the main bundle; no new build errors were introduced

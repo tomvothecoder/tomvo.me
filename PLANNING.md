@@ -155,3 +155,24 @@ Strengthen the refined `/coach` page without reverting to the older decorative t
 3. Give pricing and consultation stronger focal weight using spacing, borders, and restrained contrast rather than badges or decorative effects.
 4. Tighten credibility, FAQ, and navbar hierarchy so the full page feels more intentional.
 5. Validate with `pnpm test` and `pnpm build`.
+
+## Incremental task (2026-03-20, coach motion restraint pass)
+
+### Task understanding
+
+Keep motion on `/coach` functional and minimal: preserve smooth anchor scrolling, add a subtle first-render hero entrance, and make FAQ accordion state changes feel intentional without reintroducing decorative reveal animations elsewhere.
+
+### Files reviewed
+
+- `src/components/CoachRedesign/HeroSection.tsx`
+- `src/components/CoachRedesign/FAQSection.tsx`
+- `src/components/ui/accordion.tsx`
+- `src/components/CoachRedesign/CoachSubNav.tsx`
+- `src/components/CoachRedesign/animations.ts`
+
+### Implementation plan
+
+1. Add a reduced-motion-aware hero entrance using restrained opacity/y motion on the two hero columns only.
+2. Add open/close transitions to accordion content so FAQ interactions feel responsive without changing the content model.
+3. Leave section reveal, card lift, and decorative scroll animations disabled.
+4. Validate with `pnpm test` and `pnpm build`.
