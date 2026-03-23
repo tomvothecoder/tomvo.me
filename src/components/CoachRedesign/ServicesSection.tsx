@@ -50,34 +50,38 @@ function ServicesSection() {
       descriptionClassName="text-foreground/75"
       className="py-14 md:py-20"
     >
-      <div className="divide-y divide-border border border-border bg-surface">
+      <div className="grid gap-5 md:grid-cols-2">
         {services.map((service, index) => {
           const Icon = service.icon;
           return (
             <article
               key={service.title}
-              className={`grid gap-6 px-6 py-6 md:grid-cols-[minmax(0,1fr)_minmax(0,0.92fr)] md:gap-10 md:px-7 md:py-7 ${
-                index % 2 === 1 ? "bg-foreground/[0.015]" : ""
+              className={`flex h-full flex-col border p-6 shadow-soft md:p-7 ${
+                index % 2 === 1
+                  ? "border-[#b7cabb] bg-[#e2e8df]"
+                  : "border-[#c7d0c5] bg-[#fcfcf8]"
               }`}
             >
-              <div className="md:border-r md:border-border md:pr-10">
+              <div className="border-t-2 border-[#1f4f45]/75 pt-4">
                 <div className="flex items-center gap-3">
-                  <Icon className="h-4 w-4 text-accent" />
+                  <span className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#dfe7de] text-[#1f4f45]">
+                    <Icon className="h-4 w-4" />
+                  </span>
                   <h3 className="text-xl font-semibold text-foreground">
                     {service.title}
                   </h3>
                 </div>
-                <p className="mt-3 max-w-[34rem] text-[15px] leading-7 text-foreground/80">
+                <p className="mt-3 text-[15px] leading-7 text-foreground/80">
                   {service.description}
                 </p>
               </div>
-              <ul className="text-[15px] leading-7 text-foreground/80 md:pl-1">
+              <ul className="mt-5 space-y-0.5 border-t border-[#d8ddd5] pt-4 text-[15px] leading-7 text-foreground/80">
                 {service.points.map((point) => (
                   <li
                     key={point}
-                    className="flex items-start gap-3 border-b border-border/80 py-2.5 last:border-b-0 last:pb-0 first:pt-0"
+                    className="flex items-start gap-3 border-b border-[#d8ddd5] py-2.5 last:border-b-0 last:pb-0 first:pt-0"
                   >
-                    <span className="mt-3 h-1.5 w-1.5 shrink-0 rounded-full bg-foreground/70" />
+                    <span className="mt-3 h-1.5 w-1.5 shrink-0 rounded-full bg-[#6f5a40]" />
                     <span>{point}</span>
                   </li>
                 ))}

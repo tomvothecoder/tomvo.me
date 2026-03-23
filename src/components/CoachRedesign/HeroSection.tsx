@@ -73,22 +73,22 @@ function HeroSection() {
             coaching format that fits best.
           </p>
 
-          <div className="mt-7 grid gap-3 border border-border bg-surface p-4 sm:grid-cols-2">
+          <div className="mt-7 grid gap-3 border border-[#cad2c7] bg-[#f7f8f4] p-4 sm:grid-cols-2">
             {trustSignals.map(({ icon: Icon, label }) => (
               <div key={label} className="flex items-start gap-3 text-[15px] leading-6 text-foreground/82">
-                <Icon className="mt-1 h-4 w-4 shrink-0 text-accent" />
+                <Icon className="mt-1 h-4 w-4 shrink-0 text-[#1f4f45]" />
                 <span>{label}</span>
               </div>
             ))}
             <div className="flex items-start gap-3 text-[15px] leading-6 text-foreground/82">
-              <Clock3 className="mt-1 h-4 w-4 shrink-0 text-accent" />
+              <Clock3 className="mt-1 h-4 w-4 shrink-0 text-[#1f4f45]" />
               <span>Typical consultation response within 24 hours.</span>
             </div>
           </div>
         </motion.div>
 
         <motion.aside
-          className="border border-border bg-surface p-4 md:p-5"
+          className="border border-[#cad2c7] bg-[#f7f8f4] p-4 shadow-soft md:p-5"
           {...(prefersReducedMotion
             ? {}
             : {
@@ -111,7 +111,7 @@ function HeroSection() {
             alt="Coach Tom Vo"
             className="h-[440px] w-full object-cover object-center"
           />
-          <div className="mt-4 grid gap-4 border-t border-border pt-4 sm:grid-cols-2">
+          <div className="mt-4 grid gap-4 border-t border-[#d4d9d0] pt-4 sm:grid-cols-2">
             {quickFacts.map((fact) => (
               <div key={fact.label}>
                 <p className="text-xs font-medium tracking-wide text-muted">

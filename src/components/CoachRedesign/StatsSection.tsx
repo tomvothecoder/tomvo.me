@@ -20,16 +20,16 @@ const stats = [
 function StatsSection() {
   return (
     <section id="proof" className="px-6 py-4 md:px-10 md:py-8">
-      <div className="mx-auto grid w-full max-w-6xl border border-border bg-foreground/[0.02] sm:grid-cols-2 xl:grid-cols-4">
+      <div className="mx-auto grid w-full max-w-6xl border border-[#cad2c7] bg-[#dde5dc] sm:grid-cols-2 xl:grid-cols-4">
         {stats.map((item, index) => (
           <article
             key={item.label}
             className={[
               "p-5 md:p-6",
-              index < stats.length - 1 ? "border-b border-border xl:border-b-0" : "",
-              index % 2 === 0 ? "xl:border-r xl:border-border" : "",
-              index === 1 ? "sm:border-l sm:border-border xl:border-l-0" : "",
-              index === 3 ? "sm:border-l sm:border-border xl:border-l-0" : "",
+              index < stats.length - 1 ? "border-b border-[#cad2c7] xl:border-b-0" : "",
+              index % 2 === 0 ? "xl:border-r xl:border-[#cad2c7]" : "",
+              index === 1 ? "sm:border-l sm:border-[#cad2c7] xl:border-l-0" : "",
+              index === 3 ? "sm:border-l sm:border-[#cad2c7] xl:border-l-0" : "",
             ].join(" ")}
           >
             <p className="text-xl font-semibold tracking-tight text-foreground md:text-2xl">

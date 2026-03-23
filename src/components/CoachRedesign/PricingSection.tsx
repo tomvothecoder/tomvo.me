@@ -56,10 +56,10 @@ function PricingSection() {
             <article
               key={plan.name}
               className={cn(
-                "flex h-full flex-col border border-border bg-surface p-6 md:p-7",
+                "flex h-full flex-col border p-6 shadow-soft md:p-7",
                 plan.highlighted
-                  ? "border-foreground/30 bg-foreground/[0.02]"
-                  : undefined,
+                  ? "border-[#9fb3a4] bg-[#d8e1d6]"
+                  : "border-[#c7d0c5] bg-[#fcfcf8]",
               )}
             >
               <div className="flex min-w-0 items-center gap-3">
@@ -78,7 +78,7 @@ function PricingSection() {
               <p className="mt-3 text-[15px] leading-7 text-foreground/82 sm:text-base">
                 {plan.focus}
               </p>
-              <ul className="mt-5 space-y-2.5 border-t border-border pt-4">
+              <ul className="mt-5 space-y-2.5 border-t border-[#d4d9d0] pt-4">
                 {plan.features.map((feature) => (
                   <li
                     key={feature}
@@ -93,7 +93,12 @@ function PricingSection() {
                 <Button
                   asChild
                   size="lg"
-                  className="w-full"
+                  className={cn(
+                    "w-full",
+                    plan.highlighted
+                      ? undefined
+                      : "border-[#c9d1c7] bg-[#ffffff] hover:border-[#1f4f45] hover:bg-[#f0f3ed]",
+                  )}
                   variant={plan.highlighted ? "default" : "outline"}
                 >
                   <a href="#consultation">Book Free Consultation</a>

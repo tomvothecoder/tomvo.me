@@ -11,7 +11,7 @@ import TransformationGallery from "components/CoachRedesign/TransformationGaller
 
 function CoachLandingPage() {
   return (
-    <div className="bg-background text-foreground">
+    <div className="bg-[#eef1eb] text-[#162018]">
       <CoachSubNav />
       <HeroSection />
       <StatsSection />

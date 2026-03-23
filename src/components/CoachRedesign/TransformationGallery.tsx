@@ -10,6 +10,7 @@ interface ProofLinksProps {
 const generalOutcomes = [
   {
     label: "Body composition (Remote)",
+    tone: "warm",
     title: "Sustainable weight-loss with structure",
     summary:
       "Remote coaching from Jan to Mar 2023 combined resistance training, cardio, and calorie targets for consistent adherence.",
@@ -17,6 +18,7 @@ const generalOutcomes = [
   },
   {
     label: "Beginner strength development",
+    tone: "warm",
     title: "First-time lifter built lean mass and confidence",
     summary:
       "From Dec 2024 to Jun 2025, a rec-league athlete with no gym background improved movement quality and built strength pain-free.",
@@ -27,6 +29,7 @@ const generalOutcomes = [
 const powerliftingOutcomes = [
   {
     label: "Advanced meet prep (Remote)",
+    tone: "sage",
     title: "1st place in 181 lb class",
     summary:
       "Remote meet prep from Jun to Jul 2023 with structured attempt selection, competition-week execution, and a +55.1 lb total increase from June to July.",
@@ -41,6 +44,7 @@ const powerliftingOutcomes = [
   },
   {
     label: "Competitive meet prep (Remote)",
+    tone: "sage",
     title: "1st place in 198 lb class",
     summary:
       "Remote coaching for an Aug 2023 meet supported first place in his class with structured prep.",
@@ -55,6 +59,7 @@ const powerliftingOutcomes = [
   },
   {
     label: "Novice meet prep (In-person)",
+    tone: "sage",
     title: "First-time lifter became meet-ready",
     summary:
       "In-person meet prep from May to Nov 2024 for a first-time powerlifting athlete with minimal gym experience.",
@@ -116,7 +121,12 @@ function TransformationGallery() {
         {generalOutcomes.map((item) => (
           <article
             key={item.title}
-            className="flex h-full flex-col border border-border bg-surface p-5 md:p-6"
+            className={cn(
+              "flex h-full flex-col border p-5 shadow-soft md:p-6",
+              item.tone === "warm"
+                ? "border-[#c7d0c5] bg-[#fcfcf8]"
+                : "border-[#b7cabb] bg-[#e5ebe3]",
+            )}
           >
             <p className="text-[12px] font-medium tracking-wide text-foreground/55">
               {item.label}
@@ -124,13 +134,15 @@ function TransformationGallery() {
             <h4 className="mt-2.5 text-[1.16rem] font-semibold leading-tight text-foreground">
               {item.title}
             </h4>
-            <p className="mt-2.5 max-w-[34ch] text-[15px] leading-6 text-foreground/78">
+            <p className="mt-2.5 max-w-[34ch] text-[15px] leading-6 text-foreground/80">
               {item.summary}
             </p>
-            <p className="mt-auto border-t border-border pt-3 text-sm leading-6 text-foreground/72">
-              <span className="font-semibold text-foreground">Result:</span>{" "}
-              {item.metric}
-            </p>
+            <div className="mt-auto border-t border-[#d4d9d0] pt-3">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-foreground/55">
+                Result
+              </p>
+              <p className="mt-1 text-sm leading-6 text-foreground/76">{item.metric}</p>
+            </div>
           </article>
         ))}
       </div>
@@ -145,7 +157,12 @@ function TransformationGallery() {
         {powerliftingOutcomes.map((item) => (
           <article
             key={item.title}
-            className="flex h-full flex-col border border-border bg-surface p-5 md:p-6"
+            className={cn(
+              "flex h-full flex-col border p-5 shadow-soft md:p-6",
+              item.label.includes("Advanced")
+                ? "border-[#9fb3a4] bg-[#d8e1d6]"
+                : "border-[#b7cabb] bg-[#e5ebe3]",
+            )}
           >
             <p className="text-[12px] font-medium tracking-wide text-foreground/55">
               {item.label}
@@ -153,10 +170,10 @@ function TransformationGallery() {
             <h4 className="mt-2.5 max-w-[16ch] text-[1.16rem] font-semibold leading-tight text-foreground xl:min-h-[4rem]">
               {item.title}
             </h4>
-            <p className="mt-2.5 max-w-[33ch] text-[15px] leading-6 text-foreground/78 xl:min-h-[7rem]">
+            <p className="mt-2.5 max-w-[33ch] text-[15px] leading-6 text-foreground/80 xl:min-h-[7rem]">
               {item.summary}
             </p>
-            <div className="mt-auto border-t border-border pt-3 text-sm leading-6 text-foreground/72">
+            <div className="mt-auto border-t border-[#cbd6cc] pt-3 text-sm leading-6 text-foreground/72">
               <p className="text-[11px] font-medium uppercase tracking-[0.14em] text-foreground/55">
                 Outcome
               </p>
@@ -164,11 +181,11 @@ function TransformationGallery() {
                 {item.metric}
               </p>
             </div>
-            <div className="mt-3 border-t border-border pt-3">
+            <div className="mt-3 border-t border-[#cbd6cc] pt-3">
               <p className="text-[11px] font-medium uppercase tracking-[0.14em] text-foreground/55">
                 Best lifts
               </p>
-              <div className="mt-2 grid grid-cols-3 divide-x divide-border border border-border bg-background">
+              <div className="mt-2 grid grid-cols-3 divide-x divide-[#cbd6cc] border border-[#cbd6cc] bg-[#f7f8f4]">
                 {item.lifts.map((lift) => (
                   <div key={lift.label} className="px-2.5 py-2">
                     <p className="text-[11px] font-medium uppercase tracking-wide text-foreground/55">
@@ -184,7 +201,7 @@ function TransformationGallery() {
             <ProofLinks
               profileUrl={item.profileUrl}
               meetUrl={item.meetUrl}
-              className="mt-3 border-t border-border pt-3"
+              className="mt-3 border-t border-[#cbd6cc] pt-3"
             />
           </article>
         ))}

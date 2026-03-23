@@ -54,7 +54,7 @@ function ConsultationFormSection() {
             Best fit for clients who want measurable strength progress, meet
             prep support, or more consistent training structure.
           </p>
-          <div className="divide-y divide-border border border-border bg-surface">
+          <div className="divide-y divide-[#c7d0c5] border border-[#c7d0c5] bg-[#fcfcf8] shadow-soft">
             <div className="flex items-center gap-3 px-5 py-4 text-[15px] leading-6 text-foreground/78">
               <Clock3 className="h-4 w-4 shrink-0 text-accent" />
               <span>Typical response time: within 24 hours</span>
@@ -70,7 +70,7 @@ function ConsultationFormSection() {
           </div>
         </div>
 
-        <div className="border border-foreground/15 bg-surface p-6 md:p-7">
+        <div className="border border-[#b7cabb] bg-[#fcfcf8] p-6 shadow-soft md:p-7">
           <form
             className="kwes-form space-y-4"
             action="https://kwesforms.com/api/foreign/forms/aSVFVwmIio7ugCj6l1gO"
