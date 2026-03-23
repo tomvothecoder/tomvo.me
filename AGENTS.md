@@ -27,26 +27,6 @@ Project conventions to preserve:
 - Keep routing behavior aligned with `src/App.tsx`.
 - Keep styles co-located when that pattern is already used (`*.css` near related components/views).
 
-## Development Workflow
-
-Planning before implementation is required for non-trivial changes.
-
-Required workflow:
-
-1. Understand the task.
-2. Identify relevant files.
-3. Create an implementation plan using `PLANNING.md`.
-4. Review the plan for completeness.
-5. Implement minimal and focused changes.
-6. Validate the result.
-7. Summarize modifications using `IMPLEMENTATION.md`.
-
-Additional workflow rules:
-
-- Do not begin implementation before a plan is written.
-- In interactive sessions, present the plan and wait for confirmation before implementing.
-- Only skip formal planning for extremely small, low-risk edits.
-
 ## Coding Expectations
 
 Agents should:
