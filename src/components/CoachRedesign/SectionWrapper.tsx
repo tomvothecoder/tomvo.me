@@ -1,14 +1,13 @@
 import { type ReactNode } from "react";
-import { motion, useReducedMotion } from "framer-motion";
 
 import { cn } from "lib/utils";
-import { fadeInUp, revealInView } from "components/CoachRedesign/animations";
 
 interface SectionWrapperProps {
   id: string;
   eyebrow?: string;
   title: string;
   description?: string;
+  titleClassName?: string;
   descriptionClassName?: string;
   children: ReactNode;
   className?: string;
@@ -20,40 +19,46 @@ function SectionWrapper({
   eyebrow,
   title,
   description,
+  titleClassName,
   descriptionClassName,
   children,
   className,
   contentClassName,
 }: SectionWrapperProps) {
-  const prefersReducedMotion = useReducedMotion();
-
   return (
-    <section id={id} className={cn("scroll-mt-32 px-6 py-16 md:scroll-mt-36 md:px-10 md:py-20", className)}>
+    <section
+      id={id}
+      className={cn(
+        "scroll-mt-40 px-6 py-16 md:scroll-mt-44 md:px-10 md:py-20",
+        className,
+      )}
+    >
       <div className="mx-auto w-full max-w-6xl">
-        <motion.div
-          variants={fadeInUp}
-          {...(prefersReducedMotion ? {} : revealInView)}
-          className="mb-10 max-w-3xl"
-        >
+        <div className="mb-8 max-w-3xl">
           {eyebrow ? (
-            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.16em] text-accent">
+            <p className="coach-mono mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-[#a33c22]">
               {eyebrow}
             </p>
           ) : null}
-          <h2 className="text-3xl font-semibold leading-tight text-foreground md:text-4xl">
+          <h2
+            className={cn(
+              "font-display text-3xl font-semibold leading-tight tracking-tight text-[#141816] md:text-5xl",
+              titleClassName,
+            )}
+          >
             {title}
           </h2>
           {description ? (
             <p
               className={cn(
-                "mt-4 text-lg leading-relaxed text-muted",
+                "mt-3 text-[17px] leading-7 text-[#4d574f]",
                 descriptionClassName,
               )}
             >
               {description}
             </p>
           ) : null}
-        </motion.div>
+        </div>
 
         <div className={contentClassName}>{children}</div>
       </div>

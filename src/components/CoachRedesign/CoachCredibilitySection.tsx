@@ -1,90 +1,78 @@
-import { ClipboardCheck, FlaskConical, ShieldCheck } from "lucide-react";
-import { motion, useReducedMotion } from "framer-motion";
+import { ClipboardCheck, MapPin, ShieldCheck } from "lucide-react";
 
 import selfPortrait from "assets/me.jpg";
-import {
-  fadeInUp,
-  revealInView,
-  staggerContainer,
-} from "components/CoachRedesign/animations";
 import SectionWrapper from "components/CoachRedesign/SectionWrapper";
-import { Card, CardContent } from "components/ui/card";
 
-const credibilityPoints = [
+const coachFacts = [
   {
     icon: ClipboardCheck,
-    title: "5 years of professional coaching experience",
-    text: "Experience across private coaching, meet prep, and sustainable habit-building for adult clients.",
+    title: "Part-time by design",
+    text: "Selective coaching capacity keeps attention on serious clients and clear communication.",
   },
   {
     icon: ShieldCheck,
-    title: "NASM-certified coaching foundation",
-    text: "Programming decisions are built on safe progressions and repeatable training principles.",
+    title: "NASM-certified",
+    text: "Programming respects movement quality, recovery, and sustainable progression.",
   },
   {
-    icon: FlaskConical,
-    title: "Evidence-driven process",
-    text: "As a software engineer, I coach with measurable inputs, frequent feedback loops, and iterative adjustments.",
-  },
-  {
-    icon: ClipboardCheck,
-    title: "Clear accountability system",
-    text: "You receive simple weekly priorities, progress tracking, and clear next-step actions.",
+    icon: MapPin,
+    title: "Local and remote",
+    text: "In-person coaching in Fremont and Newark with online programming support available.",
   },
 ];
 
 function CoachCredibilitySection() {
-  const prefersReducedMotion = useReducedMotion();
-
   return (
     <SectionWrapper
-      id="credibility"
-      eyebrow="Coach credibility"
-      title="Why clients trust this coaching system"
-      description="You get a clear training process, transparent communication, and coaching decisions grounded in data and 5 years of professional coaching experience."
+      id="about"
+      eyebrow="About me"
+      title="Direct coaching from the person writing the plan."
+      description="I coach strength because I care about the repeatable work behind better lifts: clear technique, useful programming, and decisions that match the athlete in front of me."
+      descriptionClassName="text-[#2e4036]/75"
+      className="bg-[#efe8dc] py-16 md:py-24"
     >
-      <div className="grid gap-8 xl:grid-cols-[0.9fr_1.1fr] xl:items-start">
-        <motion.div
-          variants={fadeInUp}
-          {...(prefersReducedMotion ? {} : revealInView)}
-        >
-          <div className="overflow-hidden rounded-2xl border border-border bg-surface shadow-soft">
-            <img
-              src={selfPortrait}
-              alt="Coach Tom Vo coaching profile"
-              className="h-full min-h-[380px] w-full object-cover"
-            />
-          </div>
-        </motion.div>
+      <div className="grid gap-10 xl:grid-cols-[0.66fr_1.34fr] xl:items-center">
+        <div>
+          <img
+            src={selfPortrait}
+            alt="Coach Tom Vo coaching profile"
+            className="aspect-[4/5] w-full rounded-lg object-cover"
+          />
+        </div>
 
-        <motion.div
-          variants={staggerContainer}
-          {...(prefersReducedMotion ? {} : revealInView)}
-          className="flex flex-col gap-4"
-        >
-          {credibilityPoints.map((point) => {
-            const Icon = point.icon;
-            return (
-              <motion.div key={point.title} variants={fadeInUp}>
-                <Card>
-                  <CardContent className="flex gap-4 pt-6">
-                    <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-accent/10 text-accent">
-                      <Icon className="h-5 w-5" />
-                    </span>
-                    <div>
-                      <h3 className="text-lg font-semibold text-foreground">
-                        {point.title}
-                      </h3>
-                      <p className="mt-2 text-sm leading-relaxed text-muted">
-                        {point.text}
-                      </p>
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            );
-          })}
-        </motion.div>
+        <div>
+          <p className="max-w-3xl text-2xl font-semibold leading-snug text-[#141816] md:text-4xl">
+            My job is to make the next training decision obvious: what to lift,
+            how hard to push, what to adjust, and how to keep moving when life
+            gets busy.
+          </p>
+          <p className="mt-6 max-w-2xl text-[17px] leading-8 text-[#39443e]">
+            The tone is direct because training should be clear. You will know
+            the goal of each block, how success is measured, and what feedback I
+            need to coach you well.
+          </p>
+
+          <div className="mt-8 grid gap-4 sm:grid-cols-3">
+            {coachFacts.map((fact) => {
+              const Icon = fact.icon;
+
+              return (
+                <article
+                  key={fact.title}
+                  className="rounded-lg border border-[#cfc4b5] bg-[#f7f4ed] p-5"
+                >
+                  <Icon className="h-5 w-5 text-[#a33c22]" />
+                  <h3 className="mt-4 text-base font-bold leading-6 text-[#17231d]">
+                    {fact.title}
+                  </h3>
+                  <p className="mt-2 text-sm leading-6 text-[#4d574f]">
+                    {fact.text}
+                  </p>
+                </article>
+              );
+            })}
+          </div>
+        </div>
       </div>
     </SectionWrapper>
   );
