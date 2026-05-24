@@ -30,46 +30,44 @@ function HeroSection() {
       id="hero"
       className="relative flex min-h-[100dvh] overflow-hidden px-5 pb-8 pt-24 text-[#f7f4ed] sm:px-8 md:px-12"
     >
-  <img
-    src={selfPortraitHeroLarge}
-    srcSet={`${selfPortraitHeroSmall} 576w, ${selfPortraitHeroLarge} 900w`}
-    sizes="(min-width: 1024px) 50vw, 100vw"
-    alt=""
-    aria-hidden="true"
-    width="900"
-    height="1200"
-    loading="eager"
-    fetchPriority="high"
-    decoding="async"
-    className="
-      absolute
-      bottom-0
-      right-[-44%]
-      z-0
-      h-[92%]
-      w-auto
-      max-w-none
-      object-contain
-      opacity-45
+    <img
+      src={selfPortraitHeroLarge}
+      srcSet={`${selfPortraitHeroSmall} 576w, ${selfPortraitHeroLarge} 900w`}
+      sizes="(min-width: 1024px) 50vw, 100vw"
+      alt=""
+      aria-hidden="true"
+      width="900"
+      height="1200"
+      loading="eager"
+      fetchPriority="high"
+      decoding="async"
+      className="
+        absolute
+        bottom-0
+        right-[-44%]
+        z-0
+        h-[92%]
+        w-auto
+        max-w-none
+        object-contain
+        opacity-45
 
-      sm:right-[-34%]
-      sm:h-[96%]
+        sm:right-[-34%]
+        sm:h-[96%]
 
-      md:right-[-24%]
-      md:h-full
+        md:right-[-24%]
+        md:h-full
 
-      lg:right-[-18%]
-      lg:h-full
-      lg:opacity-50
+        lg:right-[-18%]
+        lg:h-full
+        lg:opacity-50
 
-      xl:right-[-18%]
-      2xl:right-[-14%]
-
-      min-[1800px]:right-[-8%]
-      min-[2200px]:right-[-4%]
-    "
-  />
-
+        xl:right-[-18%]
+        2xl:right-[-6%]
+        min-[1800px]:right-[4%]
+        min-[2200px]:right-[8%]
+      "
+    />
 <div className="absolute inset-0 bg-[radial-gradient(circle_at_78%_18%,rgba(199,91,50,0.16),transparent_30%),linear-gradient(100deg,rgba(12,15,13,0.99)_0%,rgba(18,24,20,0.95)_36%,rgba(18,24,20,0.76)_60%,rgba(18,24,20,0.42)_82%,rgba(18,24,20,0.30)_100%)]" />
 
       <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col justify-end">

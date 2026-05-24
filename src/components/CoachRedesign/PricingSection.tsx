@@ -10,7 +10,11 @@ const packages = [
     cadence: "Technique + consistency",
     focus:
       "For clients who want hands-on coaching, cleaner movement, and a repeatable training rhythm.",
-    features: ["Initial assessment", "Private session structure", "Training notes"],
+    features: [
+      "Initial assessment",
+      "Private session structure",
+      "Training notes",
+    ],
     highlighted: false,
   },
   {
@@ -108,7 +112,7 @@ function PricingSection() {
               <a
                 href="#apply"
                 className={cn(
-                  "magnetic-button mt-auto inline-flex min-h-12 items-center justify-center gap-2 rounded-[2rem] px-5 py-3.5 text-sm font-bold",
+                  "magnetic-button mt-8 inline-flex min-h-12 items-center justify-center gap-2 rounded-[2rem] px-5 py-3.5 text-sm font-bold",
                   plan.highlighted
                     ? "coach-button-primary text-white"
                     : "border border-[#cfc4b5] bg-white text-[#141816]",

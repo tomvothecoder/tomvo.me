@@ -12,17 +12,19 @@ function CoachCredibilitySection() {
     >
       <div className="grid gap-10 xl:grid-cols-[0.66fr_1.34fr] xl:items-center">
         <div>
-          <img
-            src={selfPortraitSmall}
-            srcSet={`${selfPortraitSmall} 576w, ${selfPortraitLarge} 900w`}
-            sizes="(min-width: 1280px) 32vw, 100vw"
-            alt="Coach Tom Vo coaching profile"
+          <video
+            className="aspect-[4/5] w-full rounded-lg object-cover"
             width="576"
             height="768"
-            loading="lazy"
-            decoding="async"
-            className="aspect-[4/5] w-full rounded-lg object-cover"
-          />
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="metadata"
+            aria-hidden="true"
+          >
+            <source src="/videos/IMG_3290-web.mp4" type="video/mp4" />
+          </video>
         </div>
 
         <div>
