@@ -27,7 +27,7 @@ const packages = [
     name: "Meet Prep",
     cadence: "Powerlifting focus",
     focus:
-      "For competitors who need peaking, attempt selection, and meet-week decisions made before platform day.",
+      "For competitors who want peaking, attempt selection, and meet-week decisions discussed before meet day.",
     features: ["Peaking plan", "Attempt strategy", "Meet-day checklist"],
     highlighted: false,
   },
@@ -38,8 +38,8 @@ function PricingSection() {
     <SectionWrapper
       id="packages"
       eyebrow="Start training"
-      title="Choose the coaching scope after fit is clear."
-      description="No generic price table. We start with goals, schedule, equipment, training history, and feedback needs, then match the format to the work."
+      title="Choose the coaching scope after fit is understood."
+      description="No generic price table. I start with goals, schedule, equipment, training history, and feedback needs, then match the format to the work with you."
       descriptionClassName="text-[#2e4036]/75"
       className="bg-[#f7f4ed] py-16 md:py-24"
     >

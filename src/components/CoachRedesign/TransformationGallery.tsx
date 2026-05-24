@@ -51,9 +51,9 @@ const powerliftingOutcomes = [
 ];
 
 const resultPrinciples = [
-  "Measured against the client goal, not generic before-and-after theater.",
+  "Measured against the client goal, training context, and timeline.",
   "Tracked with training context: bodyweight, experience level, timeline, and meet execution.",
-  "Presented conservatively until approved testimonials and case studies are collected.",
+  "Shared with care as approved testimonials and case studies are collected.",
 ];
 
 function ProofLinks({ profileUrl, meetUrl, className }: ProofLinksProps) {
@@ -91,8 +91,8 @@ function TransformationGallery() {
     <SectionWrapper
       id="results"
       eyebrow="Results and proof"
-      title="Performance outcomes need context."
-      description="Strong coaching is not a highlight reel. It is better execution, better decisions, and measurable progress over enough weeks to matter."
+      title="Results make more sense with context."
+      description="Strong coaching is more than numbers on a page. It is clearer execution, better decisions, and measurable progress over enough weeks to matter."
       descriptionClassName="text-[#2e4036]/75"
       className="bg-[#f7f4ed] py-16 md:py-24"
     >
@@ -118,8 +118,8 @@ function TransformationGallery() {
               Testimonial placeholder
             </p>
             <p className="mt-3 text-[15px] leading-7 text-[#39443e]">
-              Client quotes and full case studies will be added once approved.
-              Until then, verified meet results carry the proof.
+              Client stories and full case studies will be added once approved.
+              Until then, verified meet results provide context.
             </p>
           </div>
         </div>

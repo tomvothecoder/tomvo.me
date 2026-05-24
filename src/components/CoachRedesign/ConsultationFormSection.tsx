@@ -46,8 +46,8 @@ function ConsultationFormSection() {
     <SectionWrapper
       id="apply"
       eyebrow="Contact"
-      title="Apply for coaching."
-      description="Send the training context I need to evaluate fit. You will get a direct response with recommended next steps."
+      title="Start a coaching conversation."
+      description="Send the training context I need to evaluate fit. You will get thoughtful next steps based on your goals and current situation."
       descriptionClassName="text-[#2e4036]/75"
       className="bg-[#efe8dc] py-16 md:py-24"
     >
@@ -163,7 +163,7 @@ function ConsultationFormSection() {
               className="coach-button-primary magnetic-button min-h-12 w-full rounded-[2rem]"
               size="lg"
             >
-              <span>Apply for Coaching</span>
+              <span>Send coaching request</span>
             </Button>
 
             <p className="text-xs leading-5 text-[#4d574f]">

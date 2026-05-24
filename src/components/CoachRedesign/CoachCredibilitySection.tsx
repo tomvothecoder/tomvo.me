@@ -26,8 +26,8 @@ function CoachCredibilitySection() {
     <SectionWrapper
       id="about"
       eyebrow="About me"
-      title="Direct coaching from the person writing the plan."
-      description="I coach strength because I care about the repeatable work behind better lifts: clear technique, useful programming, and decisions that match the athlete in front of me."
+      title="Collaborative coaching from the person writing the plan."
+      description="I coach strength because I care about the repeatable work behind better lifts: careful listening, clear technique, useful programming, and decisions that match the athlete in front of me."
       descriptionClassName="text-[#2e4036]/75"
       className="bg-[#efe8dc] py-16 md:py-24"
     >
@@ -42,14 +42,13 @@ function CoachCredibilitySection() {
 
         <div>
           <p className="max-w-3xl text-2xl font-semibold leading-snug text-[#141816] md:text-4xl">
-            My job is to make the next training decision obvious: what to lift,
-            how hard to push, what to adjust, and how to keep moving when life
-            gets busy.
+            My job is to understand what you need, what you want from training,
+            and how you feel along the way, then help make the next step clear.
           </p>
           <p className="mt-6 max-w-2xl text-[17px] leading-8 text-[#39443e]">
-            The tone is direct because training should be clear. You will know
-            the goal of each block, how success is measured, and what feedback I
-            need to coach you well.
+            The tone is clear because training should feel understandable. I
+            use your goals, preferences, feedback, and life constraints to shape
+            each block and adjust when the plan needs to change.
           </p>
 
           <div className="mt-8 grid gap-4 sm:grid-cols-3">

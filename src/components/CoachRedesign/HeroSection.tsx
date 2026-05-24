@@ -45,15 +45,15 @@ function HeroSection() {
             Tom Vo Strength | NASM CPT | Fremont, Newark, online
           </p>
           <h1 className="font-display mt-5 max-w-5xl text-[clamp(3.25rem,15vw,9.5rem)] font-extrabold leading-[0.82] text-white">
-            Build the{" "}
+            Build{" "}
             <span className="coach-serif block text-[clamp(4.25rem,18vw,12rem)] font-semibold italic leading-[0.78] text-[#e08a63]">
-              Body That Performs.
+              Strength That Fits Your Life.
             </span>
           </h1>
           <p className="mt-6 max-w-2xl text-base leading-7 text-[#f7f4ed]/[0.82] sm:text-xl sm:leading-8">
-            Direct strength coaching for lifters who want stronger numbers,
-            cleaner movement, and a plan that adapts to recovery instead of
-            guessing from template to template.
+            Strength coaching built around your goals, schedule, feedback, and
+            recovery so cleaner lifts and steady progress can fit the life you
+            actually live.
           </p>
 
           <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
@@ -105,7 +105,7 @@ function HeroSection() {
               <CalendarCheck className="h-4 w-4 text-[#e08a63]" />
               Simple to execute.
             </strong>
-            Clear weekly targets, direct coaching notes, no filler.
+            Clear weekly targets, useful coaching notes, and room to adjust.
           </p>
         </div>
       </div>

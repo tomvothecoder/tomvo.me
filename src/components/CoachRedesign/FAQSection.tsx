@@ -6,7 +6,7 @@ const faqs = [
   {
     question: "Do I need powerlifting experience?",
     answer:
-      "No. You need a serious training goal and willingness to follow structured work. I coach newer lifters, experienced recreational lifters, and first-time competitors.",
+      "No. You need a clear goal, communication, and a plan I can adjust with you. I coach newer lifters, experienced recreational lifters, and first-time competitors.",
   },
   {
     question: "How often will my program change?",
@@ -21,7 +21,7 @@ const faqs = [
   {
     question: "What happens after I submit the form?",
     answer:
-      "I review your goals, training background, schedule, and coaching fit. If it looks aligned, we book a short consult and decide the simplest next step.",
+      "I review your goals, training background, schedule, and coaching fit. If it looks aligned, I book a short consult with you and recommend the simplest next step.",
   },
 ];
 
@@ -32,8 +32,8 @@ function FAQSection() {
     <SectionWrapper
       id="faq"
       eyebrow="FAQ"
-      title="Questions often asked before starting."
-      description="Short answers up front so you can evaluate fit before applying."
+      title="Client questions before starting."
+      description="Short answers up front so you can evaluate fit before starting a coaching conversation."
       descriptionClassName="text-[#2e4036]/75"
       className="bg-[#f7f4ed] py-16 md:py-24"
     >

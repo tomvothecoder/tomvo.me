@@ -1,9 +1,9 @@
 const methodSteps = [
   {
     number: "01",
-    title: "Assess",
+    title: "Listen",
     description:
-      "We map goals, training history, movement, schedule, equipment, and recovery constraints before loading the bar with intent.",
+      "I talk through goals, training history, movement, schedule, equipment, and recovery constraints with you before choosing the first step.",
     visual: "cycle",
   },
   {
@@ -15,9 +15,9 @@ const methodSteps = [
   },
   {
     number: "03",
-    title: "Execute",
+    title: "Adjust",
     description:
-      "Check-ins, video feedback, and recovery signals decide the next adjustment so training stays specific.",
+      "Check-ins, video feedback, and recovery signals guide the next adjustment so training stays specific.",
     visual: "wave",
   },
 ];
@@ -92,12 +92,12 @@ function ProtocolSection() {
               Method
             </p>
             <h2 className="font-display mt-4 text-4xl font-semibold leading-tight md:text-6xl">
-              Assess. Build. Execute.
+              Listen. Build. Adjust.
             </h2>
           </div>
           <p className="max-w-xl text-lg leading-8 text-[#d9d0c2]">
-            Most plans chase motivation and random hard workouts. This coaching
-            loop makes the next useful decision clear before intensity goes up.
+            Good coaching starts with understanding what you need, then making
+            the next useful decision clear before intensity goes up.
           </p>
         </div>
 

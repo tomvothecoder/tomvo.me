@@ -22,42 +22,42 @@ test("renders the strength coaching landing page", () => {
   ).toBeInTheDocument();
   expect(
     screen.getByRole("heading", {
-      name: /build the body that performs/i,
+      name: /build strength that fits your life/i,
     }),
   ).toBeInTheDocument();
   expect(
     screen.getByRole("heading", {
-      name: /coaching for lifters who want a better next training decision/i,
+      name: /coaching for lifters who want the next training step to make sense/i,
     }),
   ).toBeInTheDocument();
   expect(
     screen.getByRole("heading", {
-      name: /clear options\. same standard: measurable strength progress/i,
+      name: /coaching options matched to the support you need/i,
     }),
   ).toBeInTheDocument();
   expect(
     screen.getByRole("heading", {
-      name: /performance outcomes need context/i,
+      name: /results make more sense with context/i,
     }),
   ).toBeInTheDocument();
   expect(
     screen.getByRole("heading", {
-      name: /assess\. build\. execute/i,
+      name: /listen\. build\. adjust/i,
     }),
   ).toBeInTheDocument();
   expect(
     screen.getByRole("heading", {
-      name: /choose the coaching scope after fit is clear/i,
+      name: /choose the coaching scope after fit is understood/i,
     }),
   ).toBeInTheDocument();
   expect(
     screen.getByRole("heading", {
-      name: /questions serious lifters ask before starting/i,
+      name: /client questions before starting/i,
     }),
   ).toBeInTheDocument();
   expect(
     screen.getByRole("heading", {
-      name: /apply for coaching/i,
+      name: /start a coaching conversation/i,
     }),
   ).toBeInTheDocument();
 
@@ -67,7 +67,7 @@ test("renders the strength coaching landing page", () => {
   expect(screen.getByLabelText("Primary training goal")).toBeInTheDocument();
   expect(screen.getByLabelText("Training context")).toBeInTheDocument();
   expect(
-    screen.getByRole("button", { name: /apply for coaching/i }),
+    screen.getByRole("button", { name: /send coaching request/i }),
   ).toBeInTheDocument();
 
   const applicationLinks = screen.getAllByRole("link", {

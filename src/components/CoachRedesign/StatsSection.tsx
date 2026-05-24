@@ -24,19 +24,19 @@ const weekDays = ["S", "M", "T", "W", "T", "F", "S"];
 const pillars = [
   {
     eyebrow: "Assessment",
-    title: "Start from your actual baseline.",
+    title: "Start from your current baseline.",
     description:
       "Goals, training age, movement, schedule, equipment, and constraints shape the first block.",
   },
   {
     eyebrow: "Feedback",
-    title: "Coaching notes that change the plan.",
+    title: "Coaching notes shaped by what you share.",
     description:
-      "Video review and check-ins turn training data into useful next steps, not noise.",
+      "Video review and check-ins turn training and recovery feedback into useful next steps.",
   },
   {
     eyebrow: "Execution",
-    title: "A week you can actually run.",
+    title: "A week you can actually live with.",
     description:
       "Training days, recovery work, and check-ins fit around real life without losing intent.",
   },
@@ -161,11 +161,11 @@ function StatsSection() {
             Coaching fit
           </p>
           <h2 className="font-display mt-3 text-3xl font-semibold leading-tight text-[#141816] md:text-5xl">
-            Coaching for lifters who want a better next training decision.
+            Coaching for lifters who want the next training step to make sense.
           </h2>
           <p className="mt-5 text-[17px] leading-8 text-[#4d574f]">
-            You do not need to be a competitive lifter. You need a goal, a
-            workable schedule, and interest in training with more purpose.
+            You do not need to be a competitive lifter. You need a goal, honest
+            feedback, and a schedule I can build around with you.
           </p>
         </div>
 

@@ -57,8 +57,8 @@ function ServicesSection() {
     <SectionWrapper
       id="services"
       eyebrow="Coaching services"
-      title="Clear options. Same standard: measurable strength progress."
-      description="Coaching scope depends on your goals, current baseline, equipment, training availability, and how much feedback you want each week."
+      title="Coaching options matched to the support you need."
+      description="I work with you to create a plan based on your goals, current baseline, equipment, training availability, and how much feedback feels useful each week."
       descriptionClassName="text-[#2e4036]/[0.78]"
       className="bg-[#efe8dc] py-16 md:py-24"
     >

@@ -17,8 +17,8 @@ const Footer: React.FC = () => {
               className="h-auto w-56 rounded-lg bg-[#f7f4ed] p-2"
             />
             <p className="mt-3 max-w-sm text-sm leading-6 text-[#f2f0e9]/[0.68]">
-              Strength coaching for measurable performance, cleaner movement,
-              and training that survives real schedules.
+              Strength coaching for clearer movement, measurable progress, and
+              training that fits real schedules.
             </p>
           </div>
 
