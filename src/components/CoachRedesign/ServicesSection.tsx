@@ -13,10 +13,10 @@ const services = [
   {
     icon: Dumbbell,
     label: "Local",
-    title: "Private strength coaching",
-    bestFor: "Best for local lifters who want hands-on technique work.",
+    title: "Private strength coaching and personal training",
+    bestFor: "Best for local clients who want hands-on technique work.",
     description:
-      "In-person sessions in Fremont or Newark focused on squat, bench, deadlift, accessories, and skillful execution.",
+      "In-person sessions in Fremont or Newark focused on strength, movement quality, accessories, and skillful execution.",
     details: [
       "Real-time form cues",
       "Progressive strength blocks",
@@ -27,9 +27,9 @@ const services = [
     icon: Video,
     label: "Remote",
     title: "Online performance coaching",
-    bestFor: "Best for lifters who want structure without commuting.",
+    bestFor: "Best for people who want structure without commuting.",
     description:
-      "Remote programming, video review, and weekly adjustments based on your lifts, recovery, and schedule.",
+      "Remote programming, video review, and weekly adjustments based on your training, recovery, and schedule.",
     details: ["Custom training plan", "Weekly check-ins", "Video feedback"],
   },
   {
@@ -45,7 +45,7 @@ const services = [
     icon: ShieldCheck,
     label: "Support",
     title: "Mobility and recovery support",
-    bestFor: "Best for lifters who need training to feel sustainable.",
+    bestFor: "Best for clients who need training to feel sustainable.",
     description:
       "Movement prep, pain-aware modifications, and recovery habits that support strength progress.",
     details: ["Warm-up structure", "Exercise substitutions", "Recovery routines"],
@@ -57,7 +57,7 @@ function ServicesSection() {
     <SectionWrapper
       id="services"
       eyebrow="Coaching services"
-      title="Coaching options matched to the support you need."
+      title="Strength coaching and personal training options matched to the support you need."
       description="I work with you to create a plan based on your goals, current baseline, equipment, training availability, and how much feedback feels useful each week."
       descriptionClassName="text-[#2e4036]/[0.78]"
       className="bg-[#efe8dc] py-16 md:py-24"

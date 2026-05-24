@@ -20,7 +20,7 @@ const trustSignals = [
   },
   {
     icon: Trophy,
-    label: "Powerlifting meet prep",
+    label: "Technique and meet prep",
   },
 ];
 
@@ -51,9 +51,9 @@ function HeroSection() {
             </span>
           </h1>
           <p className="mt-6 max-w-2xl text-base leading-7 text-[#f7f4ed]/[0.82] sm:text-xl sm:leading-8">
-            Strength coaching built around your goals, schedule, feedback, and
-            recovery so cleaner lifts and steady progress can fit the life you
-            actually live.
+            Strength coaching and personal training built around your goals,
+            schedule, movement quality, and recovery so cleaner movement and
+            steady progress can fit the life you actually live.
           </p>
 
           <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
@@ -89,9 +89,10 @@ function HeroSection() {
           <p>
             <strong className="mb-1 flex items-center gap-2 text-base text-white">
               <Trophy className="h-4 w-4 text-[#e08a63]" />
-              Performance first.
+              Strength and movement quality.
             </strong>
-            Strength, meet prep, and movement quality drive the plan.
+            Better technique, steady progress, and performance goals drive the
+            plan.
           </p>
           <p>
             <strong className="mb-1 flex items-center gap-2 text-base text-white">

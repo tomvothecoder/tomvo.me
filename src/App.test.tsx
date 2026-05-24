@@ -26,13 +26,20 @@ test("renders the strength coaching landing page", () => {
     }),
   ).toBeInTheDocument();
   expect(
+    screen.getByText(/strength coaching and personal training built around/i),
+  ).toBeInTheDocument();
+  expect(screen.getByText(/technique and meet prep/i)).toBeInTheDocument();
+  expect(
+    screen.getByText(/strength and movement quality/i),
+  ).toBeInTheDocument();
+  expect(
     screen.getByRole("heading", {
-      name: /coaching for lifters who want the next training step to make sense/i,
+      name: /coaching for people who want the next training step to make sense/i,
     }),
   ).toBeInTheDocument();
   expect(
     screen.getByRole("heading", {
-      name: /coaching options matched to the support you need/i,
+      name: /strength coaching and personal training options matched to the support you need/i,
     }),
   ).toBeInTheDocument();
   expect(

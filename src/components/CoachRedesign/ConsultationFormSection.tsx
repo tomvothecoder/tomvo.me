@@ -54,13 +54,14 @@ function ConsultationFormSection() {
       <div className="grid gap-8 xl:grid-cols-[0.82fr_1.18fr] xl:items-start">
         <div className="space-y-5">
           <p className="text-[15px] leading-7 text-[#17231d]/75">
-            Good applications mention current lifts, training schedule,
+            Good applications mention movement goals, training schedule,
             equipment access, injury constraints, and what you want to improve
             over the next 12 to 24 weeks.
           </p>
           <p className="text-sm leading-6 text-[#17231d]/[0.72]">
-            Best fit for strength goals, powerlifting prep, technique work,
-            mobility support, and consistent performance-focused training.
+            Best fit for strength goals, personal training, powerlifting prep,
+            movement quality, technique work, mobility support, and consistent
+            performance-focused training.
           </p>
           <div className="overflow-hidden rounded-lg border border-[#cfc4b5] bg-[#f7f4ed]">
             <div className="flex items-center gap-3 border-b border-[#d8d1c4] px-5 py-4 text-[15px] leading-6 text-[#17231d]/[0.78]">
