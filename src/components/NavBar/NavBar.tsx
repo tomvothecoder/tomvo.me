@@ -1,21 +1,87 @@
-import { Code2, Dumbbell } from "lucide-react";
+import { ArrowRight, Code2, Dumbbell } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 
+import coachIconLogo from "assets/coach-logos/TomVoStrength_Icon_Color.png";
 import { cn } from "lib/utils";
+
+const coachLinks = [
+  { href: "#fit", label: "Fit" },
+  { href: "#coaching", label: "Coaching" },
+  { href: "#results", label: "Results" },
+  { href: "#about", label: "About" },
+  { href: "#packages", label: "Start" },
+];
 
 function NavBar() {
   const location = useLocation();
-  const brandLabel = location.pathname === "/career" ? "Tom Vo" : "Coach Tom";
+  const isCoachPage = location.pathname === "/coach";
+  const brandLabel =
+    location.pathname === "/career" ? "Tom Vo" : "Tom Vo Strength";
   const BrandIcon = location.pathname === "/career" ? Code2 : Dumbbell;
 
+  if (isCoachPage) {
+    return (
+      <header className="pointer-events-none fixed inset-x-0 top-3 z-50 px-3 sm:top-5 sm:px-6">
+        <nav
+          className={cn(
+            "pointer-events-auto mx-auto flex min-h-14 w-full max-w-5xl items-center justify-between gap-3 rounded-lg border border-[#cfc4b5]/90 bg-[#f7f4ed]/95 px-3 py-2 text-[#141816] shadow-[0_18px_55px_-42px_rgba(0,0,0,0.55)] sm:px-4",
+          )}
+        >
+          <Link
+            to="/coach"
+            className="inline-flex min-w-0 items-center gap-2 rounded-lg pr-1 text-sm font-semibold tracking-tight transition-transform hover:-translate-y-px"
+          >
+            <span
+              className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-[#cfc4b5] bg-white/70 text-[#1d2822]"
+            >
+              <img
+                src={coachIconLogo}
+                alt=""
+                aria-hidden="true"
+                className="h-7 w-7 object-contain"
+              />
+            </span>
+            <span className="truncate">{brandLabel}</span>
+          </Link>
+
+          <div className="hidden items-center gap-1 md:flex">
+            {coachLinks.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className="rounded-lg px-3 py-2 text-sm font-medium transition hover:-translate-y-px hover:bg-[#ede7dc]"
+              >
+                {link.label}
+              </a>
+            ))}
+            <Link
+              to="/career"
+              className="rounded-lg px-3 py-2 text-sm font-medium text-[#141816]/[0.72] transition hover:-translate-y-px hover:bg-[#ede7dc]"
+            >
+              Career
+            </Link>
+          </div>
+
+          <a
+            href="#apply"
+            className="coach-button-primary magnetic-button inline-flex h-10 shrink-0 items-center justify-center gap-2 rounded-[2rem] px-4 text-sm font-semibold sm:px-5"
+          >
+            <span>Apply</span>
+            <ArrowRight className="hidden h-4 w-4 sm:block" />
+          </a>
+        </nav>
+      </header>
+    );
+  }
+
   return (
-    <header className="sticky top-0 z-40 border-b border-border/80 bg-background/95 backdrop-blur">
+    <header className="sticky top-0 z-40 border-b border-[#cad2c7] bg-[#f7f8f4] shadow-[0_10px_24px_-24px_rgba(17,17,17,0.5)]">
       <nav className="mx-auto flex h-16 w-full max-w-6xl items-center justify-between px-6 md:px-10">
         <Link
           to="/coach"
           className="inline-flex items-center gap-2 text-sm font-semibold tracking-tight text-foreground"
         >
-          <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-accent/10 text-accent">
+          <span className="inline-flex h-8 w-8 items-center justify-center rounded-lg border border-[#cad2c7] bg-white text-[#1f4f45]">
             <BrandIcon className="h-4 w-4" />
           </span>
           <span>{brandLabel}</span>
@@ -27,7 +93,7 @@ function NavBar() {
             className={cn(
               "rounded-lg px-3 py-2 text-sm font-medium transition-colors",
               location.pathname === "/coach"
-                ? "bg-accent/10 text-accent"
+                ? "bg-[#ede7dc] text-foreground"
                 : "text-muted hover:text-foreground",
             )}
           >
@@ -38,7 +104,7 @@ function NavBar() {
             className={cn(
               "rounded-lg px-3 py-2 text-sm font-medium transition-colors",
               location.pathname === "/career"
-                ? "bg-accent/10 text-accent"
+                ? "bg-[#ede7dc] text-foreground"
                 : "text-muted hover:text-foreground",
             )}
           >
@@ -46,10 +112,10 @@ function NavBar() {
           </Link>
           {location.pathname === "/coach" ? (
             <a
-              href="#consultation"
-              className="rounded-lg bg-accent px-3 py-2 text-sm font-semibold text-accent-foreground transition-colors hover:bg-accent/90"
+              href="#apply"
+              className="rounded-lg bg-[#a33c22] px-3 py-2 text-sm font-semibold text-white transition-colors hover:bg-[#7f2e1a]"
             >
-              Book
+              Apply
             </a>
           ) : null}
         </div>

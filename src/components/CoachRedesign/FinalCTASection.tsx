@@ -26,8 +26,8 @@ function FinalCTASection() {
 
         <div className="mt-8">
           <Button asChild className="mx-auto inline-flex w-auto px-5 text-sm md:h-12 md:px-6 md:text-base">
-            <a href="#consultation">
-              Book Free Consultation
+            <a href="#apply">
+              Apply for Coaching
               <ArrowRight className="h-4 w-4" />
             </a>
           </Button>

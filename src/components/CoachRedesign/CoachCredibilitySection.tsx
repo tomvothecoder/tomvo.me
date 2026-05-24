@@ -1,90 +1,51 @@
-import { ClipboardCheck, FlaskConical, ShieldCheck } from "lucide-react";
-import { motion, useReducedMotion } from "framer-motion";
-
-import selfPortrait from "assets/me.jpg";
-import {
-  fadeInUp,
-  revealInView,
-  staggerContainer,
-} from "components/CoachRedesign/animations";
+import selfPortraitSmall from "assets/me-768.jpg";
+import selfPortraitLarge from "assets/me-1200.jpg";
 import SectionWrapper from "components/CoachRedesign/SectionWrapper";
-import { Card, CardContent } from "components/ui/card";
-
-const credibilityPoints = [
-  {
-    icon: ClipboardCheck,
-    title: "5 years of professional coaching experience",
-    text: "Experience across private coaching, meet prep, and sustainable habit-building for adult clients.",
-  },
-  {
-    icon: ShieldCheck,
-    title: "NASM-certified coaching foundation",
-    text: "Programming decisions are built on safe progressions and repeatable training principles.",
-  },
-  {
-    icon: FlaskConical,
-    title: "Evidence-driven process",
-    text: "As a software engineer, I coach with measurable inputs, frequent feedback loops, and iterative adjustments.",
-  },
-  {
-    icon: ClipboardCheck,
-    title: "Clear accountability system",
-    text: "You receive simple weekly priorities, progress tracking, and clear next-step actions.",
-  },
-];
 
 function CoachCredibilitySection() {
-  const prefersReducedMotion = useReducedMotion();
-
   return (
     <SectionWrapper
-      id="credibility"
-      eyebrow="Coach credibility"
-      title="Why clients trust this coaching system"
-      description="You get a clear training process, transparent communication, and coaching decisions grounded in data and 5 years of professional coaching experience."
+      id="about"
+      eyebrow="About me"
+      title="Coaching shaped by lived training experience."
+      className="bg-[#efe8dc] py-16 md:py-24"
     >
-      <div className="grid gap-8 xl:grid-cols-[0.9fr_1.1fr] xl:items-start">
-        <motion.div
-          variants={fadeInUp}
-          {...(prefersReducedMotion ? {} : revealInView)}
-        >
-          <div className="overflow-hidden rounded-2xl border border-border bg-surface shadow-soft">
-            <img
-              src={selfPortrait}
-              alt="Coach Tom Vo coaching profile"
-              className="h-full min-h-[380px] w-full object-cover"
-            />
-          </div>
-        </motion.div>
+      <div className="grid gap-10 xl:grid-cols-[0.66fr_1.34fr] xl:items-center">
+        <div>
+          <img
+            src={selfPortraitSmall}
+            srcSet={`${selfPortraitSmall} 576w, ${selfPortraitLarge} 900w`}
+            sizes="(min-width: 1280px) 32vw, 100vw"
+            alt="Coach Tom Vo coaching profile"
+            width="576"
+            height="768"
+            loading="lazy"
+            decoding="async"
+            className="aspect-[4/5] w-full rounded-lg object-cover"
+          />
+        </div>
 
-        <motion.div
-          variants={staggerContainer}
-          {...(prefersReducedMotion ? {} : revealInView)}
-          className="flex flex-col gap-4"
-        >
-          {credibilityPoints.map((point) => {
-            const Icon = point.icon;
-            return (
-              <motion.div key={point.title} variants={fadeInUp}>
-                <Card>
-                  <CardContent className="flex gap-4 pt-6">
-                    <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-accent/10 text-accent">
-                      <Icon className="h-5 w-5" />
-                    </span>
-                    <div>
-                      <h3 className="text-lg font-semibold text-foreground">
-                        {point.title}
-                      </h3>
-                      <p className="mt-2 text-sm leading-relaxed text-muted">
-                        {point.text}
-                      </p>
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            );
-          })}
-        </motion.div>
+        <div>
+          <p className="max-w-3xl text-2xl font-semibold leading-snug text-[#141816] md:text-4xl">
+            Lifting gave me a place to practice patience, problem solving, and
+            showing up.
+          </p>
+          <p className="mt-6 max-w-2xl text-[17px] leading-8 text-[#39443e]">
+            I got into lifting because progress felt honest: learn the
+            movement, make small adjustments, repeat. Over time, powerlifting
+            became a way to build confidence and community, not just stronger
+            lifts.
+          </p>
+          <p className="mt-5 max-w-2xl text-[17px] leading-8 text-[#39443e]">
+            That is how I coach. I want lifters to feel seen, supported, and
+            clear on why the plan looks the way it does. The training matters,
+            but the relationship behind it matters too.
+          </p>
+          <p className="mt-8 max-w-2xl border-l-2 border-[#a33c22] pl-5 text-lg font-medium leading-8 text-[#1d2822]">
+            The goal is better training and a coaching relationship that helps
+            you feel understood, supported, and more connected to the work.
+          </p>
+        </div>
       </div>
     </SectionWrapper>
   );

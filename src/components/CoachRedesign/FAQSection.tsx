@@ -1,73 +1,53 @@
-import { motion, useReducedMotion } from "framer-motion";
-
-import { fadeInUp, revealInView } from "components/CoachRedesign/animations";
 import SectionWrapper from "components/CoachRedesign/SectionWrapper";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "components/ui/accordion";
 
 const faqs = [
   {
-    question: "Do you offer in-person, online, or both?",
+    question: "What kind of lifter is this coaching for?",
     answer:
-      "I coach both in-person and online. In-person coaching is available in Fremont and Newark, and online support is available for clients who prefer remote coaching.",
-  },
-  {
-    question: "Do I need lifting experience before starting?",
-    answer:
-      "No. Programs are adapted to your current level, movement quality, and schedule. The first phase focuses on clear technique and sustainable progression.",
+      "Coaching is for people who want clearer training, better movement, and support they can actually use. That can mean a newer lifter, a busy professional, a recreational lifter, or someone preparing for a powerlifting meet.",
   },
   {
     question: "How often will my program change?",
     answer:
-      "Programs are reviewed weekly. Adjustments are made based on performance trends, recovery, and adherence so your plan stays realistic and effective.",
+      "Programming is reviewed weekly. Not every week needs a full rewrite; the useful changes are based on performance, recovery, technique, and adherence.",
   },
   {
-    question: "Can you coach for a powerlifting meet?",
+    question: "Do you coach mobility or pain-aware training?",
     answer:
-      "Yes. Meet prep includes peaking strategy, attempt selection, and taper planning so you can execute confidently on competition day.",
+      "Yes. Coaching can include mobility work, warm-up structure, and exercise modifications that keep training productive. This is not a substitute for medical care.",
   },
   {
-    question: "Do you coach mobility or pain-aware training modifications?",
+    question: "What happens after I submit the form?",
     answer:
-      "Yes. Coaching includes mobility-focused work and pain-aware exercise modifications to improve movement quality while keeping strength progress on track.",
-  },
-  {
-    question: "What happens after I submit a consultation request?",
-    answer:
-      "You will receive a follow-up message to review goals, training background, and package fit, then we schedule your onboarding call.",
+      "I review your goals, training background, schedule, and coaching fit. If it looks aligned, I book a short consult with you and recommend the simplest next step.",
   },
 ];
 
 function FAQSection() {
-  const prefersReducedMotion = useReducedMotion();
-
   return (
     <SectionWrapper
       id="faq"
       eyebrow="FAQ"
-      title="Questions clients ask before starting"
-      description="Everything you need to evaluate fit, format, and next steps."
-      descriptionClassName="text-foreground/80"
-      className="py-14 md:py-20"
+      title="Client questions before starting."
+      description="Short answers up front so you can evaluate fit before starting a coaching conversation."
+      descriptionClassName="text-[#2e4036]/75"
+      className="bg-[#f7f4ed] py-16 md:py-24"
     >
-      <motion.div variants={fadeInUp} {...(prefersReducedMotion ? {} : revealInView)}>
-        <Accordion type="single" collapsible className="rounded-xl border border-border bg-surface px-4 shadow-soft sm:px-5">
-          {faqs.map((faq, index) => (
-            <AccordionItem value={`item-${index + 1}`} key={faq.question}>
-              <AccordionTrigger className="text-[15px] leading-6 sm:text-base">
-                {faq.question}
-              </AccordionTrigger>
-              <AccordionContent className="text-base leading-7 text-foreground/80">
-                {faq.answer}
-              </AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
-      </motion.div>
+      <div className="divide-y divide-[#cfc4b5] border-y border-[#cfc4b5]">
+        {faqs.map((faq) => (
+          <article
+            key={faq.question}
+            className="grid gap-3 py-5 md:grid-cols-[0.85fr_1.15fr] md:gap-8"
+          >
+            <h3 className="text-lg font-bold leading-7 text-[#141816]">
+              {faq.question}
+            </h3>
+            <p className="max-w-3xl text-[15px] leading-7 text-[#4d574f]">
+              {faq.answer}
+            </p>
+          </article>
+        ))}
+      </div>
     </SectionWrapper>
   );
 }
