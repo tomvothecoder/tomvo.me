@@ -167,6 +167,10 @@ function StatsSection() {
             You do not need to be a competitive lifter. You need a goal, honest
             feedback, and a schedule I can build around with you.
           </p>
+          <p className="mt-4 text-[17px] font-semibold leading-8 text-[#1d2822]">
+            Process stays simple: listen first, build the block, adjust from
+            real feedback.
+          </p>
         </div>
 
         <div className="mt-10 grid gap-5 lg:grid-cols-3">

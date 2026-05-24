@@ -3,7 +3,6 @@ import ConsultationFormSection from "components/CoachRedesign/ConsultationFormSe
 import FAQSection from "components/CoachRedesign/FAQSection";
 import HeroSection from "components/CoachRedesign/HeroSection";
 import PricingSection from "components/CoachRedesign/PricingSection";
-import ProtocolSection from "components/CoachRedesign/ProtocolSection";
 import ServicesSection from "components/CoachRedesign/ServicesSection";
 import StatsSection from "components/CoachRedesign/StatsSection";
 import TransformationGallery from "components/CoachRedesign/TransformationGallery";
@@ -16,7 +15,6 @@ function CoachLandingPage() {
       <StatsSection />
       <ServicesSection />
       <TransformationGallery />
-      <ProtocolSection />
       <CoachCredibilitySection />
       <PricingSection />
       <FAQSection />

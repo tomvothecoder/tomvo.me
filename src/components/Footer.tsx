@@ -32,8 +32,8 @@ const Footer: React.FC = () => {
             <a className="block transition hover:-translate-y-px hover:text-white" href="#coaching">
               Coaching
             </a>
-            <a className="block transition hover:-translate-y-px hover:text-white" href="#method">
-              Method
+            <a className="block transition hover:-translate-y-px hover:text-white" href="#about">
+              About
             </a>
             <a className="block transition hover:-translate-y-px hover:text-white" href="#packages">
               Start Training

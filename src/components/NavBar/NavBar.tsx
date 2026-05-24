@@ -9,7 +9,7 @@ const coachLinks = [
   { href: "#fit", label: "Fit" },
   { href: "#coaching", label: "Coaching" },
   { href: "#results", label: "Results" },
-  { href: "#method", label: "Method" },
+  { href: "#about", label: "About" },
   { href: "#packages", label: "Start" },
 ];
 

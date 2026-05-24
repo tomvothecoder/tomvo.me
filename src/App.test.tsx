@@ -41,9 +41,7 @@ test("renders the strength coaching landing page", () => {
     }),
   ).toBeInTheDocument();
   expect(
-    screen.getByRole("heading", {
-      name: /listen\. build\. adjust/i,
-    }),
+    screen.getByText(/process stays simple: listen first, build the block/i),
   ).toBeInTheDocument();
   expect(
     screen.getByRole("heading", {
@@ -85,8 +83,8 @@ test("renders the strength coaching landing page", () => {
   ).toBe(true);
   expect(
     screen
-      .getAllByRole("link", { name: "Method" })
-      .some((link) => link.getAttribute("href") === "#method"),
+      .getAllByRole("link", { name: "About" })
+      .some((link) => link.getAttribute("href") === "#about"),
   ).toBe(true);
 
   expect(
