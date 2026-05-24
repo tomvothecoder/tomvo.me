@@ -1,12 +1,10 @@
-import { useReducedMotion } from "framer-motion";
-
 import SectionWrapper from "components/CoachRedesign/SectionWrapper";
 
 const faqs = [
   {
-    question: "Do I need powerlifting experience?",
+    question: "What kind of lifter is this coaching for?",
     answer:
-      "No. You need a clear goal, communication, and a plan I can adjust with you. I coach newer lifters, experienced recreational lifters, and first-time competitors.",
+      "Coaching is for people who want clearer training, better movement, and support they can actually use. That can mean a newer lifter, a busy professional, a recreational lifter, or someone preparing for a powerlifting meet.",
   },
   {
     question: "How often will my program change?",
@@ -26,8 +24,6 @@ const faqs = [
 ];
 
 function FAQSection() {
-  const prefersReducedMotion = useReducedMotion();
-
   return (
     <SectionWrapper
       id="faq"
@@ -39,20 +35,17 @@ function FAQSection() {
     >
       <div className="divide-y divide-[#cfc4b5] border-y border-[#cfc4b5]">
         {faqs.map((faq) => (
-          <details
+          <article
             key={faq.question}
-            className="group py-5"
+            className="grid gap-3 py-5 md:grid-cols-[0.85fr_1.15fr] md:gap-8"
           >
-            <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-bold leading-7 text-[#141816]">
+            <h3 className="text-lg font-bold leading-7 text-[#141816]">
               {faq.question}
-              <span className="text-2xl font-light text-[#a33c22] group-open:rotate-45">
-                +
-              </span>
-            </summary>
-            <p className="mt-3 max-w-3xl text-[15px] leading-7 text-[#4d574f]">
+            </h3>
+            <p className="max-w-3xl text-[15px] leading-7 text-[#4d574f]">
               {faq.answer}
             </p>
-          </details>
+          </article>
         ))}
       </div>
     </SectionWrapper>

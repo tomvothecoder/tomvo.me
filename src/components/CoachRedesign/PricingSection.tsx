@@ -9,7 +9,7 @@ const packages = [
     name: "Foundation",
     cadence: "Technique + consistency",
     focus:
-      "For lifters who want hands-on coaching, cleaner positions, and a repeatable training rhythm.",
+      "For clients who want hands-on coaching, cleaner movement, and a repeatable training rhythm.",
     features: ["Initial assessment", "Private session structure", "Training notes"],
     highlighted: false,
   },
@@ -18,7 +18,7 @@ const packages = [
     name: "Performance",
     cadence: "Online or hybrid",
     focus:
-      "For lifters who want programming, video feedback, and weekly adjustments tied to real recovery.",
+      "For people who want programming, video feedback, and weekly adjustments tied to real recovery.",
     features: ["Custom training blocks", "Weekly check-ins", "Video review"],
     highlighted: true,
   },
@@ -38,8 +38,8 @@ function PricingSection() {
     <SectionWrapper
       id="packages"
       eyebrow="Start training"
-      title="Choose the coaching scope after fit is understood."
-      description="No generic price table. I start with goals, schedule, equipment, training history, and feedback needs, then match the format to the work with you."
+      title="Find the coaching plan that fits your goals."
+      description="Rates are based on coaching format, training goals, support needs, and whether we work in person or online. After I understand what you need, I will recommend the simplest coaching option and share pricing clearly before anything starts."
       descriptionClassName="text-[#2e4036]/75"
       className="bg-[#f7f4ed] py-16 md:py-24"
     >
