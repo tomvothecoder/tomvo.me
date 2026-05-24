@@ -28,32 +28,58 @@ function HeroSection() {
   return (
     <section
       id="hero"
-      className="relative flex min-h-[100dvh] overflow-hidden bg-[#141816] px-5 pb-8 pt-24 text-[#f7f4ed] sm:px-8 md:px-12"
+      className="relative flex min-h-[100dvh] overflow-hidden px-5 pb-8 pt-24 text-[#f7f4ed] sm:px-8 md:px-12"
     >
-      <img
-        src={selfPortraitHeroLarge}
-        srcSet={`${selfPortraitHeroSmall} 576w, ${selfPortraitHeroLarge} 900w`}
-        sizes="100vw"
-        alt=""
-        aria-hidden="true"
-        width="900"
-        height="1200"
-        loading="eager"
-        fetchpriority="high"
-        decoding="async"
-        className="absolute inset-0 h-full w-full object-cover object-[58%_22%] opacity-55 saturate-[0.86] sm:object-[62%_18%] lg:object-[72%_18%]"
-      />
-      <div className="absolute inset-0 bg-gradient-to-t from-[#141816] via-[#141816]/80 to-[#141816]/35" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_74%_18%,rgba(224,138,99,0.22),transparent_28%),linear-gradient(90deg,rgba(20,24,22,0.94),rgba(20,24,22,0.62)_48%,rgba(20,24,22,0.15))]" />
+  <img
+    src={selfPortraitHeroLarge}
+    srcSet={`${selfPortraitHeroSmall} 576w, ${selfPortraitHeroLarge} 900w`}
+    sizes="(min-width: 1024px) 50vw, 100vw"
+    alt=""
+    aria-hidden="true"
+    width="900"
+    height="1200"
+    loading="eager"
+    fetchPriority="high"
+    decoding="async"
+    className="
+      absolute
+      bottom-0
+      right-[-44%]
+      z-0
+      h-[92%]
+      w-auto
+      max-w-none
+      object-contain
+      opacity-45
+
+      sm:right-[-34%]
+      sm:h-[96%]
+
+      md:right-[-24%]
+      md:h-full
+
+      lg:right-[-18%]
+      lg:h-full
+      lg:opacity-50
+
+      xl:right-[-18%]
+      2xl:right-[-14%]
+
+      min-[1800px]:right-[-8%]
+      min-[2200px]:right-[-4%]
+    "
+  />
+
+<div className="absolute inset-0 bg-[radial-gradient(circle_at_78%_18%,rgba(199,91,50,0.16),transparent_30%),linear-gradient(100deg,rgba(12,15,13,0.99)_0%,rgba(18,24,20,0.95)_36%,rgba(18,24,20,0.76)_60%,rgba(18,24,20,0.42)_82%,rgba(18,24,20,0.30)_100%)]" />
 
       <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col justify-end">
         <div className="max-w-4xl pb-6 md:pb-10">
           <p className="coach-mono text-xs font-semibold uppercase tracking-[0.2em] text-[#e08a63]">
             Tom Vo Strength | NASM CPT | Fremont, Newark, online
           </p>
-          <h1 className="font-display mt-5 max-w-5xl text-[clamp(3.25rem,15vw,9.5rem)] font-extrabold leading-[0.82] text-white">
+          <h1 className="font-display mt-5 max-w-4xl text-[clamp(2.75rem,8vw,6.25rem)] font-extrabold leading-[0.88] text-white">
             Build{" "}
-            <span className="coach-serif block text-[clamp(4.25rem,18vw,12rem)] font-semibold italic leading-[0.78] text-[#e08a63]">
+            <span className="coach-serif block text-[clamp(3.25rem,9.5vw,7.5rem)] font-semibold italic leading-[0.86] text-[#e08a63]">
               Strength That Fits Your Life.
             </span>
           </h1>
@@ -73,7 +99,7 @@ function HeroSection() {
             </a>
             <a
               href="#fit"
-              className="magnetic-button inline-flex min-h-12 items-center justify-center rounded-[2rem] border border-[#f7f4ed]/40 bg-[#f7f4ed]/10 px-6 py-4 text-sm font-bold text-white backdrop-blur-md"
+              className="magnetic-button inline-flex min-h-12 items-center justify-center rounded-[2rem] border border-[#f7f4ed]/40 bg-[#f7f4ed]/12 px-6 py-4 text-sm font-bold text-white"
             >
               <span>See If It Fits</span>
             </a>
