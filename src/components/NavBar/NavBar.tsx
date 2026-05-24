@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import { ArrowRight, Code2, Dumbbell } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 
@@ -16,33 +15,16 @@ const coachLinks = [
 function NavBar() {
   const location = useLocation();
   const isCoachPage = location.pathname === "/coach";
-  const [isScrolled, setIsScrolled] = useState(false);
   const brandLabel =
     location.pathname === "/career" ? "Tom Vo" : "Tom Vo Strength";
   const BrandIcon = location.pathname === "/career" ? Code2 : Dumbbell;
-
-  useEffect(() => {
-    if (!isCoachPage) {
-      setIsScrolled(false);
-      return undefined;
-    }
-
-    const updateScrollState = () => setIsScrolled(window.scrollY > 120);
-    updateScrollState();
-    window.addEventListener("scroll", updateScrollState, { passive: true });
-
-    return () => window.removeEventListener("scroll", updateScrollState);
-  }, [isCoachPage]);
 
   if (isCoachPage) {
     return (
       <header className="pointer-events-none fixed inset-x-0 top-3 z-50 px-3 sm:top-5 sm:px-6">
         <nav
           className={cn(
-            "pointer-events-auto mx-auto flex min-h-14 w-full max-w-5xl items-center justify-between gap-3 rounded-lg border px-3 py-2 shadow-[0_18px_55px_-42px_rgba(0,0,0,0.55)] backdrop-blur-xl transition-all duration-300 sm:px-4",
-            isScrolled
-              ? "border-[#cfc4b5]/90 bg-[#f7f4ed]/[0.86] text-[#141816]"
-              : "border-[#cfc4b5]/80 bg-[#f7f4ed]/[0.82] text-[#141816]",
+            "pointer-events-auto mx-auto flex min-h-14 w-full max-w-5xl items-center justify-between gap-3 rounded-lg border border-[#cfc4b5]/90 bg-[#f7f4ed]/95 px-3 py-2 text-[#141816] shadow-[0_18px_55px_-42px_rgba(0,0,0,0.55)] sm:px-4",
           )}
         >
           <Link
@@ -50,12 +32,7 @@ function NavBar() {
             className="inline-flex min-w-0 items-center gap-2 rounded-lg pr-1 text-sm font-semibold tracking-tight transition-transform hover:-translate-y-px"
           >
             <span
-              className={cn(
-                "inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border",
-                isScrolled
-                  ? "border-[#cfc4b5] bg-white/70 text-[#1d2822]"
-                  : "border-[#cfc4b5] bg-white/50 text-[#1d2822]",
-              )}
+              className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-[#cfc4b5] bg-white/70 text-[#1d2822]"
             >
               <img
                 src={coachIconLogo}

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   CalendarCheck,
   CheckCircle2,
@@ -42,16 +42,40 @@ const pillars = [
   },
 ];
 
-function AssessmentStack() {
+function usePrefersReducedMotion() {
+  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
+
+  useEffect(() => {
+    if (!window.matchMedia) {
+      return undefined;
+    }
+
+    const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const syncPreference = () => setPrefersReducedMotion(mediaQuery.matches);
+
+    syncPreference();
+    mediaQuery.addEventListener("change", syncPreference);
+
+    return () => mediaQuery.removeEventListener("change", syncPreference);
+  }, []);
+
+  return prefersReducedMotion;
+}
+
+function AssessmentStack({ shouldAnimate }: { shouldAnimate: boolean }) {
   const [topIndex, setTopIndex] = useState(0);
 
   useEffect(() => {
+    if (!shouldAnimate) {
+      return undefined;
+    }
+
     const interval = window.setInterval(() => {
       setTopIndex((current) => (current + 1) % assessmentLabels.length);
     }, 3000);
 
     return () => window.clearInterval(interval);
-  }, []);
+  }, [shouldAnimate]);
 
   return (
     <div className="relative h-40 overflow-hidden rounded-[2rem] bg-[#1d2822] p-4">
@@ -80,24 +104,21 @@ function AssessmentStack() {
   );
 }
 
-function CoachNoteTypewriter() {
+function CoachNoteTypewriter({ shouldAnimate }: { shouldAnimate: boolean }) {
   const [messageIndex, setMessageIndex] = useState(0);
-  const [visibleChars, setVisibleChars] = useState(0);
   const message = coachNotes[messageIndex];
 
   useEffect(() => {
-    const timeout = window.setTimeout(() => {
-      if (visibleChars < message.length) {
-        setVisibleChars((count) => count + 1);
-        return;
-      }
+    if (!shouldAnimate) {
+      return undefined;
+    }
 
-      setVisibleChars(0);
+    const interval = window.setInterval(() => {
       setMessageIndex((index) => (index + 1) % coachNotes.length);
-    }, visibleChars < message.length ? 34 : 850);
+    }, 4500);
 
-    return () => window.clearTimeout(timeout);
-  }, [message.length, visibleChars]);
+    return () => window.clearInterval(interval);
+  }, [shouldAnimate]);
 
   return (
     <div className="rounded-[2rem] bg-[#141816] p-4 text-[#f7f4ed]">
@@ -108,14 +129,16 @@ function CoachNoteTypewriter() {
         <span className="h-2.5 w-2.5 rounded-full bg-[#51d88a] shadow-[0_0_0_6px_rgba(81,216,138,0.16)]" />
       </div>
       <p className="coach-mono min-h-24 text-sm leading-7 text-[#f7f4ed]/85">
-        {message.slice(0, visibleChars)}
-        <span className="ml-0.5 inline-block h-5 w-2 translate-y-1 animate-pulse bg-[#e08a63]" />
+        {message}
+        {shouldAnimate ? (
+          <span className="ml-0.5 inline-block h-5 w-2 translate-y-1 animate-pulse bg-[#e08a63]" />
+        ) : null}
       </p>
     </div>
   );
 }
 
-function TrainingWeekScheduler() {
+function TrainingWeekScheduler({ shouldAnimate }: { shouldAnimate: boolean }) {
   return (
     <div className="relative overflow-hidden rounded-[2rem] bg-[#1d2822] p-4 text-[#f7f4ed]">
       <div className="grid grid-cols-7 gap-2">
@@ -124,7 +147,9 @@ function TrainingWeekScheduler() {
             key={`${day}-${index}`}
             className={[
               "flex aspect-square items-center justify-center rounded-full bg-white/[0.08] text-xs font-bold text-white/60",
-              index === 3 ? "animate-[day-pulse_4s_ease-in-out_infinite]" : "",
+              shouldAnimate && index === 3
+                ? "animate-[day-pulse_4s_ease-in-out_infinite]"
+                : "",
             ].join(" ")}
           >
             {day}
@@ -137,21 +162,49 @@ function TrainingWeekScheduler() {
       >
         Confirm Week
       </button>
-      <MousePointer2 className="absolute left-5 top-5 h-6 w-6 animate-[cursor-protocol_4s_ease-in-out_infinite] text-[#e08a63]" />
+      <MousePointer2
+        className={[
+          "absolute left-5 top-5 h-6 w-6 text-[#e08a63]",
+          shouldAnimate ? "animate-[cursor-protocol_4s_ease-in-out_infinite]" : "",
+        ].join(" ")}
+      />
     </div>
   );
 }
 
 function StatsSection() {
+  const sectionRef = useRef<HTMLElement>(null);
+  const [isVisible, setIsVisible] = useState(false);
+  const prefersReducedMotion = usePrefersReducedMotion();
+  const shouldAnimate = isVisible && !prefersReducedMotion;
   const artifacts = [
-    <AssessmentStack />,
-    <CoachNoteTypewriter />,
-    <TrainingWeekScheduler />,
+    <AssessmentStack shouldAnimate={shouldAnimate} />,
+    <CoachNoteTypewriter shouldAnimate={shouldAnimate} />,
+    <TrainingWeekScheduler shouldAnimate={shouldAnimate} />,
   ];
   const icons = [ClipboardList, MessageSquareText, CalendarCheck];
 
+  useEffect(() => {
+    const sectionElement = sectionRef.current;
+
+    if (!sectionElement || !("IntersectionObserver" in window)) {
+      setIsVisible(true);
+      return undefined;
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => setIsVisible(entry.isIntersecting),
+      { rootMargin: "160px 0px" },
+    );
+
+    observer.observe(sectionElement);
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <section
+      ref={sectionRef}
       id="fit"
       className="scroll-mt-40 bg-[#f7f4ed] px-6 py-16 text-[#141816] md:px-10 md:py-24"
     >

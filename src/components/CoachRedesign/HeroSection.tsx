@@ -6,8 +6,8 @@ import {
   Trophy,
 } from "lucide-react";
 
-import coachPrimaryLogo from "assets/coach-logos/TomVoStrength_Primary_Horizontal_Color.png";
-import selfPortrait from "assets/me.jpg";
+import selfPortraitHeroSmall from "assets/me-768.jpg";
+import selfPortraitHeroLarge from "assets/me-1200.jpg";
 
 const trustSignals = [
   {
@@ -31,9 +31,16 @@ function HeroSection() {
       className="relative flex min-h-[100dvh] overflow-hidden bg-[#141816] px-5 pb-8 pt-24 text-[#f7f4ed] sm:px-8 md:px-12"
     >
       <img
-        src={selfPortrait}
+        src={selfPortraitHeroLarge}
+        srcSet={`${selfPortraitHeroSmall} 576w, ${selfPortraitHeroLarge} 900w`}
+        sizes="100vw"
         alt=""
         aria-hidden="true"
+        width="900"
+        height="1200"
+        loading="eager"
+        fetchpriority="high"
+        decoding="async"
         className="absolute inset-0 h-full w-full object-cover object-[58%_22%] opacity-55 saturate-[0.86] sm:object-[62%_18%] lg:object-[72%_18%]"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-[#141816] via-[#141816]/80 to-[#141816]/35" />

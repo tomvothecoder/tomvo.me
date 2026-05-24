@@ -10,7 +10,6 @@ import TransformationGallery from "components/CoachRedesign/TransformationGaller
 function CoachLandingPage() {
   return (
     <main className="coach-cinematic bg-[#f7f4ed] text-[#141816]">
-      <div className="noise-overlay" aria-hidden="true" />
       <HeroSection />
       <StatsSection />
       <ServicesSection />

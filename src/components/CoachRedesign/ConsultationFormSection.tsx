@@ -1,17 +1,12 @@
 import { useEffect } from "react";
 import { Clock3, MapPin, Phone } from "lucide-react";
-import { motion, useReducedMotion } from "framer-motion";
 
-import { fadeInUp, revealInView, staggerContainer } from "components/CoachRedesign/animations";
 import SectionWrapper from "components/CoachRedesign/SectionWrapper";
 import { Button } from "components/ui/button";
-import { Card, CardContent } from "components/ui/card";
 import { Input } from "components/ui/input";
 import { Textarea } from "components/ui/textarea";
 
 function ConsultationFormSection() {
-  const prefersReducedMotion = useReducedMotion();
-
   useEffect(() => {
     const scriptId = "kwesforms-script";
     const kwesWindow = window as typeof window & {

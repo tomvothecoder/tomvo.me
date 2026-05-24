@@ -52,7 +52,7 @@ test("renders the strength coaching landing page", () => {
   ).toBeInTheDocument();
   expect(
     screen.getByRole("heading", {
-      name: /choose the coaching scope after fit is understood/i,
+      name: /find the coaching plan that fits your goals/i,
     }),
   ).toBeInTheDocument();
   expect(

@@ -1,4 +1,5 @@
-import selfPortrait from "assets/me.jpg";
+import selfPortraitSmall from "assets/me-768.jpg";
+import selfPortraitLarge from "assets/me-1200.jpg";
 import SectionWrapper from "components/CoachRedesign/SectionWrapper";
 
 function CoachCredibilitySection() {
@@ -12,8 +13,14 @@ function CoachCredibilitySection() {
       <div className="grid gap-10 xl:grid-cols-[0.66fr_1.34fr] xl:items-center">
         <div>
           <img
-            src={selfPortrait}
+            src={selfPortraitSmall}
+            srcSet={`${selfPortraitSmall} 576w, ${selfPortraitLarge} 900w`}
+            sizes="(min-width: 1280px) 32vw, 100vw"
             alt="Coach Tom Vo coaching profile"
+            width="576"
+            height="768"
+            loading="lazy"
+            decoding="async"
             className="aspect-[4/5] w-full rounded-lg object-cover"
           />
         </div>
