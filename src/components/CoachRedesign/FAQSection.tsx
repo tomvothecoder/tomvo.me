@@ -1,14 +1,8 @@
-import { motion, useReducedMotion } from "framer-motion";
+import { useReducedMotion } from "framer-motion";
 
-import { fadeInUp, revealInView } from "components/CoachRedesign/animations";
 import SectionWrapper from "components/CoachRedesign/SectionWrapper";
 
 const faqs = [
-  {
-    question: "Do you offer in-person, online, or both?",
-    answer:
-      "Both. In-person coaching is available in Fremont and Newark. Online coaching is available for remote lifters who can send training videos and check in consistently.",
-  },
   {
     question: "Do I need powerlifting experience?",
     answer:
@@ -18,11 +12,6 @@ const faqs = [
     question: "How often will my program change?",
     answer:
       "Programming is reviewed weekly. Not every week needs a full rewrite; the useful changes are based on performance, recovery, technique, and adherence.",
-  },
-  {
-    question: "Can you coach for a powerlifting meet?",
-    answer:
-      "Yes. Meet prep includes peaking, attempt selection, taper planning, and meet-day execution.",
   },
   {
     question: "Do you coach mobility or pain-aware training?",
@@ -43,7 +32,7 @@ function FAQSection() {
     <SectionWrapper
       id="faq"
       eyebrow="FAQ"
-      title="Questions serious lifters ask before starting."
+      title="Questions often asked before starting."
       description="Short answers up front so you can evaluate fit before applying."
       descriptionClassName="text-[#2e4036]/75"
       className="bg-[#f7f4ed] py-16 md:py-24"

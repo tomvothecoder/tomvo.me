@@ -6,8 +6,8 @@ import SectionWrapper from "components/CoachRedesign/SectionWrapper";
 const coachFacts = [
   {
     icon: ClipboardCheck,
-    title: "Part-time by design",
-    text: "Selective coaching capacity keeps attention on serious clients and clear communication.",
+    title: "Client-first",
+    text: "The needs of my clients come first, guiding every decision and adjustment in their training.",
   },
   {
     icon: ShieldCheck,

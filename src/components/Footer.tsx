@@ -1,5 +1,7 @@
 import { useLocation } from "react-router-dom";
 
+import coachPrimaryLogo from "assets/coach-logos/TomVoStrength_Primary_Horizontal_Color.png";
+
 const Footer: React.FC = () => {
   const location = useLocation();
   const isCareerPage = location.pathname === "/career";
@@ -9,9 +11,11 @@ const Footer: React.FC = () => {
       <footer className="rounded-t-[3rem] bg-[#141816] px-6 py-12 text-[#f7f4ed] md:px-10">
         <div className="mx-auto grid w-full max-w-6xl gap-8 md:grid-cols-[1.2fr_0.8fr_0.8fr]">
           <div>
-            <p className="font-display text-2xl font-semibold tracking-tight">
-              Tom Vo Strength
-            </p>
+            <img
+              src={coachPrimaryLogo}
+              alt="Tom Vo Strength"
+              className="h-auto w-56 rounded-lg bg-[#f7f4ed] p-2"
+            />
             <p className="mt-3 max-w-sm text-sm leading-6 text-[#f2f0e9]/[0.68]">
               Strength coaching for measurable performance, cleaner movement,
               and training that survives real schedules.

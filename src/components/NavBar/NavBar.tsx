@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { ArrowRight, Code2, Dumbbell } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 
+import coachIconLogo from "assets/coach-logos/TomVoStrength_Icon_Color.png";
 import { cn } from "lib/utils";
 
 const coachLinks = [
@@ -56,7 +57,12 @@ function NavBar() {
                   : "border-[#cfc4b5] bg-white/50 text-[#1d2822]",
               )}
             >
-              <BrandIcon className="h-4 w-4" />
+              <img
+                src={coachIconLogo}
+                alt=""
+                aria-hidden="true"
+                className="h-7 w-7 object-contain"
+              />
             </span>
             <span className="truncate">{brandLabel}</span>
           </Link>

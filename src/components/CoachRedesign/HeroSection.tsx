@@ -6,6 +6,7 @@ import {
   Trophy,
 } from "lucide-react";
 
+import coachPrimaryLogo from "assets/coach-logos/TomVoStrength_Primary_Horizontal_Color.png";
 import selfPortrait from "assets/me.jpg";
 
 const trustSignals = [

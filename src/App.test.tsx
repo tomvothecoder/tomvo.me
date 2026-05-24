@@ -14,7 +14,12 @@ test("renders the strength coaching landing page", () => {
   render(<App />);
 
   expect(document.querySelector(".App")).toBeInTheDocument();
-  expect(screen.getByText(/tom vo strength \| nasm cpt/i)).toBeInTheDocument();
+  expect(
+    screen.getAllByRole("img", { name: /tom vo strength/i }).length,
+  ).toBeGreaterThan(0);
+  expect(
+    screen.getByText(/nasm cpt \| fremont, newark, online/i),
+  ).toBeInTheDocument();
   expect(
     screen.getByRole("heading", {
       name: /build the body that performs/i,
