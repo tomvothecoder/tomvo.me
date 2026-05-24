@@ -1,5 +1,3 @@
-import selfPortraitSmall from "assets/me-768.jpg";
-import selfPortraitLarge from "assets/me-1200.jpg";
 import SectionWrapper from "components/CoachRedesign/SectionWrapper";
 
 function CoachCredibilitySection() {
