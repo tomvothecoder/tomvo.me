@@ -23,7 +23,7 @@ function CoachCredibilitySection() {
             preload="metadata"
             aria-hidden="true"
           >
-            <source src="/videos/IMG_3290-web.mp4" type="video/mp4" />
+            <source src="/videos/IMG_3290.mp4" type="video/mp4" />
           </video>
         </div>
 
