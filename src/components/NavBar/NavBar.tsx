@@ -6,9 +6,10 @@ import { cn } from "lib/utils";
 
 const coachLinks = [
   { href: "#fit", label: "Fit" },
-  { href: "#services", label: "Services" },
+  { href: "#coaching", label: "Coaching" },
   { href: "#results", label: "Results" },
-  { href: "#faq", label: "FAQ" },
+  { href: "#method", label: "Method" },
+  { href: "#packages", label: "Start" },
 ];
 
 function NavBar() {
@@ -80,7 +81,7 @@ function NavBar() {
 
           <a
             href="#apply"
-            className="coach-button-primary inline-flex h-10 shrink-0 items-center justify-center gap-2 rounded-lg px-4 text-sm font-semibold sm:px-5"
+            className="coach-button-primary magnetic-button inline-flex h-10 shrink-0 items-center justify-center gap-2 rounded-[2rem] px-4 text-sm font-semibold sm:px-5"
           >
             <span>Apply</span>
             <ArrowRight className="hidden h-4 w-4 sm:block" />

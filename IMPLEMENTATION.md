@@ -173,3 +173,41 @@ Resolved all four active Dependabot alerts tied to `pnpm-lock.yaml` by upgrading
 - `pnpm audit --json` -> zero vulnerabilities (`high: 0`, `moderate: 0`).
 - `pnpm test` -> pass (1/1).
 - `pnpm build` -> pass.
+
+## Incremental GEMINI `/coach` retrofit
+
+### Summary
+
+Applied the accepted targeted retrofit from `GEMINI.md` without changing the core stack. The `/coach` page now has a stronger cinematic hero, interactive coaching pillars, a clearer `Assess / Build / Execute` method, a packages-style start-training section, and updated coach navigation/footer conversion anchors.
+
+### What changed
+
+- Updated planning notes in `PLANNING.md` before implementation.
+- Reworked `src/components/CoachRedesign/HeroSection.tsx`:
+  - Full-viewport image-backed hero using the existing coach portrait.
+  - Stronger brand line, larger mobile-safe headline, visible primary CTA, and trust signals.
+- Replaced the old stats/audience block in `StatsSection.tsx` with three interactive coaching pillars:
+  - assessment stack
+  - coach-notes typewriter
+  - training-week scheduler
+- Reworked `ProtocolSection.tsx` into the `#method` section:
+  - `Assess / Build / Execute`
+  - lightweight visual artifacts using existing CSS animation utilities.
+- Added `PricingSection.tsx` back into the coach flow as `#packages`:
+  - Foundation, Performance, Meet Prep
+  - no invented pricing.
+- Updated `NavBar.tsx` and `Footer.tsx` coach anchors and availability language:
+  - `#fit`, `#coaching`, `#results`, `#method`, `#packages`, `#apply`
+  - “Currently Accepting Clients” footer status.
+- Added the existing CSS noise overlay to `CoachLandingPage.tsx`.
+- Updated `src/App.test.tsx` for new headings and anchor expectations.
+
+### Validation
+
+- `pnpm test` -> pass.
+- `pnpm build` -> pass.
+
+### Notes
+
+- React 18, Tailwind, Framer Motion, KwesForms, and `/career` behavior were preserved.
+- Verified OpenPowerlifting proof remains intact; no fabricated testimonials or pricing claims were added.

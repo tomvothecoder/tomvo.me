@@ -6,7 +6,7 @@ const Footer: React.FC = () => {
 
   if (!isCareerPage) {
     return (
-      <footer className="bg-[#141816] px-6 py-12 text-[#f7f4ed] md:px-10">
+      <footer className="rounded-t-[3rem] bg-[#141816] px-6 py-12 text-[#f7f4ed] md:px-10">
         <div className="mx-auto grid w-full max-w-6xl gap-8 md:grid-cols-[1.2fr_0.8fr_0.8fr]">
           <div>
             <p className="font-display text-2xl font-semibold tracking-tight">
@@ -25,8 +25,14 @@ const Footer: React.FC = () => {
             <a className="block transition hover:-translate-y-px hover:text-white" href="#fit">
               Fit
             </a>
-            <a className="block transition hover:-translate-y-px hover:text-white" href="#services">
-              Services
+            <a className="block transition hover:-translate-y-px hover:text-white" href="#coaching">
+              Coaching
+            </a>
+            <a className="block transition hover:-translate-y-px hover:text-white" href="#method">
+              Method
+            </a>
+            <a className="block transition hover:-translate-y-px hover:text-white" href="#packages">
+              Start Training
             </a>
             <a className="block transition hover:-translate-y-px hover:text-white" href="#apply">
               Apply
@@ -37,11 +43,12 @@ const Footer: React.FC = () => {
             <p className="coach-mono text-xs uppercase tracking-[0.18em] text-[#e08a63]">
               Coaching
             </p>
-            <div className="inline-flex items-center gap-2 rounded-lg border border-white/[0.12] bg-white/[0.06] px-3 py-2 text-xs font-semibold text-[#f2f0e9]">
-              <span>NASM CPT</span>
+            <div className="inline-flex items-center gap-2 rounded-[2rem] border border-white/[0.12] bg-white/[0.06] px-3 py-2 text-xs font-semibold text-[#f2f0e9]">
+              <span className="h-2 w-2 rounded-full bg-[#51d88a] shadow-[0_0_0_5px_rgba(81,216,138,0.16)]" />
+              <span>Currently Accepting Clients</span>
             </div>
             <p className="text-xs leading-5 text-[#f2f0e9]/[0.55]">
-              Private training in Fremont and Newark, California.
+              NASM CPT. Private training in Fremont and Newark, California.
             </p>
           </div>
         </div>

@@ -160,10 +160,10 @@ function ConsultationFormSection() {
 
             <Button
               type="submit"
-              className="coach-button-primary w-full rounded-lg"
+              className="coach-button-primary magnetic-button min-h-12 w-full rounded-[2rem]"
               size="lg"
             >
-              Apply for Coaching
+              <span>Apply for Coaching</span>
             </Button>
 
             <p className="text-xs leading-5 text-[#4d574f]">

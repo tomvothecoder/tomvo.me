@@ -14,14 +14,15 @@ test("renders the strength coaching landing page", () => {
   render(<App />);
 
   expect(document.querySelector(".App")).toBeInTheDocument();
+  expect(screen.getByText(/tom vo strength \| nasm cpt/i)).toBeInTheDocument();
   expect(
     screen.getByRole("heading", {
-      name: /tom vo strength coaching/i,
+      name: /build the body that performs/i,
     }),
   ).toBeInTheDocument();
   expect(
     screen.getByRole("heading", {
-      name: /coaching for gym clients who want better training/i,
+      name: /coaching for lifters who want a better next training decision/i,
     }),
   ).toBeInTheDocument();
   expect(
@@ -36,7 +37,12 @@ test("renders the strength coaching landing page", () => {
   ).toBeInTheDocument();
   expect(
     screen.getByRole("heading", {
-      name: /stronger lifting comes from better decisions repeated/i,
+      name: /assess\. build\. execute/i,
+    }),
+  ).toBeInTheDocument();
+  expect(
+    screen.getByRole("heading", {
+      name: /choose the coaching scope after fit is clear/i,
     }),
   ).toBeInTheDocument();
   expect(
@@ -66,6 +72,17 @@ test("renders the strength coaching landing page", () => {
   applicationLinks.forEach((link) => {
     expect(link).toHaveAttribute("href", "#apply");
   });
+
+  expect(
+    screen
+      .getAllByRole("link", { name: "Coaching" })
+      .some((link) => link.getAttribute("href") === "#coaching"),
+  ).toBe(true);
+  expect(
+    screen
+      .getAllByRole("link", { name: "Method" })
+      .some((link) => link.getAttribute("href") === "#method"),
+  ).toBe(true);
 
   expect(
     screen.getAllByRole("link", { name: "Profile" }).length,

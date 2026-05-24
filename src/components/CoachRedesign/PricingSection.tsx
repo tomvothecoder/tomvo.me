@@ -3,29 +3,32 @@ import { ArrowRight, BarChart3, Check, Dumbbell, Trophy } from "lucide-react";
 import SectionWrapper from "components/CoachRedesign/SectionWrapper";
 import { cn } from "lib/utils";
 
-const plans = [
+const packages = [
   {
     icon: Dumbbell,
-    name: "Technique",
-    cadence: "Private sessions",
-    focus: "Hands-on coaching for form, training consistency, and stronger movement patterns.",
-    features: ["In-person coaching", "Technique review", "Session notes"],
+    name: "Foundation",
+    cadence: "Technique + consistency",
+    focus:
+      "For lifters who want hands-on coaching, cleaner positions, and a repeatable training rhythm.",
+    features: ["Initial assessment", "Private session structure", "Training notes"],
     highlighted: false,
   },
   {
     icon: BarChart3,
     name: "Performance",
     cadence: "Online or hybrid",
-    focus: "Programming, check-ins, and iterative adjustments for lifters chasing measurable progress.",
-    features: ["Weekly programming", "Video feedback", "Recovery adjustments"],
+    focus:
+      "For lifters who want programming, video feedback, and weekly adjustments tied to real recovery.",
+    features: ["Custom training blocks", "Weekly check-ins", "Video review"],
     highlighted: true,
   },
   {
     icon: Trophy,
     name: "Meet Prep",
-    cadence: "12-week prep",
-    focus: "Peaking, attempt selection, and meet-week planning for powerlifting clients.",
-    features: ["Peaking structure", "Attempt strategy", "Meet-day plan"],
+    cadence: "Powerlifting focus",
+    focus:
+      "For competitors who need peaking, attempt selection, and meet-week decisions made before platform day.",
+    features: ["Peaking plan", "Attempt strategy", "Meet-day checklist"],
     highlighted: false,
   },
 ];
@@ -34,20 +37,21 @@ function PricingSection() {
   return (
     <SectionWrapper
       id="packages"
-      eyebrow="Formats"
-      title="Coaching formats are scoped after fit is clear."
-      description="Pricing is confirmed after consultation so scope matches the work."
+      eyebrow="Start training"
+      title="Choose the coaching scope after fit is clear."
+      description="No generic price table. We start with goals, schedule, equipment, training history, and feedback needs, then match the format to the work."
+      descriptionClassName="text-[#2e4036]/75"
       className="bg-[#f7f4ed] py-16 md:py-24"
     >
       <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-        {plans.map((plan) => {
+        {packages.map((plan) => {
           const Icon = plan.icon;
 
           return (
             <article
               key={plan.name}
               className={cn(
-                "flex h-full flex-col rounded-lg border p-6 md:p-7",
+                "flex h-full flex-col rounded-[2rem] border p-6 shadow-soft md:p-7",
                 plan.highlighted
                   ? "border-[#a33c22]/70 bg-[#1d2822] text-[#f7f4ed]"
                   : "border-[#cfc4b5] bg-[#fffaf1] text-[#141816]",
@@ -104,7 +108,7 @@ function PricingSection() {
               <a
                 href="#apply"
                 className={cn(
-                  "mt-auto inline-flex items-center justify-center gap-2 rounded-lg px-5 py-3.5 text-sm font-bold",
+                  "magnetic-button mt-auto inline-flex min-h-12 items-center justify-center gap-2 rounded-[2rem] px-5 py-3.5 text-sm font-bold",
                   plan.highlighted
                     ? "coach-button-primary text-white"
                     : "border border-[#cfc4b5] bg-white text-[#141816]",

@@ -104,3 +104,42 @@ Address all current Dependabot alerts reported from `pnpm-lock.yaml` by updating
 - `pnpm audit --json`
 - `pnpm test`
 - `pnpm build`
+
+## Incremental task (GEMINI `/coach` targeted retrofit)
+
+### Task understanding
+
+Retrofit the existing `/coach` redesign into a more cinematic, mobile-first strength coaching website guided by `GEMINI.md`, while preserving React 18, Tailwind, Framer Motion, KwesForms, current Tom Vo Strength positioning, and `/career` behavior.
+
+### Files reviewed
+
+- `GEMINI.md`
+- `src/App.tsx`
+- `src/components/NavBar/NavBar.tsx`
+- `src/components/Footer.tsx`
+- `src/components/CoachRedesign/*`
+- `src/index.css`
+- `src/App.test.tsx`
+
+### Implementation plan
+
+1. Keep the existing `CoachRedesign` architecture and improve page flow around anchors `#fit`, `#coaching`, `#results`, `#method`, `#packages`, `#faq`, and `#apply`.
+2. Rework the hero into a stronger first-viewport brand signal with visible mobile CTA, cinematic image treatment, and mobile-safe typography.
+3. Convert the `Who this is for` area into three interactive coaching pillar cards using lightweight CSS/React interactions.
+4. Preserve verified OpenPowerlifting proof in the results section and avoid fabricated testimonials or unsupported claims.
+5. Replace the philosophy section with a clearer `Assess / Build / Execute` method framework and lightweight visual artifacts.
+6. Add a packages-style `Start Training` section without inventing pricing.
+7. Tighten navbar/footer coach anchors, mobile usability, and availability language.
+8. Update tests and `IMPLEMENTATION.md`; validate with `pnpm test` and `pnpm build`.
+
+### Risks and mitigations
+
+- Risk: Visual-heavy changes introduce mobile overflow.
+  - Mitigation: use clamp-based hero type, single-column mobile layouts, and constrained artifact dimensions.
+- Risk: Anchor changes break existing navigation/tests.
+  - Mitigation: update navbar/footer links and route test expectations together.
+
+### Validation plan
+
+- `pnpm test`
+- `pnpm build`
