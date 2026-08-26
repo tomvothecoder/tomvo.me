@@ -20,7 +20,7 @@
     "bulma": "^1.0.4",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
-    "framer-motion": "^12.40.0",
+    "motion": "^12.40.0",
     "kwesforms": "^2.2.9",
     "lucide-react": "^1.16.0",
     "react": "^19.2.6",
