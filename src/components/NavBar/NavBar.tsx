@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ArrowUpRight, Code2, Dumbbell, Menu, X } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 
@@ -6,6 +6,7 @@ import { cn } from "lib/utils";
 
 const coachLinks = [
   { href: "#coaching", label: "Coaching" },
+  { href: "#packages", label: "Approach" },
   { href: "#results", label: "Results" },
   { href: "#about", label: "About" },
 ];
@@ -17,6 +18,14 @@ function NavBar() {
   const brandLabel =
     location.pathname === "/career" ? "Tom Vo" : "Tom Vo Strength";
   const BrandIcon = location.pathname === "/career" ? Code2 : Dumbbell;
+
+  useEffect(() => {
+    if (menuOpen && isCoachPage) {
+      document.querySelector<HTMLAnchorElement>("#coach-navigation a")?.focus({
+        preventScroll: true,
+      });
+    }
+  }, [menuOpen, isCoachPage]);
 
   if (isCoachPage) {
     return (
@@ -66,7 +75,7 @@ function NavBar() {
               className="strength-nav-apply"
               onClick={() => setMenuOpen(false)}
             >
-              Let’s talk <ArrowUpRight aria-hidden="true" />
+              <span>Let’s talk</span> <ArrowUpRight aria-hidden="true" />
             </a>
             <button
               id="coach-menu-toggle"
@@ -75,6 +84,9 @@ function NavBar() {
               aria-controls="coach-navigation"
               aria-label={menuOpen ? "Close navigation" : "Open navigation"}
               onClick={() => setMenuOpen(!menuOpen)}
+              onKeyDown={(event) => {
+                if (event.key === "Escape") setMenuOpen(false);
+              }}
             >
               {menuOpen ? (
                 <X aria-hidden="true" />

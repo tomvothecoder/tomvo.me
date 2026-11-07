@@ -45,11 +45,11 @@ function TransformationGallery() {
     >
       <header className="strength-results-heading">
         <p className="strength-entry">
-          <span>03 /</span> On the record
+          <span>04 /</span> On the record
         </p>
         <h2 id="results-title">
-          The work <br />
-          <em>shows up.</em>
+          Real training. <br />
+          Recorded results.
         </h2>
         <p>
           Real lifters. Recorded results. <br />

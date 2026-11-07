@@ -6,24 +6,22 @@ function HeroSection() {
   return (
     <section id="hero" className="strength-hero" aria-labelledby="hero-title">
       <div className="strength-hero-copy">
-        <p className="strength-location">
-          Independent strength coaching
-          <br />
-          Fremont, Newark & online
-        </p>
+        <p className="strength-entry">Individualized strength coaching</p>
         <h1 id="hero-title">
-          Strength. <br />
-          For real <br />
-          <span>life.</span>
+          Get stronger. <br />
+          Train with purpose.
         </h1>
         <div className="strength-hero-intro">
           <p>
-            Train with purpose. Get stronger. Still have a life outside the gym.
-            Personal coaching with Tom Vo, built around you.
+            Personal resistance training informed by exercise science. Built
+            around your goals, your experience, and your life outside the gym.
           </p>
           <a href="#apply" className="strength-button">
             Apply for coaching <ArrowUpRight aria-hidden="true" />
           </a>
+          <p className="strength-location">
+            With Tom Vo · Fremont, Newark & online
+          </p>
         </div>
         <div className="strength-hero-foot">
           <span>NASM-certified personal trainer</span>
@@ -36,7 +34,7 @@ function HeroSection() {
         <img
           src={trainingPhoto}
           srcSet={`${trainingPhotoSmall} 600w, ${trainingPhoto} 960w`}
-          sizes="(min-width: 760px) 48vw, 100vw"
+          sizes="(min-width: 1264px) 467px, (min-width: 1024px) 38vw, (min-width: 768px) 36vw, (min-width: 488px) 448px, calc(100vw - 40px)"
           alt="Tom training the deadlift, holding a loaded barbell at lockout"
           width="960"
           height="1706"
@@ -45,7 +43,7 @@ function HeroSection() {
         />
         <figcaption>
           <span>Tom Vo / In training</span>
-          <span>Built rep by rep.</span>
+          <span>01 / Deadlift</span>
         </figcaption>
       </figure>
     </section>

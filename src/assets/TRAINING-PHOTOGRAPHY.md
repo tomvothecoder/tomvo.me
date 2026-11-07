@@ -11,4 +11,6 @@ ffmpeg -ss 8 -i public/videos/IMG_3290.mp4 -frames:v 1 -vf scale=960:-1 -q:v 3 s
 ffmpeg -ss 8 -i public/videos/IMG_3290.mp4 -frames:v 1 -vf scale=600:-1 -q:v 4 src/assets/training-deadlift-600.jpg
 ```
 
-Grayscale/low-saturation treatment is applied in the coaching page CSS.
+A restrained saturation reduction is applied in the coaching page CSS. The
+homepage uses a 4:5 crop positioned to retain Tom’s face, grip, and feet;
+the caption identifies this as Tom’s own training, not a client session.

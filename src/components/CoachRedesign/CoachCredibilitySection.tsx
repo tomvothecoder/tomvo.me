@@ -12,7 +12,7 @@ function CoachCredibilitySection() {
         <img
           src={portrait}
           srcSet={`${portraitSmall} 576w, ${portrait} 900w`}
-          sizes="(min-width: 760px) 40vw, 100vw"
+          sizes="(min-width: 1024px) 320px, (min-width: 768px) 32vw, calc(100vw - 40px)"
           alt="Tom Vo smiling outside a café, away from the training floor"
           width="900"
           height="1200"
@@ -22,12 +22,11 @@ function CoachCredibilitySection() {
       </figure>
       <div className="strength-about-copy">
         <p className="strength-entry">
-          <span>04 /</span> Your coach
+          <span>05 /</span> Your coach
         </p>
         <h2 id="about-title">
-          A lifter. <br />
-          Not a fitness <br />
-          <em>persona.</em>
+          A coach who cares <br />
+          about the person, too.
         </h2>
         <p className="strength-about-lead">
           Lifting gave me a place to practice patience, problem solving, and
@@ -42,6 +41,11 @@ function CoachCredibilitySection() {
           That’s how I coach. I want you to feel seen, supported, and clear on
           why the plan looks the way it does. The training matters. The
           relationship behind it matters too.
+        </p>
+        <p>
+          I’m also a Research Software Engineer. That analytical mindset shapes
+          my coaching: question assumptions, track outcomes, and refine the plan
+          to fit the individual.
         </p>
         <div className="strength-about-signoff">
           <span>Tom Vo</span>

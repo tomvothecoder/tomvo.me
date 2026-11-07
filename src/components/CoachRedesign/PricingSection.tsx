@@ -24,15 +24,16 @@ function PricingSection() {
     >
       <div className="strength-process-intro">
         <p className="strength-entry">
-          <span>05 /</span> Getting started
+          <span>02 /</span> How coaching works
         </p>
         <h2 id="process-title">
-          No guesswork. <br />
-          Just a next step.
+          A clear plan. <br />
+          Room to adapt.
         </h2>
         <p>
-          Rates depend on the coaching format and support you need. We’ll
-          discuss the simplest option and clear pricing before anything starts.
+          Exercise science informs the plan. Your training tells us how to
+          refine it. We review performance, technique, and recovery—not just the
+          weight on the bar.
         </p>
         <a href="#apply" className="strength-text-link">
           Let’s talk training <ArrowUpRight aria-hidden="true" />

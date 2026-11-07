@@ -1,15 +1,39 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { ArrowUpRight } from "lucide-react";
 
 function ConsultationFormSection() {
+  const initialized = useRef(false);
+
   useEffect(() => {
     const scriptId = "kwesforms-script";
     const kwesWindow = window as typeof window & {
       kwesforms?: { init: () => void };
+      kwesFormsInitialize?: () => void;
     };
-    const initKwesForms = () => kwesWindow.kwesforms?.init();
+    const initKwesForms = () => {
+      if (initialized.current) return;
+      if (typeof kwesWindow.kwesFormsInitialize === "function") {
+        kwesWindow.kwesFormsInitialize();
+        initialized.current = true;
+      } else if (typeof kwesWindow.kwesforms?.init === "function") {
+        kwesWindow.kwesforms.init();
+        initialized.current = true;
+      }
+    };
+    // The current CDN script initializes itself on first load. Only explicitly
+    // reinitialize it for a newly mounted form after client-side navigation.
+    const onScriptLoad = () => {
+      if (typeof kwesWindow.kwesFormsInitialize === "function") {
+        initialized.current = true;
+      } else {
+        initKwesForms();
+      }
+    };
 
-    if (kwesWindow.kwesforms?.init) {
+    if (
+      typeof kwesWindow.kwesFormsInitialize === "function" ||
+      typeof kwesWindow.kwesforms?.init === "function"
+    ) {
       initKwesForms();
       return undefined;
     }
@@ -19,8 +43,8 @@ function ConsultationFormSection() {
     ) as HTMLScriptElement | null;
 
     if (existingScript) {
-      existingScript.addEventListener("load", initKwesForms);
-      return () => existingScript.removeEventListener("load", initKwesForms);
+      existingScript.addEventListener("load", onScriptLoad);
+      return () => existingScript.removeEventListener("load", onScriptLoad);
     }
 
     const script = document.createElement("script");
@@ -28,10 +52,10 @@ function ConsultationFormSection() {
     script.src = "https://kwesforms.com/v2/kwes-script.js";
     script.async = true;
     script.defer = true;
-    script.addEventListener("load", initKwesForms);
+    script.addEventListener("load", onScriptLoad);
     document.body.appendChild(script);
 
-    return () => script.removeEventListener("load", initKwesForms);
+    return () => script.removeEventListener("load", onScriptLoad);
   }, []);
 
   return (
@@ -42,11 +66,11 @@ function ConsultationFormSection() {
     >
       <div className="strength-apply-copy">
         <p className="strength-entry">
-          <span>06 /</span> Your next chapter
+          <span>06 /</span> Your next step
         </p>
         <h2 id="apply-title">
-          Let’s get <br />
-          to work.
+          Let’s talk <br />
+          about your training.
         </h2>
         <p>
           Tell me where you’re starting.
@@ -67,7 +91,14 @@ function ConsultationFormSection() {
           className="kwes-form strength-form"
           action="https://kwesforms.com/api/foreign/forms/aSVFVwmIio7ugCj6l1gO"
           method="post"
+          aria-describedby="application-help"
         >
+          <p
+            id="application-help"
+            className="strength-form-privacy strength-form-wide"
+          >
+            All fields are required.
+          </p>
           <div>
             <label htmlFor="name">Name</label>
             <input
@@ -113,7 +144,7 @@ function ConsultationFormSection() {
               id="trainingGoal"
               name="trainingGoal"
               type="text"
-              placeholder="Build strength, prep for a meet, improve technique"
+              placeholder="Your training goal"
               data-kw-rules="required|min:4|max:200"
               required
             />

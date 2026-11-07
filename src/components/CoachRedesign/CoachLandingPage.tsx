@@ -10,13 +10,13 @@ import "components/CoachRedesign/CoachLandingPage.css";
 
 function CoachLandingPage() {
   return (
-    <main id="main-content" className="strength-site">
+    <main id="main-content" className="strength-site" tabIndex={-1}>
       <HeroSection />
       <StatsSection />
+      <PricingSection />
       <ServicesSection />
       <TransformationGallery />
       <CoachCredibilitySection />
-      <PricingSection />
       <FAQSection />
       <ConsultationFormSection />
     </main>

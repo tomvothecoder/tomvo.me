@@ -20,7 +20,7 @@
   font-weight: 600;
 }
 
-#hero-title {
+#career #hero-title {
   margin-left: -8%;
   font-size: 36px;
   color: #fff;
@@ -126,7 +126,7 @@
 }
 
 @media (max-width: 1023px) {
-  #hero-title {
+  #career #hero-title {
     margin-left: 0;
   }
 }

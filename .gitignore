@@ -12,6 +12,14 @@
 # production
 /build
 
+# local design review artifacts (source links and notes remain versioned)
+/design/qa/
+/design/references/*.png
+/design/references/*.jpg
+/design/references/*.jpeg
+/design/references/*.avif
+/design/references/*.webp
+
 # misc
 .DS_Store
 .env.local

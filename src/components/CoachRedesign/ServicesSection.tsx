@@ -1,5 +1,4 @@
 import { ArrowUpRight } from "lucide-react";
-import trainingPhoto from "assets/training-deadlift.jpg";
 
 const services = [
   {
@@ -32,27 +31,14 @@ function ServicesSection() {
       className="strength-services"
       aria-labelledby="services-title"
     >
-      <figure className="strength-training-detail">
-        <img
-          src={trainingPhoto}
-          alt="Close detail of Tom’s grip and loaded barbell during a deadlift"
-          width="960"
-          height="1706"
-          loading="lazy"
-        />
-        <figcaption>
-          <span>From the training floor</span>
-          <span>Intent in every rep.</span>
-        </figcaption>
-      </figure>
       <div id="services" className="strength-services-body">
         <header className="strength-section-heading">
           <p className="strength-entry">
-            <span>02 /</span> The coaching
+            <span>03 /</span> The coaching
           </p>
           <h2 id="services-title">
-            Your goals. <br />
-            Our work.
+            Personal coaching. <br />
+            In your corner.
           </h2>
           <p>Different starting points. The same attention to detail.</p>
         </header>
@@ -73,6 +59,11 @@ function ServicesSection() {
             <p>
               Movement prep, mobility, and recovery support are part of the
               work—not an afterthought.
+            </p>
+            <p>
+              Rates depend on the coaching format and support you need. We’ll
+              discuss the simplest option and clear pricing before anything
+              starts.
             </p>
             <a className="strength-text-link" href="#apply">
               Find your coaching fit <ArrowUpRight aria-hidden="true" />
