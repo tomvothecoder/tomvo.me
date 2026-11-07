@@ -6,10 +6,11 @@ import PricingSection from "components/CoachRedesign/PricingSection";
 import ServicesSection from "components/CoachRedesign/ServicesSection";
 import StatsSection from "components/CoachRedesign/StatsSection";
 import TransformationGallery from "components/CoachRedesign/TransformationGallery";
+import "components/CoachRedesign/CoachLandingPage.css";
 
 function CoachLandingPage() {
   return (
-    <main className="coach-cinematic bg-[#f7f4ed] text-[#141816]">
+    <main id="main-content" className="strength-site">
       <HeroSection />
       <StatsSection />
       <ServicesSection />

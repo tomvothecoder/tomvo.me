@@ -1,18 +1,17 @@
-import { ArrowRight, Code2, Dumbbell } from "lucide-react";
+import { useState } from "react";
+import { ArrowUpRight, Code2, Dumbbell, Menu, X } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 
-import coachIconLogo from "assets/coach-logos/TomVoStrength_Icon_Color.png";
 import { cn } from "lib/utils";
 
 const coachLinks = [
-  { href: "#fit", label: "Fit" },
   { href: "#coaching", label: "Coaching" },
   { href: "#results", label: "Results" },
   { href: "#about", label: "About" },
-  { href: "#packages", label: "Start" },
 ];
 
 function NavBar() {
+  const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
   const isCoachPage = location.pathname === "/coach";
   const brandLabel =
@@ -21,54 +20,69 @@ function NavBar() {
 
   if (isCoachPage) {
     return (
-      <header className="pointer-events-none fixed inset-x-0 top-3 z-50 px-3 sm:top-5 sm:px-6">
-        <nav
-          className={cn(
-            "pointer-events-auto mx-auto flex min-h-14 w-full max-w-5xl items-center justify-between gap-3 rounded-lg border border-[#cfc4b5]/90 bg-[#f7f4ed]/95 px-3 py-2 text-[#141816] shadow-[0_18px_55px_-42px_rgba(0,0,0,0.55)] sm:px-4",
-          )}
-        >
+      <header className="strength-header">
+        <a href="#main-content" className="strength-skip-link">
+          Skip to content
+        </a>
+        <nav className="strength-nav" aria-label="Main navigation">
           <Link
             to="/coach"
-            className="inline-flex min-w-0 items-center gap-2 rounded-lg pr-1 text-sm font-semibold tracking-tight transition-transform hover:-translate-y-px"
+            className="strength-wordmark"
+            onClick={() => setMenuOpen(false)}
+            aria-label="Tom Vo Strength home"
           >
-            <span
-              className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-[#cfc4b5] bg-white/70 text-[#1d2822]"
-            >
-              <img
-                src={coachIconLogo}
-                alt=""
-                aria-hidden="true"
-                className="h-7 w-7 object-contain"
-              />
+            Tom Vo
+            <span>
+              Strength<span aria-hidden="true"> /</span>
             </span>
-            <span className="truncate">{brandLabel}</span>
           </Link>
-
-          <div className="hidden items-center gap-1 md:flex">
+          <div
+            id="coach-navigation"
+            className={cn("strength-nav-links", menuOpen && "is-open")}
+            onKeyDown={(event) => {
+              if (event.key === "Escape") {
+                setMenuOpen(false);
+                document.getElementById("coach-menu-toggle")?.focus();
+              }
+            }}
+          >
             {coachLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="rounded-lg px-3 py-2 text-sm font-medium transition hover:-translate-y-px hover:bg-[#ede7dc]"
+                onClick={() => setMenuOpen(false)}
               >
                 {link.label}
               </a>
             ))}
-            <Link
-              to="/career"
-              className="rounded-lg px-3 py-2 text-sm font-medium text-[#141816]/[0.72] transition hover:-translate-y-px hover:bg-[#ede7dc]"
-            >
+            <Link to="/career" onClick={() => setMenuOpen(false)}>
               Career
             </Link>
           </div>
 
-          <a
-            href="#apply"
-            className="coach-button-primary magnetic-button inline-flex h-10 shrink-0 items-center justify-center gap-2 rounded-[2rem] px-4 text-sm font-semibold sm:px-5"
-          >
-            <span>Apply</span>
-            <ArrowRight className="hidden h-4 w-4 sm:block" />
-          </a>
+          <div className="strength-nav-actions">
+            <a
+              href="#apply"
+              className="strength-nav-apply"
+              onClick={() => setMenuOpen(false)}
+            >
+              Let’s talk <ArrowUpRight aria-hidden="true" />
+            </a>
+            <button
+              id="coach-menu-toggle"
+              type="button"
+              aria-expanded={menuOpen}
+              aria-controls="coach-navigation"
+              aria-label={menuOpen ? "Close navigation" : "Open navigation"}
+              onClick={() => setMenuOpen(!menuOpen)}
+            >
+              {menuOpen ? (
+                <X aria-hidden="true" />
+              ) : (
+                <Menu aria-hidden="true" />
+              )}
+            </button>
+          </div>
         </nav>
       </header>
     );

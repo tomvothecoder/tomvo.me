@@ -1,102 +1,115 @@
-import React from "react";
-import { render, screen } from "@testing-library/react";
-import { vi } from "vitest";
-
+import { fireEvent, render, screen, within } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
+import { beforeEach, test, expect, vi } from "vitest";
 import App from "./App";
 
-vi.mock("react-player", () => ({
-  default: () => <div data-testid="react-player" />,
-}));
-
-test("renders the strength coaching landing page", () => {
+beforeEach(() => {
   window.history.pushState({}, "", "/coach");
+});
 
+test("renders the editorial coaching page with real photography and recorded results", () => {
   render(<App />);
+  expect(screen.getAllByRole("heading", { level: 1 })).toHaveLength(1);
+  expect(
+    screen.getByRole("heading", { name: /strength. for real life/i }),
+  ).toBeInTheDocument();
+  expect(
+    screen.getByRole("img", { name: /tom training the deadlift/i }),
+  ).toHaveAttribute("fetchpriority", "high");
+  expect(
+    screen.getByRole("heading", { name: /serious about training/i }),
+  ).toBeInTheDocument();
+  expect(
+    screen.getByRole("heading", { name: /your goals. our work/i }),
+  ).toBeInTheDocument();
+  expect(
+    screen.getByRole("heading", { name: /the work shows up/i }),
+  ).toBeInTheDocument();
+  expect(
+    screen.getByRole("heading", { name: /a lifter. not a fitness persona/i }),
+  ).toBeInTheDocument();
+  expect(screen.getByText("9/9")).toBeInTheDocument();
+  expect(
+    screen.getAllByRole("link", { name: /verified meet result/i }),
+  ).toHaveLength(3);
+  expect(
+    screen.getByRole("link", { name: /alvin pov: verified meet result/i }),
+  ).toHaveAttribute(
+    "href",
+    "https://www.openpowerlifting.org/m/uspa/2957#alvinpov",
+  );
+  expect(document.querySelector("video[autoplay]")).toBeNull();
+});
 
-  expect(document.querySelector(".App")).toBeInTheDocument();
-  expect(
-    screen.getAllByRole("img", { name: /tom vo strength/i }).length,
-  ).toBeGreaterThan(0);
-  expect(
-    screen.getByText(/nasm cpt \| fremont, newark, online/i),
-  ).toBeInTheDocument();
-  expect(
-    screen.getByRole("heading", {
-      name: /build strength that fits your life/i,
-    }),
-  ).toBeInTheDocument();
-  expect(
-    screen.getByText(/strength coaching and personal training built around/i),
-  ).toBeInTheDocument();
-  expect(screen.getByText(/technique and meet prep/i)).toBeInTheDocument();
-  expect(
-    screen.getByText(/strength and movement quality/i),
-  ).toBeInTheDocument();
-  expect(
-    screen.getByRole("heading", {
-      name: /coaching for people who want the next training step to make sense/i,
-    }),
-  ).toBeInTheDocument();
-  expect(
-    screen.getByRole("heading", {
-      name: /strength coaching and personal training options matched to the support you need/i,
-    }),
-  ).toBeInTheDocument();
-  expect(
-    screen.getByRole("heading", {
-      name: /results make more sense with context/i,
-    }),
-  ).toBeInTheDocument();
-  expect(
-    screen.getByText(/process stays simple: listen first, build the block/i),
-  ).toBeInTheDocument();
-  expect(
-    screen.getByRole("heading", {
-      name: /find the coaching plan that fits your goals/i,
-    }),
-  ).toBeInTheDocument();
-  expect(
-    screen.getByRole("heading", {
-      name: /client questions before starting/i,
-    }),
-  ).toBeInTheDocument();
-  expect(
-    screen.getByRole("heading", {
-      name: /start a coaching conversation/i,
-    }),
-  ).toBeInTheDocument();
-
-  expect(screen.getByLabelText("Name")).toBeInTheDocument();
-  expect(screen.getByLabelText("Email")).toBeInTheDocument();
-  expect(screen.getByLabelText("Phone")).toBeInTheDocument();
-  expect(screen.getByLabelText("Primary training goal")).toBeInTheDocument();
-  expect(screen.getByLabelText("Training context")).toBeInTheDocument();
-  expect(
-    screen.getByRole("button", { name: /send coaching request/i }),
-  ).toBeInTheDocument();
-
-  const applicationLinks = screen.getAllByRole("link", {
-    name: /apply/i,
+test("all local navigation links resolve to page sections", () => {
+  render(<App />);
+  const localLinks = screen
+    .getAllByRole("link")
+    .filter((link) => link.getAttribute("href")?.startsWith("#"));
+  expect(localLinks.length).toBeGreaterThan(5);
+  localLinks.forEach((link) => {
+    expect(
+      document.getElementById(link.getAttribute("href")!.slice(1)),
+    ).not.toBeNull();
   });
-  expect(applicationLinks.length).toBeGreaterThan(0);
-  applicationLinks.forEach((link) => {
-    expect(link).toHaveAttribute("href", "#apply");
-  });
+  expect(
+    screen.getByRole("link", { name: /apply for coaching/i }),
+  ).toHaveAttribute("href", "#apply");
+});
 
-  expect(
-    screen
-      .getAllByRole("link", { name: "Coaching" })
-      .some((link) => link.getAttribute("href") === "#coaching"),
-  ).toBe(true);
-  expect(
-    screen
-      .getAllByRole("link", { name: "About" })
-      .some((link) => link.getAttribute("href") === "#about"),
-  ).toBe(true);
+test("mobile navigation can open, close on selection, and dismiss with Escape", async () => {
+  const user = userEvent.setup();
+  render(<App />);
+  const toggle = screen.getByRole("button", { name: "Open navigation" });
+  expect(toggle).toHaveAttribute("aria-expanded", "false");
+  await user.click(toggle);
+  expect(toggle).toHaveAttribute("aria-expanded", "true");
+  const nav = screen.getByRole("navigation", { name: "Main navigation" });
+  await user.click(within(nav).getByRole("link", { name: "Coaching" }));
+  expect(toggle).toHaveAttribute("aria-expanded", "false");
+  await user.click(toggle);
+  const about = within(nav).getByRole("link", { name: "About" });
+  about.focus();
+  await user.keyboard("{Escape}");
+  expect(toggle).toHaveAttribute("aria-expanded", "false");
+  expect(toggle).toHaveFocus();
+});
 
-  expect(
-    screen.getAllByRole("link", { name: "Profile" }).length,
-  ).toBeGreaterThan(0);
-  expect(screen.getAllByRole("link", { name: "Meet" }).length).toBeGreaterThan(0);
-  expect(screen.queryByText(/sustainable weight-loss/i)).not.toBeInTheDocument();
+test("keeps labeled, required application fields and the existing Kwes endpoint", () => {
+  render(<App />);
+  for (const label of [
+    "Name",
+    "Email",
+    "Phone",
+    "What are you working toward?",
+    "Tell me where you’re starting",
+  ]) {
+    expect(screen.getByLabelText(label)).toBeRequired();
+  }
+  expect(screen.getByLabelText("Email")).toHaveAttribute("type", "email");
+  const form = screen
+    .getByRole("button", { name: /send coaching request/i })
+    .closest("form");
+  expect(form).toHaveAttribute(
+    "action",
+    "https://kwesforms.com/api/foreign/forms/aSVFVwmIio7ugCj6l1gO",
+  );
+  expect(form).toHaveAttribute("method", "post");
+  expect(form?.checkValidity()).toBe(false);
+  expect(document.querySelectorAll("#kwesforms-script")).toHaveLength(1);
+});
+
+test("initializes the contact integration when its script loads", () => {
+  const init = vi.fn();
+  const kwesWindow = window as typeof window & {
+    kwesforms?: { init: () => void };
+  };
+  const { unmount } = render(<App />);
+  kwesWindow.kwesforms = { init };
+  fireEvent.load(document.getElementById("kwesforms-script")!);
+  expect(init).toHaveBeenCalledOnce();
+  unmount();
+  fireEvent.load(document.getElementById("kwesforms-script")!);
+  expect(init).toHaveBeenCalledOnce();
+  delete kwesWindow.kwesforms;
 });
