@@ -26,7 +26,7 @@
     "react": "^19.2.6",
     "react-dom": "^19.2.6",
     "react-player": "^3.4.0",
-    "react-router-dom": "^7.15.1",
+    "react-router-dom": "^7.18.5",
     "react-scroll": "^1.9.3",
     "tailwind-merge": "^3.6.0",
     "typescript": "^6.0.3",
@@ -36,6 +36,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
+    "audit:security": "pnpm audit --audit-level=low",
     "test": "vitest run",
     "test:watch": "vitest"
   },
@@ -57,8 +58,8 @@
     "@typescript-eslint/eslint-plugin": "^8.59.4",
     "@typescript-eslint/parser": "^8.59.4",
     "@vitejs/plugin-react": "^6.0.2",
-    "autoprefixer": "^10.5.0",
-    "eslint": "^9.39.1",
+    "autoprefixer": "^10.6.2",
+    "eslint": "^9.39.5",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-import": "^2.32.0",
     "eslint-plugin-jsx-a11y": "^6.10.2",
@@ -68,12 +69,12 @@
     "globals": "^16.5.0",
     "jsdom": "^29.1.1",
     "lint-staged": "^17.0.5",
-    "postcss": "^8.5.15",
+    "postcss": "^8.5.32",
     "prettier": "^3.8.3",
     "tailwindcss": "^4.3.0",
     "typescript-eslint": "^8.59.4",
-    "vite": "^8.0.14",
-    "vitest": "^4.1.7"
+    "vite": "^8.3.6",
+    "vitest": "^4.1.12"
   },
   "lint-staged": {
     "src/**/*.+(js|jsx|ts|tsx|json)": [
@@ -85,7 +86,8 @@
   },
   "pnpm": {
     "overrides": {
-      "flatted": "^3.4.1"
+      "flatted": "^3.4.1",
+      "minimatch@>=7.0.0 <11.0.1": "^11.0.5"
     }
   },
   "packageManager": "pnpm@10.0.0"
