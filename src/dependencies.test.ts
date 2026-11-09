@@ -10,6 +10,9 @@ test("TypeScript parser resolves project globs with the patched minimatch depend
     filePath: path.resolve("src/App.tsx"),
     project: ["./tsconfig*.json"],
     tsconfigRootDir: process.cwd(),
+    // CI=true otherwise switches the parser to single-run mode, which parses
+    // src/App.tsx from disk instead of the code passed above.
+    disallowAutomaticSingleRunInference: true,
   });
 
   expect(result.ast.body[0].type).toBe("ExportNamedDeclaration");
