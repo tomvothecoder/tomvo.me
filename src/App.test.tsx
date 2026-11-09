@@ -15,23 +15,25 @@ test("renders the editorial coaching page with real photography and recorded res
     screen.getByRole("heading", { name: /get stronger. train with purpose/i }),
   ).toBeInTheDocument();
   expect(
-    screen.getByRole("img", { name: /tom training the deadlift/i }),
+    screen.getByRole("img", { name: /tom vo training the deadlift/i }),
   ).toHaveAttribute("fetchpriority", "high");
   expect(
     screen.getByRole("heading", { name: /strength starts where you are/i }),
   ).toBeInTheDocument();
   expect(
-    screen.getByRole("heading", { name: /personal coaching. in your corner/i }),
+    screen.getByRole("heading", {
+      name: /exercise science informs the plan. your training tells us how to refine\sit/i,
+    }),
   ).toBeInTheDocument();
   expect(
-    screen.getByRole("heading", { name: /real training. recorded results/i }),
+    screen.getByRole("heading", { name: /recorded on the platform/i }),
   ).toBeInTheDocument();
   expect(
     screen.getByRole("heading", {
       name: /a coach who cares about the person, too/i,
     }),
   ).toBeInTheDocument();
-  expect(screen.getByText("9/9")).toBeInTheDocument();
+  expect(screen.getByText(/9 of 9 attempts made/i)).toBeInTheDocument();
   expect(
     screen.getAllByRole("link", { name: /verified meet result/i }),
   ).toHaveLength(3);
@@ -42,6 +44,35 @@ test("renders the editorial coaching page with real photography and recorded res
     "https://www.openpowerlifting.org/m/uspa/2957#alvinpov",
   );
   expect(document.querySelector("video[autoplay]")).toBeNull();
+});
+
+test("missing photos show placeholders in development only", () => {
+  const { unmount } = render(<App />);
+  expect(document.querySelectorAll("[data-photo-placeholder]")).toHaveLength(2);
+  unmount();
+
+  vi.stubEnv("DEV", false);
+  try {
+    render(<App />);
+    expect(document.querySelector("[data-photo-placeholder]")).toBeNull();
+    expect(
+      screen.getByRole("img", { name: /tom vo smiling outside a café/i }),
+    ).toBeInTheDocument();
+    expect(
+      screen.getByRole("region", { name: /exercise science informs/i }),
+    ).not.toHaveClass("has-photo");
+  } finally {
+    vi.unstubAllEnvs();
+  }
+});
+
+test("uses one plain wordmark in the header and footer", () => {
+  render(<App />);
+  const header = screen.getByRole("link", { name: "Tom Vo Strength home" });
+  expect(header).toHaveTextContent(/^Tom Vo Strength$/);
+  expect(
+    document.querySelector(".strength-footer .strength-wordmark"),
+  ).toHaveTextContent(/^Tom Vo Strength$/);
 });
 
 test("all local navigation links resolve to page sections", () => {
@@ -83,41 +114,46 @@ test("mobile navigation can open, close on selection, and dismiss with Escape", 
   expect(toggle).toHaveAttribute("aria-expanded", "false");
 });
 
-test("explains the coaching process before the services and retains pricing context", () => {
+test("presents coaching formats before the approach and retains pricing context", () => {
   render(<App />);
-  const process = screen.getByRole("region", {
-    name: /a clear plan. room to adapt/i,
-  });
-  expect(within(process).getAllByRole("listitem")).toHaveLength(3);
   const services = screen.getByRole("region", {
-    name: /personal coaching. in your corner/i,
+    name: /strength starts where you are/i,
   });
-  expect(within(services).getAllByRole("article")).toHaveLength(3);
+  expect(within(services).getAllByRole("listitem")).toHaveLength(3);
   expect(
-    process.compareDocumentPosition(services) &
+    within(services).getByText(/rates depend on the format/i),
+  ).toBeInTheDocument();
+  const approach = screen.getByRole("region", {
+    name: /exercise science informs the plan/i,
+  });
+  expect(
+    services.compareDocumentPosition(approach) &
       Node.DOCUMENT_POSITION_FOLLOWING,
   ).toBeTruthy();
   expect(
-    within(services).getByText(/rates depend on the coaching format/i),
+    within(approach).getByText(/reviewed every week/i),
   ).toBeInTheDocument();
   expect(screen.getByRole("main")).toHaveAttribute("tabindex", "-1");
 });
 
-test("FAQ answers use keyboard-operable native disclosures", async () => {
-  const user = userEvent.setup();
+test("folds former FAQ answers into the page without numbered section labels", () => {
   render(<App />);
-  const question = screen.getByText(
-    "What kind of lifter is this coaching for?",
-  );
-  const disclosure = question.closest("details");
-  expect(disclosure).not.toHaveAttribute("open");
-  await user.click(question);
-  expect(disclosure).toHaveAttribute("open");
+  expect(document.querySelector("details")).toBeNull();
+  expect(screen.queryByText(/^0\d \/$/)).toBeNull();
   expect(
-    within(disclosure!).getByText(/newer lifters, busy professionals/i),
-  ).toBeVisible();
-  await user.click(question);
-  expect(disclosure).not.toHaveAttribute("open");
+    screen.getByText(/not a substitute for medical care/i),
+  ).toBeInTheDocument();
+  const application = screen.getByRole("region", {
+    name: /let’s talk about your training/i,
+  });
+  expect(
+    within(application).getByText(/suggest the simplest next step/i),
+  ).toBeInTheDocument();
+  expect(
+    within(
+      screen.getByRole("navigation", { name: "Main navigation" }),
+    ).getByRole("link", { name: "Approach" }),
+  ).toHaveAttribute("href", "#approach");
 });
 
 test("keeps labeled, required application fields and the existing Kwes endpoint", () => {

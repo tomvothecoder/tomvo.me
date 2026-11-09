@@ -6,7 +6,7 @@ import { cn } from "lib/utils";
 
 const coachLinks = [
   { href: "#coaching", label: "Coaching" },
-  { href: "#packages", label: "Approach" },
+  { href: "#approach", label: "Approach" },
   { href: "#results", label: "Results" },
   { href: "#about", label: "About" },
 ];
@@ -40,10 +40,7 @@ function NavBar() {
             onClick={() => setMenuOpen(false)}
             aria-label="Tom Vo Strength home"
           >
-            Tom Vo
-            <span>
-              Strength<span aria-hidden="true"> /</span>
-            </span>
+            Tom Vo Strength
           </Link>
           <div
             id="coach-navigation"

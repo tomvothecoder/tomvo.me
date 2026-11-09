@@ -1,5 +1,38 @@
 # Homepage redesign
 
+## Refinement pass (2026-11-08)
+
+An iterative refinement of the redesign below, aimed at removing templated
+landing-page patterns. No route, form field, endpoint, or dependency changed.
+
+- **Removed:** numbered eyebrows (`01 /` … `06 /`), numbered process and service
+  rows, the hero eyebrow/credential footer/scroll arrow, all image captions, the
+  results subtitle that repeated its heading, OpenPowerlifting profile links
+  (meet-record links remain), the footer tagline, and the homepage FAQ.
+- **Consolidated:** "Your starting point" and "The coaching" are one section
+  (`ServicesSection`). "How coaching works" is now prose in `ApproachSection`
+  (renamed from `PricingSection`), which also absorbs the services note and the
+  FAQ's weekly-review and medical-care answers. The FAQ's "what happens next"
+  answer moved into the application copy. `StatsSection` and `FAQSection` were
+  deleted; `TransformationGallery` was renamed `ResultsSection`.
+- **Composition:** one 12-column grid with columns 1 and 8 as recurring axes.
+  Hero copy is bottom-aligned to the photograph; formats read across three
+  columns; the approach statement is the page's one oversized line; results
+  are full-width rows; about places the portrait to the right of a prose column.
+  Hairline section dividers were removed in favor of spacing.
+- **Imagery:** a second still (deadlift setup) from the existing training video
+  was added here, then removed in round 2. See `homepage-refinement-2.md`.
+- **Results:** each lifter leads with a plain-language outcome; one sentence
+  explains attempts and totals. Figures are unchanged and remain linked.
+- **Anchors:** the approach section id changed from `#packages` to `#approach`
+  (nav updated). `#coaching`, `#services`, `#results`, `#about`, and `#apply`
+  are unchanged; `#fit` and `#faq` no longer exist.
+
+Validation for this pass: `pnpm test` (11 tests) and `pnpm build` pass;
+`docs/homepage-qa.cjs` passes at 320/375/768/1024/1440px with zero axe
+violations (FAQ steps removed from the harness). The typecheck and ESLint
+limitations described below are unchanged.
+
 ## Implementation
 
 The coaching homepage remains at `/coach`; the existing root redirect and

@@ -65,25 +65,16 @@ function ConsultationFormSection() {
       aria-labelledby="apply-title"
     >
       <div className="strength-apply-copy">
-        <p className="strength-entry">
-          <span>06 /</span> Your next step
-        </p>
-        <h2 id="apply-title">
-          Let’s talk <br />
-          about your training.
-        </h2>
+        <h2 id="apply-title">Let’s talk about your training.</h2>
         <p>
-          Tell me where you’re starting.
-          <br />
-          And where you’d like to go.
+          Tell me where you’re starting and where you’d like to go. No need to
+          have it all figured out.
         </p>
-        <div className="strength-apply-note">
-          <p>
-            I’ll read your note and send back clear next steps. No need to have
-            it all figured out.
-          </p>
-          <p>Typically replies within 24–48 hours.</p>
-        </div>
+        <p>
+          I’ll review your goals, background, schedule, and coaching fit, then
+          suggest the simplest next step. Replies typically arrive within 24–48
+          hours.
+        </p>
       </div>
 
       <div className="strength-form-wrap">
