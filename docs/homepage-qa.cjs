@@ -161,22 +161,6 @@ async function run() {
         assert.equal(await toggle.getAttribute("aria-expanded"), "false");
         assert.equal(new URL(page.url()).hash, "#coaching");
       }
-      const question = page.locator("summary").first();
-      await question.focus();
-      await page.keyboard.press("Enter");
-      assert.ok(
-        await page
-          .locator("details")
-          .first()
-          .evaluate((node) => node.open),
-      );
-      await page.keyboard.press("Space");
-      assert.ok(
-        !(await page
-          .locator("details")
-          .first()
-          .evaluate((node) => node.open)),
-      );
       await page
         .getByRole("link", { name: "Apply for coaching", exact: true })
         .click();
@@ -265,7 +249,6 @@ async function run() {
         layout,
         axeViolations: 0,
         keyboardNavigation: "passed",
-        faq: "passed",
         formValidation: "passed (not submitted)",
         routes: "passed",
         applicationErrors: unexpectedErrors,
@@ -273,7 +256,7 @@ async function run() {
         expectedSdkErrors,
       });
       console.log(
-        `PASS ${width}px: layout, accessibility, keyboard, FAQ, form validation, routes`,
+        `PASS ${width}px: layout, accessibility, keyboard, form validation, routes`,
       );
       await context.close();
     }

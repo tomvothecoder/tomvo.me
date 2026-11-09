@@ -2,25 +2,22 @@ import { ArrowUpRight } from "lucide-react";
 
 const services = [
   {
-    number: "01",
-    title: "In person.",
+    title: "In person",
     format: "Fremont & Newark",
     description:
-      "Hands-on strength coaching, real-time technique cues, and a training rhythm you can repeat. Build confidence under the bar, one session at a time.",
+      "Hands-on coaching with real-time technique cues. Build confidence under the bar, one session at a time.",
   },
   {
-    number: "02",
-    title: "Online.",
-    format: "Your gym. My guidance.",
+    title: "Online",
+    format: "Your gym, my guidance",
     description:
-      "Custom training blocks, video feedback, and weekly check-ins. A clear plan that adapts to your progress, recovery, and schedule—not the other way around.",
+      "Custom training blocks, video feedback, and weekly check-ins. The plan adapts to your progress, recovery, and schedule.",
   },
   {
-    number: "03",
-    title: "On the platform.",
-    format: "Powerlifting meet prep",
+    title: "Meet prep",
+    format: "Powerlifting",
     description:
-      "Peaking, attempt selection, and a meet-day plan. From your first competition to your next total, know what you’re working toward and how to get there.",
+      "Peaking, attempt selection, and a meet-day plan, from your first competition to your next total.",
   },
 ];
 
@@ -31,46 +28,30 @@ function ServicesSection() {
       className="strength-services"
       aria-labelledby="services-title"
     >
-      <div id="services" className="strength-services-body">
-        <header className="strength-section-heading">
-          <p className="strength-entry">
-            <span>03 /</span> The coaching
-          </p>
-          <h2 id="services-title">
-            Personal coaching. <br />
-            In your corner.
-          </h2>
-          <p>Different starting points. The same attention to detail.</p>
-        </header>
-        <div className="strength-service-list">
-          {services.map((service) => (
-            <article className="strength-service" key={service.number}>
-              <span className="strength-log-number" aria-hidden="true">
-                {service.number}
-              </span>
-              <div>
-                <h3>{service.title}</h3>
-                <p className="strength-service-format">{service.format}</p>
-              </div>
-              <p>{service.description}</p>
-            </article>
-          ))}
-          <div className="strength-service-note">
-            <p>
-              Movement prep, mobility, and recovery support are part of the
-              work—not an afterthought.
-            </p>
-            <p>
-              Rates depend on the coaching format and support you need. We’ll
-              discuss the simplest option and clear pricing before anything
-              starts.
-            </p>
-            <a className="strength-text-link" href="#apply">
-              Find your coaching fit <ArrowUpRight aria-hidden="true" />
-            </a>
-          </div>
-        </div>
+      <div id="services" className="strength-services-intro">
+        <h2 id="services-title">Strength starts where you are.</h2>
+        <p>
+          New to lifting, training for everyday life, or building on years of
+          experience? You don’t need to be a competitive lifter. You need a
+          goal, honest feedback, and a plan that makes sense for your life.
+        </p>
       </div>
+      <ul className="strength-service-list">
+        {services.map((service) => (
+          <li key={service.title}>
+            <h3>{service.title}</h3>
+            <p className="strength-service-format">{service.format}</p>
+            <p>{service.description}</p>
+          </li>
+        ))}
+      </ul>
+      <p className="strength-service-note">
+        Rates depend on the format and support you need. We’ll agree on the
+        simplest option and clear pricing before anything starts.{" "}
+        <a className="strength-inline-link" href="#apply">
+          Find your coaching fit
+        </a>
+      </p>
     </section>
   );
 }

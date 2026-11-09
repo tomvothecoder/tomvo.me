@@ -9,13 +9,10 @@ const Footer: React.FC = () => {
   if (!isCareerPage) {
     return (
       <footer className="strength-footer">
-        <a href="#hero" className="strength-footer-brand">
-          Tom Vo Strength<span aria-hidden="true"> /</span>
+        <a href="#hero" className="strength-wordmark">
+          Tom Vo Strength
         </a>
-        <div>
-          <p>Purposeful training. Personal coaching.</p>
-          <p>Fremont, Newark & online</p>
-        </div>
+        <p>Fremont, Newark & online</p>
         <nav aria-label="Footer navigation">
           <a href="#coaching">Coaching</a>
           <a href="#about">About</a>
@@ -23,7 +20,7 @@ const Footer: React.FC = () => {
           <Link to="/career">Career</Link>
         </nav>
         <p className="strength-footer-bottom">
-          © {new Date().getFullYear()} Tom Vo <span>Built rep by rep.</span>
+          © {new Date().getFullYear()} Tom Vo
         </p>
       </footer>
     );
